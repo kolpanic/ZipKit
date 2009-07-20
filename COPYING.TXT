@@ -30,7 +30,7 @@ ZipKit is covered under the following BSD-style license:
     OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     ================================================================
 
-Acknowledgement using this text are appreciated: 
+Acknowledgement using this text is appreciated: 
 	ZipKit developed by Karl Moskowski, Data Deposit Box.
 	http://bitbucket.org/kolpanic/zipkit/
 
