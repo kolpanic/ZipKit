@@ -122,13 +122,12 @@
 					PBXFileDataSource_Warnings_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 269315803;
-			PBXWorkspaceStateSaveDate = 269315803;
+			PBXPerProjectTemplateStateSaveDate = 269790382;
+			PBXWorkspaceStateSaveDate = 269790382;
 		};
 		perUserProjectItems = {
-			CBA03751100D4B0C00F6F164 /* PBXTextBookmark */ = CBA03751100D4B0C00F6F164 /* PBXTextBookmark */;
-			CBB5FB5A100D6F25004D89E0 /* PBXTextBookmark */ = CBB5FB5A100D6F25004D89E0 /* PBXTextBookmark */;
-			CBB5FB5C100D6F26004D89E0 /* PBXTextBookmark */ = CBB5FB5C100D6F26004D89E0 /* PBXTextBookmark */;
+			CBA632801014ADF300E883B0 /* PBXTextBookmark */ = CBA632801014ADF300E883B0 /* PBXTextBookmark */;
+			CBA632811014ADF400E883B0 /* PBXTextBookmark */ = CBA632811014ADF400E883B0 /* PBXTextBookmark */;
 		};
 		sourceControlManager = CBCFA5E70DC7B3F600125DEF /* Source Control */;
 		userBuildSettings = {
@@ -207,23 +206,23 @@
 	};
 	CB0A843D0F79343F00702E0D /* ZKDefs.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1100, 1170}}";
-			sepNavSelRange = "{2299, 0}";
-			sepNavVisRange = "{1063, 1526}";
+			sepNavIntBoundsRect = "{{0, 0}, {1190, 926}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 1354}";
 		};
 	};
 	CB0A843E0F79343F00702E0D /* ZKDefs.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1198, 1104}}";
-			sepNavSelRange = "{2478, 10}";
-			sepNavVisRange = "{629, 2246}";
+			sepNavIntBoundsRect = "{{0, 0}, {1190, 926}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 1169}";
 		};
 	};
 	CB0FFF1A0DE498C100A00A46 /* GMAppleDouble+ZKAdditions.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1100, 675}}";
-			sepNavSelRange = "{1801, 0}";
-			sepNavVisRange = "{0, 2015}";
+			sepNavIntBoundsRect = "{{0, 0}, {1190, 926}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 306}";
 		};
 	};
 	CB0FFF1B0DE498C100A00A46 /* GMAppleDouble+ZKAdditions.m */ = {
@@ -264,9 +263,9 @@
 	};
 	CB429C2F0DD89CFC00B12209 /* COPYING.TXT */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1100, 637}}";
-			sepNavSelRange = "{2107, 0}";
-			sepNavVisRange = "{0, 2128}";
+			sepNavIntBoundsRect = "{{0, 0}, {1190, 926}}";
+			sepNavSelRange = "{347, 0}";
+			sepNavVisRange = "{0, 2225}";
 			sepNavWindowFrame = "{{15, 156}, {1679, 1017}}";
 		};
 	};
@@ -402,9 +401,9 @@
 	};
 	CB9FD87E0E00800C00E60665 /* ZKFileArchive.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1190, 10944}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1190, 9990}}";
 			sepNavSelRange = "{0, 0}";
-			sepNavVisRange = "{1276, 1960}";
+			sepNavVisRange = "{0, 2196}";
 			sepNavWindowFrame = "{{15, -5}, {1612, 1178}}";
 		};
 	};
@@ -452,15 +451,25 @@
 			sepNavVisRange = "{1953, 2069}";
 		};
 	};
-	CBA03751100D4B0C00F6F164 /* PBXTextBookmark */ = {
+	CBA632801014ADF300E883B0 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
 		fRef = CB9FD87E0E00800C00E60665 /* ZKFileArchive.m */;
 		name = "ZKFileArchive.m: 1";
 		rLen = 0;
 		rLoc = 0;
 		rType = 0;
-		vrLen = 1123;
-		vrLoc = 1786;
+		vrLen = 471;
+		vrLoc = 0;
+	};
+	CBA632811014ADF400E883B0 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = CB9FD87E0E00800C00E60665 /* ZKFileArchive.m */;
+		name = "ZKFileArchive.m: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 2196;
+		vrLoc = 0;
 	};
 	CBA79A480FB4A3A600D525E0 /* ZKArchive.h */ = {
 		uiCtxt = {
@@ -471,30 +480,10 @@
 	};
 	CBA79A4A0FB4A3A600D525E0 /* ZKArchive.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {954, 3104}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1190, 2730}}";
 			sepNavSelRange = "{4762, 0}";
-			sepNavVisRange = "{2840, 1520}";
+			sepNavVisRange = "{0, 2283}";
 		};
-	};
-	CBB5FB5A100D6F25004D89E0 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = CB9FD87E0E00800C00E60665 /* ZKFileArchive.m */;
-		name = "ZKFileArchive.m: 1";
-		rLen = 0;
-		rLoc = 0;
-		rType = 0;
-		vrLen = 669;
-		vrLoc = 1276;
-	};
-	CBB5FB5C100D6F26004D89E0 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = CB9FD87E0E00800C00E60665 /* ZKFileArchive.m */;
-		name = "ZKFileArchive.m: 1";
-		rLen = 0;
-		rLoc = 0;
-		rType = 0;
-		vrLen = 1960;
-		vrLoc = 1276;
 	};
 	CBC87EAE0FB318D700F6B149 /* ZKDataArchive.h */ = {
 		uiCtxt = {
