@@ -19,28 +19,12 @@
 @implementation ZKDataArchive
 
 + (ZKDataArchive *) archiveWithArchivePath:(NSString *) path {
-	ZKDataArchive *archive = [ZKDataArchive new];
-	archive.archivePath = path;
-	if ([archive.fileManager fileExistsAtPath:archive.archivePath]) {
-		archive.data = [NSMutableData dataWithContentsOfFile:path];
-		archive.cdTrailer = [ZKCDTrailer recordWithData:archive.data];
-		if (archive.cdTrailer) {
-			unsigned long long offset = archive.cdTrailer.offsetOfStartOfCentralDirectory;
-			for (NSUInteger i = 0; i < archive.cdTrailer.totalNumberOfCentralDirectoryEntries; i++) {
-				ZKCDHeader *cdHeader = [ZKCDHeader recordWithData:archive.data atOffset:offset];
-				[archive.centralDirectory addObject:cdHeader];
-				offset += [cdHeader length];
-			}
-		} else {
-			archive = nil;
-		}
-	}	
-	return archive;
+	return [self archiveWithArchiveData:[NSMutableData dataWithContentsOfFile:path]];
 }
 
-+ (ZKDataArchive *) archiveWithArchiveData:(NSData *) archiveData {
++ (ZKDataArchive *) archiveWithArchiveData:(NSMutableData *) archiveData {
 	ZKDataArchive *archive = [ZKDataArchive new];
-	archive.data = [archiveData mutableCopy];
+	archive.data = archiveData;
 	archive.cdTrailer = [ZKCDTrailer recordWithData:archive.data];
 	if (archive.cdTrailer) {
 		unsigned long long offset = archive.cdTrailer.offsetOfStartOfCentralDirectory;

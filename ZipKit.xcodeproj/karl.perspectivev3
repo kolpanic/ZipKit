@@ -339,7 +339,6 @@
 								<string>29B97314FDCFA39411CA2CEA</string>
 								<string>080E96DDFE201D6D7F000001</string>
 								<string>CBA79AB50FB4A73300D525E0</string>
-								<string>CBD646680F388FF9003BAD6F</string>
 								<string>CB7C50B90DD895D000EA975A</string>
 								<string>CB7C50C40DD895E500EA975A</string>
 							</array>
@@ -402,11 +401,10 @@
 										<key>_historyCapacity</key>
 										<integer>10</integer>
 										<key>bookmark</key>
-										<string>CBAA32FB106A57D800135E13</string>
+										<string>CBAA3321106A592900135E13</string>
 										<key>history</key>
 										<array>
-											<string>CBD8051C106A57B000A76352</string>
-											<string>CBD8051F106A57B000A76352</string>
+											<string>CBAA3320106A592900135E13</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -446,8 +444,6 @@
 									<dict>
 										<key>Frame</key>
 										<string>{{10, 27}, {1251, -27}}</string>
-										<key>RubberWindowFrame</key>
-										<string>67 189 1607 989 0 0 1920 1178 </string>
 									</dict>
 									<key>Module</key>
 									<string>XCDetailModule</string>
@@ -501,7 +497,9 @@
 									<key>GeometryConfiguration</key>
 									<dict>
 										<key>Frame</key>
-										<string>{{0, 0}, {568, 405}}</string>
+										<string>{{10, 27}, {1251, -27}}</string>
+										<key>RubberWindowFrame</key>
+										<string>67 189 1607 989 0 0 1920 1178 </string>
 									</dict>
 									<key>Module</key>
 									<string>PBXBuildResultsModule</string>
@@ -529,11 +527,11 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>CBAA32FC106A57D800135E13</string>
+				<string>CBAA3314106A58FF00135E13</string>
 				<string>1CA23ED40692098700951B8B</string>
-				<string>CBAA32FD106A57D800135E13</string>
+				<string>CBAA3315106A58FF00135E13</string>
 				<string>CBBF8D580D80348D00E0F4B1</string>
-				<string>CBAA32FE106A57D800135E13</string>
+				<string>CBAA3316106A58FF00135E13</string>
 				<string>1CA23EDF0692099D00951B8B</string>
 				<string>1CA23EE00692099D00951B8B</string>
 				<string>1CA23EE10692099D00951B8B</string>
@@ -682,13 +680,13 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>CBD804CD106A554900A76352</string>
+				<string>CBAA3317106A58FF00135E13</string>
 				<string>1CCC7628064C1048000F2A68</string>
 				<string>1CCC7629064C1048000F2A68</string>
-				<string>CBD804CE106A554900A76352</string>
-				<string>CBD804CF106A554900A76352</string>
-				<string>CBD804D0106A554900A76352</string>
-				<string>CBD804D1106A554900A76352</string>
+				<string>CBAA3318106A58FF00135E13</string>
+				<string>CBAA3319106A58FF00135E13</string>
+				<string>CBAA331A106A58FF00135E13</string>
+				<string>CBAA331B106A58FF00135E13</string>
 				<string>CBBF8D580D80348D00E0F4B1</string>
 			</array>
 			<key>ToolbarConfigUserDefaultsMinorVersion</key>
@@ -706,7 +704,7 @@
 	<key>StatusbarIsVisible</key>
 	<true/>
 	<key>TimeStamp</key>
-	<real>275404760.92332202</real>
+	<real>275405097.10333502</real>
 	<key>ToolbarDisplayMode</key>
 	<integer>2</integer>
 	<key>ToolbarIsVisible</key>
@@ -721,6 +719,8 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
+		<string>CBAA331D106A58FF00135E13</string>
+		<string>CBAA331E106A58FF00135E13</string>
 		<string>/Users/karl/Projects/zipkit/ZipKit.xcodeproj</string>
 	</array>
 	<key>WindowString</key>

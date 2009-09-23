@@ -16,7 +16,7 @@
 }
 
 + (ZKDataArchive *) archiveWithArchivePath:(NSString *) path;
-+ (ZKDataArchive *) archiveWithArchiveData:(NSData *) archiveData;
++ (ZKDataArchive *) archiveWithArchiveData:(NSMutableData *) archiveData;
 - (NSUInteger) inflateAll;
 - (NSData *) inflateFile:(ZKCDHeader *) cdHeader attributes:(NSDictionary **) fileAttributes;
 
