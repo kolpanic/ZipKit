@@ -27,15 +27,31 @@
 		if (archive.cdTrailer) {
 			unsigned long long offset = archive.cdTrailer.offsetOfStartOfCentralDirectory;
 			for (NSUInteger i = 0; i < archive.cdTrailer.totalNumberOfCentralDirectoryEntries; i++) {
-				ZKCDHeader *cdHeader = [ZKCDHeader recordWithArchivePath:path atOffset:offset];
+				ZKCDHeader *cdHeader = [ZKCDHeader recordWithData:archive.data atOffset:offset];
 				[archive.centralDirectory addObject:cdHeader];
 				offset += [cdHeader length];
 			}
 		} else {
 			archive = nil;
 		}
+	}	
+	return archive;
+}
+
++ (ZKDataArchive *) archiveWithArchiveData:(NSData *) archiveData {
+	ZKDataArchive *archive = [ZKDataArchive new];
+	archive.data = [archiveData mutableCopy];
+	archive.cdTrailer = [ZKCDTrailer recordWithData:archive.data];
+	if (archive.cdTrailer) {
+		unsigned long long offset = archive.cdTrailer.offsetOfStartOfCentralDirectory;
+		for (NSUInteger i = 0; i < archive.cdTrailer.totalNumberOfCentralDirectoryEntries; i++) {
+			ZKCDHeader *cdHeader = [ZKCDHeader recordWithData:archive.data atOffset:offset];
+			[archive.centralDirectory addObject:cdHeader];
+			offset += [cdHeader length];
+		}
+	} else {
+		archive = nil;
 	}
-	
 	return archive;
 }
 

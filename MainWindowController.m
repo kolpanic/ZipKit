@@ -12,6 +12,7 @@
 #import <ZipKit/ZKDataArchive.h>
 #import <ZipKit/ZKLog.h>
 #import <ZipKit/ZKDefs.h>
+#import <ZipKit/NSFileManager+ZKAdditions.h>
 
 const double maxProgress = 100.0;
 
@@ -107,6 +108,7 @@ const double maxProgress = 100.0;
 //							}
 //							[fileManager setAttributes:fileAttributes ofItemAtPath:path error:nil]; 
 //						}
+//						[fileManager combineAppleDoubleInDirectory:expandFolder];
 //					}
 //				} else {
 //					ZKDataArchive *archive = [ZKDataArchive new];
