@@ -24,6 +24,8 @@
 + (BOOL) validArchiveAtPath:(NSString *) path;
 + (NSString *) uniquify:(NSString *) path;
 - (void) calculateSizeAndItemCount:(NSDictionary *) userInfo;
+- (NSString *) uniqueExpansionDirectoryIn:(NSString *) enclosingFolder;
+- (void) cleanUpExpansionDirectory:(NSString *) expansionDirectory;
 
 - (BOOL) delegateWantsSizes;
 

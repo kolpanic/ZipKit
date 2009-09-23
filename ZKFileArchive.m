@@ -216,13 +216,8 @@
 #pragma mark Inflation
 
 - (NSInteger) inflateToDiskUsingResourceFork:(BOOL) rfFlag {
-	NSString *finalDestinationDirectory = [self.archivePath stringByDeletingLastPathComponent];
-	NSString *expansionDirectory = [finalDestinationDirectory stringByAppendingPathComponent:ZKExpansionDirectoryName];
-	NSUInteger i = 1;
-	while ([self.fileManager fileExistsAtPath:expansionDirectory]) {
-		expansionDirectory = [finalDestinationDirectory stringByAppendingPathComponent:
-							  [NSString stringWithFormat:@"%@ %u", ZKExpansionDirectoryName, i++]];
-	}
+	NSString *enclosingFolder = [self.archivePath stringByDeletingLastPathComponent];
+	NSString *expansionDirectory = [self uniqueExpansionDirectoryIn:enclosingFolder];
 	
 	NSInteger result = zkSucceeded;
 	for (ZKCDHeader *cdHeader in self.centralDirectory) {
@@ -231,29 +226,9 @@
 			break;
 	}
 	
-	if (result == zkSucceeded) {
-		if (rfFlag)
+	if (result == zkSucceeded && rfFlag)
 			[self.fileManager combineAppleDoubleInDirectory:expansionDirectory];
-		
-		NSArray *dirContents = [self.fileManager contentsOfDirectoryAtPath:expansionDirectory error:nil];
-		for (NSString *item in dirContents) {
-			if (![item isEqualToString:ZKMacOSXDirectory]) {
-				NSString *subPath = [expansionDirectory stringByAppendingPathComponent:item];
-				NSString *dest = [finalDestinationDirectory stringByAppendingPathComponent:item];
-				NSUInteger i = 2;
-				while ([self.fileManager fileExistsAtPath:dest]) {
-					NSString *ext = [item pathExtension];
-					dest = [finalDestinationDirectory stringByAppendingPathComponent:[NSString stringWithFormat:@"%@ %u",
-																					  [item stringByDeletingPathExtension], i++]];
-					if (ext && [ext length] > 0)
-						dest = [dest stringByAppendingPathExtension:ext];
-				}
-				[self.fileManager moveItemAtPath:subPath toPath:dest error:nil];
-			}
-		}
-	}
-	
-	[self.fileManager removeItemAtPath:expansionDirectory error:nil];
+	[self cleanUpExpansionDirectory:expansionDirectory];
 	
 	return result;
 }

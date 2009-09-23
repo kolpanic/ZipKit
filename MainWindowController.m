@@ -75,46 +75,20 @@ const double maxProgress = 100.0;
 		[panel setResolvesAliases:NO];
 		if ([panel runModalForTypes:nil] == NSOKButton) {
 			NSArray *filenames = [panel filenames];
-			NSString *firstFilename = [filenames objectAtIndex:0];
 			@try {				
+				NSString *firstFilename = [filenames objectAtIndex:0];
+				
 				ZipFileOperation *zipFileOperation = [ZipFileOperation new];
 				zipFileOperation.item = ([filenames count] == 1) ? (id)firstFilename : filenames;
 				zipFileOperation.delegate = self;
 				[self.zipQueue addOperation:zipFileOperation];
 				
 //				if ([filenames count] == 1 && [[firstFilename pathExtension] isEqualToString:ZKArchiveFileExtension]) {
-//					NSFileManager *fileManager = [NSFileManager defaultManager];					
 //					NSString *archivePath = firstFilename;
-//					NSString *expandFolder = [archivePath stringByDeletingPathExtension];
-//					[[NSFileManager defaultManager] createDirectoryAtPath:expandFolder attributes:nil];
 //					ZKDataArchive *archive = [ZKDataArchive archiveWithArchivePath:archivePath];
-//					if ([archive inflateAll] == zkSucceeded) {
-//						for (NSDictionary *file in archive.inflatedFiles) {
-//							NSDictionary *fileAttributes = [file objectForKey:ZKFileAttributesKey];
-//							NSData *inflatedData = [file objectForKey:ZKFileDataKey];
-//							NSString *path = [expandFolder stringByAppendingPathComponent:[file objectForKey:ZKPathKey]];
-//							[fileManager createDirectoryAtPath:[path stringByDeletingLastPathComponent]
-//								   withIntermediateDirectories:YES attributes:nil error:nil];
-//							if ([[fileAttributes fileType] isEqualToString:NSFileTypeRegular])
-//								[inflatedData writeToFile:path atomically:YES];
-//							else if ([[fileAttributes fileType] isEqualToString:NSFileTypeDirectory])
-//								[fileManager createDirectoryAtPath:path
-//									   withIntermediateDirectories:YES attributes:nil error:nil];
-//							else if ([[fileAttributes fileType] isEqualToString:NSFileTypeSymbolicLink]) {
-//								NSString *symLinkDestinationPath = [[NSString alloc] initWithData:inflatedData
-//																						 encoding:NSUTF8StringEncoding];
-//								[fileManager createSymbolicLinkAtPath:path
-//												  withDestinationPath:symLinkDestinationPath error:nil];
-//							}
-//							[fileManager setAttributes:fileAttributes ofItemAtPath:path error:nil]; 
-//						}
-//						[fileManager combineAppleDoubleInDirectory:expandFolder];
-//					}
-//				} else {
-//					ZKDataArchive *archive = [ZKDataArchive new];
-//					[archive deflateFiles:filenames relativeToPath:[firstFilename stringByDeletingLastPathComponent]
-//						usingResourceFork:YES];
-//					[archive.data writeToFile:[@"~/Desktop/Archive.zip" stringByExpandingTildeInPath] atomically:YES];
+//					[archive inflateInFolder:[archivePath stringByDeletingLastPathComponent]
+//							  withFolderName:[[archivePath lastPathComponent] stringByDeletingPathExtension]
+//						   usingResourceFork:YES];
 //				}
 			}
 			@catch (NSException *e) {

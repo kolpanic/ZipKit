@@ -53,27 +53,27 @@
 		
 		if ([cdHeader isSymLink] || [cdHeader isDirectory]) {
 			[self.inflatedFiles addObject:[NSDictionary dictionaryWithObjectsAndKeys:
-									 fileAttributes, ZKFileAttributesKey,
-									 [[NSString alloc] initWithData:inflatedData encoding:NSUTF8StringEncoding], ZKPathKey,
-									 nil]];
+										   fileAttributes, ZKFileAttributesKey,
+										   [[NSString alloc] initWithData:inflatedData encoding:NSUTF8StringEncoding], ZKPathKey,
+										   nil]];
 		} else {
 			[self.inflatedFiles addObject:[NSDictionary dictionaryWithObjectsAndKeys:
-									 inflatedData, ZKFileDataKey,
-									 fileAttributes, ZKFileAttributesKey,
-									 cdHeader.filename, ZKPathKey,
-									 nil]];
+										   inflatedData, ZKFileDataKey,
+										   fileAttributes, ZKFileAttributesKey,
+										   cdHeader.filename, ZKPathKey,
+										   nil]];
 		}
 	}
 	return zkSucceeded;
 }
 
 - (NSData *) inflateFile:(ZKCDHeader *) cdHeader attributes:(NSDictionary **) fileAttributes {
-//	if (self.delegate) {
-//		if ([NSThread isMainThread])
-//			[self willUnzipPath:cdHeader.filename];
-//		else
-//			[self performSelectorOnMainThread:@selector(willUnzipPath:) withObject:cdHeader.filename waitUntilDone:NO];
-//	}
+	//	if (self.delegate) {
+	//		if ([NSThread isMainThread])
+	//			[self willUnzipPath:cdHeader.filename];
+	//		else
+	//			[self performSelectorOnMainThread:@selector(willUnzipPath:) withObject:cdHeader.filename waitUntilDone:NO];
+	//	}
 	BOOL isDirectory = [cdHeader isDirectory];
 	
 	ZKLFHeader *lfHeader = [ZKLFHeader recordWithData:self.data atOffset:cdHeader.localHeaderOffset];
@@ -107,6 +107,46 @@
 	
 	return inflatedData;
 }
+
+- (NSUInteger) inflateInFolder:(NSString *)enclosingFolder withFolderName:(NSString *)folderName usingResourceFork:(BOOL) rfFlag {
+	if ([self inflateAll] != zkSucceeded)
+		return zkFailed;
+	if ([self.inflatedFiles count] < 1)
+		return zkSucceeded;
+	
+	if (![self.fileManager fileExistsAtPath:enclosingFolder])
+		return zkFailed;
+	
+	NSString *expansionDirectory = [self uniqueExpansionDirectoryIn:enclosingFolder];
+	[self.fileManager createDirectoryAtPath:expansionDirectory attributes:nil];
+	for (NSDictionary *file in self.inflatedFiles) {
+		NSDictionary *fileAttributes = [file objectForKey:ZKFileAttributesKey];
+		NSData *inflatedData = [file objectForKey:ZKFileDataKey];
+		NSString *path = [expansionDirectory stringByAppendingPathComponent:[file objectForKey:ZKPathKey]];
+		[self.fileManager createDirectoryAtPath:[path stringByDeletingLastPathComponent]
+					withIntermediateDirectories:YES attributes:nil error:nil];
+		if ([[fileAttributes fileType] isEqualToString:NSFileTypeRegular])
+			[inflatedData writeToFile:path atomically:YES];
+		else if ([[fileAttributes fileType] isEqualToString:NSFileTypeDirectory])
+			[self.fileManager createDirectoryAtPath:path
+						withIntermediateDirectories:YES attributes:nil error:nil];
+		else if ([[fileAttributes fileType] isEqualToString:NSFileTypeSymbolicLink]) {
+			NSString *symLinkDestinationPath = [[NSString alloc] initWithData:inflatedData
+																	 encoding:NSUTF8StringEncoding];
+			[self.fileManager createSymbolicLinkAtPath:path
+								   withDestinationPath:symLinkDestinationPath error:nil];
+		}
+		[self.fileManager setAttributes:fileAttributes ofItemAtPath:path error:nil]; 
+	}
+	
+	if (rfFlag)
+		[self.fileManager combineAppleDoubleInDirectory:expansionDirectory];
+	[self cleanUpExpansionDirectory:expansionDirectory];
+	
+	return zkSucceeded;
+}
+
+
 
 #pragma mark -
 #pragma mark Deflation
@@ -145,12 +185,12 @@
 	BOOL isSymlink = [self.fileManager isSymLinkAtPath:path];
 	BOOL isFile = (!isSymlink && !isDir);
 	
-//	if (self.delegate) {
-//		if ([NSThread isMainThread])
-//			[self willZipPath:path];
-//		else
-//			[self performSelectorOnMainThread:@selector(willZipPath:) withObject:path waitUntilDone:NO];
-//	}
+	//	if (self.delegate) {
+	//		if ([NSThread isMainThread])
+	//			[self willZipPath:path];
+	//		else
+	//			[self performSelectorOnMainThread:@selector(willZipPath:) withObject:path waitUntilDone:NO];
+	//	}
 	
 	// append a trailing slash to directory paths
 	if (isDir && !isSymlink && ![[path substringFromIndex:([path length] - 1)] isEqualToString:@"/"])

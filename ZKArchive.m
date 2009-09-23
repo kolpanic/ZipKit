@@ -77,6 +77,38 @@
 						   withObject:[NSNumber numberWithUnsignedLongLong:count] waitUntilDone:NO];
 }
 
+- (NSString *) uniqueExpansionDirectoryIn:(NSString *) enclosingFolder {
+	NSString *expansionDirectory = [enclosingFolder stringByAppendingPathComponent:ZKExpansionDirectoryName];
+	NSUInteger i = 1;
+	while ([self.fileManager fileExistsAtPath:expansionDirectory]) {
+		expansionDirectory = [enclosingFolder stringByAppendingPathComponent:
+							  [NSString stringWithFormat:@"%@ %u", ZKExpansionDirectoryName, i++]];
+	}
+	return expansionDirectory;
+}
+
+- (void) cleanUpExpansionDirectory:(NSString *) expansionDirectory {
+	NSString *enclosingFolder = [expansionDirectory stringByDeletingLastPathComponent];
+	NSArray *dirContents = [self.fileManager contentsOfDirectoryAtPath:expansionDirectory error:nil];
+	for (NSString *item in dirContents) {
+		if (![item isEqualToString:ZKMacOSXDirectory]) {
+			NSString *subPath = [expansionDirectory stringByAppendingPathComponent:item];
+			NSString *dest = [enclosingFolder stringByAppendingPathComponent:item];
+			NSUInteger i = 2;
+			while ([self.fileManager fileExistsAtPath:dest]) {
+				NSString *ext = [item pathExtension];
+				dest = [enclosingFolder stringByAppendingPathComponent:[NSString stringWithFormat:@"%@ %u",
+																		[item stringByDeletingPathExtension], i++]];
+				if (ext && [ext length] > 0)
+					dest = [dest stringByAppendingPathExtension:ext];
+			}
+			[self.fileManager moveItemAtPath:subPath toPath:dest error:nil];
+		}
+	}
+	[self.fileManager removeItemAtPath:expansionDirectory error:nil];
+	
+}
+
 #pragma mark -
 #pragma mark Accessors
 
