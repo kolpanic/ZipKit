@@ -26,7 +26,7 @@
 		CB429C0A0DD89BB300B12209 /* ZipKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB7C50AD0DD8959300EA975A /* ZipKit.framework */; };
 		CB4972D40DD8BDDD00607C1B /* ZipKit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = CB7C50AD0DD8959300EA975A /* ZipKit.framework */; };
 		CB4BB3260F79555800CBA7B9 /* zku.m in Sources */ = {isa = PBXBuildFile; fileRef = CB4BB3250F79555800CBA7B9 /* zku.m */; };
-		CB4BB32C0F79557B00CBA7B9 /* liblibzipkit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CBE3D9B60E3769D80025B4D3 /* liblibzipkit.a */; };
+		CB4BB32C0F79557B00CBA7B9 /* libzipkit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CBE3D9B60E3769D80025B4D3 /* libzipkit.a */; };
 		CB4BB3BB0F7955B200CBA7B9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29B97325FDCFA39411CA2CEA /* Foundation.framework */; };
 		CB4BB3BC0F7955B300CBA7B9 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CBCFA5ED0DC7B43F00125DEF /* libz.dylib */; };
 		CB5C3DAF0DEC6E05001B42E1 /* NSFileManager+ZKAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = CB5C3DAD0DEC6E05001B42E1 /* NSFileManager+ZKAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -172,7 +172,7 @@
 		CBD646260F388A3D003BAD6F /* ZKCDTrailer64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZKCDTrailer64.m; sourceTree = "<group>"; };
 		CBD6467B0F3890C2003BAD6F /* ZKCDTrailer64Locator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZKCDTrailer64Locator.h; sourceTree = "<group>"; };
 		CBD6467C0F3890C2003BAD6F /* ZKCDTrailer64Locator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZKCDTrailer64Locator.m; sourceTree = "<group>"; };
-		CBE3D9B60E3769D80025B4D3 /* liblibzipkit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = liblibzipkit.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		CBE3D9B60E3769D80025B4D3 /* libzipkit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libzipkit.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBE770FB0DC8AE6100AA000B /* MainWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainWindowController.h; sourceTree = "<group>"; };
 		CBE770FC0DC8AE6100AA000B /* MainWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainWindowController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -191,7 +191,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CB4BB32C0F79557B00CBA7B9 /* liblibzipkit.a in Frameworks */,
+				CB4BB32C0F79557B00CBA7B9 /* libzipkit.a in Frameworks */,
 				CB4BB3BB0F7955B200CBA7B9 /* Foundation.framework in Frameworks */,
 				CB4BB3BC0F7955B300CBA7B9 /* libz.dylib in Frameworks */,
 			);
@@ -324,7 +324,7 @@
 			isa = PBXGroup;
 			children = (
 				CB7C50AD0DD8959300EA975A /* ZipKit.framework */,
-				CBE3D9B60E3769D80025B4D3 /* liblibzipkit.a */,
+				CBE3D9B60E3769D80025B4D3 /* libzipkit.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -516,9 +516,9 @@
 			productReference = CB7C50AD0DD8959300EA975A /* ZipKit.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		CBE3D9B50E3769D80025B4D3 /* libzipkit */ = {
+		CBE3D9B50E3769D80025B4D3 /* zipkit */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CBE3D9BA0E3769D90025B4D3 /* Build configuration list for PBXNativeTarget "libzipkit" */;
+			buildConfigurationList = CBE3D9BA0E3769D90025B4D3 /* Build configuration list for PBXNativeTarget "zipkit" */;
 			buildPhases = (
 				CBE3D9B20E3769D80025B4D3 /* Headers */,
 				CBE3D9B30E3769D80025B4D3 /* Sources */,
@@ -528,9 +528,9 @@
 			);
 			dependencies = (
 			);
-			name = libzipkit;
+			name = zipkit;
 			productName = libzipkit;
-			productReference = CBE3D9B60E3769D80025B4D3 /* liblibzipkit.a */;
+			productReference = CBE3D9B60E3769D80025B4D3 /* libzipkit.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
@@ -548,7 +548,7 @@
 			targets = (
 				8D1107260486CEB800E47090 /* ZipKit Utility */,
 				CB7C50AC0DD8959300EA975A /* ZipKit */,
-				CBE3D9B50E3769D80025B4D3 /* libzipkit */,
+				CBE3D9B50E3769D80025B4D3 /* zipkit */,
 				CB4BB30E0F7954AF00CBA7B9 /* zku */,
 			);
 		};
@@ -655,7 +655,7 @@
 		};
 		CB4BB3140F7954CD00CBA7B9 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = CBE3D9B50E3769D80025B4D3 /* libzipkit */;
+			target = CBE3D9B50E3769D80025B4D3 /* zipkit */;
 			targetProxy = CB4BB3130F7954CD00CBA7B9 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -899,7 +899,7 @@
 					AppKit,
 				);
 				PREBINDING = NO;
-				PRODUCT_NAME = libzipkit;
+				PRODUCT_NAME = zipkit;
 				SEPARATE_STRIP = NO;
 			};
 			name = Debug;
@@ -924,7 +924,7 @@
 					AppKit,
 				);
 				PREBINDING = NO;
-				PRODUCT_NAME = libzipkit;
+				PRODUCT_NAME = zipkit;
 				ZERO_LINK = NO;
 			};
 			name = Release;
@@ -968,7 +968,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CBE3D9BA0E3769D90025B4D3 /* Build configuration list for PBXNativeTarget "libzipkit" */ = {
+		CBE3D9BA0E3769D90025B4D3 /* Build configuration list for PBXNativeTarget "zipkit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CBE3D9B80E3769D90025B4D3 /* Debug */,
