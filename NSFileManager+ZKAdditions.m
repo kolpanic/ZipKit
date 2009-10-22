@@ -8,8 +8,11 @@
 #import "NSFileManager+ZKAdditions.h"
 #import "NSData+ZKAdditions.h"
 #import "NSDictionary+ZKAdditions.h"
-#import "GMAppleDouble+ZKAdditions.h"
 #import "ZKDefs.h"
+
+#ifdef ZK_ON_MACOSX
+#import "GMAppleDouble+ZKAdditions.h"
+#endif
 
 const NSUInteger ZKMaxEntriesPerFetch = 40;
 
@@ -29,6 +32,7 @@ const NSUInteger ZKMaxEntriesPerFetch = 40;
 	return [[self fileAttributesAtPath:path traverseLink:NO] fileSize];
 }
 
+#ifdef ZK_ON_MACOSX
 - (void) totalsAtDirectoryFSRef:(FSRef*) fsRef usingResourceFork:(BOOL) rfFlag
 					  totalSize:(unsigned long long *) size
 					  itemCount:(unsigned long long *) count {
@@ -56,10 +60,12 @@ const NSUInteger ZKMaxEntriesPerFetch = 40;
 	}
 	return ;
 }
+#endif
 
 - (NSDictionary *) totalSizeAndItemCountAtPath:(NSString *) path usingResourceFork:(BOOL) rfFlag {
 	unsigned long long size = 0;
 	unsigned long long count = 0;
+#ifdef ZK_ON_MACOSX
 	FSRef fsRef;
 	Boolean isDirectory;
 	OSStatus status = FSPathMakeRef((const unsigned char*)[path fileSystemRepresentation], &fsRef, &isDirectory);
@@ -74,34 +80,14 @@ const NSUInteger ZKMaxEntriesPerFetch = 40;
 		if (fsErr == noErr)
 			size = info.dataLogicalSize + (rfFlag ? info.rsrcLogicalSize : 0);
 	}
+#else
+	size = [self dataSizeAtFilePath:path];
+	count = 0; // TODO: fix this for non-Mac targets
+#endif
 	return [NSDictionary totalSizeAndCountDictionaryWithSize:size andItemCount:count];
 }
 
-- (NSDate *) modificationDateForPath:(NSString *) path {
-	return [[self fileAttributesAtPath:path traverseLink:NO] fileModificationDate];
-}
-
-- (NSUInteger) posixPermissionsAtPath:(NSString *) path {
-	return [[self fileAttributesAtPath:path traverseLink:NO] filePosixPermissions];
-}
-
-- (NSUInteger) externalFileAttributesAtPath:(NSString *) path {
-	return [self externalFileAttributesFor:[self fileAttributesAtPath:path traverseLink:NO]];
-}
-
-- (NSUInteger) externalFileAttributesFor:(NSDictionary *) fileAttributes {
-	NSUInteger externalFileAttributes = 0;
-	@try {
-		BOOL isSymLink = [[fileAttributes fileType] isEqualToString:NSFileTypeSymbolicLink];
-		BOOL isDir = [[fileAttributes fileType] isEqualToString:NSFileTypeDirectory];
-		NSUInteger posixPermissions = [fileAttributes filePosixPermissions];
-		externalFileAttributes = posixPermissions << 16 | (isSymLink ? 0xA0004000 : (isDir ? 0x40004000 : 0x80004000));
-	} @catch(NSException * e) {
-		externalFileAttributes = 0;
-	}
-	return externalFileAttributes;
-}
-
+#ifdef ZK_ON_MACOSX
 - (void) combineAppleDoubleInDirectory:(NSString *) path {
 	if (![self isDirAtPath:path])
 		return;
@@ -134,6 +120,32 @@ const NSUInteger ZKMaxEntriesPerFetch = 40;
 			}
 		}
 	}
+}
+#endif
+
+- (NSDate *) modificationDateForPath:(NSString *) path {
+	return [[self fileAttributesAtPath:path traverseLink:NO] fileModificationDate];
+}
+
+- (NSUInteger) posixPermissionsAtPath:(NSString *) path {
+	return [[self fileAttributesAtPath:path traverseLink:NO] filePosixPermissions];
+}
+
+- (NSUInteger) externalFileAttributesAtPath:(NSString *) path {
+	return [self externalFileAttributesFor:[self fileAttributesAtPath:path traverseLink:NO]];
+}
+
+- (NSUInteger) externalFileAttributesFor:(NSDictionary *) fileAttributes {
+	NSUInteger externalFileAttributes = 0;
+	@try {
+		BOOL isSymLink = [[fileAttributes fileType] isEqualToString:NSFileTypeSymbolicLink];
+		BOOL isDir = [[fileAttributes fileType] isEqualToString:NSFileTypeDirectory];
+		NSUInteger posixPermissions = [fileAttributes filePosixPermissions];
+		externalFileAttributes = posixPermissions << 16 | (isSymLink ? 0xA0004000 : (isDir ? 0x40004000 : 0x80004000));
+	} @catch(NSException * e) {
+		externalFileAttributes = 0;
+	}
+	return externalFileAttributes;
 }
 
 - (NSUInteger) crcForPath:(NSString *) path {

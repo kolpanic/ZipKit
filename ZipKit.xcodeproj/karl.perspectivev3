@@ -303,8 +303,6 @@
 			<key>Layout</key>
 			<array>
 				<dict>
-					<key>BecomeActive</key>
-					<true/>
 					<key>ContentConfiguration</key>
 					<dict>
 						<key>PBXBottomSmartGroupGIDs</key>
@@ -340,15 +338,13 @@
 							<array>
 								<string>29B97314FDCFA39411CA2CEA</string>
 								<string>080E96DDFE201D6D7F000001</string>
-								<string>CBA79AB50FB4A73300D525E0</string>
-								<string>CB7C50B90DD895D000EA975A</string>
-								<string>CB7C50C40DD895E500EA975A</string>
+								<string>CB6589060E3102E900BB2ABA</string>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>11</integer>
-									<integer>5</integer>
+									<integer>20</integer>
+									<integer>8</integer>
 									<integer>2</integer>
 									<integer>0</integer>
 								</array>
@@ -384,12 +380,14 @@
 					<key>Dock</key>
 					<array>
 						<dict>
+							<key>BecomeActive</key>
+							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
 								<string>CBBF8D580D80348D00E0F4B1</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>ZKDataArchive.m</string>
+								<string>NSFileManager+ZKAdditions.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -397,14 +395,15 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>CBBF8D590D80348D00E0F4B1</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>ZKDataArchive.m</string>
+										<string>NSFileManager+ZKAdditions.m</string>
 										<key>_historyCapacity</key>
 										<integer>10</integer>
 										<key>bookmark</key>
-										<string>CB8ED749106BB88800B56563</string>
+										<string>CB31F6481090FB590084E2F1</string>
 										<key>history</key>
 										<array>
-											<string>CB8ED747106BB87900B56563</string>
+											<string>CB31F6461090FB590084E2F1</string>
+											<string>CB31F6471090FB590084E2F1</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -527,11 +526,11 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>CB8ED738106BB86400B56563</string>
+				<string>CB31F6491090FB590084E2F1</string>
 				<string>1CA23ED40692098700951B8B</string>
-				<string>CB8ED739106BB86400B56563</string>
+				<string>CB31F64A1090FB590084E2F1</string>
 				<string>CBBF8D580D80348D00E0F4B1</string>
-				<string>CB8ED73A106BB86400B56563</string>
+				<string>CB31F64B1090FB590084E2F1</string>
 				<string>1CA23EDF0692099D00951B8B</string>
 				<string>1CA23EE00692099D00951B8B</string>
 				<string>1CA23EE10692099D00951B8B</string>
@@ -680,13 +679,13 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>CB8ED73B106BB86400B56563</string>
+				<string>CB31F6321090FA620084E2F1</string>
 				<string>1CCC7628064C1048000F2A68</string>
 				<string>1CCC7629064C1048000F2A68</string>
-				<string>CB8ED73C106BB86400B56563</string>
-				<string>CB8ED73D106BB86400B56563</string>
-				<string>CB8ED73E106BB86400B56563</string>
-				<string>CB8ED73F106BB86400B56563</string>
+				<string>CB31F6331090FA620084E2F1</string>
+				<string>CB31F6341090FA620084E2F1</string>
+				<string>CB31F6351090FA620084E2F1</string>
+				<string>CB31F6361090FA620084E2F1</string>
 				<string>CBBF8D580D80348D00E0F4B1</string>
 			</array>
 			<key>ToolbarConfigUserDefaultsMinorVersion</key>
@@ -704,7 +703,7 @@
 	<key>StatusbarIsVisible</key>
 	<true/>
 	<key>TimeStamp</key>
-	<real>275495048.25670302</real>
+	<real>277936985.74204898</real>
 	<key>ToolbarDisplayMode</key>
 	<integer>2</integer>
 	<key>ToolbarIsVisible</key>
@@ -719,8 +718,6 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>CB8ED741106BB86400B56563</string>
-		<string>CB8ED742106BB86400B56563</string>
 		<string>/Users/karl/Projects/zipkit/ZipKit.xcodeproj</string>
 	</array>
 	<key>WindowString</key>

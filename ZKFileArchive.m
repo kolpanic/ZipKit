@@ -12,7 +12,6 @@
 #import "ZKCDTrailer64Locator.h"
 #import "ZKLFHeader.h"
 #import "ZKLog.h"
-#import "GMAppleDouble+ZKAdditions.h"
 #import "NSData+ZKAdditions.h"
 #import "NSDictionary+ZKAdditions.h"
 #import "NSFileHandle+ZKAdditions.h"
@@ -20,6 +19,10 @@
 #import "NSString+ZKAdditions.h"
 #import "ZKDefs.h"
 #import "zlib.h"
+
+#ifdef ZK_ON_MACOSX
+#import "GMAppleDouble+ZKAdditions.h"
+#endif
 
 @implementation ZKFileArchive
 
@@ -226,8 +229,10 @@
 			break;
 	}
 	
+#ifdef ZK_ON_MACOSX
 	if (result == zkSucceeded && rfFlag)
 			[self.fileManager combineAppleDoubleInDirectory:expansionDirectory];
+#endif
 	[self cleanUpExpansionDirectory:expansionDirectory];
 	
 	return result;
@@ -550,6 +555,7 @@
 	self.cdTrailer.totalNumberOfCentralDirectoryEntries++;
 	self.cdTrailer.sizeOfCentralDirectory += [dataCDHeader length];
 	
+#ifdef ZK_ON_MACOSX
 	if (rfFlag) {
 		// optionally include the file's deflated AppleDoubled Finder info and resource fork in the archive
 		NSData *appleDoubleData = [GMAppleDouble appleDoubleDataForPath:path];
@@ -588,6 +594,7 @@
 			self.cdTrailer.sizeOfCentralDirectory += [resourceCDHeader length];
 		}
 	}
+#endif
 	
 	// write the central directory to the archive
 	self.useZip64Extensions = (self.useZip64Extensions || [self.cdTrailer useZip64Extensions]);

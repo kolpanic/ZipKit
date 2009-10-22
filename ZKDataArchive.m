@@ -9,12 +9,15 @@
 #import "ZKCDHeader.h"
 #import "ZKCDTrailer.h"
 #import "ZKLFHeader.h"
-#import "GMAppleDouble+ZKAdditions.h"
 #import "NSData+ZKAdditions.h"
 #import "NSFileManager+ZKAdditions.h"
 #import "NSString+ZKAdditions.h"
 #import "ZKDefs.h"
 #import "zlib.h"
+
+#ifdef ZK_ON_MACOSX
+#import "GMAppleDouble+ZKAdditions.h"
+#endif
 
 @implementation ZKDataArchive
 
@@ -138,9 +141,11 @@
 		}
 		[self.fileManager setAttributes:fileAttributes ofItemAtPath:path error:nil]; 
 	}
-	
+
+#ifdef ZK_ON_MACOSX
 	if (rfFlag)
 		[self.fileManager combineAppleDoubleInDirectory:expansionDirectory];
+#endif
 	[self cleanUpExpansionDirectory:expansionDirectory];
 	
 	return zkSucceeded;
@@ -208,6 +213,7 @@
 		NSData *fileData = [NSData dataWithContentsOfFile:path];
 		NSDictionary *fileAttributes = [self.fileManager fileAttributesAtPath:path traverseLink:NO];
 		NSInteger rc = [self deflateData:fileData withFilename:relativePath andAttributes:fileAttributes];
+#ifdef ZK_ON_MACOSX
 		if (rc == zkSucceeded && rfFlag) {
 			NSData *appleDoubleData = [GMAppleDouble appleDoubleDataForPath:path];
 			if (appleDoubleData) {
@@ -218,6 +224,7 @@
 				rc = [self deflateData:appleDoubleData withFilename:appleDoublePath andAttributes:fileAttributes];
 			}
 		}
+#endif
 		return rc;
 	}
 	
