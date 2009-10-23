@@ -12,7 +12,7 @@
 	id delegate;
 }
 
-@property (retain) id item;
-@property (retain) id delegate;
+@property (assign) id item;
+@property (assign) id delegate;
 
 @end

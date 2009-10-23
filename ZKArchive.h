@@ -41,8 +41,8 @@
 - (void) didUpdateTotalCount:(NSNumber *) count;
 - (void) didUpdateBytesWritten:(NSNumber *) byteCount;
 
-@property (retain) id invoker;
-@property (retain) id delegate;
+@property (assign) id invoker;
+@property (assign) id delegate;
 @property (copy) NSString *archivePath;
 @property (retain) NSMutableArray *centralDirectory;
 @property (retain) NSFileManager *fileManager;
