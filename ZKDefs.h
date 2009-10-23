@@ -5,6 +5,9 @@
 //  Created by Karl Moskowski on 01/04/09.
 //
 
+#define ZK_TARGET_OS_MAC (TARGET_OS_MAC && !(TARGET_OS_EMBEDDED || TARGET_OS_IPHONE))
+#define ZK_TARGET_OS_IPHONE (TARGET_OS_EMBEDDED || TARGET_OS_IPHONE || TARGET_OS_IPHONE_SIMULATOR)
+
 enum ZKReturnCodes {
 	zkFailed = -1,
 	zkCancelled = 0,

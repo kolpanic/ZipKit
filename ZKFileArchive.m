@@ -20,7 +20,7 @@
 #import "ZKDefs.h"
 #import "zlib.h"
 
-#ifdef ZK_ON_MACOSX
+#if ZK_TARGET_OS_MAC
 #import "GMAppleDouble+ZKAdditions.h"
 #endif
 
@@ -229,7 +229,7 @@
 			break;
 	}
 	
-#ifdef ZK_ON_MACOSX
+#if ZK_TARGET_OS_MAC
 	if (result == zkSucceeded && rfFlag)
 			[self.fileManager combineAppleDoubleInDirectory:expansionDirectory];
 #endif
@@ -555,7 +555,7 @@
 	self.cdTrailer.totalNumberOfCentralDirectoryEntries++;
 	self.cdTrailer.sizeOfCentralDirectory += [dataCDHeader length];
 	
-#ifdef ZK_ON_MACOSX
+#if ZK_TARGET_OS_MAC
 	if (rfFlag) {
 		// optionally include the file's deflated AppleDoubled Finder info and resource fork in the archive
 		NSData *appleDoubleData = [GMAppleDouble appleDoubleDataForPath:path];

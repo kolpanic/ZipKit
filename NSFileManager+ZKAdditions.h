@@ -6,6 +6,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "ZKDefs.h"
 
 @interface NSFileManager (ZKAdditions)
 
@@ -14,7 +15,7 @@
 
 - (unsigned long long) dataSizeAtFilePath:(NSString *) path;
 - (NSDictionary *) totalSizeAndItemCountAtPath:(NSString *) path usingResourceFork:(BOOL) rfFlag;
-#ifdef ZK_ON_MACOSX
+#if ZK_TARGET_OS_MAC
 - (void) combineAppleDoubleInDirectory:(NSString *) path;
 #endif
 

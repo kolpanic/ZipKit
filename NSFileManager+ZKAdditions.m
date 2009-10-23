@@ -8,9 +8,8 @@
 #import "NSFileManager+ZKAdditions.h"
 #import "NSData+ZKAdditions.h"
 #import "NSDictionary+ZKAdditions.h"
-#import "ZKDefs.h"
 
-#ifdef ZK_ON_MACOSX
+#if ZK_TARGET_OS_MAC
 #import "GMAppleDouble+ZKAdditions.h"
 #endif
 
@@ -32,7 +31,7 @@ const NSUInteger ZKMaxEntriesPerFetch = 40;
 	return [[self fileAttributesAtPath:path traverseLink:NO] fileSize];
 }
 
-#ifdef ZK_ON_MACOSX
+#if ZK_TARGET_OS_MAC
 - (void) totalsAtDirectoryFSRef:(FSRef*) fsRef usingResourceFork:(BOOL) rfFlag
 					  totalSize:(unsigned long long *) size
 					  itemCount:(unsigned long long *) count {
@@ -65,7 +64,7 @@ const NSUInteger ZKMaxEntriesPerFetch = 40;
 - (NSDictionary *) totalSizeAndItemCountAtPath:(NSString *) path usingResourceFork:(BOOL) rfFlag {
 	unsigned long long size = 0;
 	unsigned long long count = 0;
-#ifdef ZK_ON_MACOSX
+#if ZK_TARGET_OS_MAC
 	FSRef fsRef;
 	Boolean isDirectory;
 	OSStatus status = FSPathMakeRef((const unsigned char*)[path fileSystemRepresentation], &fsRef, &isDirectory);
@@ -81,13 +80,14 @@ const NSUInteger ZKMaxEntriesPerFetch = 40;
 			size = info.dataLogicalSize + (rfFlag ? info.rsrcLogicalSize : 0);
 	}
 #else
-	size = [self dataSizeAtFilePath:path];
-	count = 0; // TODO: fix this for non-Mac targets
+	// TODO: maybe fix this for non-Mac targets
+	size = 0;
+	count = 0;
 #endif
 	return [NSDictionary totalSizeAndCountDictionaryWithSize:size andItemCount:count];
 }
 
-#ifdef ZK_ON_MACOSX
+#if ZK_TARGET_OS_MAC
 - (void) combineAppleDoubleInDirectory:(NSString *) path {
 	if (![self isDirAtPath:path])
 		return;

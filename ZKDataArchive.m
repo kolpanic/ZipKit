@@ -15,7 +15,7 @@
 #import "ZKDefs.h"
 #import "zlib.h"
 
-#ifdef ZK_ON_MACOSX
+#if ZK_TARGET_OS_MAC
 #import "GMAppleDouble+ZKAdditions.h"
 #endif
 
@@ -142,7 +142,7 @@
 		[self.fileManager setAttributes:fileAttributes ofItemAtPath:path error:nil]; 
 	}
 
-#ifdef ZK_ON_MACOSX
+#if ZK_TARGET_OS_MAC
 	if (rfFlag)
 		[self.fileManager combineAppleDoubleInDirectory:expansionDirectory];
 #endif
@@ -213,7 +213,7 @@
 		NSData *fileData = [NSData dataWithContentsOfFile:path];
 		NSDictionary *fileAttributes = [self.fileManager fileAttributesAtPath:path traverseLink:NO];
 		NSInteger rc = [self deflateData:fileData withFilename:relativePath andAttributes:fileAttributes];
-#ifdef ZK_ON_MACOSX
+#if ZK_TARGET_OS_MAC
 		if (rc == zkSucceeded && rfFlag) {
 			NSData *appleDoubleData = [GMAppleDouble appleDoubleDataForPath:path];
 			if (appleDoubleData) {
