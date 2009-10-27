@@ -187,8 +187,8 @@
 
 + (ZKFileArchive *) archiveWithArchivePath:(NSString *) path {
 	ZKFileArchive *archive = [ZKFileArchive new];
-	if ([archive.fileManager fileExistsAtPath:path]) {
-		archive.archivePath = path;
+	archive.archivePath = path;
+	if ([archive.fileManager fileExistsAtPath:archive.archivePath]) {
 		archive.cdTrailer = [ZKCDTrailer recordWithArchivePath:path];
 		if (archive.cdTrailer) {
 			ZKCDTrailer64Locator *trailer64Locator = [ZKCDTrailer64Locator recordWithArchivePath:path
@@ -211,8 +211,6 @@
 		} else {
 			archive = nil;
 		}
-	} else {
-		archive = nil;
 	}
 	return archive;
 }
