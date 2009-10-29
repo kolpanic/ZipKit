@@ -17,17 +17,17 @@ const NSUInteger ZKMaxEntriesPerFetch = 40;
 
 @implementation  NSFileManager (ZKAdditions)
 
-- (BOOL) isSymLinkAtPath:(NSString *) path {
+- (BOOL) zkIsSymLinkAtPath:(NSString *) path {
 	return [[[self fileAttributesAtPath:path traverseLink:NO] fileType] isEqualToString:NSFileTypeSymbolicLink];
 }
 
-- (BOOL) isDirAtPath:(NSString *) path {
+- (BOOL) zkIsDirAtPath:(NSString *) path {
 	BOOL isDir;
 	BOOL pathExists = [self fileExistsAtPath:path isDirectory:&isDir];
 	return pathExists && isDir;
 }
 
-- (unsigned long long) dataSizeAtFilePath:(NSString *) path {
+- (unsigned long long) zkDataSizeAtFilePath:(NSString *) path {
 	return [[self fileAttributesAtPath:path traverseLink:NO] fileSize];
 }
 
@@ -61,7 +61,7 @@ const NSUInteger ZKMaxEntriesPerFetch = 40;
 }
 #endif
 
-- (NSDictionary *) totalSizeAndItemCountAtPath:(NSString *) path usingResourceFork:(BOOL) rfFlag {
+- (NSDictionary *) zkTotalSizeAndItemCountAtPath:(NSString *) path usingResourceFork:(BOOL) rfFlag {
 	unsigned long long size = 0;
 	unsigned long long count = 0;
 #if ZK_TARGET_OS_MAC
@@ -84,19 +84,19 @@ const NSUInteger ZKMaxEntriesPerFetch = 40;
 	size = 0;
 	count = 0;
 #endif
-	return [NSDictionary totalSizeAndCountDictionaryWithSize:size andItemCount:count];
+	return [NSDictionary zkTotalSizeAndCountDictionaryWithSize:size andItemCount:count];
 }
 
 #if ZK_TARGET_OS_MAC
-- (void) combineAppleDoubleInDirectory:(NSString *) path {
-	if (![self isDirAtPath:path])
+- (void) zkCombineAppleDoubleInDirectory:(NSString *) path {
+	if (![self zkIsDirAtPath:path])
 		return;
 	NSArray *dirContents = [self contentsOfDirectoryAtPath:path error:nil];
 	for (NSString *entry in dirContents) {
 		NSString *subPath = [path stringByAppendingPathComponent:entry];
-		if (![self isSymLinkAtPath:subPath]) {
-			if ([self isDirAtPath:subPath])
-				[self combineAppleDoubleInDirectory:subPath];
+		if (![self zkIsSymLinkAtPath:subPath]) {
+			if ([self zkIsDirAtPath:subPath])
+				[self zkCombineAppleDoubleInDirectory:subPath];
 			else {
 				// if the file is an AppleDouble file (i.e., it begins with "._") in the __MACOSX hierarchy,
 				// find its corresponding data fork and combine them
@@ -114,7 +114,7 @@ const NSUInteger ZKMaxEntriesPerFetch = 40;
 							}
 						}
 						NSData *appleDoubleData = [NSData dataWithContentsOfFile:subPath];
-						[GMAppleDouble restoreAppleDoubleData:appleDoubleData toPath:[NSString pathWithComponents:pathComponents]];
+						[GMAppleDouble zkRestoreAppleDoubleData:appleDoubleData toPath:[NSString pathWithComponents:pathComponents]];
 					}
 				}
 			}
@@ -123,19 +123,19 @@ const NSUInteger ZKMaxEntriesPerFetch = 40;
 }
 #endif
 
-- (NSDate *) modificationDateForPath:(NSString *) path {
+- (NSDate *) zkModificationDateForPath:(NSString *) path {
 	return [[self fileAttributesAtPath:path traverseLink:NO] fileModificationDate];
 }
 
-- (NSUInteger) posixPermissionsAtPath:(NSString *) path {
+- (NSUInteger) zkPosixPermissionsAtPath:(NSString *) path {
 	return [[self fileAttributesAtPath:path traverseLink:NO] filePosixPermissions];
 }
 
-- (NSUInteger) externalFileAttributesAtPath:(NSString *) path {
-	return [self externalFileAttributesFor:[self fileAttributesAtPath:path traverseLink:NO]];
+- (NSUInteger) zkExternalFileAttributesAtPath:(NSString *) path {
+	return [self zkExternalFileAttributesFor:[self fileAttributesAtPath:path traverseLink:NO]];
 }
 
-- (NSUInteger) externalFileAttributesFor:(NSDictionary *) fileAttributes {
+- (NSUInteger) zkExternalFileAttributesFor:(NSDictionary *) fileAttributes {
 	NSUInteger externalFileAttributes = 0;
 	@try {
 		BOOL isSymLink = [[fileAttributes fileType] isEqualToString:NSFileTypeSymbolicLink];
@@ -148,15 +148,15 @@ const NSUInteger ZKMaxEntriesPerFetch = 40;
 	return externalFileAttributes;
 }
 
-- (NSUInteger) crcForPath:(NSString *) path {
-	return [self crcForPath:path invoker:nil throttleThreadSleepTime:0.0];
+- (NSUInteger) zkCrcForPath:(NSString *) path {
+	return [self zkCrcForPath:path invoker:nil throttleThreadSleepTime:0.0];
 }
 
-- (NSUInteger) crcForPath:(NSString *) path invoker:(id)invoker {
-	return [self crcForPath:path invoker:invoker throttleThreadSleepTime:0.0];
+- (NSUInteger) zkCrcForPath:(NSString *) path invoker:(id)invoker {
+	return [self zkCrcForPath:path invoker:invoker throttleThreadSleepTime:0.0];
 }
 
-- (NSUInteger) crcForPath:(NSString *)path invoker:(id)invoker throttleThreadSleepTime:(NSTimeInterval) throttleThreadSleepTime {
+- (NSUInteger) zkCrcForPath:(NSString *)path invoker:(id)invoker throttleThreadSleepTime:(NSTimeInterval) throttleThreadSleepTime {
 	NSUInteger crc32 = 0;
 	path = [path stringByExpandingTildeInPath];
 	BOOL isDirectory;
@@ -165,7 +165,7 @@ const NSUInteger ZKMaxEntriesPerFetch = 40;
 		NSFileHandle *fileHandle = [NSFileHandle fileHandleForReadingAtPath:path];
 		NSData *block = [fileHandle readDataOfLength:crcBlockSize] ;
 		while ([block length] > 0) {
-			crc32 = [block crc32:crc32];
+			crc32 = [block zkCrc32:crc32];
 			if ([invoker respondsToSelector:@selector(isCancelled)]) {
 				if ([invoker isCancelled]) {
 					[fileHandle closeFile];

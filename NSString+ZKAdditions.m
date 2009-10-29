@@ -10,11 +10,11 @@
 
 @implementation NSString (ZKAdditions)
 
-- (NSUInteger) precomposedUTF8Length {
+- (NSUInteger) zkPrecomposedUTF8Length {
 	return [[self precomposedStringWithCanonicalMapping] lengthOfBytesUsingEncoding:NSUTF8StringEncoding];
 }
 
-- (BOOL) isResourceForkPath {
+- (BOOL) zkIsResourceForkPath {
 	return [[[self pathComponents] objectAtIndex:0] isEqualToString:ZKMacOSXDirectory];
 }
 

@@ -95,7 +95,7 @@
 		inflatedData = [cdHeader.filename dataUsingEncoding:NSUTF8StringEncoding];
 		fileType = NSFileTypeDirectory;
 	} else {
-		inflatedData = [deflatedData inflate];
+		inflatedData = [deflatedData zkInflate];
 		fileType = NSFileTypeRegular;
 	}
 	
@@ -144,7 +144,7 @@
 
 #if ZK_TARGET_OS_MAC
 	if (rfFlag)
-		[self.fileManager combineAppleDoubleInDirectory:expansionDirectory];
+		[self.fileManager zkCombineAppleDoubleInDirectory:expansionDirectory];
 #endif
 	[self cleanUpExpansionDirectory:expansionDirectory];
 	
@@ -159,7 +159,7 @@
 - (NSInteger) deflateFiles:(NSArray *) paths relativeToPath:(NSString *) basePath usingResourceFork:(BOOL) rfFlag {
 	NSInteger rc = zkSucceeded;
 	for (NSString *path in paths) {
-		if ([self.fileManager isDirAtPath:path] && ![self.fileManager isSymLinkAtPath:path]) {
+		if ([self.fileManager zkIsDirAtPath:path] && ![self.fileManager zkIsSymLinkAtPath:path]) {
 			rc = [self deflateDirectory:path relativeToPath:basePath usingResourceFork:rfFlag];
 			if (rc != zkSucceeded)
 				break;
@@ -186,8 +186,8 @@
 }
 
 - (NSInteger) deflateFile:(NSString *) path relativeToPath:(NSString *) basePath usingResourceFork:(BOOL) rfFlag {
-	BOOL isDir = [self.fileManager isDirAtPath:path];
-	BOOL isSymlink = [self.fileManager isSymLinkAtPath:path];
+	BOOL isDir = [self.fileManager zkIsDirAtPath:path];
+	BOOL isSymlink = [self.fileManager zkIsSymLinkAtPath:path];
 	BOOL isFile = (!isSymlink && !isDir);
 	
 	//	if (self.delegate) {
@@ -215,7 +215,7 @@
 		NSInteger rc = [self deflateData:fileData withFilename:relativePath andAttributes:fileAttributes];
 #if ZK_TARGET_OS_MAC
 		if (rc == zkSucceeded && rfFlag) {
-			NSData *appleDoubleData = [GMAppleDouble appleDoubleDataForPath:path];
+			NSData *appleDoubleData = [GMAppleDouble zkAppleDoubleDataForPath:path];
 			if (appleDoubleData) {
 				NSString *appleDoublePath = [[ZKMacOSXDirectory stringByAppendingPathComponent:
 											  [relativePath stringByDeletingLastPathComponent]]
@@ -231,9 +231,9 @@
 	// create the local file header for the file
 	ZKLFHeader *lfHeaderData = [ZKLFHeader new];
 	lfHeaderData.uncompressedSize = 0;
-	lfHeaderData.lastModDate = [self.fileManager modificationDateForPath:path];
+	lfHeaderData.lastModDate = [self.fileManager zkModificationDateForPath:path];
 	lfHeaderData.filename = relativePath;
-	lfHeaderData.filenameLength = [lfHeaderData.filename precomposedUTF8Length];
+	lfHeaderData.filenameLength = [lfHeaderData.filename zkPrecomposedUTF8Length];
 	lfHeaderData.crc = 0;
 	lfHeaderData.compressedSize = 0;
 	
@@ -244,7 +244,7 @@
 	if (isSymlink) {
 		NSString *symlinkPath = [self.fileManager destinationOfSymbolicLinkAtPath:path error:nil];
 		NSData *symlinkData = [symlinkPath dataUsingEncoding:NSUTF8StringEncoding];
-		lfHeaderData.crc = [symlinkData crc32];
+		lfHeaderData.crc = [symlinkData zkCrc32];
 		lfHeaderData.compressedSize = [symlinkData length];
 		lfHeaderData.uncompressedSize = [symlinkData length];
 		lfHeaderData.compressionMethod = Z_NO_COMPRESSION;
@@ -272,7 +272,7 @@
 	cdHeaderData.compressionMethod = lfHeaderData.compressionMethod;
 	cdHeaderData.generalPurposeBitFlag = lfHeaderData.generalPurposeBitFlag;
 	cdHeaderData.versionNeededToExtract = lfHeaderData.versionNeededToExtract;
-	cdHeaderData.externalFileAttributes = [self.fileManager externalFileAttributesAtPath:path];
+	cdHeaderData.externalFileAttributes = [self.fileManager zkExternalFileAttributesAtPath:path];
 	[self.centralDirectory addObject:cdHeaderData];
 	
 	// update the central directory trailer
@@ -293,7 +293,7 @@
 	if (!filename || [filename length] < 1)
 		return zkFailed;
 	
-	NSData *deflatedData = [data deflate];
+	NSData *deflatedData = [data zkDeflate];
 	if (!deflatedData)
 		return zkFailed;
 	
@@ -303,8 +303,8 @@
 	ZKLFHeader *lfHeaderData = [ZKLFHeader new];
 	lfHeaderData.uncompressedSize = [data length];
 	lfHeaderData.filename = filename;
-	lfHeaderData.filenameLength = [lfHeaderData.filename precomposedUTF8Length];
-	lfHeaderData.crc = [data crc32];
+	lfHeaderData.filenameLength = [lfHeaderData.filename zkPrecomposedUTF8Length];
+	lfHeaderData.crc = [data zkCrc32];
 	lfHeaderData.compressedSize = [deflatedData length];
 	
 	ZKCDHeader *cdHeaderData = [ZKCDHeader new];
@@ -328,7 +328,7 @@
 			lfHeaderData.lastModDate = [fileAttributes objectForKey:NSFileModificationDate];
 			cdHeaderData.lastModDate = lfHeaderData.lastModDate;
 		}
-		cdHeaderData.externalFileAttributes = [self.fileManager externalFileAttributesFor:fileAttributes];
+		cdHeaderData.externalFileAttributes = [self.fileManager zkExternalFileAttributesFor:fileAttributes];
 	}
 	
 	[self.data appendData:[lfHeaderData data]];

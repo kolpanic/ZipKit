@@ -111,7 +111,7 @@
 					[archive performSelectorOnMainThread:@selector(didBeginZip) withObject:nil waitUntilDone:NO];
 			}
 			NSInteger result = zkSucceeded;
-			if ([archive.fileManager isDirAtPath:path] && ![archive.fileManager isSymLinkAtPath:path]) {
+			if ([archive.fileManager zkIsDirAtPath:path] && ![archive.fileManager zkIsSymLinkAtPath:path]) {
 				result = [archive deflateDirectory:path relativeToPath:[path stringByDeletingLastPathComponent] usingResourceFork:rfFlag];
 			} else {
 				result = [archive deflateFile:path relativeToPath:[path stringByDeletingLastPathComponent] usingResourceFork:rfFlag];
@@ -231,7 +231,7 @@
 	
 #if ZK_TARGET_OS_MAC
 	if (result == zkSucceeded && rfFlag)
-			[self.fileManager combineAppleDoubleInDirectory:expansionDirectory];
+			[self.fileManager zkCombineAppleDoubleInDirectory:expansionDirectory];
 #endif
 	[self cleanUpExpansionDirectory:expansionDirectory];
 	
@@ -280,7 +280,7 @@
 			strm.total_out = 0;
 			ret = inflateInit2(&strm, -MAX_WBITS);
 			if (ret == Z_OK) {
-				NSFileHandle *inflatedFile = [NSFileHandle newFileHandleForWritingAtPath:path];
+				NSFileHandle *inflatedFile = [NSFileHandle zkNewFileHandleForWritingAtPath:path];
 				unsigned char out[ZKZipBlockSize];
 				do {
 					chunkSize = MIN(ZKZipBlockSize, cdHeader.compressedSize - totalBytesRead);
@@ -347,11 +347,11 @@
 			bytesRead = [deflatedData length];
 			totalBytesRead += bytesRead;
 			if (bytesRead > 0 && totalBytesRead <= cdHeader.compressedSize) {
-				NSFileHandle *inflatedFile = [NSFileHandle newFileHandleForWritingAtPath:path];
+				NSFileHandle *inflatedFile = [NSFileHandle zkNewFileHandleForWritingAtPath:path];
 				do {
 					[inflatedFile writeData:deflatedData];
 					bytesWritten += bytesRead;
-					crc = [deflatedData crc32:crc];
+					crc = [deflatedData zkCrc32:crc];
 					chunkSize = MIN(ZKZipBlockSize, cdHeader.compressedSize - totalBytesRead);
 					deflatedData = [archiveFile readDataOfLength:chunkSize];
 					if ([self delegateWantsSizes]) {
@@ -403,7 +403,7 @@
 - (NSInteger) deflateFiles:(NSArray *) paths relativeToPath:(NSString *) basePath usingResourceFork:(BOOL) rfFlag {
 	NSInteger rc = zkSucceeded;
 	for (NSString *path in paths) {
-		if ([self.fileManager isDirAtPath:path] && ![self.fileManager isSymLinkAtPath:path]) {
+		if ([self.fileManager zkIsDirAtPath:path] && ![self.fileManager zkIsSymLinkAtPath:path]) {
 			rc = [self deflateDirectory:path relativeToPath:basePath usingResourceFork:rfFlag];
 			if (rc != zkSucceeded)
 				break;
@@ -430,10 +430,10 @@
 }
 
 - (NSInteger) deflateFile:(NSString *) path relativeToPath:(NSString *) basePath usingResourceFork:(BOOL) rfFlag {
-	BOOL isDir = [self.fileManager isDirAtPath:path];
-	BOOL isSymlink = [self.fileManager isSymLinkAtPath:path];
+	BOOL isDir = [self.fileManager zkIsDirAtPath:path];
+	BOOL isSymlink = [self.fileManager zkIsSymLinkAtPath:path];
 	
-	NSFileHandle *archiveFile = [NSFileHandle newFileHandleForWritingAtPath:self.archivePath];
+	NSFileHandle *archiveFile = [NSFileHandle zkNewFileHandleForWritingAtPath:self.archivePath];
 
 	// append a trailing slash to directory paths
 	if (isDir && !isSymlink && ![[path substringFromIndex:([path length] - 1)] isEqualToString:@"/"])
@@ -456,10 +456,10 @@
 	
 	// create the local file header for the file
 	ZKLFHeader *lfHeaderData = [ZKLFHeader new];
-	lfHeaderData.uncompressedSize = [self.fileManager dataSizeAtFilePath:path];
-	lfHeaderData.lastModDate = [self.fileManager modificationDateForPath:path];
+	lfHeaderData.uncompressedSize = [self.fileManager zkDataSizeAtFilePath:path];
+	lfHeaderData.lastModDate = [self.fileManager zkModificationDateForPath:path];
 	lfHeaderData.filename = relativePath;
-	lfHeaderData.filenameLength = [lfHeaderData.filename precomposedUTF8Length];
+	lfHeaderData.filenameLength = [lfHeaderData.filename zkPrecomposedUTF8Length];
 	lfHeaderData.crc = 0;
 	lfHeaderData.compressedSize = 0;
 	
@@ -471,7 +471,7 @@
 	if (isSymlink) {
 		NSString *symlinkPath = [self.fileManager destinationOfSymbolicLinkAtPath:path error:nil];
 		NSData *symlinkData = [symlinkPath dataUsingEncoding:NSUTF8StringEncoding];
-		lfHeaderData.crc = [symlinkData crc32];
+		lfHeaderData.crc = [symlinkData zkCrc32];
 		lfHeaderData.compressedSize = [symlinkData length];
 		lfHeaderData.uncompressedSize = [symlinkData length];
 		lfHeaderData.compressionMethod = Z_NO_COMPRESSION;
@@ -588,7 +588,7 @@
 	dataCDHeader.compressionMethod = lfHeaderData.compressionMethod;
 	dataCDHeader.generalPurposeBitFlag = lfHeaderData.generalPurposeBitFlag;
 	dataCDHeader.versionNeededToExtract = lfHeaderData.versionNeededToExtract;
-	dataCDHeader.externalFileAttributes = [self.fileManager externalFileAttributesAtPath:path];
+	dataCDHeader.externalFileAttributes = [self.fileManager zkExternalFileAttributesAtPath:path];
 	[self.centralDirectory addObject:dataCDHeader];
 	self.useZip64Extensions = (self.useZip64Extensions || [dataCDHeader useZip64Extensions]);
 	
@@ -601,9 +601,9 @@
 #if ZK_TARGET_OS_MAC
 	if (rfFlag) {
 		// optionally include the file's deflated AppleDoubled Finder info and resource fork in the archive
-		NSData *appleDoubleData = [GMAppleDouble appleDoubleDataForPath:path];
+		NSData *appleDoubleData = [GMAppleDouble zkAppleDoubleDataForPath:path];
 		if (appleDoubleData) {
-			NSData *deflatedData = [appleDoubleData deflate];
+			NSData *deflatedData = [appleDoubleData zkDeflate];
 			
 			ZKLFHeader *lfHeaderResource = [ZKLFHeader new];
 			lfHeaderResource.uncompressedSize = [appleDoubleData length];
@@ -612,8 +612,8 @@
 										  [relativePath stringByDeletingLastPathComponent]]
 										 stringByAppendingPathComponent:
 										 [ZKDotUnderscore stringByAppendingString:[relativePath lastPathComponent]]];
-			lfHeaderResource.filenameLength = [lfHeaderResource.filename precomposedUTF8Length];
-			lfHeaderResource.crc = [appleDoubleData crc32];
+			lfHeaderResource.filenameLength = [lfHeaderResource.filename zkPrecomposedUTF8Length];
+			lfHeaderResource.crc = [appleDoubleData zkCrc32];
 			lfHeaderResource.compressedSize = [deflatedData length];
 			
 			ZKCDHeader *resourceCDHeader = [ZKCDHeader new];

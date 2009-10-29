@@ -14,7 +14,7 @@
 
 @implementation NSData (ZKAdditions)
 
-- (UInt16) hostInt16OffsetBy:(NSUInteger *)offset {
+- (UInt16) zkHostInt16OffsetBy:(NSUInteger *)offset {
 	UInt16 value;
 	NSUInteger length = sizeof(value);
 	[self getBytes:&value range:NSMakeRange(*offset, length)];
@@ -22,7 +22,7 @@
 	return CFSwapInt32LittleToHost(value);
 }
 
-- (UInt32) hostInt32OffsetBy:(NSUInteger *)offset {
+- (UInt32) zkHostInt32OffsetBy:(NSUInteger *)offset {
 	UInt32 value;
 	NSUInteger length = sizeof(value);
 	[self getBytes:&value range:NSMakeRange(*offset, length)];
@@ -30,7 +30,7 @@
 	return CFSwapInt32LittleToHost(value);
 }
 
-- (UInt64) hostInt64OffsetBy:(NSUInteger *)offset {
+- (UInt64) zkHostInt64OffsetBy:(NSUInteger *)offset {
 	UInt64 value;
 	NSUInteger length = sizeof(value);
 	[self getBytes:&value range:NSMakeRange(*offset, length)];
@@ -38,12 +38,12 @@
 	return CFSwapInt64LittleToHost(value);
 }
 
-- (BOOL) hostBoolOffsetBy:(NSUInteger *) offset {
-	UInt32 value = [self hostInt32OffsetBy:offset];
+- (BOOL) zkHostBoolOffsetBy:(NSUInteger *) offset {
+	UInt32 value = [self zkHostInt32OffsetBy:offset];
 	return (value != 0);
 }
 
-- (NSString *) stringOffsetBy:(NSUInteger *)offset length:(NSUInteger)length {
+- (NSString *) zkStringOffsetBy:(NSUInteger *)offset length:(NSUInteger)length {
 	NSString *value = nil;
 	if (length > 0)
 		value = [[NSString alloc] initWithData:[self subdataWithRange:NSMakeRange(*offset, length)] encoding:NSUTF8StringEncoding];
@@ -51,15 +51,15 @@
 	return value;
 }
 
-- (NSUInteger) crc32 {
-	return [self crc32:0];
+- (NSUInteger) zkCrc32 {
+	return [self zkCrc32:0];
 }
 
-- (NSUInteger) crc32:(NSUInteger)crc {
+- (NSUInteger) zkCrc32:(NSUInteger)crc {
 	return crc32(crc, [self bytes], [self length]);
 }
 
-- (NSData *) inflate {
+- (NSData *) zkInflate {
 	NSUInteger full_length = [self length];
 	NSUInteger half_length = full_length / 2;
 	
@@ -92,7 +92,7 @@
 	return inflatedData;
 }
 
-- (NSData *) deflate {
+- (NSData *) zkDeflate {
 	z_stream strm;
 	
 	strm.zalloc = Z_NULL;
@@ -121,44 +121,44 @@
 
 @implementation NSMutableData (ZKAdditions)
 
-+ (NSMutableData *)dataWithLittleInt16: (UInt16)value {
++ (NSMutableData *)zkDataWithLittleInt16: (UInt16)value {
 	NSMutableData *data = [self data];
-	[data appendLittleInt16:value];
+	[data zkAppendLittleInt16:value];
 	return data;
 }
 
-+ (NSMutableData *) dataWithLittleInt32:(UInt32)value {
++ (NSMutableData *) zkDataWithLittleInt32:(UInt32)value {
 	NSMutableData *data = [self data];
-	[data appendLittleInt32:value];
+	[data zkAppendLittleInt32:value];
 	return data;
 }
 
-+ (NSMutableData *) dataWithLittleInt64:(UInt64)value {
++ (NSMutableData *) zkDataWithLittleInt64:(UInt64)value {
 	NSMutableData *data = [self data];
-	[data appendLittleInt64:value];
+	[data zkAppendLittleInt64:value];
 	return data;
 }
 
-- (void) appendLittleInt16:(UInt16)value {
+- (void) zkAppendLittleInt16:(UInt16)value {
 	UInt16 swappedValue = CFSwapInt16HostToLittle(value);
 	[self appendBytes:&swappedValue length:sizeof(swappedValue)];
 }
 
-- (void) appendLittleInt32:(UInt32)value {
+- (void) zkAppendLittleInt32:(UInt32)value {
 	UInt32 swappedValue = CFSwapInt32HostToLittle(value);
 	[self appendBytes:&swappedValue length:sizeof(swappedValue)];
 }
 
-- (void) appendLittleInt64:(UInt64)value {
+- (void) zkAppendLittleInt64:(UInt64)value {
 	UInt64 swappedValue = CFSwapInt64HostToLittle(value);
 	[self appendBytes:&swappedValue length:sizeof(swappedValue)];
 }
 
-- (void) appendLittleBool:(BOOL) value {
-	return [self appendLittleInt32:(value ? 1 : 0)];
+- (void) zkAppendLittleBool:(BOOL) value {
+	return [self zkAppendLittleInt32:(value ? 1 : 0)];
 }
 
-- (void) appendPrecomposedUTF8String:(NSString *)value {
+- (void) zkAppendPrecomposedUTF8String:(NSString *)value {
 	return [self appendData:[[value precomposedStringWithCanonicalMapping] dataUsingEncoding:NSUTF8StringEncoding]];
 }
 

@@ -9,7 +9,7 @@
 
 @implementation NSFileHandle (ZKAdditions)
 
-+ (NSFileHandle *)newFileHandleForWritingAtPath:(NSString *)path {
++ (NSFileHandle *)zkNewFileHandleForWritingAtPath:(NSString *)path {
 	NSFileManager *fileManager = [NSFileManager new];
 	if (![fileManager fileExistsAtPath:path]) {
 		[fileManager createDirectoryAtPath:[path stringByDeletingLastPathComponent] withIntermediateDirectories:YES attributes:nil error:nil];

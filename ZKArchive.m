@@ -67,9 +67,9 @@
 	NSFileManager *fmgr = [NSFileManager new];
 	NSDictionary *dict;
 	for (NSString *path in paths) {
-		dict = [fmgr totalSizeAndItemCountAtPath:path usingResourceFork:rfFlag];
-		size += [dict totalFileSize];
-		count += [dict itemCount];
+		dict = [fmgr zkTotalSizeAndItemCountAtPath:path usingResourceFork:rfFlag];
+		size += [dict zkTotalFileSize];
+		count += [dict zkItemCount];
 	}
 	[self performSelectorOnMainThread:@selector(didUpdateTotalSize:)
 						   withObject:[NSNumber numberWithUnsignedLongLong:size] waitUntilDone:NO];

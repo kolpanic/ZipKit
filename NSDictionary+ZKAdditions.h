@@ -9,8 +9,8 @@
 
 @interface NSDictionary (ZKAdditions)
 
-+ (NSDictionary *) totalSizeAndCountDictionaryWithSize:(unsigned long long) size andItemCount:(unsigned long long) count;
-- (unsigned long long) totalFileSize;
-- (unsigned long long) itemCount;
++ (NSDictionary *) zkTotalSizeAndCountDictionaryWithSize:(unsigned long long) size andItemCount:(unsigned long long) count;
+- (unsigned long long) zkTotalFileSize;
+- (unsigned long long) zkItemCount;
 
 @end

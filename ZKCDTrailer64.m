@@ -25,19 +25,19 @@
 
 + (ZKCDTrailer64 *) recordWithData:(NSData *)data atOffset:(NSUInteger)offset {
 	if (!data) return nil;
-	NSUInteger mn = [data hostInt32OffsetBy:&offset];
+	NSUInteger mn = [data zkHostInt32OffsetBy:&offset];
 	if (mn != ZKCDTrailer64MagicNumber) return nil;
 	ZKCDTrailer64 *record = [ZKCDTrailer64 new];
 	record.magicNumber = mn;
-	record.sizeOfTrailer = [data hostInt64OffsetBy:&offset];
-	record.versionMadeBy = [data hostInt16OffsetBy:&offset];
-	record.versionNeededToExtract = [data hostInt16OffsetBy:&offset];
-	record.thisDiskNumber = [data hostInt32OffsetBy:&offset];
-	record.diskNumberWithStartOfCentralDirectory = [data hostInt32OffsetBy:&offset];
-	record.numberOfCentralDirectoryEntriesOnThisDisk = [data hostInt64OffsetBy:&offset];
-	record.totalNumberOfCentralDirectoryEntries = [data hostInt64OffsetBy:&offset];
-	record.sizeOfCentralDirectory = [data hostInt64OffsetBy:&offset];
-	record.offsetOfStartOfCentralDirectory = [data hostInt64OffsetBy:&offset];
+	record.sizeOfTrailer = [data zkHostInt64OffsetBy:&offset];
+	record.versionMadeBy = [data zkHostInt16OffsetBy:&offset];
+	record.versionNeededToExtract = [data zkHostInt16OffsetBy:&offset];
+	record.thisDiskNumber = [data zkHostInt32OffsetBy:&offset];
+	record.diskNumberWithStartOfCentralDirectory = [data zkHostInt32OffsetBy:&offset];
+	record.numberOfCentralDirectoryEntriesOnThisDisk = [data zkHostInt64OffsetBy:&offset];
+	record.totalNumberOfCentralDirectoryEntries = [data zkHostInt64OffsetBy:&offset];
+	record.sizeOfCentralDirectory = [data zkHostInt64OffsetBy:&offset];
+	record.offsetOfStartOfCentralDirectory = [data zkHostInt64OffsetBy:&offset];
 	return record;
 }
 
@@ -50,16 +50,16 @@
 }
 
 - (NSData *) data {
-	NSMutableData *data = [NSMutableData dataWithLittleInt32:self.magicNumber];
-	[data appendLittleInt64:self.sizeOfTrailer];
-	[data appendLittleInt16:self.versionMadeBy];
-	[data appendLittleInt16:self.versionNeededToExtract];
-	[data appendLittleInt32:self.thisDiskNumber];
-	[data appendLittleInt32:self.diskNumberWithStartOfCentralDirectory];
-	[data appendLittleInt64:self.numberOfCentralDirectoryEntriesOnThisDisk];
-	[data appendLittleInt64:self.totalNumberOfCentralDirectoryEntries];
-	[data appendLittleInt64:self.sizeOfCentralDirectory];
-	[data appendLittleInt64:self.offsetOfStartOfCentralDirectory];
+	NSMutableData *data = [NSMutableData zkDataWithLittleInt32:self.magicNumber];
+	[data zkAppendLittleInt64:self.sizeOfTrailer];
+	[data zkAppendLittleInt16:self.versionMadeBy];
+	[data zkAppendLittleInt16:self.versionNeededToExtract];
+	[data zkAppendLittleInt32:self.thisDiskNumber];
+	[data zkAppendLittleInt32:self.diskNumberWithStartOfCentralDirectory];
+	[data zkAppendLittleInt64:self.numberOfCentralDirectoryEntriesOnThisDisk];
+	[data zkAppendLittleInt64:self.totalNumberOfCentralDirectoryEntries];
+	[data zkAppendLittleInt64:self.sizeOfCentralDirectory];
+	[data zkAppendLittleInt64:self.offsetOfStartOfCentralDirectory];
 	return data;
 }
 

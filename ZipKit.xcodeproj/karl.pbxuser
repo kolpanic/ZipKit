@@ -122,12 +122,12 @@
 					PBXFileDataSource_Warnings_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 278518271;
-			PBXWorkspaceStateSaveDate = 278518271;
+			PBXPerProjectTemplateStateSaveDate = 278518396;
+			PBXWorkspaceStateSaveDate = 278518396;
 		};
 		perUserProjectItems = {
-			CBB59DC81099DA57008A3E9B /* PBXTextBookmark */ = CBB59DC81099DA57008A3E9B /* PBXTextBookmark */;
-			CBB59DC91099DA57008A3E9B /* PBXTextBookmark */ = CBB59DC91099DA57008A3E9B /* PBXTextBookmark */;
+			CBB59DE71099DC59008A3E9B /* PBXTextBookmark */ = CBB59DE71099DC59008A3E9B /* PBXTextBookmark */;
+			CBB59DE81099DC5E008A3E9B /* PBXTextBookmark */ = CBB59DE81099DC5E008A3E9B /* PBXTextBookmark */;
 		};
 		sourceControlManager = CBCFA5E70DC7B3F600125DEF /* Source Control */;
 		userBuildSettings = {
@@ -162,9 +162,9 @@
 	};
 	CB06517D0E0B48C1009C10F5 /* NSFileHandle+ZKAdditions.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1198, 660}}";
-			sepNavSelRange = "{1800, 0}";
-			sepNavVisRange = "{0, 1946}";
+			sepNavIntBoundsRect = "{{0, 0}, {1190, 926}}";
+			sepNavSelRange = "{242, 0}";
+			sepNavVisRange = "{0, 242}";
 			sepNavWindowFrame = "{{15, -5}, {1612, 1178}}";
 		};
 	};
@@ -221,8 +221,8 @@
 	CB0FFF1A0DE498C100A00A46 /* GMAppleDouble+ZKAdditions.h */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1190, 926}}";
-			sepNavSelRange = "{306, 0}";
-			sepNavVisRange = "{0, 306}";
+			sepNavSelRange = "{310, 0}";
+			sepNavVisRange = "{0, 310}";
 		};
 	};
 	CB0FFF1B0DE498C100A00A46 /* GMAppleDouble+ZKAdditions.m */ = {
@@ -249,9 +249,9 @@
 	};
 	CB3FBCAD0F77D5020058163D /* NSDate+ZKAdditions.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1198, 675}}";
-			sepNavSelRange = "{0, 0}";
-			sepNavVisRange = "{0, 1940}";
+			sepNavIntBoundsRect = "{{0, 0}, {1190, 926}}";
+			sepNavSelRange = "{170, 0}";
+			sepNavVisRange = "{0, 242}";
 		};
 	};
 	CB3FBCAE0F77D5020058163D /* NSDate+ZKAdditions.m */ = {
@@ -332,9 +332,9 @@
 	};
 	CB5C3DAD0DEC6E05001B42E1 /* NSFileManager+ZKAdditions.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1190, 643}}";
-			sepNavSelRange = "{149, 0}";
-			sepNavVisRange = "{0, 1082}";
+			sepNavIntBoundsRect = "{{0, 0}, {1190, 926}}";
+			sepNavSelRange = "{1108, 0}";
+			sepNavVisRange = "{0, 1108}";
 			sepNavWindowFrame = "{{15, 156}, {1679, 1017}}";
 		};
 	};
@@ -352,9 +352,9 @@
 	};
 	CB6967500E9418ED005AF730 /* NSString+ZKAdditions.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1198, 675}}";
-			sepNavSelRange = "{0, 0}";
-			sepNavVisRange = "{0, 1938}";
+			sepNavIntBoundsRect = "{{0, 0}, {1190, 926}}";
+			sepNavSelRange = "{237, 0}";
+			sepNavVisRange = "{0, 237}";
 		};
 	};
 	CB6967510E9418ED005AF730 /* NSString+ZKAdditions.m */ = {
@@ -387,8 +387,8 @@
 	CB9FD87B0E00800C00E60665 /* NSData+ZKAdditions.h */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1190, 926}}";
-			sepNavSelRange = "{218, 0}";
-			sepNavVisRange = "{0, 981}";
+			sepNavSelRange = "{1015, 0}";
+			sepNavVisRange = "{0, 1015}";
 		};
 	};
 	CB9FD87C0E00800C00E60665 /* NSData+ZKAdditions.m */ = {
@@ -407,9 +407,9 @@
 	};
 	CB9FD87E0E00800C00E60665 /* ZKFileArchive.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1190, 13262}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1190, 13281}}";
 			sepNavSelRange = "{14408, 0}";
-			sepNavVisRange = "{13752, 1980}";
+			sepNavVisRange = "{13706, 2033}";
 			sepNavWindowFrame = "{{15, -5}, {1612, 1178}}";
 		};
 	};
@@ -471,25 +471,25 @@
 			sepNavVisRange = "{0, 1761}";
 		};
 	};
-	CBB59DC81099DA57008A3E9B /* PBXTextBookmark */ = {
+	CBB59DE71099DC59008A3E9B /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
-		fRef = CB0FFF1A0DE498C100A00A46 /* GMAppleDouble+ZKAdditions.h */;
-		name = "GMAppleDouble+ZKAdditions.h: 1";
+		fRef = CB9FD87E0E00800C00E60665 /* ZKFileArchive.m */;
+		name = "ZKFileArchive.m: 353";
 		rLen = 0;
-		rLoc = 0;
+		rLoc = 14408;
 		rType = 0;
-		vrLen = 306;
-		vrLoc = 0;
+		vrLen = 827;
+		vrLoc = 14116;
 	};
-	CBB59DC91099DA57008A3E9B /* PBXTextBookmark */ = {
+	CBB59DE81099DC5E008A3E9B /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
-		fRef = CB0FFF1A0DE498C100A00A46 /* GMAppleDouble+ZKAdditions.h */;
-		name = "GMAppleDouble+ZKAdditions.h: 15";
+		fRef = CB9FD87E0E00800C00E60665 /* ZKFileArchive.m */;
+		name = "ZKFileArchive.m: 353";
 		rLen = 0;
-		rLoc = 306;
+		rLoc = 14408;
 		rType = 0;
-		vrLen = 306;
-		vrLoc = 0;
+		vrLen = 2033;
+		vrLoc = 13706;
 	};
 	CBC87EAE0FB318D700F6B149 /* ZKDataArchive.h */ = {
 		uiCtxt = {
@@ -588,9 +588,9 @@
 	};
 	CBD4E4120F8D2620008DF385 /* NSDictionary+ZKAdditions.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1198, 675}}";
-			sepNavSelRange = "{0, 0}";
-			sepNavVisRange = "{0, 2039}";
+			sepNavIntBoundsRect = "{{0, 0}, {1190, 926}}";
+			sepNavSelRange = "{374, 0}";
+			sepNavVisRange = "{0, 374}";
 		};
 	};
 	CBD4E4130F8D2620008DF385 /* NSDictionary+ZKAdditions.m */ = {

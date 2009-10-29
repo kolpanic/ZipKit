@@ -9,6 +9,6 @@
 
 @interface NSFileHandle (ZKAdditions)
 
-+ (NSFileHandle *)newFileHandleForWritingAtPath:(NSString *)path;
++ (NSFileHandle *)zkNewFileHandleForWritingAtPath:(NSString *)path;
 
 @end

@@ -10,23 +10,23 @@
 
 @interface NSFileManager (ZKAdditions)
 
-- (BOOL) isSymLinkAtPath:(NSString *) path;
-- (BOOL) isDirAtPath:(NSString *) path;
+- (BOOL) zkIsSymLinkAtPath:(NSString *) path;
+- (BOOL) zkIsDirAtPath:(NSString *) path;
 
-- (unsigned long long) dataSizeAtFilePath:(NSString *) path;
-- (NSDictionary *) totalSizeAndItemCountAtPath:(NSString *) path usingResourceFork:(BOOL) rfFlag;
+- (unsigned long long) zkDataSizeAtFilePath:(NSString *) path;
+- (NSDictionary *) zkTotalSizeAndItemCountAtPath:(NSString *) path usingResourceFork:(BOOL) rfFlag;
 #if ZK_TARGET_OS_MAC
-- (void) combineAppleDoubleInDirectory:(NSString *) path;
+- (void) zkCombineAppleDoubleInDirectory:(NSString *) path;
 #endif
 
-- (NSDate *) modificationDateForPath:(NSString *) path;
-- (NSUInteger) posixPermissionsAtPath:(NSString *) path;
-- (NSUInteger) externalFileAttributesAtPath:(NSString *) path;
-- (NSUInteger) externalFileAttributesFor:(NSDictionary *) fileAttributes;
+- (NSDate *) zkModificationDateForPath:(NSString *) path;
+- (NSUInteger) zkPosixPermissionsAtPath:(NSString *) path;
+- (NSUInteger) zkExternalFileAttributesAtPath:(NSString *) path;
+- (NSUInteger) zkExternalFileAttributesFor:(NSDictionary *) fileAttributes;
 
-- (NSUInteger) crcForPath:(NSString *) path;
-- (NSUInteger) crcForPath:(NSString *) path invoker:(id) invoker;
-- (NSUInteger) crcForPath:(NSString *) path invoker:(id)invoker;
-- (NSUInteger) crcForPath:(NSString *)path invoker:(id)invoker throttleThreadSleepTime:(NSTimeInterval) throttleThreadSleepTime;
+- (NSUInteger) zkCrcForPath:(NSString *) path;
+- (NSUInteger) zkCrcForPath:(NSString *) path invoker:(id) invoker;
+- (NSUInteger) zkCrcForPath:(NSString *) path invoker:(id)invoker;
+- (NSUInteger) zkCrcForPath:(NSString *)path invoker:(id)invoker throttleThreadSleepTime:(NSTimeInterval) throttleThreadSleepTime;
 
 @end

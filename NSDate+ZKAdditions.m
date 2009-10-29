@@ -9,7 +9,7 @@
 
 @implementation NSDate (ZKAdditions)
 
-+ (NSDate *)dateWithDosDate : (NSUInteger)dosDate {
++ (NSDate *)zkDateWithDosDate : (NSUInteger)dosDate {
 	NSUInteger date = (NSUInteger)(dosDate >> 16);
 	NSDateComponents *comps = [NSDateComponents new];
 	comps.year = ((date & 0x0FE00) / 0x0200) + 1980;
@@ -21,7 +21,7 @@
 	return [[NSCalendar currentCalendar] dateFromComponents:comps];
 }
 
-- (NSUInteger) dosDate {
+- (NSUInteger) zkDosDate {
 	NSUInteger options = NSYearCalendarUnit | NSMonthCalendarUnit | NSDayCalendarUnit |
 	NSHourCalendarUnit | NSMinuteCalendarUnit | NSSecondCalendarUnit;
 	NSDateComponents *comps = [[NSCalendar currentCalendar] components:options fromDate:self];
