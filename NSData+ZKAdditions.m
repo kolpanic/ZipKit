@@ -14,7 +14,7 @@
 
 @implementation NSData (ZKAdditions)
 
-- (UInt16) zkHostInt16OffsetBy:(NSUInteger *)offset {
+- (UInt16) zk_hostInt16OffsetBy:(NSUInteger *)offset {
 	UInt16 value;
 	NSUInteger length = sizeof(value);
 	[self getBytes:&value range:NSMakeRange(*offset, length)];
@@ -22,7 +22,7 @@
 	return CFSwapInt32LittleToHost(value);
 }
 
-- (UInt32) zkHostInt32OffsetBy:(NSUInteger *)offset {
+- (UInt32) zk_hostInt32OffsetBy:(NSUInteger *)offset {
 	UInt32 value;
 	NSUInteger length = sizeof(value);
 	[self getBytes:&value range:NSMakeRange(*offset, length)];
@@ -30,7 +30,7 @@
 	return CFSwapInt32LittleToHost(value);
 }
 
-- (UInt64) zkHostInt64OffsetBy:(NSUInteger *)offset {
+- (UInt64) zk_hostInt64OffsetBy:(NSUInteger *)offset {
 	UInt64 value;
 	NSUInteger length = sizeof(value);
 	[self getBytes:&value range:NSMakeRange(*offset, length)];
@@ -38,28 +38,28 @@
 	return CFSwapInt64LittleToHost(value);
 }
 
-- (BOOL) zkHostBoolOffsetBy:(NSUInteger *) offset {
-	UInt32 value = [self zkHostInt32OffsetBy:offset];
+- (BOOL) zk_hostBoolOffsetBy:(NSUInteger *) offset {
+	UInt32 value = [self zk_hostInt32OffsetBy:offset];
 	return (value != 0);
 }
 
-- (NSString *) zkStringOffsetBy:(NSUInteger *)offset length:(NSUInteger)length {
+- (NSString *) zk_stringOffsetBy:(NSUInteger *)offset length:(NSUInteger)length {
 	NSString *value = nil;
 	if (length > 0)
-		value = [[NSString alloc] initWithData:[self subdataWithRange:NSMakeRange(*offset, length)] encoding:NSUTF8StringEncoding];
+		value = [[[NSString alloc] initWithData:[self subdataWithRange:NSMakeRange(*offset, length)] encoding:NSUTF8StringEncoding] autorelease];
 	*offset += length;
 	return value;
 }
 
-- (NSUInteger) zkCrc32 {
-	return [self zkCrc32:0];
+- (NSUInteger) zk_crc32 {
+	return [self zk_crc32:0];
 }
 
-- (NSUInteger) zkCrc32:(NSUInteger)crc {
+- (NSUInteger) zk_crc32:(NSUInteger)crc {
 	return crc32(crc, [self bytes], [self length]);
 }
 
-- (NSData *) zkInflate {
+- (NSData *) zk_inflate {
 	NSUInteger full_length = [self length];
 	NSUInteger half_length = full_length / 2;
 	
@@ -92,7 +92,7 @@
 	return inflatedData;
 }
 
-- (NSData *) zkDeflate {
+- (NSData *) zk_deflate {
 	z_stream strm;
 	
 	strm.zalloc = Z_NULL;
@@ -121,44 +121,44 @@
 
 @implementation NSMutableData (ZKAdditions)
 
-+ (NSMutableData *)zkDataWithLittleInt16: (UInt16)value {
++ (NSMutableData *)zk_dataWithLittleInt16: (UInt16)value {
 	NSMutableData *data = [self data];
-	[data zkAppendLittleInt16:value];
+	[data zk_appendLittleInt16:value];
 	return data;
 }
 
-+ (NSMutableData *) zkDataWithLittleInt32:(UInt32)value {
++ (NSMutableData *) zk_dataWithLittleInt32:(UInt32)value {
 	NSMutableData *data = [self data];
-	[data zkAppendLittleInt32:value];
+	[data zk_appendLittleInt32:value];
 	return data;
 }
 
-+ (NSMutableData *) zkDataWithLittleInt64:(UInt64)value {
++ (NSMutableData *) zk_dataWithLittleInt64:(UInt64)value {
 	NSMutableData *data = [self data];
-	[data zkAppendLittleInt64:value];
+	[data zk_appendLittleInt64:value];
 	return data;
 }
 
-- (void) zkAppendLittleInt16:(UInt16)value {
+- (void) zk_appendLittleInt16:(UInt16)value {
 	UInt16 swappedValue = CFSwapInt16HostToLittle(value);
 	[self appendBytes:&swappedValue length:sizeof(swappedValue)];
 }
 
-- (void) zkAppendLittleInt32:(UInt32)value {
+- (void) zk_appendLittleInt32:(UInt32)value {
 	UInt32 swappedValue = CFSwapInt32HostToLittle(value);
 	[self appendBytes:&swappedValue length:sizeof(swappedValue)];
 }
 
-- (void) zkAppendLittleInt64:(UInt64)value {
+- (void) zk_appendLittleInt64:(UInt64)value {
 	UInt64 swappedValue = CFSwapInt64HostToLittle(value);
 	[self appendBytes:&swappedValue length:sizeof(swappedValue)];
 }
 
-- (void) zkAppendLittleBool:(BOOL) value {
-	return [self zkAppendLittleInt32:(value ? 1 : 0)];
+- (void) zk_appendLittleBool:(BOOL) value {
+	return [self zk_appendLittleInt32:(value ? 1 : 0)];
 }
 
-- (void) zkAppendPrecomposedUTF8String:(NSString *)value {
+- (void) zk_appendPrecomposedUTF8String:(NSString *)value {
 	return [self appendData:[[value precomposedStringWithCanonicalMapping] dataUsingEncoding:NSUTF8StringEncoding]];
 }
 

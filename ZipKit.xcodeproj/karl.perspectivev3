@@ -339,11 +339,12 @@
 								<string>29B97314FDCFA39411CA2CEA</string>
 								<string>080E96DDFE201D6D7F000001</string>
 								<string>CBA79AB50FB4A73300D525E0</string>
+								<string>CB2AB64C1099E98F000D5E91</string>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>9</integer>
+									<integer>7</integer>
 									<integer>5</integer>
 									<integer>2</integer>
 									<integer>0</integer>
@@ -387,7 +388,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>CBBF8D580D80348D00E0F4B1</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>ZKFileArchive.m</string>
+								<string>ZKArchive.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -395,14 +396,14 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>CBBF8D590D80348D00E0F4B1</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>ZKFileArchive.m</string>
+										<string>ZKArchive.m</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>CBB59DE81099DC5E008A3E9B</string>
+										<string>CB2AB6581099E9BD000D5E91</string>
 										<key>history</key>
 										<array>
-											<string>CBB59DE71099DC59008A3E9B</string>
+											<string>CB2AB6571099E9BD000D5E91</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -442,6 +443,8 @@
 									<dict>
 										<key>Frame</key>
 										<string>{{10, 27}, {1251, -27}}</string>
+										<key>RubberWindowFrame</key>
+										<string>95 156 1607 989 0 0 1920 1178 </string>
 									</dict>
 									<key>Module</key>
 									<string>XCDetailModule</string>
@@ -458,8 +461,6 @@
 									<dict>
 										<key>Frame</key>
 										<string>{{10, 27}, {1251, -27}}</string>
-										<key>RubberWindowFrame</key>
-										<string>95 156 1607 989 0 0 1920 1178 </string>
 									</dict>
 									<key>Module</key>
 									<string>PBXProjectFindModule</string>
@@ -497,7 +498,7 @@
 									<key>GeometryConfiguration</key>
 									<dict>
 										<key>Frame</key>
-										<string>{{0, 0}, {568, 405}}</string>
+										<string>{{10, 27}, {1251, -27}}</string>
 									</dict>
 									<key>Module</key>
 									<string>PBXBuildResultsModule</string>
@@ -525,11 +526,11 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>CBB59DDB1099DC4A008A3E9B</string>
+				<string>CB2AB6081099E7E6000D5E91</string>
 				<string>1CA23ED40692098700951B8B</string>
-				<string>CBB59DDC1099DC4A008A3E9B</string>
+				<string>CB2AB6091099E7E6000D5E91</string>
 				<string>CBBF8D580D80348D00E0F4B1</string>
-				<string>CBB59DDD1099DC4A008A3E9B</string>
+				<string>CB2AB60A1099E7E6000D5E91</string>
 				<string>1CA23EDF0692099D00951B8B</string>
 				<string>1CA23EE00692099D00951B8B</string>
 				<string>1CA23EE10692099D00951B8B</string>
@@ -678,14 +679,14 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>CBB59DDE1099DC4A008A3E9B</string>
+				<string>CB2AB60B1099E7E6000D5E91</string>
 				<string>1CCC7628064C1048000F2A68</string>
 				<string>1CCC7629064C1048000F2A68</string>
-				<string>CBB59DDF1099DC4A008A3E9B</string>
-				<string>CBB59DE01099DC4A008A3E9B</string>
-				<string>CBB59DE11099DC4A008A3E9B</string>
-				<string>CBB59DE21099DC4A008A3E9B</string>
-				<string>CBBF8D580D80348D00E0F4B1</string>
+				<string>CB2AB60C1099E7E6000D5E91</string>
+				<string>CB2AB60D1099E7E6000D5E91</string>
+				<string>CB2AB60E1099E7E6000D5E91</string>
+				<string>CB2AB60F1099E7E6000D5E91</string>
+				<string>CB2AB6101099E7E6000D5E91</string>
 			</array>
 			<key>ToolbarConfigUserDefaultsMinorVersion</key>
 			<string>2</string>
@@ -702,7 +703,7 @@
 	<key>StatusbarIsVisible</key>
 	<true/>
 	<key>TimeStamp</key>
-	<real>278518878.03663099</real>
+	<real>278522301.01769</real>
 	<key>ToolbarDisplayMode</key>
 	<integer>2</integer>
 	<key>ToolbarIsVisible</key>
@@ -717,8 +718,8 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>CBB59DE51099DC4A008A3E9B</string>
-		<string>CBB59DE61099DC4A008A3E9B</string>
+		<string>CB2AB6491099E96F000D5E91</string>
+		<string>CB2AB64A1099E96F000D5E91</string>
 		<string>CB1070290D8040430022FF3E</string>
 		<string>/Users/karl/Projects/zipkit/ZipKit.xcodeproj</string>
 	</array>
@@ -1585,7 +1586,7 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>CB1070290D8040430022FF3E</string>
-				<string>CBB59DE31099DC4A008A3E9B</string>
+				<string>CB2AB6301099E8B7000D5E91</string>
 				<string>CB1070280D8040430022FF3E</string>
 			</array>
 			<key>WindowString</key>

@@ -29,32 +29,43 @@
 	return self;
 }
 
-- (void) finalize {
+- (void) removeObservers {
 	[self removeObserver:self forKeyPath:@"comment"];
+}
+
+- (void) finalize {
+	[self removeObservers];
 	[super finalize];
 }
+
+- (void) dealloc {
+	[self removeObservers];
+	self.comment = nil;
+	[super dealloc];
+}
+
 
 - (void) observeValueForKeyPath:(NSString *) keyPath ofObject:(id) object change:(NSDictionary *) change context:(void *) context {
 	// set iVars directly, to avoid potential infinite KVO recursion
 	if ([keyPath isEqualToString:@"comment"]) {
-		commentLength = [self.comment zkPrecomposedUTF8Length];
+		commentLength = [self.comment zk_precomposedUTF8Length];
 	}
 }
 
 + (ZKCDTrailer *) recordWithData:(NSData *)data atOffset:(NSUInteger) offset {
-	NSUInteger mn = [data zkHostInt32OffsetBy:&offset];
+	NSUInteger mn = [data zk_hostInt32OffsetBy:&offset];
 	if (mn != ZKCDTrailerMagicNumber) return nil;
-	ZKCDTrailer *record = [ZKCDTrailer new];
+	ZKCDTrailer *record = [[ZKCDTrailer new] autorelease];
 	record.magicNumber = mn;
-	record.thisDiskNumber = [data zkHostInt16OffsetBy:&offset];
-	record.diskNumberWithStartOfCentralDirectory = [data zkHostInt16OffsetBy:&offset];
-	record.numberOfCentralDirectoryEntriesOnThisDisk = [data zkHostInt16OffsetBy:&offset];
-	record.totalNumberOfCentralDirectoryEntries = [data zkHostInt16OffsetBy:&offset];
-	record.sizeOfCentralDirectory = [data zkHostInt32OffsetBy:&offset];
-	record.offsetOfStartOfCentralDirectory = [data zkHostInt32OffsetBy:&offset];
-	record.commentLength = [data zkHostInt16OffsetBy:&offset];
+	record.thisDiskNumber = [data zk_hostInt16OffsetBy:&offset];
+	record.diskNumberWithStartOfCentralDirectory = [data zk_hostInt16OffsetBy:&offset];
+	record.numberOfCentralDirectoryEntriesOnThisDisk = [data zk_hostInt16OffsetBy:&offset];
+	record.totalNumberOfCentralDirectoryEntries = [data zk_hostInt16OffsetBy:&offset];
+	record.sizeOfCentralDirectory = [data zk_hostInt32OffsetBy:&offset];
+	record.offsetOfStartOfCentralDirectory = [data zk_hostInt32OffsetBy:&offset];
+	record.commentLength = [data zk_hostInt16OffsetBy:&offset];
 	if (record.commentLength > 0)
-		record.comment = [data zkStringOffsetBy:&offset length:record.commentLength];
+		record.comment = [data zk_stringOffsetBy:&offset length:record.commentLength];
 	else
 		record.comment = nil;
 	return record;
@@ -65,7 +76,7 @@
 	NSUInteger offset = [data length] - sizeof(trailerCheck);
 	while (trailerCheck != ZKCDTrailerMagicNumber && offset > 0) {
 		NSUInteger o = offset;
-		trailerCheck = [data zkHostInt32OffsetBy:&o];
+		trailerCheck = [data zk_hostInt32OffsetBy:&o];
 		offset--;
 	}
 	if (offset < 1)
@@ -94,20 +105,20 @@
 }
 
 - (NSData *) data {
-	NSMutableData *data = [NSMutableData zkDataWithLittleInt32:self.magicNumber];
-	[data zkAppendLittleInt16:self.thisDiskNumber];
-	[data zkAppendLittleInt16:self.diskNumberWithStartOfCentralDirectory];
-	[data zkAppendLittleInt16:self.numberOfCentralDirectoryEntriesOnThisDisk];
-	[data zkAppendLittleInt16:self.totalNumberOfCentralDirectoryEntries];
+	NSMutableData *data = [NSMutableData zk_dataWithLittleInt32:self.magicNumber];
+	[data zk_appendLittleInt16:self.thisDiskNumber];
+	[data zk_appendLittleInt16:self.diskNumberWithStartOfCentralDirectory];
+	[data zk_appendLittleInt16:self.numberOfCentralDirectoryEntriesOnThisDisk];
+	[data zk_appendLittleInt16:self.totalNumberOfCentralDirectoryEntries];
 	if ([self useZip64Extensions]) {
-		[data zkAppendLittleInt32:0xFFFFFFFF];
-		[data zkAppendLittleInt32:0xFFFFFFFF];
+		[data zk_appendLittleInt32:0xFFFFFFFF];
+		[data zk_appendLittleInt32:0xFFFFFFFF];
 	} else {
-		[data zkAppendLittleInt32:self.sizeOfCentralDirectory];
-		[data zkAppendLittleInt32:self.offsetOfStartOfCentralDirectory];
+		[data zk_appendLittleInt32:self.sizeOfCentralDirectory];
+		[data zk_appendLittleInt32:self.offsetOfStartOfCentralDirectory];
 	}
-	[data zkAppendLittleInt16:[self.comment zkPrecomposedUTF8Length]];
-	[data zkAppendPrecomposedUTF8String:self.comment];
+	[data zk_appendLittleInt16:[self.comment zk_precomposedUTF8Length]];
+	[data zk_appendPrecomposedUTF8String:self.comment];
 	return data;
 }
 

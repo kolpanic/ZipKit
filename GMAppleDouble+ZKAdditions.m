@@ -10,10 +10,10 @@
 
 @implementation GMAppleDouble (ZKAdditions)
 
-+ (NSData *)zkAppleDoubleDataForPath:(NSString *)path {
++ (NSData *)zk_appleDoubleDataForPath:(NSString *)path {
 	// extract a file's Finder info metadata and resource fork to a NSData object suitable for writing to a ._ file
 	NSData *appleDoubleData = nil;
-	if ([[NSFileManager new] fileExistsAtPath:path]) {
+	if ([[[NSFileManager new] autorelease] fileExistsAtPath:path]) {
 		GMAppleDouble *appleDouble = [GMAppleDouble appleDouble];
 		NSMutableData *data;
 		
@@ -39,9 +39,9 @@
 	return appleDoubleData;
 }
 
-+ (void) zkRestoreAppleDoubleData:(NSData *) appleDoubleData toPath:(NSString *) path {
++ (void) zk_restoreAppleDoubleData:(NSData *) appleDoubleData toPath:(NSString *) path {
 	// retsore AppleDouble NSData to a file's Finder info metadata and resource fork
-	if ([[NSFileManager new] fileExistsAtPath:path]) {
+	if ([[[NSFileManager new] autorelease] fileExistsAtPath:path]) {
 		GMAppleDouble *appleDouble = [GMAppleDouble appleDoubleWithData:appleDoubleData];
 		if ([appleDouble entries] && [[appleDouble entries] count] > 0) {
 			for (GMAppleDoubleEntry *entry in [appleDouble entries]) {

@@ -9,13 +9,13 @@
 
 @implementation NSFileHandle (ZKAdditions)
 
-+ (NSFileHandle *)zkNewFileHandleForWritingAtPath:(NSString *)path {
-	NSFileManager *fileManager = [NSFileManager new];
-	if (![fileManager fileExistsAtPath:path]) {
-		[fileManager createDirectoryAtPath:[path stringByDeletingLastPathComponent] withIntermediateDirectories:YES attributes:nil error:nil];
-		[fileManager createFileAtPath:path contents:nil attributes:nil];
++ (NSFileHandle *)zk_newFileHandleForWritingAtPath:(NSString *)path {
+	NSFileManager *fm = [[NSFileManager new] autorelease];
+	if (![fm fileExistsAtPath:path]) {
+		[fm createDirectoryAtPath:[path stringByDeletingLastPathComponent] withIntermediateDirectories:YES attributes:nil error:nil];
+		[fm createFileAtPath:path contents:nil attributes:nil];
 	}
-	return [self fileHandleForWritingAtPath:path];
+	return [[self fileHandleForWritingAtPath:path] retain];
 }
 
 @end

@@ -12,17 +12,17 @@ NSString* const ZKItemCount = @"ZKItemCount";
 
 @implementation NSDictionary (ZKAdditions)
 
-+ (NSDictionary *) zkTotalSizeAndCountDictionaryWithSize:(unsigned long long) size andItemCount:(unsigned long long) count {
++ (NSDictionary *) zk_totalSizeAndCountDictionaryWithSize:(unsigned long long) size andItemCount:(unsigned long long) count {
 	return [NSDictionary dictionaryWithObjectsAndKeys:
 			[NSNumber numberWithUnsignedLongLong:size], ZKTotalFileSize,
 			[NSNumber numberWithUnsignedLongLong:count], ZKItemCount, nil];
 }
 
-- (unsigned long long) zkTotalFileSize {
+- (unsigned long long) zk_totalFileSize {
 	return [[self objectForKey:ZKTotalFileSize] unsignedLongLongValue];
 }
 
-- (unsigned long long) zkItemCount {
+- (unsigned long long) zk_itemCount {
 	return [[self objectForKey:ZKItemCount] unsignedLongLongValue];
 }
 

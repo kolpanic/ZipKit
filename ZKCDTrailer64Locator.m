@@ -21,13 +21,13 @@
 }
 
 + (ZKCDTrailer64Locator *) recordWithData:(NSData *)data atOffset:(NSUInteger) offset {
-	NSUInteger mn = [data zkHostInt32OffsetBy:&offset];
+	NSUInteger mn = [data zk_hostInt32OffsetBy:&offset];
 	if (mn != ZKCDTrailer64LocatorMagicNumber) return nil;
-	ZKCDTrailer64Locator *record = [ZKCDTrailer64Locator new];
+	ZKCDTrailer64Locator *record = [[ZKCDTrailer64Locator new] autorelease];
 	record.magicNumber = mn;
-	record.diskNumberWithStartOfCentralDirectory = [data zkHostInt32OffsetBy:&offset];
-	record.offsetOfStartOfCentralDirectoryTrailer64 = [data zkHostInt64OffsetBy:&offset];
-	record.numberOfDisks = [data zkHostInt32OffsetBy:&offset];
+	record.diskNumberWithStartOfCentralDirectory = [data zk_hostInt32OffsetBy:&offset];
+	record.offsetOfStartOfCentralDirectoryTrailer64 = [data zk_hostInt64OffsetBy:&offset];
+	record.numberOfDisks = [data zk_hostInt32OffsetBy:&offset];
 	return record;
 }
 
@@ -41,10 +41,10 @@
 }
 
 - (NSData *) data {
-	NSMutableData *data = [NSMutableData zkDataWithLittleInt32:self.magicNumber];
-	[data zkAppendLittleInt32:self.diskNumberWithStartOfCentralDirectory];
-	[data zkAppendLittleInt64:self.offsetOfStartOfCentralDirectoryTrailer64];
-	[data zkAppendLittleInt32:self.numberOfDisks];
+	NSMutableData *data = [NSMutableData zk_dataWithLittleInt32:self.magicNumber];
+	[data zk_appendLittleInt32:self.diskNumberWithStartOfCentralDirectory];
+	[data zk_appendLittleInt64:self.offsetOfStartOfCentralDirectoryTrailer64];
+	[data zk_appendLittleInt32:self.numberOfDisks];
 	return data;
 }
 

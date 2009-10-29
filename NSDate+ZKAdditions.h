@@ -9,7 +9,7 @@
 
 @interface NSDate (ZKAdditions)
 
-+ (NSDate *) zkDateWithDosDate:(NSUInteger) dosDate;
-- (NSUInteger) zkDosDate;
++ (NSDate *) zk_dateWithDosDate:(NSUInteger) dosDate;
+- (NSUInteger) zk_dosDate;
 
 @end

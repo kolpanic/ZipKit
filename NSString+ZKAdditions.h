@@ -9,7 +9,7 @@
 
 @interface NSString (ZKAdditions)
 
-- (NSUInteger) zkPrecomposedUTF8Length;
-- (BOOL) zkIsResourceForkPath;
+- (NSUInteger) zk_precomposedUTF8Length;
+- (BOOL) zk_isResourceForkPath;
 
 @end

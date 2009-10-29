@@ -9,28 +9,28 @@
 
 @interface NSData (ZKAdditions)
 
-- (UInt16) zkHostInt16OffsetBy:(NSUInteger *)offset;
-- (UInt32) zkHostInt32OffsetBy:(NSUInteger *)offset;
-- (UInt64) zkHostInt64OffsetBy:(NSUInteger *)offset;
-- (BOOL) zkHostBoolOffsetBy:(NSUInteger *) offset;
-- (NSString *) zkStringOffsetBy:(NSUInteger *)offset length:(NSUInteger)length;
-- (NSUInteger) zkCrc32;
-- (NSUInteger) zkCrc32:(NSUInteger)crc;
-- (NSData *) zkInflate;
-- (NSData *) zkDeflate;
+- (UInt16) zk_hostInt16OffsetBy:(NSUInteger *)offset;
+- (UInt32) zk_hostInt32OffsetBy:(NSUInteger *)offset;
+- (UInt64) zk_hostInt64OffsetBy:(NSUInteger *)offset;
+- (BOOL) zk_hostBoolOffsetBy:(NSUInteger *) offset;
+- (NSString *) zk_stringOffsetBy:(NSUInteger *)offset length:(NSUInteger)length;
+- (NSUInteger) zk_crc32;
+- (NSUInteger) zk_crc32:(NSUInteger)crc;
+- (NSData *) zk_inflate;
+- (NSData *) zk_deflate;
 
 @end
 
 @interface NSMutableData (ZKAdditions)
 
-+ (NSMutableData *) zkDataWithLittleInt16:(UInt16)value;
-+ (NSMutableData *) zkDataWithLittleInt32:(UInt32)value;
-+ (NSMutableData *) zkDataWithLittleInt64:(UInt64)value;
++ (NSMutableData *) zk_dataWithLittleInt16:(UInt16)value;
++ (NSMutableData *) zk_dataWithLittleInt32:(UInt32)value;
++ (NSMutableData *) zk_dataWithLittleInt64:(UInt64)value;
 
-- (void) zkAppendLittleInt16:(UInt16)value;
-- (void) zkAppendLittleInt32:(UInt32)value;
-- (void) zkAppendLittleInt64:(UInt64)value;
-- (void) zkAppendLittleBool:(BOOL) value;
-- (void) zkAppendPrecomposedUTF8String:(NSString *)value;
+- (void) zk_appendLittleInt16:(UInt16)value;
+- (void) zk_appendLittleInt32:(UInt32)value;
+- (void) zk_appendLittleInt64:(UInt64)value;
+- (void) zk_appendLittleBool:(BOOL) value;
+- (void) zk_appendPrecomposedUTF8String:(NSString *)value;
 
 @end

@@ -218,7 +218,7 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		080E96DDFE201D6D7F000001 /* Framework */ = {
+		080E96DDFE201D6D7F000001 /* Framework Source */ = {
 			isa = PBXGroup;
 			children = (
 				CB0A843D0F79343F00702E0D /* ZKDefs.h */,
@@ -232,7 +232,7 @@
 				CB429C210DD89C2200B12209 /* Resources */,
 				CB5AFD290DD8AEB6007B5235 /* Products */,
 			);
-			name = Framework;
+			name = "Framework Source";
 			sourceTree = "<group>";
 		};
 		19C28FACFE9D520D11CA2CBB /* Products */ = {
@@ -247,10 +247,9 @@
 			isa = PBXGroup;
 			children = (
 				CB429C2F0DD89CFC00B12209 /* COPYING.TXT */,
-				080E96DDFE201D6D7F000001 /* Framework */,
-				CB7C50B90DD895D000EA975A /* Application */,
-				CB4BB31B0F79554000CBA7B9 /* Tool */,
-				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				080E96DDFE201D6D7F000001 /* Framework Source */,
+				CB2AB64C1099E98F000D5E91 /* Mac OS X Demo */,
+				29B97323FDCFA39411CA2CEA /* Linked Frameworks */,
 			);
 			name = ZipKit;
 			sourceTree = "<group>";
@@ -276,14 +275,23 @@
 			name = Resources;
 			sourceTree = "<group>";
 		};
-		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+		29B97323FDCFA39411CA2CEA /* Linked Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				29B97325FDCFA39411CA2CEA /* Foundation.framework */,
 				CBCFA5ED0DC7B43F00125DEF /* libz.dylib */,
 				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
 			);
-			name = Frameworks;
+			name = "Linked Frameworks";
+			sourceTree = "<group>";
+		};
+		CB2AB64C1099E98F000D5E91 /* Mac OS X Demo */ = {
+			isa = PBXGroup;
+			children = (
+				CB7C50B90DD895D000EA975A /* Application */,
+				CB4BB31B0F79554000CBA7B9 /* Tool */,
+			);
+			name = "Mac OS X Demo";
 			sourceTree = "<group>";
 		};
 		CB429C210DD89C2200B12209 /* Resources */ = {
@@ -546,9 +554,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				8D1107260486CEB800E47090 /* ZipKit Utility */,
 				CB7C50AC0DD8959300EA975A /* ZipKit */,
 				CBE3D9B50E3769D80025B4D3 /* zipkit */,
+				8D1107260486CEB800E47090 /* ZipKit Utility */,
 				CB4BB30E0F7954AF00CBA7B9 /* zku */,
 			);
 		};
@@ -814,7 +822,7 @@
 				FRAMEWORK_VERSION = A;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_FIX_AND_CONTINUE = YES;
-				GCC_ENABLE_OBJC_GC = required;
+				GCC_ENABLE_OBJC_GC = supported;
 				GCC_MODEL_TUNING = G5;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -847,7 +855,7 @@
 				);
 				FRAMEWORK_VERSION = A;
 				GCC_ENABLE_FIX_AND_CONTINUE = NO;
-				GCC_ENABLE_OBJC_GC = required;
+				GCC_ENABLE_OBJC_GC = supported;
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = ZipKit_Prefix.pch;
@@ -873,7 +881,7 @@
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_FIX_AND_CONTINUE = YES;
-				GCC_ENABLE_OBJC_GC = required;
+				GCC_ENABLE_OBJC_GC = supported;
 				GCC_MODEL_TUNING = G5;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -899,7 +907,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEPLOYMENT_POSTPROCESSING = YES;
 				GCC_ENABLE_FIX_AND_CONTINUE = NO;
-				GCC_ENABLE_OBJC_GC = required;
+				GCC_ENABLE_OBJC_GC = supported;
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = ZipKit_Prefix.pch;
