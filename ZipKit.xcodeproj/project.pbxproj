@@ -20,6 +20,26 @@
 		CB0FFF360DE49A5E00A00A46 /* GMAppleDouble+ZKAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = CB0FFF1A0DE498C100A00A46 /* GMAppleDouble+ZKAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CB2158260E01D1E5004346E1 /* ZKLog.m in Sources */ = {isa = PBXBuildFile; fileRef = CB2158240E01D1E5004346E1 /* ZKLog.m */; };
 		CB2158270E01D1E5004346E1 /* ZKLog.h in Headers */ = {isa = PBXBuildFile; fileRef = CB2158250E01D1E5004346E1 /* ZKLog.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CB2D82531099EEEF00A535C1 /* GMAppleDouble.m in Sources */ = {isa = PBXBuildFile; fileRef = CBCC6F750F7141EF00B1C585 /* GMAppleDouble.m */; };
+		CB2D82541099EEF000A535C1 /* NSString+ZKAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = CB6967510E9418ED005AF730 /* NSString+ZKAdditions.m */; };
+		CB2D82551099EEF100A535C1 /* NSFileManager+ZKAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = CB5C3DAE0DEC6E05001B42E1 /* NSFileManager+ZKAdditions.m */; };
+		CB2D82561099EEF100A535C1 /* NSFileHandle+ZKAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = CB06517E0E0B48C1009C10F5 /* NSFileHandle+ZKAdditions.m */; };
+		CB2D82571099EEF200A535C1 /* NSDictionary+ZKAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = CBD4E4130F8D2620008DF385 /* NSDictionary+ZKAdditions.m */; };
+		CB2D82581099EEF200A535C1 /* NSDate+ZKAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = CB3FBCAE0F77D5020058163D /* NSDate+ZKAdditions.m */; };
+		CB2D82591099EEF300A535C1 /* NSData+ZKAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = CB9FD87C0E00800C00E60665 /* NSData+ZKAdditions.m */; };
+		CB2D825A1099EEF300A535C1 /* GMAppleDouble+ZKAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = CB0FFF1B0DE498C100A00A46 /* GMAppleDouble+ZKAdditions.m */; };
+		CB2D825B1099EEF400A535C1 /* ZKLog.m in Sources */ = {isa = PBXBuildFile; fileRef = CB2158240E01D1E5004346E1 /* ZKLog.m */; };
+		CB2D825C1099EEF500A535C1 /* ZKLFHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = CB9FD8840E00800C00E60665 /* ZKLFHeader.m */; };
+		CB2D825D1099EEF500A535C1 /* ZKCDTrailer64Locator.m in Sources */ = {isa = PBXBuildFile; fileRef = CBD6467C0F3890C2003BAD6F /* ZKCDTrailer64Locator.m */; };
+		CB2D825E1099EEF600A535C1 /* ZKCDTrailer64.m in Sources */ = {isa = PBXBuildFile; fileRef = CBD646260F388A3D003BAD6F /* ZKCDTrailer64.m */; };
+		CB2D825F1099EEF600A535C1 /* ZKCDTrailer.m in Sources */ = {isa = PBXBuildFile; fileRef = CB9FD8820E00800C00E60665 /* ZKCDTrailer.m */; };
+		CB2D82601099EEF700A535C1 /* ZKCDHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = CB9FD8800E00800C00E60665 /* ZKCDHeader.m */; };
+		CB2D82611099EEF800A535C1 /* ZKDataArchive.m in Sources */ = {isa = PBXBuildFile; fileRef = CBC87EAF0FB318D700F6B149 /* ZKDataArchive.m */; };
+		CB2D82621099EEF800A535C1 /* ZKFileArchive.m in Sources */ = {isa = PBXBuildFile; fileRef = CB9FD87E0E00800C00E60665 /* ZKFileArchive.m */; };
+		CB2D82631099EEF900A535C1 /* ZKArchive.m in Sources */ = {isa = PBXBuildFile; fileRef = CBA79A4A0FB4A3A600D525E0 /* ZKArchive.m */; };
+		CB2D82641099EEFA00A535C1 /* ZKDefs.m in Sources */ = {isa = PBXBuildFile; fileRef = CB0A843E0F79343F00702E0D /* ZKDefs.m */; };
+		CB2D83D91099EFDB00A535C1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB2D83D81099EFDB00A535C1 /* Foundation.framework */; };
+		CB2D83DD1099F00000A535C1 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CB2D83DC1099F00000A535C1 /* libz.dylib */; };
 		CB3FBCB00F77D5020058163D /* NSDate+ZKAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = CB3FBCAE0F77D5020058163D /* NSDate+ZKAdditions.m */; };
 		CB3FBCB10F77D5020058163D /* NSDate+ZKAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = CB3FBCAD0F77D5020058163D /* NSDate+ZKAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CB3FBCB20F77D5020058163D /* NSDate+ZKAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = CB3FBCAE0F77D5020058163D /* NSDate+ZKAdditions.m */; };
@@ -131,6 +151,9 @@
 		CB0FFF1B0DE498C100A00A46 /* GMAppleDouble+ZKAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GMAppleDouble+ZKAdditions.m"; sourceTree = "<group>"; };
 		CB2158240E01D1E5004346E1 /* ZKLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZKLog.m; sourceTree = "<group>"; };
 		CB2158250E01D1E5004346E1 /* ZKLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZKLog.h; sourceTree = "<group>"; };
+		CB2D82501099EED100A535C1 /* libtouchzipkit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libtouchzipkit.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		CB2D83D81099EFDB00A535C1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		CB2D83DC1099F00000A535C1 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		CB3FBCAD0F77D5020058163D /* NSDate+ZKAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+ZKAdditions.h"; sourceTree = "<group>"; };
 		CB3FBCAE0F77D5020058163D /* NSDate+ZKAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+ZKAdditions.m"; sourceTree = "<group>"; };
 		CB429C2F0DD89CFC00B12209 /* COPYING.TXT */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = COPYING.TXT; sourceTree = "<group>"; };
@@ -187,6 +210,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		CB2D824E1099EED100A535C1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CB2D83D91099EFDB00A535C1 /* Foundation.framework in Frameworks */,
+				CB2D83DD1099F00000A535C1 /* libz.dylib in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CB4BB30D0F7954AF00CBA7B9 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -230,7 +262,7 @@
 				CBCC6F730F7141EF00B1C585 /* MacFUSE */,
 				CB429C230DD89C4400B12209 /* Other Sources */,
 				CB429C210DD89C2200B12209 /* Resources */,
-				CB5AFD290DD8AEB6007B5235 /* Products */,
+				CB5AFD290DD8AEB6007B5235 /* Build Products */,
 			);
 			name = "Framework Source";
 			sourceTree = "<group>";
@@ -247,6 +279,7 @@
 			isa = PBXGroup;
 			children = (
 				CB429C2F0DD89CFC00B12209 /* COPYING.TXT */,
+				CB429C520DD89F5F00B12209 /* Credits.html */,
 				080E96DDFE201D6D7F000001 /* Framework Source */,
 				CB2AB64C1099E98F000D5E91 /* Mac OS X Demo */,
 				29B97323FDCFA39411CA2CEA /* Linked Frameworks */,
@@ -266,7 +299,6 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				CB429C520DD89F5F00B12209 /* Credits.html */,
 				8D1107310486CEB800E47090 /* Info.plist */,
 				CB8491D00F7A8CFF003C263B /* MainMenu.xib */,
 				CB5F90BA0E9A884E003E304C /* ZipKit.icns */,
@@ -278,9 +310,8 @@
 		29B97323FDCFA39411CA2CEA /* Linked Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				29B97325FDCFA39411CA2CEA /* Foundation.framework */,
-				CBCFA5ED0DC7B43F00125DEF /* libz.dylib */,
-				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
+				CB2D83D41099EFB900A535C1 /* Mac OS X */,
+				CB2D83DA1099EFE700A535C1 /* iPhone OS */,
 			);
 			name = "Linked Frameworks";
 			sourceTree = "<group>";
@@ -292,6 +323,25 @@
 				CB4BB31B0F79554000CBA7B9 /* Tool */,
 			);
 			name = "Mac OS X Demo";
+			sourceTree = "<group>";
+		};
+		CB2D83D41099EFB900A535C1 /* Mac OS X */ = {
+			isa = PBXGroup;
+			children = (
+				29B97325FDCFA39411CA2CEA /* Foundation.framework */,
+				CBCFA5ED0DC7B43F00125DEF /* libz.dylib */,
+				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
+			);
+			name = "Mac OS X";
+			sourceTree = "<group>";
+		};
+		CB2D83DA1099EFE700A535C1 /* iPhone OS */ = {
+			isa = PBXGroup;
+			children = (
+				CB2D83D81099EFDB00A535C1 /* Foundation.framework */,
+				CB2D83DC1099F00000A535C1 /* libz.dylib */,
+			);
+			name = "iPhone OS";
 			sourceTree = "<group>";
 		};
 		CB429C210DD89C2200B12209 /* Resources */ = {
@@ -328,13 +378,14 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		CB5AFD290DD8AEB6007B5235 /* Products */ = {
+		CB5AFD290DD8AEB6007B5235 /* Build Products */ = {
 			isa = PBXGroup;
 			children = (
 				CB7C50AD0DD8959300EA975A /* ZipKit.framework */,
 				CBE3D9B60E3769D80025B4D3 /* libzipkit.a */,
+				CB2D82501099EED100A535C1 /* libtouchzipkit.a */,
 			);
-			name = Products;
+			name = "Build Products";
 			sourceTree = "<group>";
 		};
 		CB6589060E3102E900BB2ABA /* Categories */ = {
@@ -434,6 +485,13 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		CB2D824C1099EED100A535C1 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CB7C50A80DD8959300EA975A /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -488,6 +546,23 @@
 			productName = ZipKit;
 			productReference = 8D1107320486CEB800E47090 /* ZipKit Utility.app */;
 			productType = "com.apple.product-type.application";
+		};
+		CB2D824F1099EED100A535C1 /* touchzipkit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CB2D826C1099EF0300A535C1 /* Build configuration list for PBXNativeTarget "touchzipkit" */;
+			buildPhases = (
+				CB2D824C1099EED100A535C1 /* Headers */,
+				CB2D824D1099EED100A535C1 /* Sources */,
+				CB2D824E1099EED100A535C1 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = touchzipkit;
+			productName = touchzipkit;
+			productReference = CB2D82501099EED100A535C1 /* libtouchzipkit.a */;
+			productType = "com.apple.product-type.library.static";
 		};
 		CB4BB30E0F7954AF00CBA7B9 /* zku */ = {
 			isa = PBXNativeTarget;
@@ -556,6 +631,7 @@
 			targets = (
 				CB7C50AC0DD8959300EA975A /* ZipKit */,
 				CBE3D9B50E3769D80025B4D3 /* zipkit */,
+				CB2D824F1099EED100A535C1 /* touchzipkit */,
 				8D1107260486CEB800E47090 /* ZipKit Utility */,
 				CB4BB30E0F7954AF00CBA7B9 /* zku */,
 			);
@@ -592,6 +668,31 @@
 				CBE770FD0DC8AE6100AA000B /* MainWindowController.m in Sources */,
 				CB0BFC160F695E3000C889C7 /* ZipFileOperation.m in Sources */,
 				CB0A83720F7923CA00702E0D /* RemainingTimeTransformer.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CB2D824D1099EED100A535C1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CB2D82531099EEEF00A535C1 /* GMAppleDouble.m in Sources */,
+				CB2D82541099EEF000A535C1 /* NSString+ZKAdditions.m in Sources */,
+				CB2D82551099EEF100A535C1 /* NSFileManager+ZKAdditions.m in Sources */,
+				CB2D82561099EEF100A535C1 /* NSFileHandle+ZKAdditions.m in Sources */,
+				CB2D82571099EEF200A535C1 /* NSDictionary+ZKAdditions.m in Sources */,
+				CB2D82581099EEF200A535C1 /* NSDate+ZKAdditions.m in Sources */,
+				CB2D82591099EEF300A535C1 /* NSData+ZKAdditions.m in Sources */,
+				CB2D825A1099EEF300A535C1 /* GMAppleDouble+ZKAdditions.m in Sources */,
+				CB2D825B1099EEF400A535C1 /* ZKLog.m in Sources */,
+				CB2D825C1099EEF500A535C1 /* ZKLFHeader.m in Sources */,
+				CB2D825D1099EEF500A535C1 /* ZKCDTrailer64Locator.m in Sources */,
+				CB2D825E1099EEF600A535C1 /* ZKCDTrailer64.m in Sources */,
+				CB2D825F1099EEF600A535C1 /* ZKCDTrailer.m in Sources */,
+				CB2D82601099EEF700A535C1 /* ZKCDHeader.m in Sources */,
+				CB2D82611099EEF800A535C1 /* ZKDataArchive.m in Sources */,
+				CB2D82621099EEF800A535C1 /* ZKFileArchive.m in Sources */,
+				CB2D82631099EEF900A535C1 /* ZKArchive.m in Sources */,
+				CB2D82641099EEFA00A535C1 /* ZKDefs.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -756,6 +857,35 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				PREBINDING = NO;
 				SDKROOT = macosx10.5;
+			};
+			name = Release;
+		};
+		CB2D82511099EED100A535C1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREFIX_HEADER = ZipKit_Prefix.pch;
+				PREBINDING = NO;
+				PRODUCT_NAME = touchzipkit;
+				SDKROOT = iphoneos3.0;
+			};
+			name = Debug;
+		};
+		CB2D82521099EED100A535C1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_PREFIX_HEADER = ZipKit_Prefix.pch;
+				PREBINDING = NO;
+				PRODUCT_NAME = touchzipkit;
+				SDKROOT = iphoneos3.0;
+				ZERO_LINK = NO;
 			};
 			name = Release;
 		};
@@ -941,6 +1071,15 @@
 			buildConfigurations = (
 				C01FCF4F08A954540054247B /* Debug */,
 				C01FCF5008A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CB2D826C1099EF0300A535C1 /* Build configuration list for PBXNativeTarget "touchzipkit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CB2D82511099EED100A535C1 /* Debug */,
+				CB2D82521099EED100A535C1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

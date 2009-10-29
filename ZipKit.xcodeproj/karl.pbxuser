@@ -5,8 +5,6 @@
 		activeExecutable = CBCFA5D90DC7B3DA00125DEF /* ZipKit Utility */;
 		activeTarget = 8D1107260486CEB800E47090 /* ZipKit Utility */;
 		addToTargets = (
-			CB4BB30E0F7954AF00CBA7B9 /* zku */,
-			CB7C50AC0DD8959300EA975A /* ZipKit */,
 		);
 		breakpoints = (
 		);
@@ -122,12 +120,12 @@
 					PBXFileDataSource_Warnings_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 278520439;
-			PBXWorkspaceStateSaveDate = 278520439;
+			PBXPerProjectTemplateStateSaveDate = 278525194;
+			PBXWorkspaceStateSaveDate = 278525194;
 		};
 		perUserProjectItems = {
-			CB2AB6571099E9BD000D5E91 /* PBXTextBookmark */ = CB2AB6571099E9BD000D5E91 /* PBXTextBookmark */;
-			CB2AB6581099E9BD000D5E91 /* PBXTextBookmark */ = CB2AB6581099E9BD000D5E91 /* PBXTextBookmark */;
+			CB5837FF1099F5BF0034DF0D /* PBXTextBookmark */ = CB5837FF1099F5BF0034DF0D /* PBXTextBookmark */;
+			CB5838011099F5BF0034DF0D /* PBXTextBookmark */ = CB5838011099F5BF0034DF0D /* PBXTextBookmark */;
 		};
 		sourceControlManager = CBCFA5E70DC7B3F600125DEF /* Source Control */;
 		userBuildSettings = {
@@ -206,15 +204,15 @@
 	};
 	CB0A843D0F79343F00702E0D /* ZKDefs.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1190, 969}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1190, 1045}}";
 			sepNavSelRange = "{317, 0}";
-			sepNavVisRange = "{0, 1479}";
+			sepNavVisRange = "{0, 972}";
 		};
 	};
 	CB0A843E0F79343F00702E0D /* ZKDefs.m */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1190, 926}}";
-			sepNavSelRange = "{97, 0}";
+			sepNavSelRange = "{0, 0}";
 			sepNavVisRange = "{0, 1169}";
 		};
 	};
@@ -247,25 +245,8 @@
 			sepNavVisRange = "{1703, 1076}";
 		};
 	};
-	CB2AB6571099E9BD000D5E91 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = CBA79A4A0FB4A3A600D525E0 /* ZKArchive.m */;
-		name = "ZKArchive.m: 10";
-		rLen = 0;
-		rLoc = 154;
-		rType = 0;
-		vrLen = 1761;
-		vrLoc = 0;
-	};
-	CB2AB6581099E9BD000D5E91 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = CBA79A4A0FB4A3A600D525E0 /* ZKArchive.m */;
-		name = "ZKArchive.m: 13";
-		rLen = 0;
-		rLoc = 220;
-		rType = 0;
-		vrLen = 1761;
-		vrLoc = 0;
+	CB2D824F1099EED100A535C1 /* touchzipkit */ = {
+		activeExec = 0;
 	};
 	CB3FBCAD0F77D5020058163D /* NSDate+ZKAdditions.h */ = {
 		uiCtxt = {
@@ -291,9 +272,9 @@
 	};
 	CB429C520DD89F5F00B12209 /* Credits.html */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1456, 278}}";
-			sepNavSelRange = "{40, 0}";
-			sepNavVisRange = "{0, 329}";
+			sepNavIntBoundsRect = "{{0, 0}, {1190, 926}}";
+			sepNavSelRange = "{527, 0}";
+			sepNavVisRange = "{0, 527}";
 		};
 	};
 	CB4BB30E0F7954AF00CBA7B9 /* zku */ = {
@@ -350,6 +331,26 @@
 			sepNavVisRange = "{676, 1342}";
 		};
 	};
+	CB5837FF1099F5BF0034DF0D /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = CBA79A4A0FB4A3A600D525E0 /* ZKArchive.m */;
+		name = "ZKArchive.m: 13";
+		rLen = 0;
+		rLoc = 220;
+		rType = 0;
+		vrLen = 1761;
+		vrLoc = 0;
+	};
+	CB5838011099F5BF0034DF0D /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = CBA79A4A0FB4A3A600D525E0 /* ZKArchive.m */;
+		name = "ZKArchive.m: 13";
+		rLen = 0;
+		rLoc = 220;
+		rType = 0;
+		vrLen = 1761;
+		vrLoc = 0;
+	};
 	CB5C3DAD0DEC6E05001B42E1 /* NSFileManager+ZKAdditions.h */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1190, 643}}";
@@ -398,8 +399,8 @@
 	};
 	CB7C53E80DD898D200EA975A /* ZipKit_Prefix.pch */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1100, 637}}";
-			sepNavSelRange = "{9, 4}";
+			sepNavIntBoundsRect = "{{0, 0}, {1190, 926}}";
+			sepNavSelRange = "{60, 0}";
 			sepNavVisRange = "{0, 60}";
 			sepNavWindowFrame = "{{15, -5}, {1612, 1178}}";
 		};
@@ -427,9 +428,9 @@
 	};
 	CB9FD87E0E00800C00E60665 /* ZKFileArchive.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1190, 13395}}";
-			sepNavSelRange = "{14345, 31}";
-			sepNavVisRange = "{14098, 1530}";
+			sepNavIntBoundsRect = "{{0, 0}, {1190, 13300}}";
+			sepNavSelRange = "{729, 0}";
+			sepNavVisRange = "{257, 1105}";
 			sepNavWindowFrame = "{{15, -5}, {1612, 1178}}";
 		};
 	};
@@ -486,7 +487,7 @@
 	};
 	CBA79A4A0FB4A3A600D525E0 /* ZKArchive.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1190, 4446}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1190, 4218}}";
 			sepNavSelRange = "{220, 0}";
 			sepNavVisRange = "{0, 1761}";
 		};

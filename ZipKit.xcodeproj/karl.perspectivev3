@@ -303,6 +303,8 @@
 			<key>Layout</key>
 			<array>
 				<dict>
+					<key>BecomeActive</key>
+					<true/>
 					<key>ContentConfiguration</key>
 					<dict>
 						<key>PBXBottomSmartGroupGIDs</key>
@@ -340,13 +342,15 @@
 								<string>080E96DDFE201D6D7F000001</string>
 								<string>CBA79AB50FB4A73300D525E0</string>
 								<string>CB2AB64C1099E98F000D5E91</string>
+								<string>CB7C50B90DD895D000EA975A</string>
+								<string>29B97317FDCFA39411CA2CEA</string>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>7</integer>
-									<integer>5</integer>
-									<integer>2</integer>
+									<integer>8</integer>
+									<integer>6</integer>
+									<integer>3</integer>
 									<integer>0</integer>
 								</array>
 							</array>
@@ -370,7 +374,7 @@
 							<real>22</real>
 						</array>
 						<key>RubberWindowFrame</key>
-						<string>95 156 1607 989 0 0 1920 1178 </string>
+						<string>96 157 1607 989 0 0 1920 1178 </string>
 					</dict>
 					<key>Module</key>
 					<string>PBXSmartGroupTreeModule</string>
@@ -381,8 +385,6 @@
 					<key>Dock</key>
 					<array>
 						<dict>
-							<key>BecomeActive</key>
-							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
@@ -400,10 +402,10 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>CB2AB6581099E9BD000D5E91</string>
+										<string>CB5838011099F5BF0034DF0D</string>
 										<key>history</key>
 										<array>
-											<string>CB2AB6571099E9BD000D5E91</string>
+											<string>CB5837FF1099F5BF0034DF0D</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -419,7 +421,7 @@
 								<key>Frame</key>
 								<string>{{0, 0}, {1251, 943}}</string>
 								<key>RubberWindowFrame</key>
-								<string>95 156 1607 989 0 0 1920 1178 </string>
+								<string>96 157 1607 989 0 0 1920 1178 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
@@ -444,7 +446,7 @@
 										<key>Frame</key>
 										<string>{{10, 27}, {1251, -27}}</string>
 										<key>RubberWindowFrame</key>
-										<string>95 156 1607 989 0 0 1920 1178 </string>
+										<string>96 157 1607 989 0 0 1920 1178 </string>
 									</dict>
 									<key>Module</key>
 									<string>XCDetailModule</string>
@@ -460,7 +462,7 @@
 									<key>GeometryConfiguration</key>
 									<dict>
 										<key>Frame</key>
-										<string>{{10, 27}, {1251, -27}}</string>
+										<string>{{0, 0}, {614, 336}}</string>
 									</dict>
 									<key>Module</key>
 									<string>PBXProjectFindModule</string>
@@ -498,7 +500,7 @@
 									<key>GeometryConfiguration</key>
 									<dict>
 										<key>Frame</key>
-										<string>{{10, 27}, {1251, -27}}</string>
+										<string>{{0, 0}, {568, 405}}</string>
 									</dict>
 									<key>Module</key>
 									<string>PBXBuildResultsModule</string>
@@ -526,11 +528,11 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>CB2AB6081099E7E6000D5E91</string>
+				<string>CB5837F81099F51B0034DF0D</string>
 				<string>1CA23ED40692098700951B8B</string>
-				<string>CB2AB6091099E7E6000D5E91</string>
+				<string>CB5837F91099F51B0034DF0D</string>
 				<string>CBBF8D580D80348D00E0F4B1</string>
-				<string>CB2AB60A1099E7E6000D5E91</string>
+				<string>CB5837FA1099F51B0034DF0D</string>
 				<string>1CA23EDF0692099D00951B8B</string>
 				<string>1CA23EE00692099D00951B8B</string>
 				<string>1CA23EE10692099D00951B8B</string>
@@ -703,7 +705,7 @@
 	<key>StatusbarIsVisible</key>
 	<true/>
 	<key>TimeStamp</key>
-	<real>278522301.01769</real>
+	<real>278525375.86579102</real>
 	<key>ToolbarDisplayMode</key>
 	<integer>2</integer>
 	<key>ToolbarIsVisible</key>
@@ -718,13 +720,10 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>CB2AB6491099E96F000D5E91</string>
-		<string>CB2AB64A1099E96F000D5E91</string>
-		<string>CB1070290D8040430022FF3E</string>
 		<string>/Users/karl/Projects/zipkit/ZipKit.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
-	<string>95 156 1607 989 0 0 1920 1178 </string>
+	<string>96 157 1607 989 0 0 1920 1178 </string>
 	<key>WindowToolsV3</key>
 	<array>
 		<dict>

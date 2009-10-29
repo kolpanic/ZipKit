@@ -27,7 +27,7 @@
 @implementation ZKFileArchive
 
 /*
- rfFlag indicates whether the AppleDouble'd resource fork should be processed (like Mac OS X's Archive Utility)
+ rfFlag indicates whether the AppleDouble'd resource fork should be processed (like Mac OS X's Archive Utility); it's ignored when using building for iPhoneOS
  
  invoker should be an object that responds to isCancelled (e.g., NSOperation) so processing can be cancelled
 
