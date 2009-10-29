@@ -51,7 +51,7 @@ int main(int argc, const char * argv[]) {
 	[ZKLog sharedInstance].minimumLevel = ZKLogLevelAll;
 
 	if (argc > 1) {
-		NSFileManager *fileManager = [NSFileManager new];
+		NSFileManager *fileManager = [NSFileManager defaultManager];
 		NSMutableArray *items = [NSMutableArray arrayWithCapacity:(argc - 1)];
 		for (NSUInteger i = 1; i <= argc; i++) {
 			const char *p = argv[i];

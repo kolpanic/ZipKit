@@ -283,11 +283,14 @@
 			<array>
 				<string>XCToolbarPerspectiveControl</string>
 				<string>NSToolbarSeparatorItem</string>
-				<string>active-combo-popup</string>
 				<string>action</string>
+				<string>active-combo-popup</string>
+				<string>NSToolbarSpaceItem</string>
 				<string>build</string>
 				<string>build-and-go</string>
+				<string>go</string>
 				<string>clean</string>
+				<string>NSToolbarFlexibleSpaceItem</string>
 			</array>
 			<key>ControllerClassBaseName</key>
 			<string></string>
@@ -336,12 +339,13 @@
 								<string>29B97314FDCFA39411CA2CEA</string>
 								<string>080E96DDFE201D6D7F000001</string>
 								<string>CBA79AB50FB4A73300D525E0</string>
+								<string>CB6589060E3102E900BB2ABA</string>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>9</integer>
-									<integer>5</integer>
+									<integer>15</integer>
+									<integer>14</integer>
 									<integer>2</integer>
 									<integer>0</integer>
 								</array>
@@ -366,7 +370,7 @@
 							<real>22</real>
 						</array>
 						<key>RubberWindowFrame</key>
-						<string>67 189 1607 989 0 0 1920 1178 </string>
+						<string>95 156 1607 989 0 0 1920 1178 </string>
 					</dict>
 					<key>Module</key>
 					<string>PBXSmartGroupTreeModule</string>
@@ -384,7 +388,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>CBBF8D580D80348D00E0F4B1</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>ZKFileArchive.m</string>
+								<string>GMAppleDouble+ZKAdditions.h</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -392,14 +396,14 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>CBBF8D590D80348D00E0F4B1</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>ZKFileArchive.m</string>
+										<string>GMAppleDouble+ZKAdditions.h</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>CB94A6901099234A002B971B</string>
+										<string>CBB59DC91099DA57008A3E9B</string>
 										<key>history</key>
 										<array>
-											<string>CB94A68F1099234A002B971B</string>
+											<string>CBB59DC81099DA57008A3E9B</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -415,7 +419,7 @@
 								<key>Frame</key>
 								<string>{{0, 0}, {1251, 943}}</string>
 								<key>RubberWindowFrame</key>
-								<string>67 189 1607 989 0 0 1920 1178 </string>
+								<string>95 156 1607 989 0 0 1920 1178 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
@@ -455,6 +459,8 @@
 									<dict>
 										<key>Frame</key>
 										<string>{{10, 27}, {1251, -27}}</string>
+										<key>RubberWindowFrame</key>
+										<string>95 156 1607 989 0 0 1920 1178 </string>
 									</dict>
 									<key>Module</key>
 									<string>PBXProjectFindModule</string>
@@ -492,9 +498,7 @@
 									<key>GeometryConfiguration</key>
 									<dict>
 										<key>Frame</key>
-										<string>{{10, 27}, {1251, -27}}</string>
-										<key>RubberWindowFrame</key>
-										<string>67 189 1607 989 0 0 1920 1178 </string>
+										<string>{{0, 0}, {568, 405}}</string>
 									</dict>
 									<key>Module</key>
 									<string>PBXBuildResultsModule</string>
@@ -522,11 +526,11 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>CB94A5F810991C44002B971B</string>
+				<string>CBB59DCA1099DA57008A3E9B</string>
 				<string>1CA23ED40692098700951B8B</string>
-				<string>CB94A5F910991C44002B971B</string>
+				<string>CBB59DCB1099DA57008A3E9B</string>
 				<string>CBBF8D580D80348D00E0F4B1</string>
-				<string>CB94A5FA10991C44002B971B</string>
+				<string>CBB59DCC1099DA57008A3E9B</string>
 				<string>1CA23EDF0692099D00951B8B</string>
 				<string>1CA23EE00692099D00951B8B</string>
 				<string>1CA23EE10692099D00951B8B</string>
@@ -699,7 +703,7 @@
 	<key>StatusbarIsVisible</key>
 	<true/>
 	<key>TimeStamp</key>
-	<real>278471498.49229902</real>
+	<real>278518359.32884401</real>
 	<key>ToolbarDisplayMode</key>
 	<integer>2</integer>
 	<key>ToolbarIsVisible</key>
@@ -714,12 +718,10 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>CB94A60510991C67002B971B</string>
-		<string>CB94A60610991C67002B971B</string>
 		<string>/Users/karl/Projects/zipkit/ZipKit.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
-	<string>67 189 1607 989 0 0 1920 1178 </string>
+	<string>95 156 1607 989 0 0 1920 1178 </string>
 	<key>WindowToolsV3</key>
 	<array>
 		<dict>
