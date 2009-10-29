@@ -265,83 +265,126 @@
 	} else if ([cdHeader isDirectory]) {
 		result = [self.fileManager createDirectoryAtPath:path withIntermediateDirectories:YES attributes:nil error:nil];
 	} else {
-		// inflate the the deflated data from the archive to the file
-		z_stream strm;
-		strm.zalloc = Z_NULL;
-		strm.zfree = Z_NULL;
-		strm.opaque = Z_NULL;
-		strm.next_in = Z_NULL;
-		strm.avail_in = 0;
-		strm.total_out = 0;
-		int ret = inflateInit2(&strm, -MAX_WBITS);
-		if (ret == Z_OK) {
-			NSFileHandle *inflatedFile = [NSFileHandle newFileHandleForWritingAtPath:path];
-			NSData *deflatedData;
-			unsigned char out[ZKZipBlockSize];
-			NSUInteger have, chunkSize, bytesRead, totalBytesRead = 0, crc = 0;
-			unsigned long long block = 0, bytesWritten = 0;
-			do {
-				chunkSize = MIN(ZKZipBlockSize, cdHeader.compressedSize - totalBytesRead);
-				deflatedData = [archiveFile readDataOfLength:chunkSize];
-				bytesRead = [deflatedData length];
-				totalBytesRead += bytesRead;
-				if (bytesRead > 0 && totalBytesRead <= cdHeader.compressedSize) {
-					strm.avail_in = bytesRead;
-					strm.next_in = (Bytef*)[deflatedData bytes];
-					do {
-						strm.avail_out = chunkSize;
-						strm.next_out = out;
-						ret = inflate(&strm, Z_SYNC_FLUSH);
-						if (ret != Z_STREAM_ERROR) {
-							have = (chunkSize - strm.avail_out);
-							crc = crc32(crc, out, have);
-							[inflatedFile writeData:[NSData dataWithBytesNoCopy:out length:have freeWhenDone:NO]];
-							bytesWritten += have;
-						} else
-							ZKLogError(@"Stream error: %@", path);
-						if ([self.invoker respondsToSelector:@selector(isCancelled)]) {
-							if ([self.invoker isCancelled]) {
-								[inflatedFile closeFile];
-								if (self.delegate)
-									[self performSelectorOnMainThread:@selector(didCancel) withObject:nil waitUntilDone:NO];
-								[archiveFile closeFile];
-								return zkCancelled;
+		NSData *deflatedData;
+		NSUInteger have, chunkSize, bytesRead, totalBytesRead = 0, crc = 0;
+		unsigned long long block = 0, bytesWritten = 0;
+		int ret = Z_OK;
+		if (cdHeader.compressionMethod == Z_DEFLATED) {
+			// inflate the the deflated data from the archive to the file
+			z_stream strm;
+			strm.zalloc = Z_NULL;
+			strm.zfree = Z_NULL;
+			strm.opaque = Z_NULL;
+			strm.next_in = Z_NULL;
+			strm.avail_in = 0;
+			strm.total_out = 0;
+			ret = inflateInit2(&strm, -MAX_WBITS);
+			if (ret == Z_OK) {
+				NSFileHandle *inflatedFile = [NSFileHandle newFileHandleForWritingAtPath:path];
+				unsigned char out[ZKZipBlockSize];
+				do {
+					chunkSize = MIN(ZKZipBlockSize, cdHeader.compressedSize - totalBytesRead);
+					deflatedData = [archiveFile readDataOfLength:chunkSize];
+					bytesRead = [deflatedData length];
+					totalBytesRead += bytesRead;
+					if (bytesRead > 0 && totalBytesRead <= cdHeader.compressedSize) {
+						strm.avail_in = bytesRead;
+						strm.next_in = (Bytef*)[deflatedData bytes];
+						do {
+							strm.avail_out = chunkSize;
+							strm.next_out = out;
+							ret = inflate(&strm, Z_SYNC_FLUSH);
+							if (ret != Z_STREAM_ERROR) {
+								have = (chunkSize - strm.avail_out);
+								crc = crc32(crc, out, have);
+								[inflatedFile writeData:[NSData dataWithBytesNoCopy:out length:have freeWhenDone:NO]];
+								bytesWritten += have;
+							} else
+								ZKLogError(@"Stream error: %@", path);
+							if ([self.invoker respondsToSelector:@selector(isCancelled)]) {
+								if ([self.invoker isCancelled]) {
+									[inflatedFile closeFile];
+									if (self.delegate)
+										[self performSelectorOnMainThread:@selector(didCancel) withObject:nil waitUntilDone:NO];
+									[archiveFile closeFile];
+									return zkCancelled;
+								}
 							}
-						}
-					} while (strm.avail_out == 0 && ret != Z_STREAM_ERROR);
-				} else {
-					ret = Z_STREAM_END;
-				}
-				if ([self delegateWantsSizes]) {
-					if (ZKNotificationIterations > 0 && ++block % ZKNotificationIterations == 0) {
-						if ([NSThread isMainThread])
-							[self didUpdateBytesWritten:[NSNumber numberWithUnsignedLongLong:bytesWritten]];
-						else
-							[self performSelectorOnMainThread:@selector(didUpdateBytesWritten:)
-												   withObject:[NSNumber numberWithUnsignedLongLong:bytesWritten] waitUntilDone:NO];
-						bytesWritten = 0;
+						} while (strm.avail_out == 0 && ret != Z_STREAM_ERROR);
+					} else {
+						ret = Z_STREAM_END;
 					}
+					if ([self delegateWantsSizes]) {
+						if (ZKNotificationIterations > 0 && ++block % ZKNotificationIterations == 0) {
+							if ([NSThread isMainThread])
+								[self didUpdateBytesWritten:[NSNumber numberWithUnsignedLongLong:bytesWritten]];
+							else
+								[self performSelectorOnMainThread:@selector(didUpdateBytesWritten:)
+													   withObject:[NSNumber numberWithUnsignedLongLong:bytesWritten] waitUntilDone:NO];
+							bytesWritten = 0;
+						}
+					}
+					[NSThread sleepForTimeInterval:self.throttleThreadSleepTime];
+				} while (ret != Z_STREAM_END && ret != Z_STREAM_ERROR);
+				if ([self delegateWantsSizes]) {
+					if ([NSThread isMainThread])
+						[self didUpdateBytesWritten:[NSNumber numberWithUnsignedLongLong:bytesWritten]];
+					else
+						[self performSelectorOnMainThread:@selector(didUpdateBytesWritten:)
+											   withObject:[NSNumber numberWithUnsignedLongLong:bytesWritten] waitUntilDone:NO];
 				}
-				[NSThread sleepForTimeInterval:self.throttleThreadSleepTime];
-			} while (ret != Z_STREAM_END && ret != Z_STREAM_ERROR);
-			if ([self delegateWantsSizes]) {
-				if ([NSThread isMainThread])
-					[self didUpdateBytesWritten:[NSNumber numberWithUnsignedLongLong:bytesWritten]];
-				else
-					[self performSelectorOnMainThread:@selector(didUpdateBytesWritten:)
-										   withObject:[NSNumber numberWithUnsignedLongLong:bytesWritten] waitUntilDone:NO];
+				if (ret != Z_STREAM_ERROR)
+					inflateEnd(&strm);
+				[inflatedFile closeFile];
+				if (cdHeader.crc != crc) {
+					ret = Z_DATA_ERROR;
+					ZKLogError(@"Inflation CRC mismatch for %@ - stored: %u, calculated: %u", path, cdHeader.crc, crc);
+				}
 			}
-			if (ret != Z_STREAM_ERROR)
-				inflateEnd(&strm);
-			[inflatedFile closeFile];
-			if (cdHeader.crc != crc) {
-				ret = Z_DATA_ERROR;
-				ZKLogError(@"Inflation CRC mismatch for %@ - stored: %u, calculated: %u", path, cdHeader.crc, crc);
+		} else if (cdHeader.compressionMethod == Z_NO_COMPRESSION) {
+			chunkSize = MIN(ZKZipBlockSize, cdHeader.compressedSize);
+			deflatedData = [archiveFile readDataOfLength:chunkSize];
+			bytesRead = [deflatedData length];
+			totalBytesRead += bytesRead;
+			if (bytesRead > 0 && totalBytesRead <= cdHeader.compressedSize) {
+				NSFileHandle *inflatedFile = [NSFileHandle newFileHandleForWritingAtPath:path];
+				do {
+					[inflatedFile writeData:deflatedData];
+					bytesWritten += bytesRead;
+					crc = [deflatedData crc32:crc];
+					chunkSize = MIN(ZKZipBlockSize, cdHeader.compressedSize - totalBytesRead);
+					deflatedData = [archiveFile readDataOfLength:chunkSize];
+					if ([self delegateWantsSizes]) {
+						if (ZKNotificationIterations > 0 && ++block % ZKNotificationIterations == 0) {
+							if ([NSThread isMainThread])
+								[self didUpdateBytesWritten:[NSNumber numberWithUnsignedLongLong:bytesWritten]];
+							else
+								[self performSelectorOnMainThread:@selector(didUpdateBytesWritten:)
+													   withObject:[NSNumber numberWithUnsignedLongLong:bytesWritten] waitUntilDone:NO];
+							bytesWritten = 0;
+						}
+					}
+					[NSThread sleepForTimeInterval:self.throttleThreadSleepTime];
+					if ([self.invoker respondsToSelector:@selector(isCancelled)]) {
+						if ([self.invoker isCancelled]) {
+							[inflatedFile closeFile];
+							if (self.delegate)
+								[self performSelectorOnMainThread:@selector(didCancel) withObject:nil waitUntilDone:NO];
+							[archiveFile closeFile];
+							return zkCancelled;
+						}
+					}
+				} while (totalBytesRead < cdHeader.compressedSize);
+				[inflatedFile closeFile];
+				if (cdHeader.crc != crc) {
+					ret = Z_DATA_ERROR;
+					ZKLogError(@"Inflation CRC mismatch for %@ - stored: %u, calculated: %u", path, cdHeader.crc, crc);
+				}
 			}
 		}
 		result = (ret == Z_OK || ret == Z_STREAM_END);
 	}
-	
+
 	// restore the extracted file's attributes
 	if (result) {
 		[self.fileManager changeFileAttributes:[NSDictionary dictionaryWithObjectsAndKeys:

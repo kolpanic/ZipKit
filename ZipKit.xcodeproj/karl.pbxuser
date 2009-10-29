@@ -122,13 +122,12 @@
 					PBXFileDataSource_Warnings_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 278362129;
-			PBXWorkspaceStateSaveDate = 278362129;
+			PBXPerProjectTemplateStateSaveDate = 278469694;
+			PBXWorkspaceStateSaveDate = 278469694;
 		};
 		perUserProjectItems = {
-			CB4D46B01097782300465060 /* PBXTextBookmark */ = CB4D46B01097782300465060 /* PBXTextBookmark */;
-			CB4D46B11097782300465060 /* PBXBookmark */ = CB4D46B11097782300465060 /* PBXBookmark */;
-			CB4D46B21097782300465060 /* PBXTextBookmark */ = CB4D46B21097782300465060 /* PBXTextBookmark */;
+			CB94A68F1099234A002B971B /* PBXTextBookmark */ = CB94A68F1099234A002B971B /* PBXTextBookmark */;
+			CB94A6901099234A002B971B /* PBXTextBookmark */ = CB94A6901099234A002B971B /* PBXTextBookmark */;
 		};
 		sourceControlManager = CBCFA5E70DC7B3F600125DEF /* Source Control */;
 		userBuildSettings = {
@@ -186,7 +185,7 @@
 	CB097D5F0F6853AE00FA7B04 /* ZipFileOperation.m */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1190, 926}}";
-			sepNavSelRange = "{362, 0}";
+			sepNavSelRange = "{280, 0}";
 			sepNavVisRange = "{0, 362}";
 		};
 	};
@@ -331,30 +330,6 @@
 			sepNavVisRange = "{748, 1259}";
 		};
 	};
-	CB4D46B01097782300465060 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = CB0A843E0F79343F00702E0D /* ZKDefs.m */;
-		name = "ZKDefs.m: 10";
-		rLen = 0;
-		rLoc = 97;
-		rType = 0;
-		vrLen = 1169;
-		vrLoc = 0;
-	};
-	CB4D46B11097782300465060 /* PBXBookmark */ = {
-		isa = PBXBookmark;
-		fRef = CB9FD87E0E00800C00E60665 /* ZKFileArchive.m */;
-	};
-	CB4D46B21097782300465060 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = CB9FD87E0E00800C00E60665 /* ZKFileArchive.m */;
-		name = "ZKFileArchive.m: 190";
-		rLen = 0;
-		rLoc = 7288;
-		rType = 0;
-		vrLen = 2097;
-		vrLoc = 6362;
-	};
 	CB5C3DAD0DEC6E05001B42E1 /* NSFileManager+ZKAdditions.h */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1190, 643}}";
@@ -409,6 +384,26 @@
 			sepNavWindowFrame = "{{15, -5}, {1612, 1178}}";
 		};
 	};
+	CB94A68F1099234A002B971B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = CB9FD87E0E00800C00E60665 /* ZKFileArchive.m */;
+		name = "ZKFileArchive.m: 366";
+		rLen = 0;
+		rLoc = 15067;
+		rType = 0;
+		vrLen = 2426;
+		vrLoc = 13783;
+	};
+	CB94A6901099234A002B971B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = CB9FD87E0E00800C00E60665 /* ZKFileArchive.m */;
+		name = "ZKFileArchive.m: 354";
+		rLen = 0;
+		rLoc = 14450;
+		rType = 0;
+		vrLen = 2488;
+		vrLoc = 13566;
+	};
 	CB9FD87B0E00800C00E60665 /* NSData+ZKAdditions.h */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1190, 926}}";
@@ -418,9 +413,9 @@
 	};
 	CB9FD87C0E00800C00E60665 /* NSData+ZKAdditions.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1190, 3154}}";
-			sepNavSelRange = "{0, 0}";
-			sepNavVisRange = "{3176, 1266}";
+			sepNavIntBoundsRect = "{{0, 0}, {1190, 2640}}";
+			sepNavSelRange = "{1511, 20}";
+			sepNavVisRange = "{736, 1688}";
 		};
 	};
 	CB9FD87D0E00800C00E60665 /* ZKFileArchive.h */ = {
@@ -432,9 +427,9 @@
 	};
 	CB9FD87E0E00800C00E60665 /* ZKFileArchive.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1190, 12540}}";
-			sepNavSelRange = "{7288, 0}";
-			sepNavVisRange = "{6362, 2097}";
+			sepNavIntBoundsRect = "{{0, 0}, {1546, 11056}}";
+			sepNavSelRange = "{15067, 0}";
+			sepNavVisRange = "{14453, 979}";
 			sepNavWindowFrame = "{{15, -5}, {1612, 1178}}";
 		};
 	};
@@ -447,9 +442,9 @@
 	};
 	CB9FD8800E00800C00E60665 /* ZKCDHeader.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1190, 4465}}";
-			sepNavSelRange = "{0, 0}";
-			sepNavVisRange = "{0, 1594}";
+			sepNavIntBoundsRect = "{{0, 0}, {1190, 3808}}";
+			sepNavSelRange = "{475, 10}";
+			sepNavVisRange = "{0, 2026}";
 			sepNavWindowFrame = "{{15, -5}, {1612, 1178}}";
 		};
 	};
@@ -505,9 +500,9 @@
 	};
 	CBC87EAF0FB318D700F6B149 /* ZKDataArchive.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1190, 7239}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1190, 6048}}";
 			sepNavSelRange = "{683, 0}";
-			sepNavVisRange = "{0, 1307}";
+			sepNavVisRange = "{0, 1666}";
 			sepNavWindowFrame = "{{15, 156}, {1679, 1017}}";
 		};
 	};
