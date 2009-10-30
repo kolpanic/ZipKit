@@ -20,14 +20,12 @@
 		CB0FFF360DE49A5E00A00A46 /* GMAppleDouble+ZKAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = CB0FFF1A0DE498C100A00A46 /* GMAppleDouble+ZKAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CB2158260E01D1E5004346E1 /* ZKLog.m in Sources */ = {isa = PBXBuildFile; fileRef = CB2158240E01D1E5004346E1 /* ZKLog.m */; };
 		CB2158270E01D1E5004346E1 /* ZKLog.h in Headers */ = {isa = PBXBuildFile; fileRef = CB2158250E01D1E5004346E1 /* ZKLog.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		CB2D82531099EEEF00A535C1 /* GMAppleDouble.m in Sources */ = {isa = PBXBuildFile; fileRef = CBCC6F750F7141EF00B1C585 /* GMAppleDouble.m */; };
 		CB2D82541099EEF000A535C1 /* NSString+ZKAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = CB6967510E9418ED005AF730 /* NSString+ZKAdditions.m */; };
 		CB2D82551099EEF100A535C1 /* NSFileManager+ZKAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = CB5C3DAE0DEC6E05001B42E1 /* NSFileManager+ZKAdditions.m */; };
 		CB2D82561099EEF100A535C1 /* NSFileHandle+ZKAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = CB06517E0E0B48C1009C10F5 /* NSFileHandle+ZKAdditions.m */; };
 		CB2D82571099EEF200A535C1 /* NSDictionary+ZKAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = CBD4E4130F8D2620008DF385 /* NSDictionary+ZKAdditions.m */; };
 		CB2D82581099EEF200A535C1 /* NSDate+ZKAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = CB3FBCAE0F77D5020058163D /* NSDate+ZKAdditions.m */; };
 		CB2D82591099EEF300A535C1 /* NSData+ZKAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = CB9FD87C0E00800C00E60665 /* NSData+ZKAdditions.m */; };
-		CB2D825A1099EEF300A535C1 /* GMAppleDouble+ZKAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = CB0FFF1B0DE498C100A00A46 /* GMAppleDouble+ZKAdditions.m */; };
 		CB2D825B1099EEF400A535C1 /* ZKLog.m in Sources */ = {isa = PBXBuildFile; fileRef = CB2158240E01D1E5004346E1 /* ZKLog.m */; };
 		CB2D825C1099EEF500A535C1 /* ZKLFHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = CB9FD8840E00800C00E60665 /* ZKLFHeader.m */; };
 		CB2D825D1099EEF500A535C1 /* ZKCDTrailer64Locator.m in Sources */ = {isa = PBXBuildFile; fileRef = CBD6467C0F3890C2003BAD6F /* ZKCDTrailer64Locator.m */; };
@@ -675,14 +673,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CB2D82531099EEEF00A535C1 /* GMAppleDouble.m in Sources */,
 				CB2D82541099EEF000A535C1 /* NSString+ZKAdditions.m in Sources */,
 				CB2D82551099EEF100A535C1 /* NSFileManager+ZKAdditions.m in Sources */,
 				CB2D82561099EEF100A535C1 /* NSFileHandle+ZKAdditions.m in Sources */,
 				CB2D82571099EEF200A535C1 /* NSDictionary+ZKAdditions.m in Sources */,
 				CB2D82581099EEF200A535C1 /* NSDate+ZKAdditions.m in Sources */,
 				CB2D82591099EEF300A535C1 /* NSData+ZKAdditions.m in Sources */,
-				CB2D825A1099EEF300A535C1 /* GMAppleDouble+ZKAdditions.m in Sources */,
 				CB2D825B1099EEF400A535C1 /* ZKLog.m in Sources */,
 				CB2D825C1099EEF500A535C1 /* ZKLFHeader.m in Sources */,
 				CB2D825D1099EEF500A535C1 /* ZKCDTrailer64Locator.m in Sources */,

@@ -283,14 +283,11 @@
 			<array>
 				<string>XCToolbarPerspectiveControl</string>
 				<string>NSToolbarSeparatorItem</string>
-				<string>action</string>
 				<string>active-combo-popup</string>
-				<string>NSToolbarSpaceItem</string>
+				<string>action</string>
 				<string>build</string>
 				<string>build-and-go</string>
-				<string>go</string>
 				<string>clean</string>
-				<string>NSToolbarFlexibleSpaceItem</string>
 			</array>
 			<key>ControllerClassBaseName</key>
 			<string></string>
@@ -341,9 +338,6 @@
 								<string>29B97314FDCFA39411CA2CEA</string>
 								<string>080E96DDFE201D6D7F000001</string>
 								<string>CBA79AB50FB4A73300D525E0</string>
-								<string>CB2AB64C1099E98F000D5E91</string>
-								<string>CB7C50B90DD895D000EA975A</string>
-								<string>29B97317FDCFA39411CA2CEA</string>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
@@ -402,10 +396,10 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>CB5838011099F5BF0034DF0D</string>
+										<string>CBA0F0C9109A657E00821EB1</string>
 										<key>history</key>
 										<array>
-											<string>CB5837FF1099F5BF0034DF0D</string>
+											<string>CBA0F0C4109A657E00821EB1</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -528,11 +522,11 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>CB5837F81099F51B0034DF0D</string>
+				<string>CBA0F0C6109A657E00821EB1</string>
 				<string>1CA23ED40692098700951B8B</string>
-				<string>CB5837F91099F51B0034DF0D</string>
+				<string>CBA0F0C7109A657E00821EB1</string>
 				<string>CBBF8D580D80348D00E0F4B1</string>
-				<string>CB5837FA1099F51B0034DF0D</string>
+				<string>CBA0F0C8109A657E00821EB1</string>
 				<string>1CA23EDF0692099D00951B8B</string>
 				<string>1CA23EE00692099D00951B8B</string>
 				<string>1CA23EE10692099D00951B8B</string>
@@ -705,7 +699,7 @@
 	<key>StatusbarIsVisible</key>
 	<true/>
 	<key>TimeStamp</key>
-	<real>278525375.86579102</real>
+	<real>278553982.94863403</real>
 	<key>ToolbarDisplayMode</key>
 	<integer>2</integer>
 	<key>ToolbarIsVisible</key>
