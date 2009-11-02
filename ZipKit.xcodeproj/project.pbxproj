@@ -19,6 +19,7 @@
 		CB0682C7109F405E0028E41A /* ZipKitTest.zip in Resources */ = {isa = PBXBuildFile; fileRef = CB0682BD109F40210028E41A /* ZipKitTest.zip */; };
 		CB0682D3109F40C10028E41A /* libtouchzipkit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CB2D82501099EED100A535C1 /* libtouchzipkit.a */; };
 		CB0682D6109F40C60028E41A /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CB2D83DC1099F00000A535C1 /* libz.dylib */; };
+		CB06830A109F41910028E41A /* ZipKit_Touch.png in Resources */ = {isa = PBXBuildFile; fileRef = CB068309109F41910028E41A /* ZipKit_Touch.png */; };
 		CB0A83720F7923CA00702E0D /* RemainingTimeTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = CB0A83710F7923CA00702E0D /* RemainingTimeTransformer.m */; };
 		CB0A843F0F79343F00702E0D /* ZKDefs.h in Headers */ = {isa = PBXBuildFile; fileRef = CB0A843D0F79343F00702E0D /* ZKDefs.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CB0A84400F79343F00702E0D /* ZKDefs.m in Sources */ = {isa = PBXBuildFile; fileRef = CB0A843E0F79343F00702E0D /* ZKDefs.m */; };
@@ -113,7 +114,7 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = CB2D824F1099EED100A535C1 /* touchzipkit */;
+			remoteGlobalIDString = CB2D824F1099EED100A535C1;
 			remoteInfo = touchzipkit;
 		};
 		CB429C110DD89BCC00B12209 /* PBXContainerItemProxy */ = {
@@ -165,6 +166,7 @@
 		CB0682BD109F40210028E41A /* ZipKitTest.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = ZipKitTest.zip; sourceTree = "<group>"; };
 		CB0682BF109F40350028E41A /* ZipKit_Touch-main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ZipKit_Touch-main.m"; sourceTree = "<group>"; };
 		CB0682EC109F40EA0028E41A /* ZipKit_Touch_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZipKit_Touch_Prefix.pch; sourceTree = "<group>"; };
+		CB068309109F41910028E41A /* ZipKit_Touch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ZipKit_Touch.png; sourceTree = "<group>"; };
 		CB097D5E0F6853AE00FA7B04 /* ZipFileOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZipFileOperation.h; sourceTree = "<group>"; };
 		CB097D5F0F6853AE00FA7B04 /* ZipFileOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZipFileOperation.m; sourceTree = "<group>"; };
 		CB0A83700F7923CA00702E0D /* RemainingTimeTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RemainingTimeTransformer.h; sourceTree = "<group>"; };
@@ -388,6 +390,7 @@
 				CB0682B3109F400F0028E41A /* ZipKit_Touch-MainWindow.xib */,
 				CB0682B4109F400F0028E41A /* ZipKit_Touch-RootViewController.xib */,
 				CB0682BD109F40210028E41A /* ZipKitTest.zip */,
+				CB068309109F41910028E41A /* ZipKit_Touch.png */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -759,6 +762,7 @@
 				CB0682C7109F405E0028E41A /* ZipKitTest.zip in Resources */,
 				CB0682B5109F400F0028E41A /* ZipKit_Touch-MainWindow.xib in Resources */,
 				CB0682B6109F400F0028E41A /* ZipKit_Touch-RootViewController.xib in Resources */,
+				CB06830A109F41910028E41A /* ZipKit_Touch.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

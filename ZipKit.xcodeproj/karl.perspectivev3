@@ -305,8 +305,6 @@
 			<key>Layout</key>
 			<array>
 				<dict>
-					<key>BecomeActive</key>
-					<true/>
 					<key>ContentConfiguration</key>
 					<dict>
 						<key>PBXBottomSmartGroupGIDs</key>
@@ -384,6 +382,8 @@
 					<key>Dock</key>
 					<array>
 						<dict>
+							<key>BecomeActive</key>
+							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
@@ -401,10 +401,10 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>CB0682FC109F41560028E41A</string>
+										<string>CB068322109F41E30028E41A</string>
 										<key>history</key>
 										<array>
-											<string>CB0682FB109F414D0028E41A</string>
+											<string>CB068320109F41E30028E41A</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -499,7 +499,7 @@
 									<key>GeometryConfiguration</key>
 									<dict>
 										<key>Frame</key>
-										<string>{{10, 27}, {1251, -27}}</string>
+										<string>{{0, 0}, {568, 405}}</string>
 									</dict>
 									<key>Module</key>
 									<string>PBXBuildResultsModule</string>
@@ -527,11 +527,11 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>CB068288109F3F3A0028E41A</string>
+				<string>CB068306109F41890028E41A</string>
 				<string>1CA23ED40692098700951B8B</string>
-				<string>CB068289109F3F3A0028E41A</string>
+				<string>CB068307109F41890028E41A</string>
 				<string>CBBF8D580D80348D00E0F4B1</string>
-				<string>CB06828A109F3F3A0028E41A</string>
+				<string>CB068308109F41890028E41A</string>
 				<string>1CA23EDF0692099D00951B8B</string>
 				<string>1CA23EE00692099D00951B8B</string>
 				<string>1CA23EE10692099D00951B8B</string>
@@ -680,13 +680,13 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>CB0682AC109F3F6C0028E41A</string>
+				<string>CB068313109F41A50028E41A</string>
 				<string>1CCC7628064C1048000F2A68</string>
 				<string>1CCC7629064C1048000F2A68</string>
-				<string>CB0682AD109F3F6C0028E41A</string>
-				<string>CB0682AE109F3F6C0028E41A</string>
-				<string>CB0682AF109F3F6C0028E41A</string>
-				<string>CB0682B0109F3F6C0028E41A</string>
+				<string>CB068314109F41A50028E41A</string>
+				<string>CB068315109F41A50028E41A</string>
+				<string>CB068316109F41A50028E41A</string>
+				<string>CB068317109F41A50028E41A</string>
 				<string>CBBF8D580D80348D00E0F4B1</string>
 			</array>
 			<key>ToolbarConfigUserDefaultsMinorVersion</key>
@@ -704,7 +704,7 @@
 	<key>StatusbarIsVisible</key>
 	<true/>
 	<key>TimeStamp</key>
-	<real>278872406.31426501</real>
+	<real>278872547.30686003</real>
 	<key>ToolbarDisplayMode</key>
 	<integer>2</integer>
 	<key>ToolbarIsVisible</key>
