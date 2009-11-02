@@ -342,14 +342,14 @@
 						<dict>
 							<key>PBXSmartGroupTreeModuleOutlineStateExpansionKey</key>
 							<array>
-								<string>0867D691FE84028FC02AAC07</string>
-								<string>08FB77AEFE84172EC02AAC07</string>
+								<string>29B97314FDCFA39411CA2CEA</string>
+								<string>080E96DDFE201D6D7F000001</string>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>5</integer>
 									<integer>3</integer>
+									<integer>1</integer>
 									<integer>0</integer>
 								</array>
 							</array>
@@ -373,7 +373,7 @@
 							<real>22</real>
 						</array>
 						<key>RubberWindowFrame</key>
-						<string>98 143 1613 1035 0 0 1920 1178 </string>
+						<string>185 141 1613 1035 0 0 1920 1178 </string>
 					</dict>
 					<key>Module</key>
 					<string>PBXSmartGroupTreeModule</string>
@@ -391,7 +391,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>CB3742AB106A5CEF00AED801</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>ZKLog.m</string>
+								<string>MainWindowController.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -399,15 +399,14 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>CB3742AC106A5CEF00AED801</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>ZKLog.m</string>
+										<string>MainWindowController.m</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>CB58D4E3109F7DC80091A69D</string>
+										<string>CB58D503109F7DD60091A69D</string>
 										<key>history</key>
 										<array>
-											<string>CB58D4E1109F7DC80091A69D</string>
-											<string>CB58D4E2109F7DC80091A69D</string>
+											<string>CB58D4B0109F7CD60091A69D</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -423,7 +422,7 @@
 								<key>Frame</key>
 								<string>{{0, 0}, {1269, 989}}</string>
 								<key>RubberWindowFrame</key>
-								<string>98 143 1613 1035 0 0 1920 1178 </string>
+								<string>185 141 1613 1035 0 0 1920 1178 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
@@ -464,7 +463,7 @@
 										<key>Frame</key>
 										<string>{{10, 27}, {1269, -27}}</string>
 										<key>RubberWindowFrame</key>
-										<string>98 143 1613 1035 0 0 1920 1178 </string>
+										<string>185 141 1613 1035 0 0 1920 1178 </string>
 									</dict>
 									<key>Module</key>
 									<string>PBXProjectFindModule</string>
@@ -502,7 +501,7 @@
 									<key>GeometryConfiguration</key>
 									<dict>
 										<key>Frame</key>
-										<string>{{10, 27}, {1269, -27}}</string>
+										<string>{{0, 0}, {568, 405}}</string>
 									</dict>
 									<key>Module</key>
 									<string>PBXBuildResultsModule</string>
@@ -530,11 +529,11 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>CB58D4E4109F7DC80091A69D</string>
+				<string>CB58D504109F7DD60091A69D</string>
 				<string>1CA23ED40692098700951B8B</string>
-				<string>CB58D4E5109F7DC80091A69D</string>
+				<string>CB58D505109F7DD60091A69D</string>
 				<string>CB3742AB106A5CEF00AED801</string>
-				<string>CB58D4E6109F7DC80091A69D</string>
+				<string>CB58D506109F7DD60091A69D</string>
 				<string>1CA23EDF0692099D00951B8B</string>
 				<string>1CA23EE00692099D00951B8B</string>
 				<string>1CA23EE10692099D00951B8B</string>
@@ -683,14 +682,14 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>CB3742E2106A5F9E00AED801</string>
+				<string>CB58D4A5109F7CCE0091A69D</string>
 				<string>1CCC7628064C1048000F2A68</string>
 				<string>1CCC7629064C1048000F2A68</string>
-				<string>CB3742E3106A5F9E00AED801</string>
-				<string>CB3742E4106A5F9E00AED801</string>
-				<string>CB3742E5106A5F9E00AED801</string>
-				<string>CB3742E6106A5F9E00AED801</string>
-				<string>CB3742E7106A5F9E00AED801</string>
+				<string>CB58D4A6109F7CCE0091A69D</string>
+				<string>CB58D4A7109F7CCE0091A69D</string>
+				<string>CB58D4A8109F7CCE0091A69D</string>
+				<string>CB58D4A9109F7CCE0091A69D</string>
+				<string>CB3742AB106A5CEF00AED801</string>
 			</array>
 			<key>ToolbarConfigUserDefaultsMinorVersion</key>
 			<string>2</string>
@@ -707,7 +706,7 @@
 	<key>StatusbarIsVisible</key>
 	<true/>
 	<key>TimeStamp</key>
-	<real>278887880.32937998</real>
+	<real>278887894.80029601</real>
 	<key>ToolbarConfigUserDefaultsMinorVersion</key>
 	<string>2</string>
 	<key>ToolbarDisplayMode</key>
@@ -724,10 +723,10 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>/Users/karl/Projects/zipkit/ZipKit.xcodeproj</string>
+		<string>/Users/karl/Projects/zipkit/Demo Projects/ZipKit Utility - Mac OS X App/ZipKit Utility.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
-	<string>98 143 1613 1035 0 0 1920 1178 </string>
+	<string>185 141 1613 1035 0 0 1920 1178 </string>
 	<key>WindowToolsV3</key>
 	<array>
 		<dict>

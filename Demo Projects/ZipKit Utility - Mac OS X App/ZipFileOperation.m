@@ -1,10 +1,3 @@
-//
-//  ZipFileOperation.m
-//  ZipKit
-//
-//  Created by Karl Moskowski on 01/04/09.
-//
-
 #import "ZipFileOperation.h"
 #import <ZipKit/ZKFileArchive.h>
 #import <ZipKit/ZKLog.h>

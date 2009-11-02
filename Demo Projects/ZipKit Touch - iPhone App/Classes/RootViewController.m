@@ -1,7 +1,7 @@
-#import "ZipKit_TouchRootViewController.h"
+#import "RootViewController.h"
 #import "ZKDefs.h"
 
-@implementation ZipKit_TouchRootViewController
+@implementation RootViewController
 @synthesize nextViewController;
 @synthesize imageView;
 @synthesize textView;

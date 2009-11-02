@@ -329,11 +329,13 @@
 						<dict>
 							<key>PBXSmartGroupTreeModuleColumnWidthsKey</key>
 							<array>
-								<real>300</real>
+								<real>22</real>
+								<real>278</real>
 								<real>22</real>
 							</array>
 							<key>PBXSmartGroupTreeModuleColumnsKey_v4</key>
 							<array>
+								<string>SCMStatusColumn</string>
 								<string>MainColumn</string>
 								<string>TargetStatusColumn</string>
 							</array>
@@ -342,14 +344,14 @@
 						<dict>
 							<key>PBXSmartGroupTreeModuleOutlineStateExpansionKey</key>
 							<array>
-								<string>0867D691FE84028FC02AAC07</string>
-								<string>08FB77AEFE84172EC02AAC07</string>
+								<string>08FB7794FE84155DC02AAC07</string>
+								<string>08FB7795FE84155DC02AAC07</string>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>5</integer>
 									<integer>3</integer>
+									<integer>1</integer>
 									<integer>0</integer>
 								</array>
 							</array>
@@ -367,13 +369,15 @@
 						<string>{{0, 0}, {339, 994}}</string>
 						<key>GroupTreeTableConfiguration</key>
 						<array>
+							<string>SCMStatusColumn</string>
+							<real>22</real>
 							<string>MainColumn</string>
-							<real>300</real>
+							<real>278</real>
 							<string>TargetStatusColumn</string>
 							<real>22</real>
 						</array>
 						<key>RubberWindowFrame</key>
-						<string>98 143 1613 1035 0 0 1920 1178 </string>
+						<string>307 58 1613 1035 0 0 1920 1178 </string>
 					</dict>
 					<key>Module</key>
 					<string>PBXSmartGroupTreeModule</string>
@@ -391,7 +395,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>CB3742AB106A5CEF00AED801</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>ZKLog.m</string>
+								<string>zku.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -399,15 +403,14 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>CB3742AC106A5CEF00AED801</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>ZKLog.m</string>
+										<string>zku.m</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>CB58D4E3109F7DC80091A69D</string>
+										<string>CB58D4F2109F7DD00091A69D</string>
 										<key>history</key>
 										<array>
-											<string>CB58D4E1109F7DC80091A69D</string>
-											<string>CB58D4E2109F7DC80091A69D</string>
+											<string>CB58D4C5109F7CEF0091A69D</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -423,7 +426,7 @@
 								<key>Frame</key>
 								<string>{{0, 0}, {1269, 989}}</string>
 								<key>RubberWindowFrame</key>
-								<string>98 143 1613 1035 0 0 1920 1178 </string>
+								<string>307 58 1613 1035 0 0 1920 1178 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
@@ -464,7 +467,7 @@
 										<key>Frame</key>
 										<string>{{10, 27}, {1269, -27}}</string>
 										<key>RubberWindowFrame</key>
-										<string>98 143 1613 1035 0 0 1920 1178 </string>
+										<string>307 58 1613 1035 0 0 1920 1178 </string>
 									</dict>
 									<key>Module</key>
 									<string>PBXProjectFindModule</string>
@@ -502,7 +505,7 @@
 									<key>GeometryConfiguration</key>
 									<dict>
 										<key>Frame</key>
-										<string>{{10, 27}, {1269, -27}}</string>
+										<string>{{0, 0}, {568, 405}}</string>
 									</dict>
 									<key>Module</key>
 									<string>PBXBuildResultsModule</string>
@@ -530,11 +533,11 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>CB58D4E4109F7DC80091A69D</string>
+				<string>CB58D4F3109F7DD00091A69D</string>
 				<string>1CA23ED40692098700951B8B</string>
-				<string>CB58D4E5109F7DC80091A69D</string>
+				<string>CB58D4F4109F7DD00091A69D</string>
 				<string>CB3742AB106A5CEF00AED801</string>
-				<string>CB58D4E6109F7DC80091A69D</string>
+				<string>CB58D4F5109F7DD00091A69D</string>
 				<string>1CA23EDF0692099D00951B8B</string>
 				<string>1CA23EE00692099D00951B8B</string>
 				<string>1CA23EE10692099D00951B8B</string>
@@ -683,14 +686,14 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>CB3742E2106A5F9E00AED801</string>
+				<string>CB49E711109F78FE0046B62A</string>
 				<string>1CCC7628064C1048000F2A68</string>
 				<string>1CCC7629064C1048000F2A68</string>
-				<string>CB3742E3106A5F9E00AED801</string>
-				<string>CB3742E4106A5F9E00AED801</string>
-				<string>CB3742E5106A5F9E00AED801</string>
-				<string>CB3742E6106A5F9E00AED801</string>
-				<string>CB3742E7106A5F9E00AED801</string>
+				<string>CB49E712109F78FE0046B62A</string>
+				<string>CB49E713109F78FE0046B62A</string>
+				<string>CB49E714109F78FE0046B62A</string>
+				<string>CB49E715109F78FE0046B62A</string>
+				<string>CB3742AB106A5CEF00AED801</string>
 			</array>
 			<key>ToolbarConfigUserDefaultsMinorVersion</key>
 			<string>2</string>
@@ -707,7 +710,7 @@
 	<key>StatusbarIsVisible</key>
 	<true/>
 	<key>TimeStamp</key>
-	<real>278887880.32937998</real>
+	<real>278887888.96224999</real>
 	<key>ToolbarConfigUserDefaultsMinorVersion</key>
 	<string>2</string>
 	<key>ToolbarDisplayMode</key>
@@ -724,10 +727,10 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>/Users/karl/Projects/zipkit/ZipKit.xcodeproj</string>
+		<string>/Users/karl/Projects/zipkit/Demo Projects/zku - Mac OS X Tool/zku.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
-	<string>98 143 1613 1035 0 0 1920 1178 </string>
+	<string>307 58 1613 1035 0 0 1920 1178 </string>
 	<key>WindowToolsV3</key>
 	<array>
 		<dict>

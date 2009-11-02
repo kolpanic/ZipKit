@@ -21,9 +21,11 @@ NSString* const ZKLogToFileKey = @"ZKLogToFile";
 		NSString *label = [self levelToLabel:level];
 		NSString *now = [self.dateFormatter stringFromDate:[NSDate date]];
 		if (label) {
-			fprintf(stderr, "%s [%i] %s %s (%s:%u)\r\n",
+			NSString *lineNumberString = [NSString stringWithFormat:@"%u", lineNumber];
+			fprintf(stderr, "%s [%i] %s %s (%s:%s)\r\n",
 					[now UTF8String], self.pid, [label UTF8String], [message UTF8String],
-					[[[NSString stringWithUTF8String:sourceFile] lastPathComponent] UTF8String], lineNumber);
+					[[[NSString stringWithUTF8String:sourceFile] lastPathComponent] UTF8String],
+					[lineNumberString UTF8String]);
 			fflush(stderr);
 		}
 	}

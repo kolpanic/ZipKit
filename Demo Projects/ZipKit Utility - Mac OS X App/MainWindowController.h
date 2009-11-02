@@ -1,10 +1,3 @@
-//
-//  MainWindowController.h
-//  ZipKit
-//
-//  Created by Karl Moskowski on 01/04/09.
-//
-
 #import <Cocoa/Cocoa.h>
 
 @interface MainWindowController : NSWindowController {

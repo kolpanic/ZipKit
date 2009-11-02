@@ -1,5 +1,5 @@
 #import "ZipKit_TouchAppDelegate.h"
-#import "ZipKit_TouchRootViewController.h"
+#import "RootViewController.h"
 
 @implementation ZipKit_TouchAppDelegate
 

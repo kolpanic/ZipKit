@@ -1,6 +1,6 @@
 #import "ZKDataArchive.h"
 
-@interface ZipKit_TouchRootViewController : UITableViewController {
+@interface RootViewController : UITableViewController {
 	UIViewController *nextViewController;
 	UIImageView *imageView;
 	UITextView *textView;

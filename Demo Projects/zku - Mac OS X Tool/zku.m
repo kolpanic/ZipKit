@@ -1,6 +1,7 @@
 #import <Foundation/Foundation.h>
-#import "ZipKit/ZKFileArchive.h"
-#import "ZipKit/ZKLog.h"
+#import "ZKFileArchive.h"
+#import "ZKLog.h"
+#include <objc/objc-auto.h>
 
 @interface ZKUController : NSObject
 - (void) process:(NSArray *)items;
@@ -49,7 +50,7 @@ int main(int argc, const char * argv[]) {
 	objc_startCollectorThread();
 	NSAutoreleasePool *pool = [NSAutoreleasePool new];
 	[ZKLog sharedInstance].minimumLevel = ZKLogLevelAll;
-
+	
 	if (argc > 1) {
 		NSFileManager *fileManager = [NSFileManager defaultManager];
 		NSMutableArray *items = [NSMutableArray arrayWithCapacity:(argc - 1)];

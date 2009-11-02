@@ -1,10 +1,3 @@
-//
-//  RemainingTimeTransformer.m
-//  ZipKit
-//
-//  Created by Karl Moskowski on 01/04/09.
-//
-
 #import "RemainingTimeTransformer.h"
 
 @implementation RemainingTimeTransformer

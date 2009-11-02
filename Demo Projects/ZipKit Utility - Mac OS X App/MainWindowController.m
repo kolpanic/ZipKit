@@ -1,10 +1,3 @@
-//
-//  MainWindowController.m
-//  ZipKit
-//
-//  Created by Karl Moskowski on 01/04/09.
-//
-
 #import "MainWindowController.h"
 #import "ZipFileOperation.h"
 #import "RemainingTimeTransformer.h"

@@ -1,0 +1,184 @@
+// !$*UTF8*$!
+{
+	1D3623250D0F684500981E51 /* ZipKit_TouchAppDelegate.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1208, 972}}";
+			sepNavSelRange = "{412, 0}";
+			sepNavVisRange = "{0, 412}";
+		};
+	};
+	1D6058900D05DD3D006BFB54 /* ZipKit Touch */ = {
+		activeExec = 0;
+		executables = (
+			CB748019109F76B3006A143C /* ZipKit Touch */,
+		);
+	};
+	28AD735F0D9D9599002E5188 /* MainWindow.xib */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1222, 3724}}";
+			sepNavSelRange = "{3109, 0}";
+			sepNavVisRect = "{{0, 431}, {1222, 972}}";
+		};
+	};
+	28C286DF0D94DF7D0034E888 /* RootViewController.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1552, 285}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 383}";
+		};
+	};
+	28C286E00D94DF7D0034E888 /* RootViewController.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1552, 1577}}";
+			sepNavSelRange = "{184, 0}";
+			sepNavVisRange = "{0, 262}";
+		};
+	};
+	29B97313FDCFA39411CA2CEA /* Project object */ = {
+		activeBuildConfigurationName = Debug;
+		activeExecutable = CB748019109F76B3006A143C /* ZipKit Touch */;
+		activeTarget = 1D6058900D05DD3D006BFB54 /* ZipKit Touch */;
+		addToTargets = (
+			1D6058900D05DD3D006BFB54 /* ZipKit Touch */,
+		);
+		codeSenseManager = CB748022109F76B4006A143C /* Code sense */;
+		executables = (
+			CB748019109F76B3006A143C /* ZipKit Touch */,
+		);
+		perUserDictionary = {
+			PBXConfiguration.PBXFileTableDataSource3.PBXFileTableDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					10,
+					20,
+					48,
+					43,
+					43,
+					20,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+					PBXFileDataSource_Target_ColumnID,
+				);
+			};
+			PBXConfiguration.PBXTargetDataSource.PBXTargetDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					10,
+					60,
+					20,
+					48,
+					43,
+					43,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXTargetDataSource_PrimaryAttribute,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+				);
+			};
+			PBXPerProjectTemplateStateSaveDate = 278887898;
+			PBXWorkspaceStateSaveDate = 278887898;
+		};
+		perUserProjectItems = {
+			CB58D48F109F7CC70091A69D /* PBXTextBookmark */ = CB58D48F109F7CC70091A69D /* PBXTextBookmark */;
+			CB58D514109F7DE00091A69D /* PBXTextBookmark */ = CB58D514109F7DE00091A69D /* PBXTextBookmark */;
+			CB58D51B109F7DE00091A69D /* PBXTextBookmark */ = CB58D51B109F7DE00091A69D /* PBXTextBookmark */;
+		};
+		sourceControlManager = CB748021109F76B4006A143C /* Source Control */;
+		userBuildSettings = {
+		};
+	};
+	29B97316FDCFA39411CA2CEA /* main.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1208, 675}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 224}";
+		};
+	};
+	CB58D48F109F7CC70091A69D /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28C286E00D94DF7D0034E888 /* RootViewController.m */;
+		name = "RootViewController.m: 9";
+		rLen = 0;
+		rLoc = 184;
+		rType = 0;
+		vrLen = 1673;
+		vrLoc = 0;
+	};
+	CB58D514109F7DE00091A69D /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623250D0F684500981E51 /* ZipKit_TouchAppDelegate.m */;
+		name = "ZipKit_TouchAppDelegate.m: 2";
+		rLen = 0;
+		rLoc = 63;
+		rType = 0;
+		vrLen = 412;
+		vrLoc = 0;
+	};
+	CB58D51B109F7DE00091A69D /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623250D0F684500981E51 /* ZipKit_TouchAppDelegate.m */;
+		name = "ZipKit_TouchAppDelegate.m: 20";
+		rLen = 0;
+		rLoc = 412;
+		rType = 0;
+		vrLen = 412;
+		vrLoc = 0;
+	};
+	CB748019109F76B3006A143C /* ZipKit Touch */ = {
+		isa = PBXExecutable;
+		activeArgIndices = (
+		);
+		argumentStrings = (
+		);
+		autoAttachOnCrash = 1;
+		breakpointsEnabled = 0;
+		configStateDict = {
+		};
+		customDataFormattersEnabled = 1;
+		dataTipCustomDataFormattersEnabled = 1;
+		dataTipShowTypeColumn = 1;
+		dataTipSortType = 0;
+		debuggerPlugin = GDBDebugging;
+		disassemblyDisplayState = 0;
+		dylibVariantSuffix = "";
+		enableDebugStr = 1;
+		environmentEntries = (
+		);
+		executableSystemSymbolLevel = 0;
+		executableUserSymbolLevel = 0;
+		libgmallocEnabled = 0;
+		name = "ZipKit Touch";
+		showTypeColumn = 0;
+		sourceDirectories = (
+		);
+	};
+	CB748021109F76B4006A143C /* Source Control */ = {
+		isa = PBXSourceControlManager;
+		fallbackIsa = XCSourceControlManager;
+		isSCMEnabled = 0;
+		scmConfiguration = {
+			repositoryNamesForRoots = {
+				"" = "";
+			};
+		};
+	};
+	CB748022109F76B4006A143C /* Code sense */ = {
+		isa = PBXCodeSenseManager;
+		indexTemplatePath = "";
+	};
+}
