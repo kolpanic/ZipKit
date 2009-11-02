@@ -2,9 +2,11 @@
 {
 	29B97313FDCFA39411CA2CEA /* Project object */ = {
 		activeBuildConfigurationName = Debug;
-		activeExecutable = CBCFA5D90DC7B3DA00125DEF /* ZipKit Utility */;
-		activeTarget = 8D1107260486CEB800E47090 /* ZipKit Utility */;
+		activeExecutable = CB06827E109F3F2A0028E41A /* ZipKit Touch */;
+		activeSDKPreference = iphonesimulator3.1.2;
+		activeTarget = CB06827C109F3F2A0028E41A /* ZipKit Touch */;
 		addToTargets = (
+			CB06827C109F3F2A0028E41A /* ZipKit Touch */,
 		);
 		breakpoints = (
 		);
@@ -12,6 +14,7 @@
 		executables = (
 			CBCFA5D90DC7B3DA00125DEF /* ZipKit Utility */,
 			CB4BB3100F7954AF00CBA7B9 /* zku */,
+			CB06827E109F3F2A0028E41A /* ZipKit Touch */,
 		);
 		perUserDictionary = {
 			"PBXConfiguration.PBXBreakpointsDataSource.v1:1CA1AED706398EBD00589147" = {
@@ -120,12 +123,12 @@
 					PBXFileDataSource_Warnings_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 278870831;
-			PBXWorkspaceStateSaveDate = 278870831;
+			PBXPerProjectTemplateStateSaveDate = 278871832;
+			PBXWorkspaceStateSaveDate = 278871832;
 		};
 		perUserProjectItems = {
-			CBEC7E36109F3B4A00AC9C48 /* PBXTextBookmark */ = CBEC7E36109F3B4A00AC9C48 /* PBXTextBookmark */;
-			CBEC7E37109F3B4A00AC9C48 /* PBXTextBookmark */ = CBEC7E37109F3B4A00AC9C48 /* PBXTextBookmark */;
+			CB0682FB109F414D0028E41A /* PBXTextBookmark */ = CB0682FB109F414D0028E41A /* PBXTextBookmark */;
+			CB0682FC109F41560028E41A /* PBXTextBookmark */ = CB0682FC109F41560028E41A /* PBXTextBookmark */;
 		};
 		sourceControlManager = CBCFA5E70DC7B3F600125DEF /* Source Control */;
 		userBuildSettings = {
@@ -173,6 +176,95 @@
 			sepNavVisRange = "{0, 592}";
 		};
 	};
+	CB06827C109F3F2A0028E41A /* ZipKit Touch */ = {
+		activeExec = 0;
+		executables = (
+			CB06827E109F3F2A0028E41A /* ZipKit Touch */,
+		);
+	};
+	CB06827E109F3F2A0028E41A /* ZipKit Touch */ = {
+		isa = PBXExecutable;
+		activeArgIndices = (
+		);
+		argumentStrings = (
+		);
+		autoAttachOnCrash = 1;
+		breakpointsEnabled = 0;
+		configStateDict = {
+		};
+		customDataFormattersEnabled = 1;
+		dataTipCustomDataFormattersEnabled = 1;
+		dataTipShowTypeColumn = 1;
+		dataTipSortType = 0;
+		debuggerPlugin = GDBDebugging;
+		disassemblyDisplayState = 0;
+		dylibVariantSuffix = "";
+		enableDebugStr = 1;
+		environmentEntries = (
+		);
+		executableSystemSymbolLevel = 0;
+		executableUserSymbolLevel = 0;
+		libgmallocEnabled = 0;
+		name = "ZipKit Touch";
+		showTypeColumn = 0;
+		sourceDirectories = (
+		);
+	};
+	CB0682B7109F401B0028E41A /* ZipKit_TouchAppDelegate.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1190, 926}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 288}";
+		};
+	};
+	CB0682B9109F401B0028E41A /* ZipKit_TouchRootViewController.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1190, 926}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 452}";
+		};
+	};
+	CB0682BA109F401B0028E41A /* ZipKit_TouchRootViewController.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1546, 1406}}";
+			sepNavSelRange = "{1324, 0}";
+			sepNavVisRange = "{1125, 690}";
+		};
+	};
+	CB0682BF109F40350028E41A /* ZipKit_Touch-main.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1190, 926}}";
+			sepNavSelRange = "{60, 0}";
+			sepNavVisRange = "{0, 224}";
+		};
+	};
+	CB0682EC109F40EA0028E41A /* ZipKit_Touch_Prefix.pch */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1190, 926}}";
+			sepNavSelRange = "{225, 0}";
+			sepNavVisRange = "{0, 225}";
+		};
+	};
+	CB0682FB109F414D0028E41A /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = CB0A843E0F79343F00702E0D /* ZKDefs.m */;
+		name = "ZKDefs.m: 9";
+		rLen = 0;
+		rLoc = 96;
+		rType = 0;
+		vrLen = 394;
+		vrLoc = 0;
+	};
+	CB0682FC109F41560028E41A /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = CB0A843E0F79343F00702E0D /* ZKDefs.m */;
+		name = "ZKDefs.m: 9";
+		rLen = 0;
+		rLoc = 96;
+		rType = 0;
+		vrLen = 1169;
+		vrLoc = 0;
+	};
 	CB097D5E0F6853AE00FA7B04 /* ZipFileOperation.h */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1190, 926}}";
@@ -212,7 +304,7 @@
 	CB0A843E0F79343F00702E0D /* ZKDefs.m */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1190, 926}}";
-			sepNavSelRange = "{0, 0}";
+			sepNavSelRange = "{96, 0}";
 			sepNavVisRange = "{0, 1169}";
 		};
 	};
@@ -463,9 +555,9 @@
 	};
 	CBA79A4A0FB4A3A600D525E0 /* ZKArchive.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1190, 4161}}";
-			sepNavSelRange = "{220, 0}";
-			sepNavVisRange = "{0, 1761}";
+			sepNavIntBoundsRect = "{{0, 0}, {1546, 4294}}";
+			sepNavSelRange = "{18, 0}";
+			sepNavVisRange = "{0, 370}";
 		};
 	};
 	CBC87EAE0FB318D700F6B149 /* ZKDataArchive.h */ = {
@@ -622,25 +714,5 @@
 			sepNavVisRange = "{0, 1509}";
 			sepNavWindowFrame = "{{15, 143}, {1612, 1030}}";
 		};
-	};
-	CBEC7E36109F3B4A00AC9C48 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = CBA79A4A0FB4A3A600D525E0 /* ZKArchive.m */;
-		name = "ZKArchive.m: 13";
-		rLen = 0;
-		rLoc = 220;
-		rType = 0;
-		vrLen = 1761;
-		vrLoc = 0;
-	};
-	CBEC7E37109F3B4A00AC9C48 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = CBA79A4A0FB4A3A600D525E0 /* ZKArchive.m */;
-		name = "ZKArchive.m: 13";
-		rLen = 0;
-		rLoc = 220;
-		rType = 0;
-		vrLen = 1761;
-		vrLoc = 0;
 	};
 }
