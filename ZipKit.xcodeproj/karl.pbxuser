@@ -52,13 +52,13 @@
 					PBXFileDataSource_Warnings_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 278887690;
-			PBXWorkspaceStateSaveDate = 278887690;
+			PBXPerProjectTemplateStateSaveDate = 278890153;
+			PBXWorkspaceStateSaveDate = 278890153;
 		};
 		perUserProjectItems = {
 			CB58D4E1109F7DC80091A69D /* PBXTextBookmark */ = CB58D4E1109F7DC80091A69D /* PBXTextBookmark */;
-			CB58D4E2109F7DC80091A69D /* XCBuildMessageTextBookmark */ = CB58D4E2109F7DC80091A69D /* XCBuildMessageTextBookmark */;
-			CB58D4E3109F7DC80091A69D /* PBXTextBookmark */ = CB58D4E3109F7DC80091A69D /* PBXTextBookmark */;
+			CBE2DFAE109F8767009FF99F /* XCBuildMessageTextBookmark */ = CBE2DFAE109F8767009FF99F /* XCBuildMessageTextBookmark */;
+			CBE2DFAF109F8767009FF99F /* PBXTextBookmark */ = CBE2DFAF109F8767009FF99F /* PBXTextBookmark */;
 		};
 		sourceControlManager = CB9B9A1C109F63A8003E3F8B /* Source Control */;
 		userBuildSettings = {
@@ -82,25 +82,6 @@
 		rLoc = 95;
 		rType = 0;
 		vrLen = 1047;
-		vrLoc = 0;
-	};
-	CB58D4E2109F7DC80091A69D /* XCBuildMessageTextBookmark */ = {
-		isa = PBXTextBookmark;
-		comments = "Format '%u' expects type 'unsigned int', but argument 8 has type 'NSUInteger'";
-		fRef = CB9B9B30109F646B003E3F8B /* ZKLog.m */;
-		fallbackIsa = XCBuildMessageTextBookmark;
-		rLen = 1;
-		rLoc = 27;
-		rType = 1;
-	};
-	CB58D4E3109F7DC80091A69D /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = CB9B9B30109F646B003E3F8B /* ZKLog.m */;
-		name = "ZKLog.m: 25";
-		rLen = 0;
-		rLoc = 780;
-		rType = 0;
-		vrLen = 1417;
 		vrLoc = 0;
 	};
 	CB9B9A1C109F63A8003E3F8B /* Source Control */ = {
@@ -154,9 +135,9 @@
 	};
 	CB9B9B30109F646B003E3F8B /* ZKLog.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1208, 2793}}";
-			sepNavSelRange = "{780, 0}";
-			sepNavVisRange = "{0, 1417}";
+			sepNavIntBoundsRect = "{{0, 0}, {1208, 2698}}";
+			sepNavSelRange = "{846, 0}";
+			sepNavVisRange = "{0, 1333}";
 		};
 	};
 	CB9B9B35109F64A0003E3F8B /* ZKArchive.h */ = {
@@ -227,5 +208,24 @@
 	};
 	CB9B9CED109F6769003E3F8B /* touchzipkit */ = {
 		activeExec = 0;
+	};
+	CBE2DFAE109F8767009FF99F /* XCBuildMessageTextBookmark */ = {
+		isa = PBXTextBookmark;
+		comments = "Unused variable 'lineNumberString'";
+		fRef = CB9B9B30109F646B003E3F8B /* ZKLog.m */;
+		fallbackIsa = XCBuildMessageTextBookmark;
+		rLen = 1;
+		rLoc = 24;
+		rType = 1;
+	};
+	CBE2DFAF109F8767009FF99F /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = CB9B9B30109F646B003E3F8B /* ZKLog.m */;
+		name = "ZKLog.m: 25";
+		rLen = 0;
+		rLoc = 846;
+		rType = 0;
+		vrLen = 1333;
+		vrLoc = 0;
 	};
 }

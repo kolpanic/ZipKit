@@ -90,13 +90,13 @@
 					PBXFileDataSource_Warnings_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 278887898;
-			PBXWorkspaceStateSaveDate = 278887898;
+			PBXPerProjectTemplateStateSaveDate = 278888183;
+			PBXWorkspaceStateSaveDate = 278888183;
 		};
 		perUserProjectItems = {
 			CB58D48F109F7CC70091A69D /* PBXTextBookmark */ = CB58D48F109F7CC70091A69D /* PBXTextBookmark */;
-			CB58D514109F7DE00091A69D /* PBXTextBookmark */ = CB58D514109F7DE00091A69D /* PBXTextBookmark */;
-			CB58D51B109F7DE00091A69D /* PBXTextBookmark */ = CB58D51B109F7DE00091A69D /* PBXTextBookmark */;
+			CBA013A4109F7F0200BD08C9 /* PBXTextBookmark */ = CBA013A4109F7F0200BD08C9 /* PBXTextBookmark */;
+			CBA013A6109F7F1500BD08C9 /* PBXTextBookmark */ = CBA013A6109F7F1500BD08C9 /* PBXTextBookmark */;
 		};
 		sourceControlManager = CB748021109F76B4006A143C /* Source Control */;
 		userBuildSettings = {
@@ -117,26 +117,6 @@
 		rLoc = 184;
 		rType = 0;
 		vrLen = 1673;
-		vrLoc = 0;
-	};
-	CB58D514109F7DE00091A69D /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 1D3623250D0F684500981E51 /* ZipKit_TouchAppDelegate.m */;
-		name = "ZipKit_TouchAppDelegate.m: 2";
-		rLen = 0;
-		rLoc = 63;
-		rType = 0;
-		vrLen = 412;
-		vrLoc = 0;
-	};
-	CB58D51B109F7DE00091A69D /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 1D3623250D0F684500981E51 /* ZipKit_TouchAppDelegate.m */;
-		name = "ZipKit_TouchAppDelegate.m: 20";
-		rLen = 0;
-		rLoc = 412;
-		rType = 0;
-		vrLen = 412;
 		vrLoc = 0;
 	};
 	CB748019109F76B3006A143C /* ZipKit Touch */ = {
@@ -180,5 +160,25 @@
 	CB748022109F76B4006A143C /* Code sense */ = {
 		isa = PBXCodeSenseManager;
 		indexTemplatePath = "";
+	};
+	CBA013A4109F7F0200BD08C9 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623250D0F684500981E51 /* ZipKit_TouchAppDelegate.m */;
+		name = "ZipKit_TouchAppDelegate.m: 20";
+		rLen = 0;
+		rLoc = 412;
+		rType = 0;
+		vrLen = 248;
+		vrLoc = 164;
+	};
+	CBA013A6109F7F1500BD08C9 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623250D0F684500981E51 /* ZipKit_TouchAppDelegate.m */;
+		name = "ZipKit_TouchAppDelegate.m: 20";
+		rLen = 0;
+		rLoc = 412;
+		rType = 0;
+		vrLen = 412;
+		vrLoc = 0;
 	};
 }
