@@ -283,11 +283,16 @@
 			<array>
 				<string>XCToolbarPerspectiveControl</string>
 				<string>NSToolbarSeparatorItem</string>
-				<string>active-combo-popup</string>
 				<string>action</string>
+				<string>active-combo-popup</string>
+				<string>NSToolbarSpaceItem</string>
 				<string>build</string>
 				<string>build-and-go</string>
+				<string>go</string>
+				<string>clean-target</string>
 				<string>clean</string>
+				<string>NSToolbarFlexibleSpaceItem</string>
+				<string>com.apple.pbx.toolbar.searchfield</string>
 			</array>
 			<key>ControllerClassBaseName</key>
 			<string></string>
@@ -396,10 +401,10 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>CBA0F0C9109A657E00821EB1</string>
+										<string>CBEC7E37109F3B4A00AC9C48</string>
 										<key>history</key>
 										<array>
-											<string>CBA0F0C4109A657E00821EB1</string>
+											<string>CBEC7E36109F3B4A00AC9C48</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -522,11 +527,11 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>CBA0F0C6109A657E00821EB1</string>
+				<string>CBEC7E38109F3B4A00AC9C48</string>
 				<string>1CA23ED40692098700951B8B</string>
-				<string>CBA0F0C7109A657E00821EB1</string>
+				<string>CBEC7E39109F3B4A00AC9C48</string>
 				<string>CBBF8D580D80348D00E0F4B1</string>
-				<string>CBA0F0C8109A657E00821EB1</string>
+				<string>CBEC7E3A109F3B4A00AC9C48</string>
 				<string>1CA23EDF0692099D00951B8B</string>
 				<string>1CA23EE00692099D00951B8B</string>
 				<string>1CA23EE10692099D00951B8B</string>
@@ -699,7 +704,7 @@
 	<key>StatusbarIsVisible</key>
 	<true/>
 	<key>TimeStamp</key>
-	<real>278553982.94863403</real>
+	<real>278870858.20773399</real>
 	<key>ToolbarDisplayMode</key>
 	<integer>2</integer>
 	<key>ToolbarIsVisible</key>

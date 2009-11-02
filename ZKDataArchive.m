@@ -95,7 +95,10 @@
 		inflatedData = [cdHeader.filename dataUsingEncoding:NSUTF8StringEncoding];
 		fileType = NSFileTypeDirectory;
 	} else {
-		inflatedData = [deflatedData zk_inflate];
+		if (cdHeader.compressionMethod == Z_NO_COMPRESSION)
+			inflatedData = deflatedData;
+		else
+			inflatedData = [deflatedData zk_inflate];
 		fileType = NSFileTypeRegular;
 	}
 	

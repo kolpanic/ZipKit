@@ -44,7 +44,7 @@
 				PBXFileTableDataSourceColumnWidthsKey = (
 					22,
 					300,
-					810,
+					57.58349609375,
 				);
 				PBXFileTableDataSourceColumnsKey = (
 					PBXExecutablesDataSource_ActiveFlagID,
@@ -120,12 +120,12 @@
 					PBXFileDataSource_Warnings_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 278553939;
-			PBXWorkspaceStateSaveDate = 278553939;
+			PBXPerProjectTemplateStateSaveDate = 278870831;
+			PBXWorkspaceStateSaveDate = 278870831;
 		};
 		perUserProjectItems = {
-			CBA0F0C4109A657E00821EB1 /* PBXTextBookmark */ = CBA0F0C4109A657E00821EB1 /* PBXTextBookmark */;
-			CBA0F0C9109A657E00821EB1 /* PBXTextBookmark */ = CBA0F0C9109A657E00821EB1 /* PBXTextBookmark */;
+			CBEC7E36109F3B4A00AC9C48 /* PBXTextBookmark */ = CBEC7E36109F3B4A00AC9C48 /* PBXTextBookmark */;
+			CBEC7E37109F3B4A00AC9C48 /* PBXTextBookmark */ = CBEC7E37109F3B4A00AC9C48 /* PBXTextBookmark */;
 		};
 		sourceControlManager = CBCFA5E70DC7B3F600125DEF /* Source Control */;
 		userBuildSettings = {
@@ -286,12 +286,8 @@
 	CB4BB3100F7954AF00CBA7B9 /* zku */ = {
 		isa = PBXExecutable;
 		activeArgIndices = (
-			YES,
-			NO,
 		);
 		argumentStrings = (
-			/Applications/Mojotones.app,
-			/Applications/Mojotones.zip,
 		);
 		autoAttachOnCrash = 1;
 		breakpointsEnabled = 0;
@@ -458,26 +454,6 @@
 			sepNavVisRange = "{350, 1745}";
 		};
 	};
-	CBA0F0C4109A657E00821EB1 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = CBA79A4A0FB4A3A600D525E0 /* ZKArchive.m */;
-		name = "ZKArchive.m: 13";
-		rLen = 0;
-		rLoc = 220;
-		rType = 0;
-		vrLen = 2211;
-		vrLoc = 0;
-	};
-	CBA0F0C9109A657E00821EB1 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = CBA79A4A0FB4A3A600D525E0 /* ZKArchive.m */;
-		name = "ZKArchive.m: 13";
-		rLen = 0;
-		rLoc = 220;
-		rType = 0;
-		vrLen = 2211;
-		vrLoc = 0;
-	};
 	CBA79A480FB4A3A600D525E0 /* ZKArchive.h */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1190, 1007}}";
@@ -487,9 +463,9 @@
 	};
 	CBA79A4A0FB4A3A600D525E0 /* ZKArchive.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1190, 3520}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1190, 4161}}";
 			sepNavSelRange = "{220, 0}";
-			sepNavVisRange = "{0, 2211}";
+			sepNavVisRange = "{0, 1761}";
 		};
 	};
 	CBC87EAE0FB318D700F6B149 /* ZKDataArchive.h */ = {
@@ -501,9 +477,9 @@
 	};
 	CBC87EAF0FB318D700F6B149 /* ZKDataArchive.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1190, 7163}}";
-			sepNavSelRange = "{13599, 0}";
-			sepNavVisRange = "{12476, 1309}";
+			sepNavIntBoundsRect = "{{0, 0}, {1190, 7277}}";
+			sepNavSelRange = "{3177, 16}";
+			sepNavVisRange = "{2258, 1656}";
 			sepNavWindowFrame = "{{15, 156}, {1679, 1017}}";
 		};
 	};
@@ -646,5 +622,25 @@
 			sepNavVisRange = "{0, 1509}";
 			sepNavWindowFrame = "{{15, 143}, {1612, 1030}}";
 		};
+	};
+	CBEC7E36109F3B4A00AC9C48 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = CBA79A4A0FB4A3A600D525E0 /* ZKArchive.m */;
+		name = "ZKArchive.m: 13";
+		rLen = 0;
+		rLoc = 220;
+		rType = 0;
+		vrLen = 1761;
+		vrLoc = 0;
+	};
+	CBEC7E37109F3B4A00AC9C48 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = CBA79A4A0FB4A3A600D525E0 /* ZKArchive.m */;
+		name = "ZKArchive.m: 13";
+		rLen = 0;
+		rLoc = 220;
+		rType = 0;
+		vrLen = 1761;
+		vrLoc = 0;
 	};
 }
