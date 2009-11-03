@@ -52,12 +52,12 @@
 					PBXFileDataSource_Warnings_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 278949489;
-			PBXWorkspaceStateSaveDate = 278949489;
+			PBXPerProjectTemplateStateSaveDate = 278960805;
+			PBXWorkspaceStateSaveDate = 278960805;
 		};
 		perUserProjectItems = {
-			CBB417B910A06E4C00F2A735 /* PBXTextBookmark */ = CBB417B910A06E4C00F2A735 /* PBXTextBookmark */;
-			CBB417E510A06E7600F2A735 /* PBXTextBookmark */ = CBB417E510A06E7600F2A735 /* PBXTextBookmark */;
+			CB08DFF910A09ACC006DA11D /* PBXTextBookmark */ = CB08DFF910A09ACC006DA11D /* PBXTextBookmark */;
+			CB08DFFA10A09ACC006DA11D /* PBXTextBookmark */ = CB08DFFA10A09ACC006DA11D /* PBXTextBookmark */;
 		};
 		sourceControlManager = CB9B9A1C109F63A8003E3F8B /* Source Control */;
 		userBuildSettings = {
@@ -72,6 +72,26 @@
 	};
 	8DC2EF4F0486A6940098B216 /* ZipKit */ = {
 		activeExec = 0;
+	};
+	CB08DFF910A09ACC006DA11D /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = CB9B9B42109F64A0003E3F8B /* ZKDefs.m */;
+		name = "ZKDefs.m: 17";
+		rLen = 0;
+		rLoc = 394;
+		rType = 0;
+		vrLen = 1169;
+		vrLoc = 0;
+	};
+	CB08DFFA10A09ACC006DA11D /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = CB9B9B42109F64A0003E3F8B /* ZKDefs.m */;
+		name = "ZKDefs.m: 17";
+		rLen = 0;
+		rLoc = 394;
+		rType = 0;
+		vrLen = 1169;
+		vrLoc = 0;
 	};
 	CB9B9A1C109F63A8003E3F8B /* Source Control */ = {
 		isa = PBXSourceControlManager;
@@ -125,8 +145,8 @@
 	CB9B9B30109F646B003E3F8B /* ZKLog.m */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1208, 2755}}";
-			sepNavSelRange = "{1320, 0}";
-			sepNavVisRange = "{0, 1333}";
+			sepNavSelRange = "{864, 0}";
+			sepNavVisRange = "{0, 1327}";
 		};
 	};
 	CB9B9B35109F64A0003E3F8B /* ZKArchive.h */ = {
@@ -167,7 +187,7 @@
 	CB9B9B42109F64A0003E3F8B /* ZKDefs.m */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1208, 972}}";
-			sepNavSelRange = "{95, 0}";
+			sepNavSelRange = "{394, 0}";
 			sepNavVisRange = "{0, 1169}";
 		};
 	};
@@ -204,25 +224,5 @@
 	};
 	CB9B9CED109F6769003E3F8B /* touchzipkit */ = {
 		activeExec = 0;
-	};
-	CBB417B910A06E4C00F2A735 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = CB9B9B42109F64A0003E3F8B /* ZKDefs.m */;
-		name = "ZKDefs.m: 8";
-		rLen = 0;
-		rLoc = 95;
-		rType = 0;
-		vrLen = 1169;
-		vrLoc = 0;
-	};
-	CBB417E510A06E7600F2A735 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = CB9B9B42109F64A0003E3F8B /* ZKDefs.m */;
-		name = "ZKDefs.m: 8";
-		rLen = 0;
-		rLoc = 95;
-		rType = 0;
-		vrLen = 1169;
-		vrLoc = 0;
 	};
 }
