@@ -10,6 +10,7 @@
 		1DDD58160DA1D0A300B32029 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DDD58140DA1D0A300B32029 /* MainMenu.xib */; };
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+		CB2178EA10A06D9F0027DEBE /* ZipKit.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = CB49E72B109F79180046B62A /* ZipKit.framework */; };
 		CB49E730109F791B0046B62A /* ZipKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB49E72B109F79180046B62A /* ZipKit.framework */; };
 		CB9B9DD5109F69F1003E3F8B /* MainWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB9B9DD4109F69F1003E3F8B /* MainWindowController.m */; };
 		CB9B9DDA109F6A03003E3F8B /* RemainingTimeTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = CB9B9DD7109F6A03003E3F8B /* RemainingTimeTransformer.m */; };
@@ -46,6 +47,20 @@
 			remoteInfo = ZipKit;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		CB2178F210A06DB30027DEBE /* Copy Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				CB2178EA10A06D9F0027DEBE /* ZipKit.framework in Copy Frameworks */,
+			);
+			name = "Copy Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
@@ -154,6 +169,7 @@
 			buildConfigurationList = C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "ZipKit Utility" */;
 			buildPhases = (
 				8D1107290486CEB800E47090 /* Resources */,
+				CB2178F210A06DB30027DEBE /* Copy Frameworks */,
 				8D11072C0486CEB800E47090 /* Sources */,
 				8D11072E0486CEB800E47090 /* Frameworks */,
 			);

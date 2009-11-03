@@ -403,10 +403,10 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>CB58D503109F7DD60091A69D</string>
+										<string>CBB417D910A06E5B00F2A735</string>
 										<key>history</key>
 										<array>
-											<string>CB58D4B0109F7CD60091A69D</string>
+											<string>CBB417D810A06E5A00F2A735</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -446,6 +446,8 @@
 									<dict>
 										<key>Frame</key>
 										<string>{{10, 27}, {1269, -27}}</string>
+										<key>RubberWindowFrame</key>
+										<string>185 141 1613 1035 0 0 1920 1178 </string>
 									</dict>
 									<key>Module</key>
 									<string>XCDetailModule</string>
@@ -461,9 +463,7 @@
 									<key>GeometryConfiguration</key>
 									<dict>
 										<key>Frame</key>
-										<string>{{10, 27}, {1269, -27}}</string>
-										<key>RubberWindowFrame</key>
-										<string>185 141 1613 1035 0 0 1920 1178 </string>
+										<string>{{0, 0}, {614, 336}}</string>
 									</dict>
 									<key>Module</key>
 									<string>PBXProjectFindModule</string>
@@ -529,11 +529,11 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>CB58D504109F7DD60091A69D</string>
+				<string>CBB417CB10A06E5800F2A735</string>
 				<string>1CA23ED40692098700951B8B</string>
-				<string>CB58D505109F7DD60091A69D</string>
+				<string>CBB417CC10A06E5800F2A735</string>
 				<string>CB3742AB106A5CEF00AED801</string>
-				<string>CB58D506109F7DD60091A69D</string>
+				<string>CBB417CD10A06E5800F2A735</string>
 				<string>1CA23EDF0692099D00951B8B</string>
 				<string>1CA23EE00692099D00951B8B</string>
 				<string>1CA23EE10692099D00951B8B</string>
@@ -682,13 +682,13 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>CB58D4A5109F7CCE0091A69D</string>
+				<string>CBB417CE10A06E5800F2A735</string>
 				<string>1CCC7628064C1048000F2A68</string>
 				<string>1CCC7629064C1048000F2A68</string>
-				<string>CB58D4A6109F7CCE0091A69D</string>
-				<string>CB58D4A7109F7CCE0091A69D</string>
-				<string>CB58D4A8109F7CCE0091A69D</string>
-				<string>CB58D4A9109F7CCE0091A69D</string>
+				<string>CBB417CF10A06E5800F2A735</string>
+				<string>CBB417D010A06E5800F2A735</string>
+				<string>CBB417D110A06E5800F2A735</string>
+				<string>CBB417D210A06E5800F2A735</string>
 				<string>CB3742AB106A5CEF00AED801</string>
 			</array>
 			<key>ToolbarConfigUserDefaultsMinorVersion</key>
@@ -706,7 +706,7 @@
 	<key>StatusbarIsVisible</key>
 	<true/>
 	<key>TimeStamp</key>
-	<real>278887894.80029601</real>
+	<real>278949467.04882097</real>
 	<key>ToolbarConfigUserDefaultsMinorVersion</key>
 	<string>2</string>
 	<key>ToolbarDisplayMode</key>
@@ -723,6 +723,8 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
+		<string>CBB417D410A06E5800F2A735</string>
+		<string>CBB417D510A06E5800F2A735</string>
 		<string>/Users/karl/Projects/zipkit/Demo Projects/ZipKit Utility - Mac OS X App/ZipKit Utility.xcodeproj</string>
 	</array>
 	<key>WindowString</key>

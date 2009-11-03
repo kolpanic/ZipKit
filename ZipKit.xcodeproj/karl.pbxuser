@@ -35,7 +35,7 @@
 				PBXFileTableDataSourceColumnSortingKey = PBXTargetDataSource_PrimaryAttribute;
 				PBXFileTableDataSourceColumnWidthsKey = (
 					20,
-					990,
+					10,
 					60,
 					20,
 					48,
@@ -52,13 +52,12 @@
 					PBXFileDataSource_Warnings_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 278890153;
-			PBXWorkspaceStateSaveDate = 278890153;
+			PBXPerProjectTemplateStateSaveDate = 278949489;
+			PBXWorkspaceStateSaveDate = 278949489;
 		};
 		perUserProjectItems = {
-			CB58D4E1109F7DC80091A69D /* PBXTextBookmark */ = CB58D4E1109F7DC80091A69D /* PBXTextBookmark */;
-			CBE2DFAE109F8767009FF99F /* XCBuildMessageTextBookmark */ = CBE2DFAE109F8767009FF99F /* XCBuildMessageTextBookmark */;
-			CBE2DFAF109F8767009FF99F /* PBXTextBookmark */ = CBE2DFAF109F8767009FF99F /* PBXTextBookmark */;
+			CBB417B910A06E4C00F2A735 /* PBXTextBookmark */ = CBB417B910A06E4C00F2A735 /* PBXTextBookmark */;
+			CBB417E510A06E7600F2A735 /* PBXTextBookmark */ = CBB417E510A06E7600F2A735 /* PBXTextBookmark */;
 		};
 		sourceControlManager = CB9B9A1C109F63A8003E3F8B /* Source Control */;
 		userBuildSettings = {
@@ -73,16 +72,6 @@
 	};
 	8DC2EF4F0486A6940098B216 /* ZipKit */ = {
 		activeExec = 0;
-	};
-	CB58D4E1109F7DC80091A69D /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = CB9B9B42109F64A0003E3F8B /* ZKDefs.m */;
-		name = "ZKDefs.m: 8";
-		rLen = 0;
-		rLoc = 95;
-		rType = 0;
-		vrLen = 1047;
-		vrLoc = 0;
 	};
 	CB9B9A1C109F63A8003E3F8B /* Source Control */ = {
 		isa = PBXSourceControlManager;
@@ -135,8 +124,8 @@
 	};
 	CB9B9B30109F646B003E3F8B /* ZKLog.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1208, 2698}}";
-			sepNavSelRange = "{846, 0}";
+			sepNavIntBoundsRect = "{{0, 0}, {1208, 2755}}";
+			sepNavSelRange = "{1320, 0}";
 			sepNavVisRange = "{0, 1333}";
 		};
 	};
@@ -177,9 +166,9 @@
 	};
 	CB9B9B42109F64A0003E3F8B /* ZKDefs.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1208, 741}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1208, 972}}";
 			sepNavSelRange = "{95, 0}";
-			sepNavVisRange = "{0, 1047}";
+			sepNavVisRange = "{0, 1169}";
 		};
 	};
 	CB9B9B43109F64A0003E3F8B /* ZKFileArchive.h */ = {
@@ -187,6 +176,13 @@
 			sepNavIntBoundsRect = "{{0, 0}, {1208, 675}}";
 			sepNavSelRange = "{978, 0}";
 			sepNavVisRange = "{0, 978}";
+		};
+	};
+	CB9B9B44109F64A0003E3F8B /* ZKFileArchive.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1208, 13395}}";
+			sepNavSelRange = "{3834, 6}";
+			sepNavVisRange = "{3117, 2107}";
 		};
 	};
 	CB9B9B46109F64A0003E3F8B /* ZKLFHeader.m */ = {
@@ -209,23 +205,24 @@
 	CB9B9CED109F6769003E3F8B /* touchzipkit */ = {
 		activeExec = 0;
 	};
-	CBE2DFAE109F8767009FF99F /* XCBuildMessageTextBookmark */ = {
+	CBB417B910A06E4C00F2A735 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
-		comments = "Unused variable 'lineNumberString'";
-		fRef = CB9B9B30109F646B003E3F8B /* ZKLog.m */;
-		fallbackIsa = XCBuildMessageTextBookmark;
-		rLen = 1;
-		rLoc = 24;
-		rType = 1;
-	};
-	CBE2DFAF109F8767009FF99F /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = CB9B9B30109F646B003E3F8B /* ZKLog.m */;
-		name = "ZKLog.m: 25";
+		fRef = CB9B9B42109F64A0003E3F8B /* ZKDefs.m */;
+		name = "ZKDefs.m: 8";
 		rLen = 0;
-		rLoc = 846;
+		rLoc = 95;
 		rType = 0;
-		vrLen = 1333;
+		vrLen = 1169;
+		vrLoc = 0;
+	};
+	CBB417E510A06E7600F2A735 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = CB9B9B42109F64A0003E3F8B /* ZKDefs.m */;
+		name = "ZKDefs.m: 8";
+		rLen = 0;
+		rLoc = 95;
+		rType = 0;
+		vrLen = 1169;
 		vrLoc = 0;
 	};
 }

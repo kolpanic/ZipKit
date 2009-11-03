@@ -77,14 +77,12 @@
 		CB9B9CF8109F678E003E3F8B /* ZKCDTrailer64Locator.m in Sources */ = {isa = PBXBuildFile; fileRef = CB9B9B3E109F64A0003E3F8B /* ZKCDTrailer64Locator.m */; };
 		CB9B9CF9109F678E003E3F8B /* ZKLFHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = CB9B9B46109F64A0003E3F8B /* ZKLFHeader.m */; };
 		CB9B9CFA109F6790003E3F8B /* ZKLog.m in Sources */ = {isa = PBXBuildFile; fileRef = CB9B9B30109F646B003E3F8B /* ZKLog.m */; };
-		CB9B9CFB109F6791003E3F8B /* GMAppleDouble+ZKAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = CB9B9B0E109F6455003E3F8B /* GMAppleDouble+ZKAdditions.m */; };
 		CB9B9CFC109F6792003E3F8B /* NSData+ZKAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = CB9B9B10109F6455003E3F8B /* NSData+ZKAdditions.m */; };
 		CB9B9CFD109F6793003E3F8B /* NSDate+ZKAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = CB9B9B12109F6455003E3F8B /* NSDate+ZKAdditions.m */; };
 		CB9B9CFE109F6794003E3F8B /* NSDictionary+ZKAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = CB9B9B14109F6455003E3F8B /* NSDictionary+ZKAdditions.m */; };
 		CB9B9CFF109F6794003E3F8B /* NSFileHandle+ZKAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = CB9B9B16109F6455003E3F8B /* NSFileHandle+ZKAdditions.m */; };
 		CB9B9D00109F6795003E3F8B /* NSFileManager+ZKAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = CB9B9B18109F6455003E3F8B /* NSFileManager+ZKAdditions.m */; };
 		CB9B9D01109F6796003E3F8B /* NSString+ZKAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = CB9B9B1A109F6455003E3F8B /* NSString+ZKAdditions.m */; };
-		CB9B9D02109F6798003E3F8B /* GMAppleDouble.m in Sources */ = {isa = PBXBuildFile; fileRef = CB9B9B09109F643D003E3F8B /* GMAppleDouble.m */; };
 		CB9B9D08109F67E2003E3F8B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB9B9D07109F67E2003E3F8B /* Foundation.framework */; };
 		CB9B9D88109F67FF003E3F8B /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CB9B9D87109F67FF003E3F8B /* libz.dylib */; };
 		CB9B9E3C109F6B72003E3F8B /* ZKLog.m in Sources */ = {isa = PBXBuildFile; fileRef = CB9B9B30109F646B003E3F8B /* ZKLog.m */; };
@@ -521,14 +519,12 @@
 				CB9B9CF8109F678E003E3F8B /* ZKCDTrailer64Locator.m in Sources */,
 				CB9B9CF9109F678E003E3F8B /* ZKLFHeader.m in Sources */,
 				CB9B9CFA109F6790003E3F8B /* ZKLog.m in Sources */,
-				CB9B9CFB109F6791003E3F8B /* GMAppleDouble+ZKAdditions.m in Sources */,
 				CB9B9CFC109F6792003E3F8B /* NSData+ZKAdditions.m in Sources */,
 				CB9B9CFD109F6793003E3F8B /* NSDate+ZKAdditions.m in Sources */,
 				CB9B9CFE109F6794003E3F8B /* NSDictionary+ZKAdditions.m in Sources */,
 				CB9B9CFF109F6794003E3F8B /* NSFileHandle+ZKAdditions.m in Sources */,
 				CB9B9D00109F6795003E3F8B /* NSFileManager+ZKAdditions.m in Sources */,
 				CB9B9D01109F6796003E3F8B /* NSString+ZKAdditions.m in Sources */,
-				CB9B9D02109F6798003E3F8B /* GMAppleDouble.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -551,7 +547,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = ZipKit_Prefix.pch;
 				INFOPLIST_FILE = "ZipKitFW-Info.plist";
-				INSTALL_PATH = "$(HOME)/Library/Frameworks";
+				INSTALL_PATH = "@executable_path/../Frameworks";
 				PRODUCT_NAME = ZipKit;
 				WRAPPER_EXTENSION = framework;
 			};
@@ -570,7 +566,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = ZipKit_Prefix.pch;
 				INFOPLIST_FILE = "ZipKitFW-Info.plist";
-				INSTALL_PATH = "$(HOME)/Library/Frameworks";
+				INSTALL_PATH = "@executable_path/../Frameworks";
 				PRODUCT_NAME = ZipKit;
 				WRAPPER_EXTENSION = framework;
 			};

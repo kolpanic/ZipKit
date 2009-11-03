@@ -46,7 +46,7 @@
 				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
 				PBXFileTableDataSourceColumnWidthsKey = (
 					20,
-					10,
+					990,
 					60,
 					20,
 					48,
@@ -63,12 +63,12 @@
 					PBXFileDataSource_Warnings_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 278887892;
-			PBXWorkspaceStateSaveDate = 278887892;
+			PBXPerProjectTemplateStateSaveDate = 278949460;
+			PBXWorkspaceStateSaveDate = 278949460;
 		};
 		perUserProjectItems = {
-			CB58D4B0109F7CD60091A69D /* PBXTextBookmark */ = CB58D4B0109F7CD60091A69D /* PBXTextBookmark */;
-			CB58D503109F7DD60091A69D /* PBXTextBookmark */ = CB58D503109F7DD60091A69D /* PBXTextBookmark */;
+			CBB417D810A06E5A00F2A735 /* PBXTextBookmark */ = CBB417D810A06E5A00F2A735 /* PBXTextBookmark */;
+			CBB417D910A06E5B00F2A735 /* PBXTextBookmark */ = CBB417D910A06E5B00F2A735 /* PBXTextBookmark */;
 		};
 		sourceControlManager = CB9B9DB4109F693C003E3F8B /* Source Control */;
 		userBuildSettings = {
@@ -86,26 +86,6 @@
 		executables = (
 			CB9B9DAB109F692E003E3F8B /* ZipKit Utility */,
 		);
-	};
-	CB58D4B0109F7CD60091A69D /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = CB9B9DD4109F69F1003E3F8B /* MainWindowController.m */;
-		name = "MainWindowController.m: 18";
-		rLen = 0;
-		rLoc = 556;
-		rType = 0;
-		vrLen = 1717;
-		vrLoc = 0;
-	};
-	CB58D503109F7DD60091A69D /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = CB9B9DD4109F69F1003E3F8B /* MainWindowController.m */;
-		name = "MainWindowController.m: 18";
-		rLen = 0;
-		rLoc = 556;
-		rType = 0;
-		vrLen = 1717;
-		vrLoc = 0;
 	};
 	CB9B9DAB109F692E003E3F8B /* ZipKit Utility */ = {
 		isa = PBXExecutable;
@@ -153,7 +133,7 @@
 	};
 	CB9B9DD3109F69F1003E3F8B /* MainWindowController.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1208, 972}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1208, 675}}";
 			sepNavSelRange = "{123, 0}";
 			sepNavVisRange = "{0, 848}";
 		};
@@ -192,5 +172,25 @@
 			sepNavSelRange = "{0, 0}";
 			sepNavVisRange = "{0, 275}";
 		};
+	};
+	CBB417D810A06E5A00F2A735 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = CB9B9DD4109F69F1003E3F8B /* MainWindowController.m */;
+		name = "MainWindowController.m: 18";
+		rLen = 0;
+		rLoc = 556;
+		rType = 0;
+		vrLen = 366;
+		vrLoc = 335;
+	};
+	CBB417D910A06E5B00F2A735 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = CB9B9DD4109F69F1003E3F8B /* MainWindowController.m */;
+		name = "MainWindowController.m: 18";
+		rLen = 0;
+		rLoc = 556;
+		rType = 0;
+		vrLen = 1717;
+		vrLoc = 0;
 	};
 }
