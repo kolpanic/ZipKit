@@ -4,7 +4,6 @@
 		activeBuildConfigurationName = Debug;
 		activeTarget = 8DC2EF4F0486A6940098B216 /* ZipKit */;
 		addToTargets = (
-			8DC2EF4F0486A6940098B216 /* ZipKit */,
 		);
 		codeSenseManager = CB9B9A1D109F63A8003E3F8B /* Code sense */;
 		perUserDictionary = {
@@ -52,12 +51,12 @@
 					PBXFileDataSource_Warnings_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 278960805;
-			PBXWorkspaceStateSaveDate = 278960805;
+			PBXPerProjectTemplateStateSaveDate = 279037361;
+			PBXWorkspaceStateSaveDate = 279037361;
 		};
 		perUserProjectItems = {
-			CB08DFF910A09ACC006DA11D /* PBXTextBookmark */ = CB08DFF910A09ACC006DA11D /* PBXTextBookmark */;
-			CB08DFFA10A09ACC006DA11D /* PBXTextBookmark */ = CB08DFFA10A09ACC006DA11D /* PBXTextBookmark */;
+			CB2E994D10A1C5FA00E04C37 /* PBXTextBookmark */ = CB2E994D10A1C5FA00E04C37 /* PBXTextBookmark */;
+			CB2E994E10A1C5FA00E04C37 /* PBXTextBookmark */ = CB2E994E10A1C5FA00E04C37 /* PBXTextBookmark */;
 		};
 		sourceControlManager = CB9B9A1C109F63A8003E3F8B /* Source Control */;
 		userBuildSettings = {
@@ -73,22 +72,22 @@
 	8DC2EF4F0486A6940098B216 /* ZipKit */ = {
 		activeExec = 0;
 	};
-	CB08DFF910A09ACC006DA11D /* PBXTextBookmark */ = {
+	CB2E994D10A1C5FA00E04C37 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
 		fRef = CB9B9B42109F64A0003E3F8B /* ZKDefs.m */;
-		name = "ZKDefs.m: 17";
+		name = "ZKDefs.m: 13";
 		rLen = 0;
-		rLoc = 394;
+		rLoc = 290;
 		rType = 0;
 		vrLen = 1169;
 		vrLoc = 0;
 	};
-	CB08DFFA10A09ACC006DA11D /* PBXTextBookmark */ = {
+	CB2E994E10A1C5FA00E04C37 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
 		fRef = CB9B9B42109F64A0003E3F8B /* ZKDefs.m */;
-		name = "ZKDefs.m: 17";
+		name = "ZKDefs.m: 13";
 		rLen = 0;
-		rLoc = 394;
+		rLoc = 290;
 		rType = 0;
 		vrLen = 1169;
 		vrLoc = 0;
@@ -187,7 +186,7 @@
 	CB9B9B42109F64A0003E3F8B /* ZKDefs.m */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1208, 972}}";
-			sepNavSelRange = "{394, 0}";
+			sepNavSelRange = "{290, 0}";
 			sepNavVisRange = "{0, 1169}";
 		};
 	};

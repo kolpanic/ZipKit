@@ -305,6 +305,8 @@
 			<key>Layout</key>
 			<array>
 				<dict>
+					<key>BecomeActive</key>
+					<true/>
 					<key>ContentConfiguration</key>
 					<dict>
 						<key>PBXBottomSmartGroupGIDs</key>
@@ -348,8 +350,7 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>3</integer>
-									<integer>1</integer>
+									<integer>9</integer>
 									<integer>0</integer>
 								</array>
 							</array>
@@ -384,8 +385,6 @@
 					<key>Dock</key>
 					<array>
 						<dict>
-							<key>BecomeActive</key>
-							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
@@ -403,10 +402,10 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>CBB417D910A06E5B00F2A735</string>
+										<string>CB2E994710A1C5F300E04C37</string>
 										<key>history</key>
 										<array>
-											<string>CBB417D810A06E5A00F2A735</string>
+											<string>CB2E98FE10A1C5AA00E04C37</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -529,11 +528,11 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>CBB417CB10A06E5800F2A735</string>
+				<string>CB2E994810A1C5F300E04C37</string>
 				<string>1CA23ED40692098700951B8B</string>
-				<string>CBB417CC10A06E5800F2A735</string>
+				<string>CB2E994910A1C5F300E04C37</string>
 				<string>CB3742AB106A5CEF00AED801</string>
-				<string>CBB417CD10A06E5800F2A735</string>
+				<string>CB2E994A10A1C5F300E04C37</string>
 				<string>1CA23EDF0692099D00951B8B</string>
 				<string>1CA23EE00692099D00951B8B</string>
 				<string>1CA23EE10692099D00951B8B</string>
@@ -682,13 +681,13 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>CBB417CE10A06E5800F2A735</string>
+				<string>CB2E98F310A1C5A100E04C37</string>
 				<string>1CCC7628064C1048000F2A68</string>
 				<string>1CCC7629064C1048000F2A68</string>
-				<string>CBB417CF10A06E5800F2A735</string>
-				<string>CBB417D010A06E5800F2A735</string>
-				<string>CBB417D110A06E5800F2A735</string>
-				<string>CBB417D210A06E5800F2A735</string>
+				<string>CB2E98F410A1C5A100E04C37</string>
+				<string>CB2E98F510A1C5A100E04C37</string>
+				<string>CB2E98F610A1C5A100E04C37</string>
+				<string>CB2E98F710A1C5A100E04C37</string>
 				<string>CB3742AB106A5CEF00AED801</string>
 			</array>
 			<key>ToolbarConfigUserDefaultsMinorVersion</key>
@@ -706,7 +705,7 @@
 	<key>StatusbarIsVisible</key>
 	<true/>
 	<key>TimeStamp</key>
-	<real>278949467.04882097</real>
+	<real>279037427.65826601</real>
 	<key>ToolbarConfigUserDefaultsMinorVersion</key>
 	<string>2</string>
 	<key>ToolbarDisplayMode</key>
@@ -723,8 +722,6 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>CBB417D410A06E5800F2A735</string>
-		<string>CBB417D510A06E5800F2A735</string>
 		<string>/Users/karl/Projects/zipkit/Demo Projects/ZipKit Utility - Mac OS X App/ZipKit Utility.xcodeproj</string>
 	</array>
 	<key>WindowString</key>

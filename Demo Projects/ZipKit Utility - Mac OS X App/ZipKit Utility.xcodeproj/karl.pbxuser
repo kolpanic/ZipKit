@@ -63,12 +63,12 @@
 					PBXFileDataSource_Warnings_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 278949460;
-			PBXWorkspaceStateSaveDate = 278949460;
+			PBXPerProjectTemplateStateSaveDate = 279037414;
+			PBXWorkspaceStateSaveDate = 279037414;
 		};
 		perUserProjectItems = {
-			CBB417D810A06E5A00F2A735 /* PBXTextBookmark */ = CBB417D810A06E5A00F2A735 /* PBXTextBookmark */;
-			CBB417D910A06E5B00F2A735 /* PBXTextBookmark */ = CBB417D910A06E5B00F2A735 /* PBXTextBookmark */;
+			CB2E98FE10A1C5AA00E04C37 /* PBXTextBookmark */ = CB2E98FE10A1C5AA00E04C37 /* PBXTextBookmark */;
+			CB2E994710A1C5F300E04C37 /* PBXTextBookmark */ = CB2E994710A1C5F300E04C37 /* PBXTextBookmark */;
 		};
 		sourceControlManager = CB9B9DB4109F693C003E3F8B /* Source Control */;
 		userBuildSettings = {
@@ -86,6 +86,26 @@
 		executables = (
 			CB9B9DAB109F692E003E3F8B /* ZipKit Utility */,
 		);
+	};
+	CB2E98FE10A1C5AA00E04C37 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = CB9B9DD4109F69F1003E3F8B /* MainWindowController.m */;
+		name = "MainWindowController.m: 18";
+		rLen = 0;
+		rLoc = 556;
+		rType = 0;
+		vrLen = 1717;
+		vrLoc = 0;
+	};
+	CB2E994710A1C5F300E04C37 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = CB9B9DD4109F69F1003E3F8B /* MainWindowController.m */;
+		name = "MainWindowController.m: 18";
+		rLen = 0;
+		rLoc = 556;
+		rType = 0;
+		vrLen = 1717;
+		vrLoc = 0;
 	};
 	CB9B9DAB109F692E003E3F8B /* ZipKit Utility */ = {
 		isa = PBXExecutable;
@@ -172,25 +192,5 @@
 			sepNavSelRange = "{0, 0}";
 			sepNavVisRange = "{0, 275}";
 		};
-	};
-	CBB417D810A06E5A00F2A735 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = CB9B9DD4109F69F1003E3F8B /* MainWindowController.m */;
-		name = "MainWindowController.m: 18";
-		rLen = 0;
-		rLoc = 556;
-		rType = 0;
-		vrLen = 366;
-		vrLoc = 335;
-	};
-	CBB417D910A06E5B00F2A735 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = CB9B9DD4109F69F1003E3F8B /* MainWindowController.m */;
-		name = "MainWindowController.m: 18";
-		rLen = 0;
-		rLoc = 556;
-		rType = 0;
-		vrLen = 1717;
-		vrLoc = 0;
 	};
 }

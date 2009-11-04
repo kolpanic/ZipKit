@@ -88,11 +88,38 @@
 		CB9B9E3C109F6B72003E3F8B /* ZKLog.m in Sources */ = {isa = PBXBuildFile; fileRef = CB9B9B30109F646B003E3F8B /* ZKLog.m */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		CB2E991210A1C5BB00E04C37 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CB2E990A10A1C5BB00E04C37 /* ZipKit Touch.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 1D6058910D05DD3D006BFB54 /* ZipKit Touch.app */;
+			remoteInfo = "ZipKit Touch";
+		};
+		CB2E991C10A1C5C500E04C37 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CB2E991410A1C5C500E04C37 /* ZipKit Utility.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8D1107320486CEB800E47090 /* ZipKit Utility.app */;
+			remoteInfo = "ZipKit Utility";
+		};
+		CB2E992610A1C5CF00E04C37 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CB2E991E10A1C5CF00E04C37 /* zku.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8DD76FA10486AA7600D96B5E /* zku */;
+			remoteInfo = zku;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		0867D69BFE84028FC02AAC07 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
 		32DBCF5E0370ADEE00C91783 /* ZipKit_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZipKit_Prefix.pch; sourceTree = "<group>"; };
 		8DC2EF5A0486A6940098B216 /* ZipKitFW-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "ZipKitFW-Info.plist"; sourceTree = "<group>"; };
 		8DC2EF5B0486A6940098B216 /* ZipKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ZipKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CB2E990A10A1C5BB00E04C37 /* ZipKit Touch.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "ZipKit Touch.xcodeproj"; path = "Demo Projects/ZipKit Touch - iPhone App/ZipKit Touch.xcodeproj"; sourceTree = "<group>"; };
+		CB2E991410A1C5C500E04C37 /* ZipKit Utility.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "ZipKit Utility.xcodeproj"; path = "Demo Projects/ZipKit Utility - Mac OS X App/ZipKit Utility.xcodeproj"; sourceTree = "<group>"; };
+		CB2E991E10A1C5CF00E04C37 /* zku.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = zku.xcodeproj; path = "Demo Projects/zku - Mac OS X Tool/zku.xcodeproj"; sourceTree = "<group>"; };
 		CB9B9B07109F643D003E3F8B /* COPYING.TXT */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = COPYING.TXT; sourceTree = "<group>"; };
 		CB9B9B08109F643D003E3F8B /* GMAppleDouble.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMAppleDouble.h; sourceTree = "<group>"; };
 		CB9B9B09109F643D003E3F8B /* GMAppleDouble.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMAppleDouble.m; sourceTree = "<group>"; };
@@ -188,6 +215,7 @@
 			children = (
 				CB9B9B61109F64D3003E3F8B /* COPYING.TXT */,
 				CB9B9B62109F64D3003E3F8B /* Credits.html */,
+				CB2E992910A1C5D700E04C37 /* Demo Projects */,
 				08FB77AEFE84172EC02AAC07 /* Classes */,
 				32C88DFF0371C24200C91783 /* Other Sources */,
 				089C1665FE841158C02AAC07 /* Resources */,
@@ -234,6 +262,40 @@
 				32DBCF5E0370ADEE00C91783 /* ZipKit_Prefix.pch */,
 			);
 			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		CB2E990B10A1C5BB00E04C37 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CB2E991310A1C5BB00E04C37 /* ZipKit Touch.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CB2E991510A1C5C500E04C37 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CB2E991D10A1C5C500E04C37 /* ZipKit Utility.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CB2E991F10A1C5CF00E04C37 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CB2E992710A1C5CF00E04C37 /* zku */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CB2E992910A1C5D700E04C37 /* Demo Projects */ = {
+			isa = PBXGroup;
+			children = (
+				CB2E991E10A1C5CF00E04C37 /* zku.xcodeproj */,
+				CB2E991410A1C5C500E04C37 /* ZipKit Utility.xcodeproj */,
+				CB2E990A10A1C5BB00E04C37 /* ZipKit Touch.xcodeproj */,
+			);
+			name = "Demo Projects";
 			sourceTree = "<group>";
 		};
 		CB9B9B06109F643D003E3F8B /* MacFUSE */ = {
@@ -434,6 +496,20 @@
 			mainGroup = 0867D691FE84028FC02AAC07 /* ZipKit */;
 			productRefGroup = 034768DFFF38A50411DB9C8B /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = CB2E990B10A1C5BB00E04C37 /* Products */;
+					ProjectRef = CB2E990A10A1C5BB00E04C37 /* ZipKit Touch.xcodeproj */;
+				},
+				{
+					ProductGroup = CB2E991510A1C5C500E04C37 /* Products */;
+					ProjectRef = CB2E991410A1C5C500E04C37 /* ZipKit Utility.xcodeproj */;
+				},
+				{
+					ProductGroup = CB2E991F10A1C5CF00E04C37 /* Products */;
+					ProjectRef = CB2E991E10A1C5CF00E04C37 /* zku.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				8DC2EF4F0486A6940098B216 /* ZipKit */,
@@ -442,6 +518,30 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		CB2E991310A1C5BB00E04C37 /* ZipKit Touch.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = "ZipKit Touch.app";
+			remoteRef = CB2E991210A1C5BB00E04C37 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		CB2E991D10A1C5C500E04C37 /* ZipKit Utility.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = "ZipKit Utility.app";
+			remoteRef = CB2E991C10A1C5C500E04C37 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		CB2E992710A1C5CF00E04C37 /* zku */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			path = zku;
+			remoteRef = CB2E992610A1C5CF00E04C37 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		8DC2EF520486A6940098B216 /* Resources */ = {
