@@ -12,6 +12,7 @@
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
 		CB2178EA10A06D9F0027DEBE /* ZipKit.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = CB49E72B109F79180046B62A /* ZipKit.framework */; };
 		CB2E98EE10A1C59600E04C37 /* ZipKit.icns in Resources */ = {isa = PBXBuildFile; fileRef = CB2E98ED10A1C59600E04C37 /* ZipKit.icns */; };
+		CB2E995A10A1C65100E04C37 /* Credits.html in Resources */ = {isa = PBXBuildFile; fileRef = CB2E995910A1C65100E04C37 /* Credits.html */; };
 		CB49E730109F791B0046B62A /* ZipKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB49E72B109F79180046B62A /* ZipKit.framework */; };
 		CB9B9DD5109F69F1003E3F8B /* MainWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB9B9DD4109F69F1003E3F8B /* MainWindowController.m */; };
 		CB9B9DDA109F6A03003E3F8B /* RemainingTimeTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = CB9B9DD7109F6A03003E3F8B /* RemainingTimeTransformer.m */; };
@@ -71,6 +72,7 @@
 		8D1107310486CEB800E47090 /* ZipKit_Utility-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "ZipKit_Utility-Info.plist"; sourceTree = "<group>"; };
 		8D1107320486CEB800E47090 /* ZipKit Utility.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ZipKit Utility.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB2E98ED10A1C59600E04C37 /* ZipKit.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = ZipKit.icns; sourceTree = "<group>"; };
+		CB2E995910A1C65100E04C37 /* Credits.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = Credits.html; path = ../../Credits.html; sourceTree = SOURCE_ROOT; };
 		CB9B9DB6109F6949003E3F8B /* ZipKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ZipKit.xcodeproj; path = ../../ZipKit.xcodeproj; sourceTree = SOURCE_ROOT; };
 		CB9B9DD3109F69F1003E3F8B /* MainWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainWindowController.h; sourceTree = "<group>"; };
 		CB9B9DD4109F69F1003E3F8B /* MainWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainWindowController.m; sourceTree = "<group>"; };
@@ -138,9 +140,10 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				CB2E995910A1C65100E04C37 /* Credits.html */,
+				1DDD58140DA1D0A300B32029 /* MainMenu.xib */,
 				CB2E98ED10A1C59600E04C37 /* ZipKit.icns */,
 				8D1107310486CEB800E47090 /* ZipKit_Utility-Info.plist */,
-				1DDD58140DA1D0A300B32029 /* MainMenu.xib */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -241,6 +244,7 @@
 			files = (
 				1DDD58160DA1D0A300B32029 /* MainMenu.xib in Resources */,
 				CB2E98EE10A1C59600E04C37 /* ZipKit.icns in Resources */,
+				CB2E995A10A1C65100E04C37 /* Credits.html in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

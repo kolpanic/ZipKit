@@ -291,11 +291,27 @@
 		CB2E992910A1C5D700E04C37 /* Demo Projects */ = {
 			isa = PBXGroup;
 			children = (
-				CB2E991E10A1C5CF00E04C37 /* zku.xcodeproj */,
-				CB2E991410A1C5C500E04C37 /* ZipKit Utility.xcodeproj */,
-				CB2E990A10A1C5BB00E04C37 /* ZipKit Touch.xcodeproj */,
+				CB2E997B10A1C67500E04C37 /* Mac OS X */,
+				CB2E998410A1C67F00E04C37 /* iPhone OS */,
 			);
 			name = "Demo Projects";
+			sourceTree = "<group>";
+		};
+		CB2E997B10A1C67500E04C37 /* Mac OS X */ = {
+			isa = PBXGroup;
+			children = (
+				CB2E991410A1C5C500E04C37 /* ZipKit Utility.xcodeproj */,
+				CB2E991E10A1C5CF00E04C37 /* zku.xcodeproj */,
+			);
+			name = "Mac OS X";
+			sourceTree = "<group>";
+		};
+		CB2E998410A1C67F00E04C37 /* iPhone OS */ = {
+			isa = PBXGroup;
+			children = (
+				CB2E990A10A1C5BB00E04C37 /* ZipKit Touch.xcodeproj */,
+			);
+			name = "iPhone OS";
 			sourceTree = "<group>";
 		};
 		CB9B9B06109F643D003E3F8B /* MacFUSE */ = {
