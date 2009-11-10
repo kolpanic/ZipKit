@@ -292,7 +292,6 @@
 				<string>clean-target</string>
 				<string>clean</string>
 				<string>NSToolbarFlexibleSpaceItem</string>
-				<string>com.apple.pbx.toolbar.searchfield</string>
 			</array>
 			<key>ControllerClassBaseName</key>
 			<string></string>
@@ -403,10 +402,10 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>CB2E998A10A1C68B00E04C37</string>
+										<string>CB95EC3810A9AEDA003402A9</string>
 										<key>history</key>
 										<array>
-											<string>CB2E998910A1C68B00E04C37</string>
+											<string>CB95EC3710A9AEDA003402A9</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -529,11 +528,11 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>CB2E995D10A1C65700E04C37</string>
+				<string>CB95EC3910A9AEDA003402A9</string>
 				<string>1CA23ED40692098700951B8B</string>
-				<string>CB2E995E10A1C65700E04C37</string>
+				<string>CB95EC3A10A9AEDA003402A9</string>
 				<string>CB3742AB106A5CEF00AED801</string>
-				<string>CB2E995F10A1C65700E04C37</string>
+				<string>CB95EC3B10A9AEDA003402A9</string>
 				<string>1CA23EDF0692099D00951B8B</string>
 				<string>1CA23EE00692099D00951B8B</string>
 				<string>1CA23EE10692099D00951B8B</string>
@@ -706,7 +705,7 @@
 	<key>StatusbarIsVisible</key>
 	<true/>
 	<key>TimeStamp</key>
-	<real>279037579.61293203</real>
+	<real>279555802.792656</real>
 	<key>ToolbarConfigUserDefaultsMinorVersion</key>
 	<string>2</string>
 	<key>ToolbarDisplayMode</key>

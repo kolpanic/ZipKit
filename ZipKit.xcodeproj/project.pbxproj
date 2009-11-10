@@ -93,21 +93,21 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = CB2E990A10A1C5BB00E04C37 /* ZipKit Touch.xcodeproj */;
 			proxyType = 2;
-			remoteGlobalIDString = 1D6058910D05DD3D006BFB54 /* ZipKit Touch.app */;
+			remoteGlobalIDString = 1D6058910D05DD3D006BFB54;
 			remoteInfo = "ZipKit Touch";
 		};
 		CB2E991C10A1C5C500E04C37 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = CB2E991410A1C5C500E04C37 /* ZipKit Utility.xcodeproj */;
 			proxyType = 2;
-			remoteGlobalIDString = 8D1107320486CEB800E47090 /* ZipKit Utility.app */;
+			remoteGlobalIDString = 8D1107320486CEB800E47090;
 			remoteInfo = "ZipKit Utility";
 		};
 		CB2E992610A1C5CF00E04C37 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = CB2E991E10A1C5CF00E04C37 /* zku.xcodeproj */;
 			proxyType = 2;
-			remoteGlobalIDString = 8DD76FA10486AA7600D96B5E /* zku */;
+			remoteGlobalIDString = 8DD76FA10486AA7600D96B5E;
 			remoteInfo = zku;
 		};
 /* End PBXContainerItemProxy section */
@@ -663,7 +663,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = ZipKit_Prefix.pch;
 				INFOPLIST_FILE = "ZipKitFW-Info.plist";
-				INSTALL_PATH = "@executable_path/../Frameworks";
+				INSTALL_PATH = "@rpath//Frameworks";
 				PRODUCT_NAME = ZipKit;
 				WRAPPER_EXTENSION = framework;
 			};
@@ -682,7 +682,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = ZipKit_Prefix.pch;
 				INFOPLIST_FILE = "ZipKitFW-Info.plist";
-				INSTALL_PATH = "@executable_path/../Frameworks";
+				INSTALL_PATH = "@rpath//Frameworks";
 				PRODUCT_NAME = ZipKit;
 				WRAPPER_EXTENSION = framework;
 			};
