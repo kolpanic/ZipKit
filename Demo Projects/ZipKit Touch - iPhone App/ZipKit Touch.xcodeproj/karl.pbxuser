@@ -3,7 +3,7 @@
 	1D3623250D0F684500981E51 /* ZipKit_TouchAppDelegate.m */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1208, 972}}";
-			sepNavSelRange = "{412, 0}";
+			sepNavSelRange = "{407, 0}";
 			sepNavVisRange = "{0, 412}";
 		};
 	};
@@ -29,9 +29,9 @@
 	};
 	28C286E00D94DF7D0034E888 /* RootViewController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1208, 1501}}";
-			sepNavSelRange = "{1450, 0}";
-			sepNavVisRange = "{707, 1830}";
+			sepNavIntBoundsRect = "{{0, 0}, {1208, 1444}}";
+			sepNavSelRange = "{859, 0}";
+			sepNavVisRange = "{582, 1909}";
 		};
 	};
 	29B97313FDCFA39411CA2CEA /* Project object */ = {
@@ -41,11 +41,37 @@
 		addToTargets = (
 			1D6058900D05DD3D006BFB54 /* ZipKit Touch */,
 		);
+		breakpoints = (
+		);
 		codeSenseManager = CB748022109F76B4006A143C /* Code sense */;
 		executables = (
 			CB748019109F76B3006A143C /* ZipKit Touch */,
 		);
 		perUserDictionary = {
+			"PBXConfiguration.PBXBreakpointsDataSource.v1:1CA23EDF0692099D00951B8B" = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXBreakpointsDataSource_BreakpointID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					20,
+					10,
+					20,
+					10,
+					10,
+					10,
+					20,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXBreakpointsDataSource_ActionID,
+					PBXBreakpointsDataSource_TypeID,
+					PBXBreakpointsDataSource_BreakpointID,
+					PBXBreakpointsDataSource_UseID,
+					PBXBreakpointsDataSource_LocationID,
+					PBXBreakpointsDataSource_ConditionID,
+					PBXBreakpointsDataSource_IgnoreCountID,
+					PBXBreakpointsDataSource_ContinueID,
+				);
+			};
 			PBXConfiguration.PBXFileTableDataSource3.PBXFileTableDataSource = {
 				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
 				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
@@ -90,13 +116,12 @@
 					PBXFileDataSource_Warnings_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 278969333;
-			PBXWorkspaceStateSaveDate = 278969333;
+			PBXPerProjectTemplateStateSaveDate = 279729520;
+			PBXWorkspaceStateSaveDate = 279729520;
 		};
 		perUserProjectItems = {
-			CB4C5F4210A0C07700A4A94F /* PBXTextBookmark */ = CB4C5F4210A0C07700A4A94F /* PBXTextBookmark */;
-			CB4C5F6810A0DBB200A4A94F /* PBXTextBookmark */ = CB4C5F6810A0DBB200A4A94F /* PBXTextBookmark */;
-			CB4C5F6910A0DC9F00A4A94F /* PBXTextBookmark */ = CB4C5F6910A0DC9F00A4A94F /* PBXTextBookmark */;
+			CB611A3F10AC573A003E92D6 /* PBXTextBookmark */ = CB611A3F10AC573A003E92D6 /* PBXTextBookmark */;
+			CB611A4210AC5745003E92D6 /* PBXTextBookmark */ = CB611A4210AC5745003E92D6 /* PBXTextBookmark */;
 		};
 		sourceControlManager = CB748021109F76B4006A143C /* Source Control */;
 		userBuildSettings = {
@@ -109,35 +134,25 @@
 			sepNavVisRange = "{0, 224}";
 		};
 	};
-	CB4C5F4210A0C07700A4A94F /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 1D3623250D0F684500981E51 /* ZipKit_TouchAppDelegate.m */;
-		name = "ZipKit_TouchAppDelegate.m: 20";
-		rLen = 0;
-		rLoc = 412;
-		rType = 0;
-		vrLen = 412;
-		vrLoc = 0;
-	};
-	CB4C5F6810A0DBB200A4A94F /* PBXTextBookmark */ = {
+	CB611A3F10AC573A003E92D6 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
 		fRef = 28C286E00D94DF7D0034E888 /* RootViewController.m */;
 		name = "RootViewController.m: 45";
 		rLen = 0;
 		rLoc = 1450;
 		rType = 0;
-		vrLen = 456;
-		vrLoc = 1012;
+		vrLen = 545;
+		vrLoc = 1244;
 	};
-	CB4C5F6910A0DC9F00A4A94F /* PBXTextBookmark */ = {
+	CB611A4210AC5745003E92D6 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
 		fRef = 28C286E00D94DF7D0034E888 /* RootViewController.m */;
-		name = "RootViewController.m: 45";
+		name = "RootViewController.m: 33";
 		rLen = 0;
-		rLoc = 1450;
+		rLoc = 859;
 		rType = 0;
-		vrLen = 1830;
-		vrLoc = 707;
+		vrLen = 1909;
+		vrLoc = 582;
 	};
 	CB748019109F76B3006A143C /* ZipKit Touch */ = {
 		isa = PBXExecutable;
@@ -163,9 +178,13 @@
 		executableUserSymbolLevel = 0;
 		libgmallocEnabled = 0;
 		name = "ZipKit Touch";
+		savedGlobals = {
+		};
 		showTypeColumn = 0;
 		sourceDirectories = (
 		);
+		variableFormatDictionary = {
+		};
 	};
 	CB748021109F76B4006A143C /* Source Control */ = {
 		isa = PBXSourceControlManager;

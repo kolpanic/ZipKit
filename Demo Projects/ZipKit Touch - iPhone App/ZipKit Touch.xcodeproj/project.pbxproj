@@ -283,7 +283,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = ZipKit_Touch_Prefix.pch;
 				INFOPLIST_FILE = "ZipKit_Touch-Info.plist";
-				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
 				PRODUCT_NAME = "ZipKit Touch";
 			};
 			name = Debug;
@@ -296,7 +299,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = ZipKit_Touch_Prefix.pch;
 				INFOPLIST_FILE = "ZipKit_Touch-Info.plist";
-				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
 				PRODUCT_NAME = "ZipKit Touch";
 			};
 			name = Release;
