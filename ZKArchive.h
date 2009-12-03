@@ -19,6 +19,23 @@
 	NSFileManager *_fileManager;
 	ZKCDTrailer *_cdTrailer;
 	NSTimeInterval _throttleThreadSleepTime;
+
+@protected
+	// cached respondsToSelector: checks
+	BOOL drtsDelegateWantsSizes;
+	BOOL drtsDidBeginZip;
+	BOOL drtsDidBeginUnzip;
+	BOOL drtsWillZipPath;
+	BOOL drtsWillUnzipPath;
+	BOOL drtsDidEndZip;
+	BOOL drtsDidEndUnzip;
+	BOOL drtsDidCancel;
+	BOOL drtsDidFail;
+	BOOL drtsDidUpdateTotalSize;
+	BOOL drtsDidUpdateTotalCount;
+	BOOL drtsDidUpdateBytesWritten;
+	
+	BOOL irtsIsCancelled;
 }
 
 + (BOOL) validArchiveAtPath:(NSString *) path;

@@ -301,7 +301,7 @@
 								bytesWritten += have;
 							} else
 								ZKLogError(@"Stream error: %@", path);
-							if ([self.invoker respondsToSelector:@selector(isCancelled)]) {
+							if (irtsIsCancelled) {
 								if ([self.invoker isCancelled]) {
 									[inflatedFile closeFile];
 									if (self.delegate)
@@ -365,7 +365,7 @@
 						}
 					}
 					[NSThread sleepForTimeInterval:self.throttleThreadSleepTime];
-					if ([self.invoker respondsToSelector:@selector(isCancelled)]) {
+					if (irtsIsCancelled) {
 						if ([self.invoker isCancelled]) {
 							[inflatedFile closeFile];
 							if (self.delegate)
@@ -521,7 +521,7 @@
 						compressedSize += have;
 						archiveData = [NSData dataWithBytesNoCopy:out length:have freeWhenDone:NO];
 						[archiveFile writeData:archiveData];
-						if ([self.invoker respondsToSelector:@selector(isCancelled)]) {
+						if (irtsIsCancelled) {
 							if ([self.invoker isCancelled]) {
 								[file closeFile];
 								[archiveFile closeFile];

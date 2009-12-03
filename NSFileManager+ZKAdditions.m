@@ -161,12 +161,13 @@ const NSUInteger ZKMaxEntriesPerFetch = 40;
 	path = [path stringByExpandingTildeInPath];
 	BOOL isDirectory;
 	if ([self fileExistsAtPath:path isDirectory:&isDirectory] && !isDirectory) {
+		BOOL irtsIsCancelled = [invoker respondsToSelector:@selector(isCancelled)];
 		const NSUInteger crcBlockSize = 1048576;
 		NSFileHandle *fileHandle = [NSFileHandle fileHandleForReadingAtPath:path];
 		NSData *block = [fileHandle readDataOfLength:crcBlockSize] ;
 		while ([block length] > 0) {
 			crc32 = [block zk_crc32:crc32];
-			if ([invoker respondsToSelector:@selector(isCancelled)]) {
+			if (irtsIsCancelled) {
 				if ([invoker isCancelled]) {
 					[fileHandle closeFile];
 					return 0;

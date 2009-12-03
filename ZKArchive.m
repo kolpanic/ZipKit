@@ -122,66 +122,106 @@
 #pragma mark -
 #pragma mark Delegate 
 
+- (void) setInvoker:(id)i {
+	_invoker = i;
+	if (_invoker) {
+		irtsIsCancelled = [self.invoker respondsToSelector:@selector(isCancelled)];
+	} else {
+		irtsIsCancelled = NO;
+	}
+}
+
+- (void) setDelegate:(id)d {
+	_delegate = d;
+	if (_delegate) {
+		drtsDelegateWantsSizes = [_delegate respondsToSelector:@selector(zkDelegateWantsSizes)];
+		drtsDidBeginZip = [_delegate respondsToSelector:@selector(onZKArchiveDidBeginZip:)];
+		drtsDidBeginUnzip = [_delegate respondsToSelector:@selector(onZKArchiveDidBeginUnzip:)];
+		drtsWillZipPath = [_delegate respondsToSelector:@selector(onZKArchive:willZipPath:)];
+		drtsWillUnzipPath = [_delegate respondsToSelector:@selector(onZKArchive:willUnzipPath:)];
+		drtsDidEndZip = [_delegate respondsToSelector:@selector(onZKArchiveDidEndZip:)];
+		drtsDidEndUnzip = [_delegate respondsToSelector:@selector(onZKArchiveDidEndUnzip:)];
+		drtsDidCancel = [_delegate respondsToSelector:@selector(onZKArchiveDidCancel:)];
+		drtsDidFail = [_delegate respondsToSelector:@selector(onZKArchiveDidFail:)];
+		drtsDidUpdateTotalSize = [_delegate respondsToSelector:@selector(onZKArchive:didUpdateTotalSize:)];
+		drtsDidUpdateTotalCount = [_delegate respondsToSelector:@selector(onZKArchive:didUpdateTotalCount:)];
+		drtsDidUpdateBytesWritten = [_delegate respondsToSelector:@selector(onZKArchive:didUpdateBytesWritten:)];
+	} else {
+		drtsDelegateWantsSizes = NO;
+		drtsDidBeginZip = NO;
+		drtsDidBeginUnzip = NO;
+		drtsWillZipPath = NO;
+		drtsWillUnzipPath = NO;
+		drtsDidEndZip = NO;
+		drtsDidEndUnzip = NO;
+		drtsDidCancel = NO;
+		drtsDidFail = NO;
+		drtsDidUpdateTotalSize = NO;
+		drtsDidUpdateTotalCount = NO;
+		drtsDidUpdateBytesWritten = NO;
+	}
+}
+
 - (BOOL) delegateWantsSizes {
 	BOOL delegateWantsSizes = NO;
-	if ([self.delegate respondsToSelector:@selector(zkDelegateWantsSizes)]) {
+	if (drtsDelegateWantsSizes) {
 		delegateWantsSizes = [self.delegate zkDelegateWantsSizes];
 	}
 	return delegateWantsSizes;
 }
 
 - (void) didBeginZip  {
-	if ([self.delegate respondsToSelector:@selector(onZKArchiveDidBeginZip:)])
+	if (drtsDidBeginZip)
 		[self.delegate onZKArchiveDidBeginZip:self];
 }
 
 - (void) didBeginUnzip  {
-	if ([self.delegate respondsToSelector:@selector(onZKArchiveDidBeginUnzip:)])
+	if (drtsDidBeginUnzip)
 		[self.delegate onZKArchiveDidBeginUnzip:self];
 }
 
 - (void) willZipPath:(NSString *) path {
-	if ([self.delegate respondsToSelector:@selector(onZKArchive:willZipPath:)])
+	if (drtsWillZipPath)
 		[self.delegate onZKArchive:self willZipPath:path];
 }
 
 - (void) willUnzipPath:(NSString *) path {
-	if ([self.delegate respondsToSelector:@selector(onZKArchive:willUnzipPath:)])
+	if (drtsWillUnzipPath)
 		[self.delegate onZKArchive:self willUnzipPath:path];
 }
 
 - (void) didEndZip {
-	if ([self.delegate respondsToSelector:@selector(onZKArchiveDidEndZip:)])
+	if (drtsDidEndZip)
 		[self.delegate onZKArchiveDidEndZip:self];
 }
 
 - (void) didEndUnzip {
-	if ([self.delegate respondsToSelector:@selector(onZKArchiveDidEndUnzip:)])
+	if (drtsDidEndUnzip)
 		[self.delegate onZKArchiveDidEndUnzip:self];
 }
 
 - (void) didCancel {
-	if ([self.delegate respondsToSelector:@selector(onZKArchiveDidCancel:)])
+	if (drtsDidCancel)
 		[self.delegate onZKArchiveDidCancel:self];
 }
 
 - (void) didFail {
-	if ([self.delegate respondsToSelector:@selector(onZKArchiveDidFail)])
+	if (drtsDidFail)
 		[self.delegate onZKArchiveDidFail:self];
 }
 
 - (void) didUpdateTotalSize:(NSNumber *) size {
-	if ([self.delegate respondsToSelector:@selector(onZKArchive:didUpdateTotalSize:)])
+	if (drtsDidUpdateTotalSize)
 		[self.delegate onZKArchive:self didUpdateTotalSize:[size unsignedLongLongValue]];
 }
 
 - (void) didUpdateTotalCount:(NSNumber *) count {
-	if ([self.delegate respondsToSelector:@selector(onZKArchive:didUpdateTotalCount:)])
+	if (drtsDidUpdateTotalCount)
 		[self.delegate onZKArchive:self didUpdateTotalCount:[count unsignedLongLongValue]];
 }
 
 - (void) didUpdateBytesWritten:(NSNumber *) byteCount {
-	if ([self.delegate respondsToSelector:@selector(onZKArchive:didUpdateBytesWritten:)])
+	if (drtsDidUpdateBytesWritten)
 		[self.delegate onZKArchive:self didUpdateBytesWritten:[byteCount unsignedLongLongValue]];
 }
 

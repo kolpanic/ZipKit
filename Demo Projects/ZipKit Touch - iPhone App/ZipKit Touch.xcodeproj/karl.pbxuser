@@ -29,9 +29,9 @@
 	};
 	28C286E00D94DF7D0034E888 /* RootViewController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1208, 1444}}";
-			sepNavSelRange = "{859, 0}";
-			sepNavVisRange = "{582, 1909}";
+			sepNavIntBoundsRect = "{{0, 0}, {1019, 1482}}";
+			sepNavSelRange = "{1013, 0}";
+			sepNavVisRange = "{582, 1555}";
 		};
 	};
 	29B97313FDCFA39411CA2CEA /* Project object */ = {
@@ -116,12 +116,12 @@
 					PBXFileDataSource_Warnings_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 279729520;
-			PBXWorkspaceStateSaveDate = 279729520;
+			PBXPerProjectTemplateStateSaveDate = 281548314;
+			PBXWorkspaceStateSaveDate = 281548314;
 		};
 		perUserProjectItems = {
-			CB611A3F10AC573A003E92D6 /* PBXTextBookmark */ = CB611A3F10AC573A003E92D6 /* PBXTextBookmark */;
-			CB611A4210AC5745003E92D6 /* PBXTextBookmark */ = CB611A4210AC5745003E92D6 /* PBXTextBookmark */;
+			CB81EA4910C81631006AD76E /* PBXTextBookmark */ = CB81EA4910C81631006AD76E /* PBXTextBookmark */;
+			CB81EA4A10C81633006AD76E /* PBXTextBookmark */ = CB81EA4A10C81633006AD76E /* PBXTextBookmark */;
 		};
 		sourceControlManager = CB748021109F76B4006A143C /* Source Control */;
 		userBuildSettings = {
@@ -133,26 +133,6 @@
 			sepNavSelRange = "{0, 0}";
 			sepNavVisRange = "{0, 224}";
 		};
-	};
-	CB611A3F10AC573A003E92D6 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 28C286E00D94DF7D0034E888 /* RootViewController.m */;
-		name = "RootViewController.m: 45";
-		rLen = 0;
-		rLoc = 1450;
-		rType = 0;
-		vrLen = 545;
-		vrLoc = 1244;
-	};
-	CB611A4210AC5745003E92D6 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 28C286E00D94DF7D0034E888 /* RootViewController.m */;
-		name = "RootViewController.m: 33";
-		rLen = 0;
-		rLoc = 859;
-		rType = 0;
-		vrLen = 1909;
-		vrLoc = 582;
 	};
 	CB748019109F76B3006A143C /* ZipKit Touch */ = {
 		isa = PBXExecutable;
@@ -199,5 +179,25 @@
 	CB748022109F76B4006A143C /* Code sense */ = {
 		isa = PBXCodeSenseManager;
 		indexTemplatePath = "";
+	};
+	CB81EA4910C81631006AD76E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28C286E00D94DF7D0034E888 /* RootViewController.m */;
+		name = "RootViewController.m: 37";
+		rLen = 0;
+		rLoc = 1013;
+		rType = 0;
+		vrLen = 521;
+		vrLoc = 721;
+	};
+	CB81EA4A10C81633006AD76E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28C286E00D94DF7D0034E888 /* RootViewController.m */;
+		name = "RootViewController.m: 37";
+		rLen = 0;
+		rLoc = 1013;
+		rType = 0;
+		vrLen = 1555;
+		vrLoc = 582;
 	};
 }
