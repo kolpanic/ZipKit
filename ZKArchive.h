@@ -12,8 +12,8 @@
 @interface ZKArchive : NSObject {
 @private
 	// invoker should be an NSOperation or NSThread; if [invoker isCancelled], inflation or deflation will be aborted
-	id _invoker;
-	id _delegate;
+	id __weak _invoker;
+	id __weak _delegate;
 	NSString *_archivePath;
 	NSMutableArray *_centralDirectory;
 	NSFileManager *_fileManager;
@@ -58,8 +58,8 @@
 - (void) didUpdateTotalCount:(NSNumber *) count;
 - (void) didUpdateBytesWritten:(NSNumber *) byteCount;
 
-@property (assign) id invoker;
-@property (assign) id delegate;
+@property (assign) id __weak invoker;
+@property (assign) id __weak delegate;
 @property (copy) NSString *archivePath;
 @property (retain) NSMutableArray *centralDirectory;
 @property (retain) NSFileManager *fileManager;
