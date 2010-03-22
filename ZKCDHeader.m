@@ -34,7 +34,7 @@
 		self.localHeaderOffset = 0;
 		self.extraField = nil;
 		self.comment = nil;
-		
+
 		[self addObserver:self forKeyPath:@"compressedSize" options:NSKeyValueObservingOptionNew context:nil];
 		[self addObserver:self forKeyPath:@"uncompressedSize" options:NSKeyValueObservingOptionNew context:nil];
 		[self addObserver:self forKeyPath:@"localHeaderOffset" options:NSKeyValueObservingOptionNew context:nil];
@@ -75,11 +75,11 @@
 		|| [keyPath isEqualToString:@"uncompressedSize"]
 		|| [keyPath isEqualToString:@"localHeaderOffset"]) {
 		self.versionNeededToExtract = ([self useZip64Extensions] ? 45 : 20);
-	} else if ([keyPath isEqualToString:@"extraField"]) {
+	} else if ([keyPath isEqualToString:@"extraField"] && self.extraFieldLength < 1) {
 		self.extraFieldLength = [self.extraField length];
-	} else if ([keyPath isEqualToString:@"filename"]) {
+	} else if ([keyPath isEqualToString:@"filename"] && self.filenameLength < 1) {
 		self.filenameLength = [self.filename zk_precomposedUTF8Length];
-	} else if ([keyPath isEqualToString:@"comment"]) {
+	} else if ([keyPath isEqualToString:@"comment"] && self.commentLength < 1) {
 		self.commentLength = [self.comment zk_precomposedUTF8Length];
 	}
 }
@@ -145,7 +145,7 @@
 - (NSData *) data {
 	if (!self.cachedData || ([self.cachedData length] < ZKCDHeaderFixedDataLength)) {
 		self.extraField = [self zip64ExtraField];
-		
+
 		self.cachedData = [NSMutableData zk_dataWithLittleInt32:self.magicNumber];
 		[self.cachedData zk_appendLittleInt16:self.versionMadeBy];
 		[self.cachedData zk_appendLittleInt16:self.versionNeededToExtract];

@@ -28,7 +28,7 @@
 		self.extraFieldLength = 0;
 		self.filename = nil;
 		self.extraField = nil;
-		
+
 		[self addObserver:self forKeyPath:@"compressedSize" options:NSKeyValueObservingOptionNew context:nil];
 		[self addObserver:self forKeyPath:@"uncompressedSize" options:NSKeyValueObservingOptionNew context:nil];
 		[self addObserver:self forKeyPath:@"extraField" options:NSKeyValueObservingOptionNew context:nil];
@@ -60,9 +60,9 @@
 - (void) observeValueForKeyPath:(NSString *) keyPath ofObject:(id) object change:(NSDictionary *) change context:(void *) context {
 	if ([keyPath isEqualToString:@"compressedSize"] || [keyPath isEqualToString:@"uncompressedSize"]) {
 		self.versionNeededToExtract = ([self useZip64Extensions] ? 45 : 20);
-	} else if ([keyPath isEqualToString:@"extraField"]) {
+	} else if ([keyPath isEqualToString:@"extraField"] && self.extraFieldLength < 1) {
 		self.extraFieldLength = [self.extraField length];
-	} else if ([keyPath isEqualToString:@"filename"]) {
+	} else if ([keyPath isEqualToString:@"filename"] && self.filenameLength < 1) {
 		self.filenameLength = [self.filename zk_precomposedUTF8Length];
 	}
 }

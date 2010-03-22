@@ -16,7 +16,7 @@
 - (id) init {
 	if (self = [super init]) {
 		[self addObserver:self forKeyPath:@"comment" options:NSKeyValueObservingOptionNew context:nil];
-		
+
 		self.magicNumber = ZKCDTrailerMagicNumber;
 		self.thisDiskNumber = 0;
 		self.diskNumberWithStartOfCentralDirectory = 0;
@@ -46,9 +46,8 @@
 
 
 - (void) observeValueForKeyPath:(NSString *) keyPath ofObject:(id) object change:(NSDictionary *) change context:(void *) context {
-	// set iVars directly, to avoid potential infinite KVO recursion
-	if ([keyPath isEqualToString:@"comment"]) {
-		commentLength = [self.comment zk_precomposedUTF8Length];
+	if ([keyPath isEqualToString:@"comment"] && self.commentLength < 1) {
+		self.commentLength = [self.comment zk_precomposedUTF8Length];
 	}
 }
 

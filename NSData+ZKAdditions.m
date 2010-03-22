@@ -38,15 +38,28 @@
 	return CFSwapInt64LittleToHost(value);
 }
 
-- (BOOL) zk_hostBoolOffsetBy:(NSUInteger *) offset {
+- (BOOL) zk_hostBoolOffsetBy:(NSUInteger *)offset {
 	UInt32 value = [self zk_hostInt32OffsetBy:offset];
-	return (value != 0);
+	return value != 0;
 }
 
 - (NSString *) zk_stringOffsetBy:(NSUInteger *)offset length:(NSUInteger)length {
 	NSString *value = nil;
+	NSData *subData = [self subdataWithRange:NSMakeRange(*offset, length)];
 	if (length > 0)
-		value = [[[NSString alloc] initWithData:[self subdataWithRange:NSMakeRange(*offset, length)] encoding:NSUTF8StringEncoding] autorelease];
+		value = [[[NSString alloc] initWithData:subData encoding:NSUTF8StringEncoding] autorelease];
+	if (!value) {
+		// No valid utf8 encoding, replace everything non-ascii with '?'
+		NSMutableData *md = [subData mutableCopyWithZone:nil];
+		unsigned char *mdd = [md mutableBytes];
+		if ([md length] > 0) {
+			for (unsigned int i = 0; i < [md length]; i++)
+				if (mdd[i] > 127)
+					mdd[i] = '?';
+			value = [[[NSString alloc] initWithData:md encoding:NSUTF8StringEncoding] autorelease];
+		}
+		[md release];
+	}
 	*offset += length;
 	return value;
 }
@@ -62,19 +75,19 @@
 - (NSData *) zk_inflate {
 	NSUInteger full_length = [self length];
 	NSUInteger half_length = full_length / 2;
-	
-	NSMutableData *inflatedData = [NSMutableData dataWithLength: full_length + half_length];
+
+	NSMutableData *inflatedData = [NSMutableData dataWithLength:full_length + half_length];
 	BOOL done = NO;
 	int status;
-	
+
 	z_stream strm;
-	
+
 	strm.next_in = (Bytef *)[self bytes];
 	strm.avail_in = [self length];
 	strm.total_out = 0;
 	strm.zalloc = Z_NULL;
 	strm.zfree = Z_NULL;
-	
+
 	if (inflateInit2(&strm, -MAX_WBITS) != Z_OK) return nil;
 	while (!done) {
 		if (strm.total_out >= [inflatedData length])
@@ -86,7 +99,7 @@
 		else if (status != Z_OK) break;
 	}
 	if (inflateEnd(&strm) == Z_OK && done)
-		[inflatedData setLength: strm.total_out];
+		[inflatedData setLength:strm.total_out];
 	else
 		inflatedData = nil;
 	return inflatedData;
@@ -94,14 +107,14 @@
 
 - (NSData *) zk_deflate {
 	z_stream strm;
-	
+
 	strm.zalloc = Z_NULL;
 	strm.zfree = Z_NULL;
 	strm.opaque = Z_NULL;
 	strm.total_out = 0;
 	strm.next_in = (Bytef *)[self bytes];
 	strm.avail_in = [self length];
-	
+
 	NSMutableData *deflatedData = [NSMutableData dataWithLength:16384];
 	if (deflateInit2(&strm, Z_BEST_COMPRESSION, Z_DEFLATED, -MAX_WBITS, 8, Z_DEFAULT_STRATEGY) != Z_OK) return nil;
 	do {
@@ -113,7 +126,7 @@
 	} while (strm.avail_out == 0);
 	deflateEnd(&strm);
 	[deflatedData setLength:strm.total_out];
-	
+
 	return deflatedData;
 }
 
@@ -121,7 +134,7 @@
 
 @implementation NSMutableData (ZKAdditions)
 
-+ (NSMutableData *)zk_dataWithLittleInt16: (UInt16)value {
++ (NSMutableData *) zk_dataWithLittleInt16:(UInt16)value {
 	NSMutableData *data = [self data];
 	[data zk_appendLittleInt16:value];
 	return data;
@@ -154,8 +167,8 @@
 	[self appendBytes:&swappedValue length:sizeof(swappedValue)];
 }
 
-- (void) zk_appendLittleBool:(BOOL) value {
-	return [self zk_appendLittleInt32:(value ? 1 : 0)];
+- (void) zk_appendLittleBool:(BOOL)value {
+	return [self zk_appendLittleInt32:(value ? 1:0)];
 }
 
 - (void) zk_appendPrecomposedUTF8String:(NSString *)value {

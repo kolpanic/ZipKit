@@ -51,12 +51,13 @@
 					PBXFileDataSource_Warnings_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 281807628;
-			PBXWorkspaceStateSaveDate = 281807628;
+			PBXPerProjectTemplateStateSaveDate = 290959186;
+			PBXWorkspaceStateSaveDate = 290959186;
 		};
 		perUserProjectItems = {
-			CB3C45C410CC0AF600681A7A /* PBXTextBookmark */ = CB3C45C410CC0AF600681A7A /* PBXTextBookmark */;
-			CB3C45E310CC0B1600681A7A /* PBXTextBookmark */ = CB3C45E310CC0B1600681A7A /* PBXTextBookmark */;
+			CB319FBF1157B0DE009102C6 /* PBXTextBookmark */ = CB319FBF1157B0DE009102C6 /* PBXTextBookmark */;
+			CB319FC01157B0DE009102C6 /* PBXBookmark */ = CB319FC01157B0DE009102C6 /* PBXBookmark */;
+			CB319FC11157B0DE009102C6 /* PBXTextBookmark */ = CB319FC11157B0DE009102C6 /* PBXTextBookmark */;
 		};
 		sourceControlManager = CB9B9A1C109F63A8003E3F8B /* Source Control */;
 		userBuildSettings = {
@@ -72,25 +73,29 @@
 	8DC2EF4F0486A6940098B216 /* ZipKit */ = {
 		activeExec = 0;
 	};
-	CB3C45C410CC0AF600681A7A /* PBXTextBookmark */ = {
+	CB319FBF1157B0DE009102C6 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
-		fRef = CB9B9B36109F64A0003E3F8B /* ZKArchive.m */;
-		name = "ZKArchive.m: 258";
-		rLen = 12;
-		rLoc = 8659;
-		rType = 0;
-		vrLen = 1095;
-		vrLoc = 7771;
-	};
-	CB3C45E310CC0B1600681A7A /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = CB9B9B36109F64A0003E3F8B /* ZKArchive.m */;
-		name = "ZKArchive.m: 1";
+		fRef = CB9B9B42109F64A0003E3F8B /* ZKDefs.m */;
+		name = "ZKDefs.m: 10";
 		rLen = 0;
-		rLoc = 0;
+		rLoc = 116;
 		rType = 0;
-		vrLen = 1422;
+		vrLen = 1169;
 		vrLoc = 0;
+	};
+	CB319FC01157B0DE009102C6 /* PBXBookmark */ = {
+		isa = PBXBookmark;
+		fRef = CB9B9B10109F6455003E3F8B /* NSData+ZKAdditions.m */;
+	};
+	CB319FC11157B0DE009102C6 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = CB9B9B10109F6455003E3F8B /* NSData+ZKAdditions.m */;
+		name = "NSData+ZKAdditions.m: 53";
+		rLen = 0;
+		rLoc = 1501;
+		rType = 0;
+		vrLen = 1217;
+		vrLoc = 797;
 	};
 	CB9B9A1C109F63A8003E3F8B /* Source Control */ = {
 		isa = PBXSourceControlManager;
@@ -111,6 +116,20 @@
 			sepNavIntBoundsRect = "{{0, 0}, {1208, 2451}}";
 			sepNavSelRange = "{230, 0}";
 			sepNavVisRange = "{0, 1966}";
+		};
+	};
+	CB9B9B08109F643D003E3F8B /* GMAppleDouble.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1019, 2964}}";
+			sepNavSelRange = "{1575, 1}";
+			sepNavVisRange = "{420, 1706}";
+		};
+	};
+	CB9B9B10109F6455003E3F8B /* NSData+ZKAdditions.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1019, 3515}}";
+			sepNavSelRange = "{1501, 0}";
+			sepNavVisRange = "{797, 1217}";
 		};
 	};
 	CB9B9B17109F6455003E3F8B /* NSFileManager+ZKAdditions.h */ = {
@@ -169,6 +188,13 @@
 			sepNavVisRange = "{0, 945}";
 		};
 	};
+	CB9B9B38109F64A0003E3F8B /* ZKCDHeader.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1019, 4997}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 1065}";
+		};
+	};
 	CB9B9B3A109F64A0003E3F8B /* ZKCDTrailer.m */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1019, 2850}}";
@@ -192,8 +218,8 @@
 	};
 	CB9B9B42109F64A0003E3F8B /* ZKDefs.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1208, 972}}";
-			sepNavSelRange = "{290, 0}";
+			sepNavIntBoundsRect = "{{0, 0}, {1019, 776}}";
+			sepNavSelRange = "{116, 0}";
 			sepNavVisRange = "{0, 1169}";
 		};
 	};
@@ -213,9 +239,9 @@
 	};
 	CB9B9B46109F64A0003E3F8B /* ZKLFHeader.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1208, 3743}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1019, 3743}}";
 			sepNavSelRange = "{0, 0}";
-			sepNavVisRange = "{0, 1446}";
+			sepNavVisRange = "{0, 1101}";
 		};
 	};
 	CB9B9B61109F64D3003E3F8B /* COPYING.TXT */ = {
