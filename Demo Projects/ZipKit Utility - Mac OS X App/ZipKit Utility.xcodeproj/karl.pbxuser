@@ -63,12 +63,12 @@
 					PBXFileDataSource_Warnings_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 281807604;
-			PBXWorkspaceStateSaveDate = 281807604;
+			PBXPerProjectTemplateStateSaveDate = 291681802;
+			PBXWorkspaceStateSaveDate = 291681802;
 		};
 		perUserProjectItems = {
-			CB3C45DD10CC0B0700681A7A /* PBXTextBookmark */ = CB3C45DD10CC0B0700681A7A /* PBXTextBookmark */;
-			CB3C45DE10CC0B0A00681A7A /* PBXTextBookmark */ = CB3C45DE10CC0B0A00681A7A /* PBXTextBookmark */;
+			CB713BD21162B71400FD67F8 /* PBXTextBookmark */ = CB713BD21162B71400FD67F8 /* PBXTextBookmark */;
+			CB713BD31162B71900FD67F8 /* PBXTextBookmark */ = CB713BD31162B71900FD67F8 /* PBXTextBookmark */;
 		};
 		sourceControlManager = CB9B9DB4109F693C003E3F8B /* Source Control */;
 		userBuildSettings = {
@@ -94,25 +94,25 @@
 			sepNavVisRange = "{0, 527}";
 		};
 	};
-	CB3C45DD10CC0B0700681A7A /* PBXTextBookmark */ = {
+	CB713BD21162B71400FD67F8 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
 		fRef = CB9B9DD4109F69F1003E3F8B /* MainWindowController.m */;
-		name = "MainWindowController.m: 18";
+		name = "MainWindowController.m: 23";
 		rLen = 0;
-		rLoc = 553;
+		rLoc = 631;
 		rType = 0;
-		vrLen = 297;
-		vrLoc = 335;
+		vrLen = 280;
+		vrLoc = 630;
 	};
-	CB3C45DE10CC0B0A00681A7A /* PBXTextBookmark */ = {
+	CB713BD31162B71900FD67F8 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
 		fRef = CB9B9DD4109F69F1003E3F8B /* MainWindowController.m */;
-		name = "MainWindowController.m: 18";
+		name = "MainWindowController.m: 23";
 		rLen = 0;
-		rLoc = 553;
+		rLoc = 631;
 		rType = 0;
-		vrLen = 1249;
-		vrLoc = 0;
+		vrLen = 1406;
+		vrLoc = 190;
 	};
 	CB9B9DAB109F692E003E3F8B /* ZipKit Utility */ = {
 		isa = PBXExecutable;
@@ -167,9 +167,9 @@
 	};
 	CB9B9DD4109F69F1003E3F8B /* MainWindowController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1019, 4180}}";
-			sepNavSelRange = "{553, 0}";
-			sepNavVisRange = "{0, 1249}";
+			sepNavIntBoundsRect = "{{0, 0}, {1019, 4237}}";
+			sepNavSelRange = "{631, 0}";
+			sepNavVisRange = "{190, 1406}";
 		};
 	};
 	CB9B9DD6109F6A03003E3F8B /* RemainingTimeTransformer.h */ = {

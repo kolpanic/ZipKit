@@ -283,15 +283,11 @@
 			<array>
 				<string>XCToolbarPerspectiveControl</string>
 				<string>NSToolbarSeparatorItem</string>
-				<string>action</string>
 				<string>active-combo-popup</string>
-				<string>NSToolbarSpaceItem</string>
+				<string>action</string>
 				<string>build</string>
 				<string>build-and-go</string>
-				<string>go</string>
-				<string>clean-target</string>
 				<string>clean</string>
-				<string>NSToolbarFlexibleSpaceItem</string>
 			</array>
 			<key>ControllerClassBaseName</key>
 			<string></string>
@@ -304,6 +300,8 @@
 			<key>Layout</key>
 			<array>
 				<dict>
+					<key>BecomeActive</key>
+					<true/>
 					<key>ContentConfiguration</key>
 					<dict>
 						<key>PBXBottomSmartGroupGIDs</key>
@@ -342,15 +340,14 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateExpansionKey</key>
 							<array>
 								<string>0867D691FE84028FC02AAC07</string>
+								<string>CB2E992910A1C5D700E04C37</string>
 								<string>08FB77AEFE84172EC02AAC07</string>
-								<string>CB9B9B29109F6458003E3F8B</string>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>14</integer>
-									<integer>10</integer>
-									<integer>4</integer>
+									<integer>8</integer>
+									<integer>6</integer>
 									<integer>0</integer>
 								</array>
 							</array>
@@ -385,14 +382,12 @@
 					<key>Dock</key>
 					<array>
 						<dict>
-							<key>BecomeActive</key>
-							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
 								<string>CB3742AB106A5CEF00AED801</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>NSData+ZKAdditions.m</string>
+								<string>ZKDefs.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -400,15 +395,14 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>CB3742AC106A5CEF00AED801</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>NSData+ZKAdditions.m</string>
+										<string>ZKDefs.m</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>CB319FC11157B0DE009102C6</string>
+										<string>CB713BD11162B71300FD67F8</string>
 										<key>history</key>
 										<array>
-											<string>CB319FBF1157B0DE009102C6</string>
-											<string>CB319FC01157B0DE009102C6</string>
+											<string>CB713BD01162B71300FD67F8</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -448,8 +442,6 @@
 									<dict>
 										<key>Frame</key>
 										<string>{{10, 27}, {1080, -27}}</string>
-										<key>RubberWindowFrame</key>
-										<string>297 339 1373 839 0 0 1920 1178 </string>
 									</dict>
 									<key>Module</key>
 									<string>XCDetailModule</string>
@@ -465,7 +457,9 @@
 									<key>GeometryConfiguration</key>
 									<dict>
 										<key>Frame</key>
-										<string>{{0, 0}, {614, 336}}</string>
+										<string>{{10, 27}, {1080, -27}}</string>
+										<key>RubberWindowFrame</key>
+										<string>297 339 1373 839 0 0 1920 1178 </string>
 									</dict>
 									<key>Module</key>
 									<string>PBXProjectFindModule</string>
@@ -531,11 +525,11 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>CB319F901157AF6C009102C6</string>
+				<string>CB713BA41162B55A00FD67F8</string>
 				<string>1CA23ED40692098700951B8B</string>
-				<string>CB319F911157AF6C009102C6</string>
+				<string>CB713BA51162B55A00FD67F8</string>
 				<string>CB3742AB106A5CEF00AED801</string>
-				<string>CB319F921157AF6C009102C6</string>
+				<string>CB713BA61162B55A00FD67F8</string>
 				<string>1CA23EDF0692099D00951B8B</string>
 				<string>1CA23EE00692099D00951B8B</string>
 				<string>1CA23EE10692099D00951B8B</string>
@@ -708,7 +702,7 @@
 	<key>StatusbarIsVisible</key>
 	<true/>
 	<key>TimeStamp</key>
-	<real>290959582.91490698</real>
+	<real>291682067.63678902</real>
 	<key>ToolbarConfigUserDefaultsMinorVersion</key>
 	<string>2</string>
 	<key>ToolbarDisplayMode</key>
@@ -725,7 +719,7 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>/Users/karl/Projects/zipkit/ZipKit.xcodeproj</string>
+		<string>/Users/karl/Projects/DDB/zipkit/ZipKit.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
 	<string>297 339 1373 839 0 0 1920 1178 </string>

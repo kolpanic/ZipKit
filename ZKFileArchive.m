@@ -30,17 +30,16 @@
  rfFlag indicates whether the AppleDouble'd resource fork should be processed (like Mac OS X's Archive Utility); it's ignored when using building for iPhoneOS
  
  invoker should be an object that responds to isCancelled (e.g., NSOperation) so processing can be cancelled
-
+ 
  delegate should be an object that responds to one or more of the messages in the above category to display progress (see the Application or Tool targets for examples)
-*/
+ */
 
-+ (ZKFileArchive *) process:(id) item usingResourceFork:(BOOL) rfFlag withInvoker:(id) invoker andDelegate:(id) delegate {
++ (ZKFileArchive *) process:(id)item usingResourceFork:(BOOL)rfFlag withInvoker:(id)invoker andDelegate:(id)delegate {
 	ZKFileArchive *archive = nil;
 	
-	if ([item isKindOfClass:[NSArray class]]) {
+	if ([item isKindOfClass:[NSArray class]])
 		if ([item count] == 1)
 			item = [item objectAtIndex:0];
-	}
 	
 	if ([item isKindOfClass:[NSString class]]) {
 		NSString *path = (NSString *)item;
@@ -95,7 +94,7 @@
 			}
 		} else {
 			NSString *archivePath = [self uniquify:[[path stringByDeletingPathExtension]
-													stringByAppendingPathExtension:ZKArchiveFileExtension]];
+			                                        stringByAppendingPathExtension:ZKArchiveFileExtension]];
 			archive = [self archiveWithArchivePath:archivePath];
 			if (!archive)
 				return nil;
@@ -111,11 +110,10 @@
 					[archive performSelectorOnMainThread:@selector(didBeginZip) withObject:nil waitUntilDone:NO];
 			}
 			NSInteger result = zkSucceeded;
-			if ([archive.fileManager zk_isDirAtPath:path] && ![archive.fileManager zk_isSymLinkAtPath:path]) {
+			if ([archive.fileManager zk_isDirAtPath:path] && ![archive.fileManager zk_isSymLinkAtPath:path])
 				result = [archive deflateDirectory:path relativeToPath:[path stringByDeletingLastPathComponent] usingResourceFork:rfFlag];
-			} else {
+			else
 				result = [archive deflateFile:path relativeToPath:[path stringByDeletingLastPathComponent] usingResourceFork:rfFlag];
-			}
 			if (result == zkSucceeded) {
 				if (archive.delegate) {
 					if ([NSThread isMainThread])
@@ -142,7 +140,7 @@
 		NSString *firstPath = [paths objectAtIndex:0];
 		NSString *basePath = [firstPath stringByDeletingLastPathComponent];
 		NSString *archiveName = [NSLocalizedString(@"Archive", @"default archive filename")
-								 stringByAppendingPathExtension:ZKArchiveFileExtension];
+		                         stringByAppendingPathExtension:ZKArchiveFileExtension];
 		NSString *archivePath = [self uniquify:[basePath stringByAppendingPathComponent:archiveName]];
 		archive = [self archiveWithArchivePath:archivePath];
 		if (!archive)
@@ -179,13 +177,12 @@
 					[archive performSelectorOnMainThread:@selector(didFail) withObject:nil waitUntilDone:NO];
 			}
 		}
-	} else {
+	} else
 		ZKLogError(@"Skipping %@ - not a NSString or NSArray", item);
-	}
 	return archive;
 }
 
-+ (ZKFileArchive *) archiveWithArchivePath:(NSString *) path {
++ (ZKFileArchive *) archiveWithArchivePath:(NSString *)path {
 	ZKFileArchive *archive = [[ZKFileArchive new] autorelease];
 	archive.archivePath = path;
 	if ([archive.fileManager fileExistsAtPath:archive.archivePath]) {
@@ -195,7 +192,7 @@
 																			  andCDTrailerLength:[archive.cdTrailer length]];
 			if (trailer64Locator) {
 				ZKCDTrailer64 *trailer64 = [ZKCDTrailer64 recordWithArchivePath:path atOffset:
-											trailer64Locator.offsetOfStartOfCentralDirectoryTrailer64];
+				                            trailer64Locator.offsetOfStartOfCentralDirectoryTrailer64];
 				if (trailer64) {
 					archive.cdTrailer.offsetOfStartOfCentralDirectory = trailer64.offsetOfStartOfCentralDirectory;
 					archive.cdTrailer.sizeOfCentralDirectory = trailer64.sizeOfCentralDirectory;
@@ -208,9 +205,8 @@
 				archive.useZip64Extensions = (archive.useZip64Extensions || [cdHeader useZip64Extensions]);
 				offset += [cdHeader length];
 			}
-		} else {
+		} else
 			archive = nil;
-		}
 	}
 	return archive;
 }
@@ -218,7 +214,7 @@
 #pragma mark -
 #pragma mark Inflation
 
-- (NSInteger) inflateToDiskUsingResourceFork:(BOOL) rfFlag {
+- (NSInteger) inflateToDiskUsingResourceFork:(BOOL)rfFlag {
 	NSString *enclosingFolder = [self.archivePath stringByDeletingLastPathComponent];
 	NSString *expansionDirectory = [self uniqueExpansionDirectoryIn:enclosingFolder];
 	
@@ -228,17 +224,26 @@
 		if (result != zkSucceeded)
 			break;
 	}
+	if (result == zkSucceeded) {
+		for (ZKCDHeader *cdHeader in self.centralDirectory) {
+			NSString *path = [expansionDirectory stringByAppendingPathComponent:cdHeader.filename];
+			[self.fileManager changeFileAttributes:[NSDictionary dictionaryWithObjectsAndKeys:
+			                                        [cdHeader posixPermissions], NSFilePosixPermissions,
+			                                        [cdHeader lastModDate], NSFileCreationDate,
+			                                        [cdHeader lastModDate], NSFileModificationDate, nil] atPath:path];
+		}
+	}
 	
 #if ZK_TARGET_OS_MAC
 	if (result == zkSucceeded && rfFlag)
-			[self.fileManager zk_combineAppleDoubleInDirectory:expansionDirectory];
+		[self.fileManager zk_combineAppleDoubleInDirectory:expansionDirectory];
 #endif
 	[self cleanUpExpansionDirectory:expansionDirectory];
 	
 	return result;
 }
 
-- (NSInteger) inflateFile:(ZKCDHeader *) cdHeader toDirectory:(NSString *) expansionDirectory {
+- (NSInteger) inflateFile:(ZKCDHeader *)cdHeader toDirectory:(NSString *)expansionDirectory {
 	if (self.delegate) {
 		if ([NSThread isMainThread])
 			[self willUnzipPath:cdHeader.filename];
@@ -259,12 +264,12 @@
 		NSString *symLinkDestinationPath = [[[NSString alloc] initWithData:symLinkData encoding:NSUTF8StringEncoding] autorelease];
 		NSString *filename = [expansionDirectory stringByAppendingPathComponent:cdHeader.filename];
 		result = [self.fileManager createDirectoryAtPath:[path stringByDeletingLastPathComponent]
-				  withIntermediateDirectories:YES attributes:nil error:nil];
+							 withIntermediateDirectories:YES attributes:nil error:nil];
 		if (result)
 			result = [self.fileManager createSymbolicLinkAtPath:filename withDestinationPath:symLinkDestinationPath error:nil];
-	} else if ([cdHeader isDirectory]) {
+	} else if ([cdHeader isDirectory])
 		result = [self.fileManager createDirectoryAtPath:path withIntermediateDirectories:YES attributes:nil error:nil];
-	} else {
+	else {
 		NSData *deflatedData;
 		NSUInteger have, chunkSize, bytesRead, totalBytesRead = 0, crc = 0;
 		unsigned long long block = 0, bytesWritten = 0;
@@ -289,7 +294,7 @@
 					totalBytesRead += bytesRead;
 					if (bytesRead > 0 && totalBytesRead <= cdHeader.compressedSize) {
 						strm.avail_in = bytesRead;
-						strm.next_in = (Bytef*)[deflatedData bytes];
+						strm.next_in = (Bytef *)[deflatedData bytes];
 						do {
 							strm.avail_out = chunkSize;
 							strm.next_out = out;
@@ -311,9 +316,8 @@
 								}
 							}
 						} while (strm.avail_out == 0 && ret != Z_STREAM_ERROR);
-					} else {
+					} else
 						ret = Z_STREAM_END;
-					}
 					if ([self delegateWantsSizes]) {
 						if (ZKNotificationIterations > 0 && ++block % ZKNotificationIterations == 0) {
 							if ([NSThread isMainThread])
@@ -384,23 +388,23 @@
 		}
 		result = (ret == Z_OK || ret == Z_STREAM_END);
 	}
-
+	
 	// restore the extracted file's attributes
 	if (result) {
 		[self.fileManager changeFileAttributes:[NSDictionary dictionaryWithObjectsAndKeys:
-												[cdHeader posixPermissions], NSFilePosixPermissions,
-												[cdHeader lastModDate], NSFileCreationDate,
-												[cdHeader lastModDate], NSFileModificationDate, nil] atPath:path];
+		                                        [cdHeader posixPermissions], NSFilePosixPermissions,
+		                                        [cdHeader lastModDate], NSFileCreationDate,
+		                                        [cdHeader lastModDate], NSFileModificationDate, nil] atPath:path];
 	}
 	
 	[archiveFile closeFile];
-	return (result ? zkSucceeded : zkFailed);
+	return result ? zkSucceeded : zkFailed;
 }
 
 #pragma mark -
 #pragma mark Deflation
 
-- (NSInteger) deflateFiles:(NSArray *) paths relativeToPath:(NSString *) basePath usingResourceFork:(BOOL) rfFlag {
+- (NSInteger) deflateFiles:(NSArray *)paths relativeToPath:(NSString *)basePath usingResourceFork:(BOOL)rfFlag {
 	NSInteger rc = zkSucceeded;
 	for (NSString *path in paths) {
 		if ([self.fileManager zk_isDirAtPath:path] && ![self.fileManager zk_isSymLinkAtPath:path]) {
@@ -416,7 +420,7 @@
 	return rc;
 }
 
-- (NSInteger) deflateDirectory:(NSString *) dirPath relativeToPath:(NSString *) basePath usingResourceFork:(BOOL) rfFlag {
+- (NSInteger) deflateDirectory:(NSString *)dirPath relativeToPath:(NSString *)basePath usingResourceFork:(BOOL)rfFlag {
 	NSInteger rc = [self deflateFile:dirPath relativeToPath:basePath usingResourceFork:rfFlag];
 	if (rc == zkSucceeded) {
 		NSDirectoryEnumerator *e = [self.fileManager enumeratorAtPath:dirPath];
@@ -429,12 +433,12 @@
 	return rc;
 }
 
-- (NSInteger) deflateFile:(NSString *) path relativeToPath:(NSString *) basePath usingResourceFork:(BOOL) rfFlag {
+- (NSInteger) deflateFile:(NSString *)path relativeToPath:(NSString *)basePath usingResourceFork:(BOOL)rfFlag {
 	BOOL isDir = [self.fileManager zk_isDirAtPath:path];
 	BOOL isSymlink = [self.fileManager zk_isSymLinkAtPath:path];
 	
 	NSFileHandle *archiveFile = [[NSFileHandle zk_newFileHandleForWritingAtPath:self.archivePath] autorelease];
-
+	
 	// append a trailing slash to directory paths
 	if (isDir && !isSymlink && ![[path substringFromIndex:([path length] - 1)] isEqualToString:@"/"])
 		path = [path stringByAppendingString:@"/"];
@@ -509,7 +513,7 @@
 				flush = Z_FINISH;
 				if (strm.avail_in > 0) {
 					flush = Z_SYNC_FLUSH;
-					strm.next_in = (Bytef*)[fileData bytes];
+					strm.next_in = (Bytef *)[fileData bytes];
 					crc = crc32(crc, strm.next_in, strm.avail_in);
 				}
 				do {
@@ -609,9 +613,9 @@
 			lfHeaderResource.uncompressedSize = [appleDoubleData length];
 			lfHeaderResource.lastModDate = lfHeaderData.lastModDate;
 			lfHeaderResource.filename = [[ZKMacOSXDirectory stringByAppendingPathComponent:
-										  [relativePath stringByDeletingLastPathComponent]]
-										 stringByAppendingPathComponent:
-										 [ZKDotUnderscore stringByAppendingString:[relativePath lastPathComponent]]];
+			                              [relativePath stringByDeletingLastPathComponent]]
+			                             stringByAppendingPathComponent:
+			                             [ZKDotUnderscore stringByAppendingString:[relativePath lastPathComponent]]];
 			lfHeaderResource.filenameLength = [lfHeaderResource.filename zk_precomposedUTF8Length];
 			lfHeaderResource.crc = [appleDoubleData zk_crc32];
 			lfHeaderResource.compressedSize = [deflatedData length];
@@ -653,10 +657,9 @@
 		cdTrailer64Locator.offsetOfStartOfCentralDirectoryTrailer64 = [archiveFile offsetInFile];
 		[archiveFile writeData:[cdTrailer64 data]];
 		[archiveFile writeData:[cdTrailer64Locator data]];
-	} else {
+	} else
 		for (ZKCDHeader *cdHeader in self.centralDirectory)
 			[archiveFile writeData:[cdHeader data]];
-	}
 	
 	[archiveFile writeData:[self.cdTrailer data]];
 	
@@ -672,9 +675,8 @@
 #pragma mark Setup
 
 - (id) init {
-	if (self = [super init]) {
+	if (self = [super init])
 		self.useZip64Extensions = NO;
-	}
 	return self;
 }
 
