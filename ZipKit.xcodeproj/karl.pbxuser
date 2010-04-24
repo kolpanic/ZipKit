@@ -12,7 +12,7 @@
 				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
 				PBXFileTableDataSourceColumnWidthsKey = (
 					20,
-					10,
+					841,
 					20,
 					48,
 					43,
@@ -27,6 +27,18 @@
 					PBXFileDataSource_Errors_ColumnID,
 					PBXFileDataSource_Warnings_ColumnID,
 					PBXFileDataSource_Target_ColumnID,
+				);
+			};
+			PBXConfiguration.PBXFileTableDataSource3.PBXFindDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFindDataSource_LocationID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					200,
+					855.20849609375,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFindDataSource_MessageID,
+					PBXFindDataSource_LocationID,
 				);
 			};
 			PBXConfiguration.PBXTargetDataSource.PBXTargetDataSource = {
@@ -51,12 +63,12 @@
 					PBXFileDataSource_Warnings_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 291681621;
-			PBXWorkspaceStateSaveDate = 291681621;
+			PBXPerProjectTemplateStateSaveDate = 293768923;
+			PBXWorkspaceStateSaveDate = 293768923;
 		};
 		perUserProjectItems = {
-			CB713BD01162B71300FD67F8 /* PBXTextBookmark */ = CB713BD01162B71300FD67F8 /* PBXTextBookmark */;
-			CB713BD11162B71300FD67F8 /* PBXTextBookmark */ = CB713BD11162B71300FD67F8 /* PBXTextBookmark */;
+			CB46EA8A11828F51003274F7 /* PBXTextBookmark */ = CB46EA8A11828F51003274F7 /* PBXTextBookmark */;
+			CB46EA8B11828F51003274F7 /* PBXTextBookmark */ = CB46EA8B11828F51003274F7 /* PBXTextBookmark */;
 		};
 		sourceControlManager = CB9B9A1C109F63A8003E3F8B /* Source Control */;
 		userBuildSettings = {
@@ -72,7 +84,7 @@
 	8DC2EF4F0486A6940098B216 /* ZipKit */ = {
 		activeExec = 0;
 	};
-	CB713BD01162B71300FD67F8 /* PBXTextBookmark */ = {
+	CB46EA8A11828F51003274F7 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
 		fRef = CB9B9B42109F64A0003E3F8B /* ZKDefs.m */;
 		name = "ZKDefs.m: 10";
@@ -82,7 +94,7 @@
 		vrLen = 1169;
 		vrLoc = 0;
 	};
-	CB713BD11162B71300FD67F8 /* PBXTextBookmark */ = {
+	CB46EA8B11828F51003274F7 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
 		fRef = CB9B9B42109F64A0003E3F8B /* ZKDefs.m */;
 		name = "ZKDefs.m: 10";
@@ -185,16 +197,23 @@
 	};
 	CB9B9B38109F64A0003E3F8B /* ZKCDHeader.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1019, 4997}}";
-			sepNavSelRange = "{236, 27}";
-			sepNavVisRange = "{8440, 1312}";
+			sepNavIntBoundsRect = "{{0, 0}, {1019, 4940}}";
+			sepNavSelRange = "{7365, 17}";
+			sepNavVisRange = "{7236, 1353}";
+		};
+	};
+	CB9B9B39109F64A0003E3F8B /* ZKCDTrailer.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1019, 776}}";
+			sepNavSelRange = "{536, 15}";
+			sepNavVisRange = "{0, 1294}";
 		};
 	};
 	CB9B9B3A109F64A0003E3F8B /* ZKCDTrailer.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1019, 2850}}";
-			sepNavSelRange = "{877, 0}";
-			sepNavVisRange = "{555, 734}";
+			sepNavIntBoundsRect = "{{0, 0}, {1019, 2812}}";
+			sepNavSelRange = "{3250, 15}";
+			sepNavVisRange = "{2529, 1539}";
 		};
 	};
 	CB9B9B3B109F64A0003E3F8B /* ZKCDTrailer64.h */ = {
@@ -206,9 +225,9 @@
 	};
 	CB9B9B40109F64A0003E3F8B /* ZKDataArchive.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1019, 7486}}";
-			sepNavSelRange = "{2151, 12}";
-			sepNavVisRange = "{2613, 1303}";
+			sepNavIntBoundsRect = "{{0, 0}, {1019, 7543}}";
+			sepNavSelRange = "{765, 15}";
+			sepNavVisRange = "{318, 1362}";
 		};
 	};
 	CB9B9B41109F64A0003E3F8B /* ZKDefs.h */ = {
@@ -241,9 +260,9 @@
 	};
 	CB9B9B46109F64A0003E3F8B /* ZKLFHeader.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1019, 3743}}";
-			sepNavSelRange = "{0, 0}";
-			sepNavVisRange = "{0, 1101}";
+			sepNavIntBoundsRect = "{{0, 0}, {1019, 3724}}";
+			sepNavSelRange = "{4999, 17}";
+			sepNavVisRange = "{4859, 941}";
 		};
 	};
 	CB9B9B61109F64D3003E3F8B /* COPYING.TXT */ = {

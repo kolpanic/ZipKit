@@ -399,10 +399,10 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>CB713BD11162B71300FD67F8</string>
+										<string>CB46EA8B11828F51003274F7</string>
 										<key>history</key>
 										<array>
-											<string>CB713BD01162B71300FD67F8</string>
+											<string>CB46EA8A11828F51003274F7</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -441,7 +441,7 @@
 									<key>GeometryConfiguration</key>
 									<dict>
 										<key>Frame</key>
-										<string>{{10, 27}, {1080, -27}}</string>
+										<string>{{10, 27}, {1080, 211}}</string>
 									</dict>
 									<key>Module</key>
 									<string>XCDetailModule</string>
@@ -525,11 +525,11 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>CB713BA41162B55A00FD67F8</string>
+				<string>CB46EA8C11828F51003274F7</string>
 				<string>1CA23ED40692098700951B8B</string>
-				<string>CB713BA51162B55A00FD67F8</string>
+				<string>CB46EA8D11828F51003274F7</string>
 				<string>CB3742AB106A5CEF00AED801</string>
-				<string>CB713BA61162B55A00FD67F8</string>
+				<string>CB46EA8E11828F51003274F7</string>
 				<string>1CA23EDF0692099D00951B8B</string>
 				<string>1CA23EE00692099D00951B8B</string>
 				<string>1CA23EE10692099D00951B8B</string>
@@ -702,7 +702,7 @@
 	<key>StatusbarIsVisible</key>
 	<true/>
 	<key>TimeStamp</key>
-	<real>291682067.63678902</real>
+	<real>293769041.73483098</real>
 	<key>ToolbarConfigUserDefaultsMinorVersion</key>
 	<string>2</string>
 	<key>ToolbarDisplayMode</key>
@@ -719,7 +719,7 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>/Users/karl/Projects/DDB/zipkit/ZipKit.xcodeproj</string>
+		<string>/Users/karl/Projects/kineticD/zipkit/ZipKit.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
 	<string>297 339 1373 839 0 0 1920 1178 </string>

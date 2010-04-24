@@ -72,7 +72,7 @@
 
 + (ZKCDTrailer *) recordWithData:(NSData *)data {
 	UInt32 trailerCheck = 0;
-	NSUInteger offset = [data length] - sizeof(trailerCheck);
+	NSInteger offset = [data length] - sizeof(trailerCheck);
 	while (trailerCheck != ZKCDTrailerMagicNumber && offset > 0) {
 		NSUInteger o = offset;
 		trailerCheck = [data zk_hostInt32OffsetBy:&o];
