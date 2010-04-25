@@ -10,6 +10,6 @@
 @interface GMAppleDouble (ZKAdditions)
 
 + (NSData *) zk_appleDoubleDataForPath:(NSString *)path;
-+ (void) zk_restoreAppleDoubleData:(NSData *) appleDoubleData toPath:(NSString *) path;
++ (void) zk_restoreAppleDoubleData:(NSData *)appleDoubleData toPath:(NSString *)path;
 
 @end

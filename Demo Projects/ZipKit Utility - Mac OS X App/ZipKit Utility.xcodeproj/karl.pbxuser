@@ -63,12 +63,12 @@
 					PBXFileDataSource_Warnings_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 291681802;
-			PBXWorkspaceStateSaveDate = 291681802;
+			PBXPerProjectTemplateStateSaveDate = 293893518;
+			PBXWorkspaceStateSaveDate = 293893518;
 		};
 		perUserProjectItems = {
-			CB713BD21162B71400FD67F8 /* PBXTextBookmark */ = CB713BD21162B71400FD67F8 /* PBXTextBookmark */;
-			CB713BD31162B71900FD67F8 /* PBXTextBookmark */ = CB713BD31162B71900FD67F8 /* PBXTextBookmark */;
+			CBF79C9E118475B80043361D /* PBXTextBookmark */ = CBF79C9E118475B80043361D /* PBXTextBookmark */;
+			CBF79C9F118475B80043361D /* PBXTextBookmark */ = CBF79C9F118475B80043361D /* PBXTextBookmark */;
 		};
 		sourceControlManager = CB9B9DB4109F693C003E3F8B /* Source Control */;
 		userBuildSettings = {
@@ -93,26 +93,6 @@
 			sepNavSelRange = "{155, 0}";
 			sepNavVisRange = "{0, 527}";
 		};
-	};
-	CB713BD21162B71400FD67F8 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = CB9B9DD4109F69F1003E3F8B /* MainWindowController.m */;
-		name = "MainWindowController.m: 23";
-		rLen = 0;
-		rLoc = 631;
-		rType = 0;
-		vrLen = 280;
-		vrLoc = 630;
-	};
-	CB713BD31162B71900FD67F8 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = CB9B9DD4109F69F1003E3F8B /* MainWindowController.m */;
-		name = "MainWindowController.m: 23";
-		rLen = 0;
-		rLoc = 631;
-		rType = 0;
-		vrLen = 1406;
-		vrLoc = 190;
 	};
 	CB9B9DAB109F692E003E3F8B /* ZipKit Utility */ = {
 		isa = PBXExecutable;
@@ -167,9 +147,9 @@
 	};
 	CB9B9DD4109F69F1003E3F8B /* MainWindowController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1019, 4237}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1019, 4161}}";
 			sepNavSelRange = "{631, 0}";
-			sepNavVisRange = "{190, 1406}";
+			sepNavVisRange = "{190, 1398}";
 		};
 	};
 	CB9B9DD6109F6A03003E3F8B /* RemainingTimeTransformer.h */ = {
@@ -199,5 +179,25 @@
 			sepNavSelRange = "{0, 0}";
 			sepNavVisRange = "{0, 275}";
 		};
+	};
+	CBF79C9E118475B80043361D /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = CB9B9DD4109F69F1003E3F8B /* MainWindowController.m */;
+		name = "MainWindowController.m: 23";
+		rLen = 0;
+		rLoc = 631;
+		rType = 0;
+		vrLen = 1398;
+		vrLoc = 190;
+	};
+	CBF79C9F118475B80043361D /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = CB9B9DD4109F69F1003E3F8B /* MainWindowController.m */;
+		name = "MainWindowController.m: 23";
+		rLen = 0;
+		rLoc = 631;
+		rType = 0;
+		vrLen = 1398;
+		vrLoc = 190;
 	};
 }
