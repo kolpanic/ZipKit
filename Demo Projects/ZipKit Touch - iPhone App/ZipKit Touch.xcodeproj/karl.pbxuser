@@ -2,7 +2,7 @@
 {
 	1D3623250D0F684500981E51 /* ZipKit_TouchAppDelegate.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1208, 972}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1019, 776}}";
 			sepNavSelRange = "{407, 0}";
 			sepNavVisRange = "{0, 412}";
 		};
@@ -29,7 +29,7 @@
 	};
 	28C286E00D94DF7D0034E888 /* RootViewController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1019, 1482}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1019, 1425}}";
 			sepNavSelRange = "{1013, 0}";
 			sepNavVisRange = "{582, 1555}";
 		};
@@ -116,12 +116,12 @@
 					PBXFileDataSource_Warnings_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 281548314;
-			PBXWorkspaceStateSaveDate = 281548314;
+			PBXPerProjectTemplateStateSaveDate = 293903346;
+			PBXWorkspaceStateSaveDate = 293903346;
 		};
 		perUserProjectItems = {
-			CB81EA4910C81631006AD76E /* PBXTextBookmark */ = CB81EA4910C81631006AD76E /* PBXTextBookmark */;
-			CB81EA4A10C81633006AD76E /* PBXTextBookmark */ = CB81EA4A10C81633006AD76E /* PBXTextBookmark */;
+			CBB6CDC511849C0600906F10 /* PBXTextBookmark */ = CBB6CDC511849C0600906F10 /* PBXTextBookmark */;
+			CBB6CDC611849C0600906F10 /* PBXTextBookmark */ = CBB6CDC611849C0600906F10 /* PBXTextBookmark */;
 		};
 		sourceControlManager = CB748021109F76B4006A143C /* Source Control */;
 		userBuildSettings = {
@@ -180,24 +180,24 @@
 		isa = PBXCodeSenseManager;
 		indexTemplatePath = "";
 	};
-	CB81EA4910C81631006AD76E /* PBXTextBookmark */ = {
+	CBB6CDC511849C0600906F10 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
-		fRef = 28C286E00D94DF7D0034E888 /* RootViewController.m */;
-		name = "RootViewController.m: 37";
+		fRef = 1D3623250D0F684500981E51 /* ZipKit_TouchAppDelegate.m */;
+		name = "ZipKit_TouchAppDelegate.m: 19";
 		rLen = 0;
-		rLoc = 1013;
+		rLoc = 407;
 		rType = 0;
-		vrLen = 521;
-		vrLoc = 721;
+		vrLen = 412;
+		vrLoc = 0;
 	};
-	CB81EA4A10C81633006AD76E /* PBXTextBookmark */ = {
+	CBB6CDC611849C0600906F10 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
-		fRef = 28C286E00D94DF7D0034E888 /* RootViewController.m */;
-		name = "RootViewController.m: 37";
+		fRef = 1D3623250D0F684500981E51 /* ZipKit_TouchAppDelegate.m */;
+		name = "ZipKit_TouchAppDelegate.m: 19";
 		rLen = 0;
-		rLoc = 1013;
+		rLoc = 407;
 		rType = 0;
-		vrLen = 1555;
-		vrLoc = 582;
+		vrLen = 412;
+		vrLoc = 0;
 	};
 }

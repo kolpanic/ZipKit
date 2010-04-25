@@ -70,11 +70,11 @@
 					PBXFileDataSource_Warnings_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 278890349;
-			PBXWorkspaceStateSaveDate = 278890349;
+			PBXPerProjectTemplateStateSaveDate = 293903370;
+			PBXWorkspaceStateSaveDate = 293903370;
 		};
 		perUserProjectItems = {
-			CB58D4F2109F7DD00091A69D /* PBXTextBookmark */ = CB58D4F2109F7DD00091A69D /* PBXTextBookmark */;
+			CBB6CDD111849C0F00906F10 /* PBXTextBookmark */ = CBB6CDD111849C0F00906F10 /* PBXTextBookmark */;
 			CBE2DFC6109F8791009FF99F /* PBXTextBookmark */ = CBE2DFC6109F8791009FF99F /* PBXTextBookmark */;
 		};
 		sourceControlManager = CB9B9E0C109F6AC3003E3F8B /* Source Control */;
@@ -100,16 +100,6 @@
 		executables = (
 			CB9B9E07109F6ABC003E3F8B /* zku */,
 		);
-	};
-	CB58D4F2109F7DD00091A69D /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 08FB7796FE84155DC02AAC07 /* zku.m */;
-		name = "zku.m: 1";
-		rLen = 0;
-		rLoc = 0;
-		rType = 0;
-		vrLen = 1489;
-		vrLoc = 0;
 	};
 	CB9B9E07109F6ABC003E3F8B /* zku */ = {
 		isa = PBXExecutable;
@@ -188,6 +178,16 @@
 	CB9B9E0D109F6AC3003E3F8B /* Code sense */ = {
 		isa = PBXCodeSenseManager;
 		indexTemplatePath = "";
+	};
+	CBB6CDD111849C0F00906F10 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 08FB7796FE84155DC02AAC07 /* zku.m */;
+		name = "zku.m: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1489;
+		vrLoc = 0;
 	};
 	CBE2DFC6109F8791009FF99F /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;

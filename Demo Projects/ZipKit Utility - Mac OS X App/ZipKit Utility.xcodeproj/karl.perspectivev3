@@ -300,8 +300,6 @@
 			<key>Layout</key>
 			<array>
 				<dict>
-					<key>BecomeActive</key>
-					<true/>
 					<key>ContentConfiguration</key>
 					<dict>
 						<key>PBXBottomSmartGroupGIDs</key>
@@ -398,10 +396,10 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>CBF79C9F118475B80043361D</string>
+										<string>CBB6CDDC11849C1E00906F10</string>
 										<key>history</key>
 										<array>
-											<string>CBF79C9E118475B80043361D</string>
+											<string>CBF79C9F118475B80043361D</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -441,8 +439,6 @@
 									<dict>
 										<key>Frame</key>
 										<string>{{10, 27}, {1080, -27}}</string>
-										<key>RubberWindowFrame</key>
-										<string>377 197 1373 839 0 0 1920 1178 </string>
 									</dict>
 									<key>Module</key>
 									<string>XCDetailModule</string>
@@ -458,7 +454,9 @@
 									<key>GeometryConfiguration</key>
 									<dict>
 										<key>Frame</key>
-										<string>{{0, 0}, {614, 336}}</string>
+										<string>{{10, 27}, {1080, -27}}</string>
+										<key>RubberWindowFrame</key>
+										<string>377 197 1373 839 0 0 1920 1178 </string>
 									</dict>
 									<key>Module</key>
 									<string>PBXProjectFindModule</string>
@@ -524,11 +522,11 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>CBF79C8C118475930043361D</string>
+				<string>CBB6CDDD11849C1E00906F10</string>
 				<string>1CA23ED40692098700951B8B</string>
-				<string>CBF79C8D118475930043361D</string>
+				<string>CBB6CDDE11849C1E00906F10</string>
 				<string>CB3742AB106A5CEF00AED801</string>
-				<string>CBF79C8E118475930043361D</string>
+				<string>CBB6CDDF11849C1E00906F10</string>
 				<string>1CA23EDF0692099D00951B8B</string>
 				<string>1CA23EE00692099D00951B8B</string>
 				<string>1CA23EE10692099D00951B8B</string>
@@ -701,7 +699,7 @@
 	<key>StatusbarIsVisible</key>
 	<true/>
 	<key>TimeStamp</key>
-	<real>293893560.76040602</real>
+	<real>293903390.065925</real>
 	<key>ToolbarConfigUserDefaultsMinorVersion</key>
 	<string>2</string>
 	<key>ToolbarDisplayMode</key>
@@ -718,8 +716,6 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>CBF79C9B1184759C0043361D</string>
-		<string>CBF79C9C1184759C0043361D</string>
 		<string>/Users/karl/Projects/kineticD/zipkit/Demo Projects/ZipKit Utility - Mac OS X App/ZipKit Utility.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
