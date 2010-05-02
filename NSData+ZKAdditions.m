@@ -19,7 +19,7 @@
 	NSUInteger length = sizeof(value);
 	[self getBytes:&value range:NSMakeRange(*offset, length)];
 	*offset += length;
-	return CFSwapInt32LittleToHost(value);
+	return CFSwapInt16LittleToHost(value);
 }
 
 - (UInt32) zk_hostInt32OffsetBy:(NSUInteger *)offset {
