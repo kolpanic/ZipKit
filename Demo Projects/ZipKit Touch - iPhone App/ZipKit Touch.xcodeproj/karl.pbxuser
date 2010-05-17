@@ -3,7 +3,7 @@
 	1D3623250D0F684500981E51 /* ZipKit_TouchAppDelegate.m */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1019, 776}}";
-			sepNavSelRange = "{407, 0}";
+			sepNavSelRange = "{162, 0}";
 			sepNavVisRange = "{0, 412}";
 		};
 	};
@@ -35,8 +35,10 @@
 		};
 	};
 	29B97313FDCFA39411CA2CEA /* Project object */ = {
+		activeArchitecturePreference = armv7;
 		activeBuildConfigurationName = Debug;
 		activeExecutable = CB748019109F76B3006A143C /* ZipKit Touch */;
+		activeSDKPreference = iphonesimulator3.0;
 		activeTarget = 1D6058900D05DD3D006BFB54 /* ZipKit Touch */;
 		addToTargets = (
 			1D6058900D05DD3D006BFB54 /* ZipKit Touch */,
@@ -116,12 +118,12 @@
 					PBXFileDataSource_Warnings_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 293903346;
-			PBXWorkspaceStateSaveDate = 293903346;
+			PBXPerProjectTemplateStateSaveDate = 295809483;
+			PBXWorkspaceStateSaveDate = 295809483;
 		};
 		perUserProjectItems = {
-			CBB6CDC511849C0600906F10 /* PBXTextBookmark */ = CBB6CDC511849C0600906F10 /* PBXTextBookmark */;
-			CBB6CDC611849C0600906F10 /* PBXTextBookmark */ = CBB6CDC611849C0600906F10 /* PBXTextBookmark */;
+			CB5FD45411A1B1D600D42C40 /* PBXTextBookmark */ = CB5FD45411A1B1D600D42C40 /* PBXTextBookmark */;
+			CB5FD46111A1B20700D42C40 /* PBXTextBookmark */ = CB5FD46111A1B20700D42C40 /* PBXTextBookmark */;
 		};
 		sourceControlManager = CB748021109F76B4006A143C /* Source Control */;
 		userBuildSettings = {
@@ -133,6 +135,26 @@
 			sepNavSelRange = "{0, 0}";
 			sepNavVisRange = "{0, 224}";
 		};
+	};
+	CB5FD45411A1B1D600D42C40 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623250D0F684500981E51 /* ZipKit_TouchAppDelegate.m */;
+		name = "ZipKit_TouchAppDelegate.m: 7";
+		rLen = 0;
+		rLoc = 162;
+		rType = 0;
+		vrLen = 412;
+		vrLoc = 0;
+	};
+	CB5FD46111A1B20700D42C40 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623250D0F684500981E51 /* ZipKit_TouchAppDelegate.m */;
+		name = "ZipKit_TouchAppDelegate.m: 7";
+		rLen = 0;
+		rLoc = 162;
+		rType = 0;
+		vrLen = 412;
+		vrLoc = 0;
 	};
 	CB748019109F76B3006A143C /* ZipKit Touch */ = {
 		isa = PBXExecutable;
@@ -179,25 +201,5 @@
 	CB748022109F76B4006A143C /* Code sense */ = {
 		isa = PBXCodeSenseManager;
 		indexTemplatePath = "";
-	};
-	CBB6CDC511849C0600906F10 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 1D3623250D0F684500981E51 /* ZipKit_TouchAppDelegate.m */;
-		name = "ZipKit_TouchAppDelegate.m: 19";
-		rLen = 0;
-		rLoc = 407;
-		rType = 0;
-		vrLen = 412;
-		vrLoc = 0;
-	};
-	CBB6CDC611849C0600906F10 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 1D3623250D0F684500981E51 /* ZipKit_TouchAppDelegate.m */;
-		name = "ZipKit_TouchAppDelegate.m: 19";
-		rLen = 0;
-		rLoc = 407;
-		rType = 0;
-		vrLen = 412;
-		vrLoc = 0;
 	};
 }

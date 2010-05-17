@@ -1,6 +1,7 @@
 // !$*UTF8*$!
 {
 	0867D690FE84028FC02AAC07 /* Project object */ = {
+		activeArchitecturePreference = armv7;
 		activeBuildConfigurationName = Debug;
 		activeTarget = 8DC2EF4F0486A6940098B216 /* ZipKit */;
 		addToTargets = (
@@ -63,12 +64,12 @@
 					PBXFileDataSource_Warnings_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 293903275;
-			PBXWorkspaceStateSaveDate = 293903275;
+			PBXPerProjectTemplateStateSaveDate = 295809369;
+			PBXWorkspaceStateSaveDate = 295809369;
 		};
 		perUserProjectItems = {
-			CBB6CDE211849C2B00906F10 /* PBXTextBookmark */ = CBB6CDE211849C2B00906F10 /* PBXTextBookmark */;
-			CBB6CDE411849C2B00906F10 /* PBXTextBookmark */ = CBB6CDE411849C2B00906F10 /* PBXTextBookmark */;
+			CB5FD44811A1B15E00D42C40 /* PBXTextBookmark */ = CB5FD44811A1B15E00D42C40 /* PBXTextBookmark */;
+			CB5FD44911A1B15E00D42C40 /* PBXTextBookmark */ = CB5FD44911A1B15E00D42C40 /* PBXTextBookmark */;
 		};
 		sourceControlManager = CB9B9A1C109F63A8003E3F8B /* Source Control */;
 		userBuildSettings = {
@@ -83,6 +84,26 @@
 	};
 	8DC2EF4F0486A6940098B216 /* ZipKit */ = {
 		activeExec = 0;
+	};
+	CB5FD44811A1B15E00D42C40 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = CB9B9B42109F64A0003E3F8B /* ZKDefs.m */;
+		name = "ZKDefs.m: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1169;
+		vrLoc = 0;
+	};
+	CB5FD44911A1B15E00D42C40 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = CB9B9B42109F64A0003E3F8B /* ZKDefs.m */;
+		name = "ZKDefs.m: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1169;
+		vrLoc = 0;
 	};
 	CB9B9A1C109F63A8003E3F8B /* Source Control */ = {
 		isa = PBXSourceControlManager;
@@ -278,25 +299,5 @@
 	};
 	CB9B9CED109F6769003E3F8B /* touchzipkit */ = {
 		activeExec = 0;
-	};
-	CBB6CDE211849C2B00906F10 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = CB9B9B42109F64A0003E3F8B /* ZKDefs.m */;
-		name = "ZKDefs.m: 10";
-		rLen = 0;
-		rLoc = 116;
-		rType = 0;
-		vrLen = 1169;
-		vrLoc = 0;
-	};
-	CBB6CDE411849C2B00906F10 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = CB9B9B42109F64A0003E3F8B /* ZKDefs.m */;
-		name = "ZKDefs.m: 1";
-		rLen = 0;
-		rLoc = 0;
-		rType = 0;
-		vrLen = 1169;
-		vrLoc = 0;
 	};
 }
