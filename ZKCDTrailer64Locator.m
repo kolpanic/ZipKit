@@ -38,7 +38,6 @@
 	NSData *data = [file readDataOfLength:ZKCDTrailer64LocatorFixedDataLength];
 	[file closeFile];
 	ZKCDTrailer64Locator *record = [self recordWithData:data atOffset:0];
-	[data release];
 	return record;
 }
 

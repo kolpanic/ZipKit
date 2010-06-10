@@ -56,13 +56,6 @@
 
 - (void) dealloc {
 	[self removeObservers];
-
-	[self.cachedData release];
-	[self.lastModDate release];
-	[self.filename release];
-	[self.extraField release];
-	[self.comment release];
-
 	self.cachedData = nil;
 	self.lastModDate = nil;
 	self.filename = nil;
@@ -131,11 +124,9 @@
 	[file seekToFileOffset:offset];
 	NSData *fixedData = [file readDataOfLength:ZKCDHeaderFixedDataLength];
 	ZKCDHeader *record = [self recordWithData:fixedData atOffset:0];
-	[fixedData release];
 	if (record.filenameLength > 0) {
 		NSData *data = [file readDataOfLength:record.filenameLength];
 		record.filename = [[[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding] autorelease];
-		[data release];
 	}
 	if (record.extraFieldLength > 0) {
 		record.extraField = [file readDataOfLength:record.extraFieldLength];
@@ -144,7 +135,6 @@
 	if (record.commentLength > 0) {
 		NSData *data = [file readDataOfLength:record.commentLength];
 		record.comment = [[[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding] autorelease];
-		[data release];
 	} else
 		record.comment = nil;
 

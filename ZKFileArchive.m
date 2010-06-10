@@ -262,7 +262,6 @@
 		// symbolic links are stored as uncompressed UTF-8-encoded string data in the archive
 		NSData *symLinkData = [archiveFile readDataOfLength:cdHeader.compressedSize];
 		NSString *symLinkDestinationPath = [[[NSString alloc] initWithData:symLinkData encoding:NSUTF8StringEncoding] autorelease];
-		[symLinkData release];
 		NSString *filename = [expansionDirectory stringByAppendingPathComponent:cdHeader.filename];
 		result = [self.fileManager createDirectoryAtPath:[path stringByDeletingLastPathComponent]
 							 withIntermediateDirectories:YES attributes:nil error:nil];
@@ -313,7 +312,6 @@
 									if (self.delegate)
 										[self performSelectorOnMainThread:@selector(didCancel) withObject:nil waitUntilDone:NO];
 									[archiveFile closeFile];
-									[deflatedData release];
 									return zkCancelled;
 								}
 							}
@@ -330,7 +328,6 @@
 							bytesWritten = 0;
 						}
 					}
-					[deflatedData release];
 					[NSThread sleepForTimeInterval:self.throttleThreadSleepTime];
 				} while (ret != Z_STREAM_END && ret != Z_STREAM_ERROR);
 				if ([self delegateWantsSizes]) {
@@ -371,7 +368,6 @@
 							bytesWritten = 0;
 						}
 					}
-					[deflatedData release];
 					[NSThread sleepForTimeInterval:self.throttleThreadSleepTime];
 					if (irtsIsCancelled) {
 						if ([self.invoker isCancelled]) {
@@ -533,7 +529,6 @@
 							if ([self.invoker isCancelled]) {
 								[file closeFile];
 								[archiveFile closeFile];
-								[fileData release];
 								if (self.delegate)
 									[self performSelectorOnMainThread:@selector(didCancel) withObject:nil waitUntilDone:NO];
 								return zkCancelled;
@@ -543,7 +538,6 @@
 						ZKLogError(@"Error in deflate");
 						[file closeFile];
 						[archiveFile closeFile];
-						[fileData release];
 						return zkFailed;
 					}
 				} while (strm.avail_out == 0);
@@ -551,7 +545,6 @@
 					ZKLogError(@"All input not used");
 					[file closeFile];
 					[archiveFile closeFile];
-					[fileData release];
 					return zkFailed;
 				}
 				if ([self delegateWantsSizes]) {
@@ -564,7 +557,6 @@
 						bytesWritten = 0;
 					}
 				}
-				[fileData release];
 				[NSThread sleepForTimeInterval:self.throttleThreadSleepTime];
 			} while (flush != Z_FINISH);
 			deflateEnd(&strm);

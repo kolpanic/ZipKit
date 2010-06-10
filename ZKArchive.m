@@ -40,7 +40,6 @@
 	[fileHandle closeFile];
 	UInt32 headerValue;
 	[fileHeader getBytes:&headerValue];
-	[fileHeader release];
 	return (CFSwapInt32LittleToHost(headerValue) == ZKLFHeaderMagicNumber);
 }
 

@@ -170,11 +170,9 @@ const NSUInteger ZKMaxEntriesPerFetch = 40;
 			if (irtsIsCancelled) {
 				if ([invoker isCancelled]) {
 					[fileHandle closeFile];
-					[block release];
 					return 0;
 				}
 			}
-			[block release];
 			block = [fileHandle readDataOfLength:crcBlockSize];
 			[NSThread sleepForTimeInterval:throttleThreadSleepTime];
 		}
