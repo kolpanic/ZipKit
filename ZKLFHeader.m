@@ -98,9 +98,11 @@
 	[file seekToFileOffset:offset];
 	NSData *fixedData = [file readDataOfLength:ZKLFHeaderFixedDataLength];
 	ZKLFHeader *record = [self recordWithData:fixedData atOffset:0];
+	[fixedData release];
 	if (record.filenameLength > 0) {
 		NSData *data = [file readDataOfLength:record.filenameLength];
 		record.filename = [[[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding] autorelease];
+		[data release];
 	}
 	if (record.extraFieldLength > 0) {
 		record.extraField = [file readDataOfLength:record.extraFieldLength];

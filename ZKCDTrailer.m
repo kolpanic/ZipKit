@@ -40,6 +40,7 @@
 
 - (void) dealloc {
 	[self removeObservers];
+	[self.comment release];
 	self.comment = nil;
 	[super dealloc];
 }
@@ -91,6 +92,7 @@
 		[file seekToFileOffset:fileOffset];
 		NSData *data = [file readDataOfLength:sizeof(UInt32)];
 		[data getBytes:&trailerCheck length:sizeof(UInt32)];
+		[data release];
 	}
 	if (fileOffset < 1) {
 		[file closeFile];
@@ -100,7 +102,9 @@
 	[file seekToFileOffset:fileOffset];
 	NSData *data = [file readDataToEndOfFile];
 	[file closeFile];
-	return [self recordWithData:data atOffset:(NSUInteger) 0];
+	ZKCDTrailer *record = [self recordWithData:data atOffset:(NSUInteger) 0];
+	[data release];
+	return record;
 }
 
 - (NSData *) data {

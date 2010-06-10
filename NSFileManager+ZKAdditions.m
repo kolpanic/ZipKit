@@ -104,7 +104,7 @@ const NSUInteger ZKMaxEntriesPerFetch = 40;
 					NSString *fileName = [subPath lastPathComponent];
 					NSRange ZKDotUnderscoreRange = [fileName rangeOfString:ZKDotUnderscore];
 					if (ZKDotUnderscoreRange.location == 0 && ZKDotUnderscoreRange.length == 2) {
-						NSMutableArray *pathComponents = 
+						NSMutableArray *pathComponents =
 						(NSMutableArray *)[[[subPath stringByDeletingLastPathComponent] stringByAppendingPathComponent:
 											[fileName substringFromIndex:2]] pathComponents];
 						for (NSString *pathComponent in pathComponents) {
@@ -170,9 +170,11 @@ const NSUInteger ZKMaxEntriesPerFetch = 40;
 			if (irtsIsCancelled) {
 				if ([invoker isCancelled]) {
 					[fileHandle closeFile];
+					[block release];
 					return 0;
 				}
 			}
+			[block release];
 			block = [fileHandle readDataOfLength:crcBlockSize];
 			[NSThread sleepForTimeInterval:throttleThreadSleepTime];
 		}

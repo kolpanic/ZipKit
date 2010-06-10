@@ -40,6 +40,7 @@
 	[fileHandle closeFile];
 	UInt32 headerValue;
 	[fileHeader getBytes:&headerValue];
+	[fileHeader release];
 	return (CFSwapInt32LittleToHost(headerValue) == ZKLFHeaderMagicNumber);
 }
 
@@ -106,7 +107,7 @@
 		}
 	}
 	[self.fileManager removeItemAtPath:expansionDirectory error:nil];
-	
+
 }
 
 #pragma mark -
@@ -120,7 +121,7 @@
 }
 
 #pragma mark -
-#pragma mark Delegate 
+#pragma mark Delegate
 
 - (void) setInvoker:(id)i {
 	_invoker = i;
