@@ -124,7 +124,7 @@
 		return zkFailed;
 	
 	NSString *expansionDirectory = [self uniqueExpansionDirectoryIn:enclosingFolder];
-	[self.fileManager createDirectoryAtPath:expansionDirectory attributes:nil];
+	[self.fileManager createDirectoryAtPath:expansionDirectory withIntermediateDirectories:YES attributes:nil error:nil];
 	for (NSDictionary *file in self.inflatedFiles) {
 		NSDictionary *fileAttributes = [file objectForKey:ZKFileAttributesKey];
 		NSData *inflatedData = [file objectForKey:ZKFileDataKey];
@@ -216,7 +216,7 @@
 	
 	if (isFile) {
 		NSData *fileData = [NSData dataWithContentsOfFile:path];
-		NSDictionary *fileAttributes = [self.fileManager fileAttributesAtPath:path traverseLink:NO];
+		NSDictionary *fileAttributes = [self.fileManager attributesOfItemAtPath:path error:nil];
 		NSInteger rc = [self deflateData:fileData withFilename:relativePath andAttributes:fileAttributes];
 #if ZK_TARGET_OS_MAC
 		if (rc == zkSucceeded && rfFlag) {

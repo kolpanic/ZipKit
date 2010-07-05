@@ -227,10 +227,10 @@
 	if (result == zkSucceeded) {
 		for (ZKCDHeader *cdHeader in self.centralDirectory) {
 			NSString *path = [expansionDirectory stringByAppendingPathComponent:cdHeader.filename];
-			[self.fileManager changeFileAttributes:[NSDictionary dictionaryWithObjectsAndKeys:
-			                                        [cdHeader posixPermissions], NSFilePosixPermissions,
-			                                        [cdHeader lastModDate], NSFileCreationDate,
-			                                        [cdHeader lastModDate], NSFileModificationDate, nil] atPath:path];
+			[self.fileManager setAttributes:[NSDictionary dictionaryWithObjectsAndKeys:
+											 [cdHeader posixPermissions], NSFilePosixPermissions,
+											 [cdHeader lastModDate], NSFileCreationDate,
+											 [cdHeader lastModDate], NSFileModificationDate, nil] ofItemAtPath:path error:nil];
 		}
 	}
 
@@ -391,10 +391,10 @@
 
 	// restore the extracted file's attributes
 	if (result) {
-		[self.fileManager changeFileAttributes:[NSDictionary dictionaryWithObjectsAndKeys:
-		                                        [cdHeader posixPermissions], NSFilePosixPermissions,
-		                                        [cdHeader lastModDate], NSFileCreationDate,
-		                                        [cdHeader lastModDate], NSFileModificationDate, nil] atPath:path];
+		[self.fileManager setAttributes:[NSDictionary dictionaryWithObjectsAndKeys:
+										 [cdHeader posixPermissions], NSFilePosixPermissions,
+										 [cdHeader lastModDate], NSFileCreationDate,
+										 [cdHeader lastModDate], NSFileModificationDate, nil] ofItemAtPath:path error:nil];
 	}
 
 	[archiveFile closeFile];

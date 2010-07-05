@@ -18,7 +18,7 @@ const NSUInteger ZKMaxEntriesPerFetch = 40;
 @implementation  NSFileManager (ZKAdditions)
 
 - (BOOL) zk_isSymLinkAtPath:(NSString *) path {
-	return [[[self fileAttributesAtPath:path traverseLink:NO] fileType] isEqualToString:NSFileTypeSymbolicLink];
+	return [[[self attributesOfItemAtPath:path error:nil] fileType] isEqualToString:NSFileTypeSymbolicLink];
 }
 
 - (BOOL) zk_isDirAtPath:(NSString *) path {
@@ -28,7 +28,7 @@ const NSUInteger ZKMaxEntriesPerFetch = 40;
 }
 
 - (unsigned long long) zk_dataSizeAtFilePath:(NSString *) path {
-	return [[self fileAttributesAtPath:path traverseLink:NO] fileSize];
+	return [[self attributesOfItemAtPath:path error:nil] fileSize];
 }
 
 #if ZK_TARGET_OS_MAC
@@ -124,15 +124,15 @@ const NSUInteger ZKMaxEntriesPerFetch = 40;
 #endif
 
 - (NSDate *) zk_modificationDateForPath:(NSString *) path {
-	return [[self fileAttributesAtPath:path traverseLink:NO] fileModificationDate];
+	return [[self attributesOfItemAtPath:path error:nil] fileModificationDate];
 }
 
 - (NSUInteger) zk_posixPermissionsAtPath:(NSString *) path {
-	return [[self fileAttributesAtPath:path traverseLink:NO] filePosixPermissions];
+	return [[self attributesOfItemAtPath:path error:nil] filePosixPermissions];
 }
 
 - (NSUInteger) zk_externalFileAttributesAtPath:(NSString *) path {
-	return [self zk_externalFileAttributesFor:[self fileAttributesAtPath:path traverseLink:NO]];
+	return [self zk_externalFileAttributesFor:[self attributesOfItemAtPath:path error:nil]];
 }
 
 - (NSUInteger) zk_externalFileAttributesFor:(NSDictionary *) fileAttributes {
