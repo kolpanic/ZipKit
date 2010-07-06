@@ -453,9 +453,11 @@
 	// construct a relative path for storage in the archive directory by removing basePath from the beginning of path
 	NSString *relativePath = path;
 	if (basePath && [basePath length] > 0) {
+		if (![basePath hasSuffix:@"/"])
+			basePath = [basePath stringByAppendingString:@"/"];
 		NSRange r = [path rangeOfString:basePath];
 		if (r.location != NSNotFound)
-			relativePath = [path substringFromIndex:r.length + 1];
+			relativePath = [path substringFromIndex:r.length];
 	}
 
 	// create the local file header for the file
