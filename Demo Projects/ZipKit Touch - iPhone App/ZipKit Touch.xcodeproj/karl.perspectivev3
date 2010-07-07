@@ -283,11 +283,15 @@
 			<array>
 				<string>XCToolbarPerspectiveControl</string>
 				<string>NSToolbarSeparatorItem</string>
-				<string>active-combo-popup</string>
 				<string>action</string>
+				<string>active-combo-popup</string>
+				<string>NSToolbarSpaceItem</string>
 				<string>build</string>
 				<string>build-and-go</string>
+				<string>go</string>
+				<string>clean-target</string>
 				<string>clean</string>
+				<string>NSToolbarFlexibleSpaceItem</string>
 			</array>
 			<key>ControllerClassBaseName</key>
 			<string></string>
@@ -300,8 +304,6 @@
 			<key>Layout</key>
 			<array>
 				<dict>
-					<key>BecomeActive</key>
-					<true/>
 					<key>ContentConfiguration</key>
 					<dict>
 						<key>PBXBottomSmartGroupGIDs</key>
@@ -348,7 +350,7 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>5</integer>
+									<integer>3</integer>
 									<integer>1</integer>
 									<integer>0</integer>
 								</array>
@@ -386,12 +388,14 @@
 					<key>Dock</key>
 					<array>
 						<dict>
+							<key>BecomeActive</key>
+							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
 								<string>CB3742AB106A5CEF00AED801</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>ZipKit_TouchAppDelegate.m</string>
+								<string>RootViewController.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -399,14 +403,14 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>CB3742AC106A5CEF00AED801</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>ZipKit_TouchAppDelegate.m</string>
+										<string>RootViewController.m</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>CB341D3011A1F4440014B8BE</string>
+										<string>CBF0D2A911E4D09600B81C32</string>
 										<key>history</key>
 										<array>
-											<string>CB341D2F11A1F4440014B8BE</string>
+											<string>CBF0D2A811E4D09600B81C32</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -529,11 +533,11 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>CB341D2011A1F3F70014B8BE</string>
+				<string>CBF0D24311E4CCD900B81C32</string>
 				<string>1CA23ED40692098700951B8B</string>
-				<string>CB341D2111A1F3F70014B8BE</string>
+				<string>CBF0D24411E4CCD900B81C32</string>
 				<string>CB3742AB106A5CEF00AED801</string>
-				<string>CB341D2211A1F3F70014B8BE</string>
+				<string>CBF0D24511E4CCD900B81C32</string>
 				<string>1CA23EDF0692099D00951B8B</string>
 				<string>1CA23EE00692099D00951B8B</string>
 				<string>1CA23EE10692099D00951B8B</string>
@@ -548,11 +552,15 @@
 			<key>ChosenToolbarItems</key>
 			<array>
 				<string>XCToolbarPerspectiveControl</string>
+				<string>NSToolbarSeparatorItem</string>
+				<string>action</string>
+				<string>active-combo-popup</string>
 				<string>NSToolbarSpaceItem</string>
-				<string>active-executable-popup</string>
-				<string>NSToolbarSpaceItem</string>
+				<string>build</string>
 				<string>build-and-go</string>
 				<string>go</string>
+				<string>clean-target</string>
+				<string>clean</string>
 				<string>NSToolbarFlexibleSpaceItem</string>
 				<string>debugger-fix-and-continue</string>
 				<string>debugger-restart-executable</string>
@@ -682,13 +690,13 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>CB341D2311A1F3F70014B8BE</string>
+				<string>CBF0D24611E4CCD900B81C32</string>
 				<string>1CCC7628064C1048000F2A68</string>
 				<string>1CCC7629064C1048000F2A68</string>
-				<string>CB341D2411A1F3F70014B8BE</string>
-				<string>CB341D2511A1F3F70014B8BE</string>
-				<string>CB341D2611A1F3F70014B8BE</string>
-				<string>CB341D2711A1F3F70014B8BE</string>
+				<string>CBF0D24711E4CCD900B81C32</string>
+				<string>CBF0D24811E4CCD900B81C32</string>
+				<string>CBF0D24911E4CCD900B81C32</string>
+				<string>CBF0D24A11E4CCD900B81C32</string>
 				<string>CB3742AB106A5CEF00AED801</string>
 			</array>
 			<key>ToolbarConfigUserDefaultsMinorVersion</key>
@@ -706,7 +714,7 @@
 	<key>StatusbarIsVisible</key>
 	<true/>
 	<key>TimeStamp</key>
-	<real>295826500.58098298</real>
+	<real>300208278.40004498</real>
 	<key>ToolbarConfigUserDefaultsMinorVersion</key>
 	<string>2</string>
 	<key>ToolbarDisplayMode</key>
@@ -723,9 +731,7 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>CB341D3111A1F4440014B8BE</string>
-		<string>CB341D3211A1F4440014B8BE</string>
-		<string>/Users/karl/Desktop/zipkit/Demo Projects/ZipKit Touch - iPhone App/ZipKit Touch.xcodeproj</string>
+		<string>/Users/karl/Projects/zipkit/Demo Projects/ZipKit Touch - iPhone App/ZipKit Touch.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
 	<string>178 339 1373 839 0 0 1920 1178 </string>

@@ -1,4 +1,4 @@
-#import "ZKDataArchive.h"
+@class ZKDataArchive;
 
 @interface RootViewController : UITableViewController {
 	UIViewController *nextViewController;

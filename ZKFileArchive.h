@@ -19,6 +19,7 @@
 + (ZKFileArchive *) archiveWithArchivePath:(NSString *) archivePath;
 
 - (NSInteger) inflateToDiskUsingResourceFork:(BOOL) flag;
+- (NSInteger) inflateToDirectory:(NSString *)expansionDirectory usingResourceFork:(BOOL)rfFlag;
 - (NSInteger) inflateFile:(ZKCDHeader *) cdHeader toDirectory:(NSString *) expansionDirectory;
 
 - (NSInteger) deflateFiles:(NSArray *) paths relativeToPath:(NSString *) basePath usingResourceFork:(BOOL) flag;
