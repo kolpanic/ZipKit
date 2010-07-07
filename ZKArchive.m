@@ -65,7 +65,7 @@
 	unsigned long long size = 0;
 	unsigned long long count = 0;
 	NSFileManager *fmgr = [[NSFileManager new] autorelease];
-	NSDictionary *dict;
+	NSDictionary *dict = nil;
 	for (NSString *path in paths) {
 		dict = [fmgr zkTotalSizeAndItemCountAtPath:path usingResourceFork:rfFlag];
 		size += [dict zk_totalFileSize];

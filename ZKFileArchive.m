@@ -270,7 +270,7 @@
 	} else if ([cdHeader isDirectory])
 		result = [self.fileManager createDirectoryAtPath:path withIntermediateDirectories:YES attributes:nil error:nil];
 	else {
-		NSData *deflatedData;
+		NSData *deflatedData = nil;
 		NSUInteger have, chunkSize, bytesRead, totalBytesRead = 0, crc = 0;
 		unsigned long long block = 0, bytesWritten = 0;
 		int ret = Z_OK;
@@ -503,8 +503,8 @@
 		NSInteger ret = deflateInit2(&strm, Z_BEST_COMPRESSION, Z_DEFLATED, -MAX_WBITS, 8, Z_DEFAULT_STRATEGY);
 		if (ret == Z_OK) {
 			NSFileHandle *file = [NSFileHandle fileHandleForReadingAtPath:path];
-			NSData *fileData;
-			NSData *archiveData;
+			NSData *fileData = nil;
+			NSData *archiveData = nil;
 			unsigned char out[ZKZipBlockSize];
 			unsigned long long compressedSize = 0, block = 0, bytesWritten = 0;
 			NSUInteger flush, have, crc = 0;

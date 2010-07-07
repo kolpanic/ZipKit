@@ -47,8 +47,8 @@
 
 - (NSUInteger) inflateAll {
 	[self.inflatedFiles removeAllObjects];
-	NSDictionary *fileAttributes;
-	NSData *inflatedData;
+	NSDictionary *fileAttributes = nil;
+	NSData *inflatedData = nil;
 	for (ZKCDHeader *cdHeader in self.centralDirectory) {
 		inflatedData = [self inflateFile:cdHeader attributes:&fileAttributes];
 		if (!inflatedData)
@@ -87,7 +87,7 @@
 						NSMakeRange(cdHeader.localHeaderOffset + [lfHeader length], cdHeader.compressedSize)];
 	
 	NSData *inflatedData = nil;
-	NSString *fileType;
+	NSString *fileType = nil;
 	if ([cdHeader isSymLink]) {
 		inflatedData = deflatedData; // UTF-8 encoded symlink destination path
 		fileType = NSFileTypeSymbolicLink;

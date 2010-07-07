@@ -403,10 +403,10 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>CBC4530011E360EE00AB7489</string>
+										<string>CBBA2E7311E4C277006416C5</string>
 										<key>history</key>
 										<array>
-											<string>CBC452FF11E360EE00AB7489</string>
+											<string>CBBA2E7211E4C277006416C5</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -446,8 +446,6 @@
 									<dict>
 										<key>Frame</key>
 										<string>{{10, 27}, {1080, -27}}</string>
-										<key>RubberWindowFrame</key>
-										<string>297 339 1373 839 0 0 1920 1178 </string>
 									</dict>
 									<key>Module</key>
 									<string>XCDetailModule</string>
@@ -463,7 +461,9 @@
 									<key>GeometryConfiguration</key>
 									<dict>
 										<key>Frame</key>
-										<string>{{0, 0}, {614, 336}}</string>
+										<string>{{10, 27}, {1080, -27}}</string>
+										<key>RubberWindowFrame</key>
+										<string>297 339 1373 839 0 0 1920 1178 </string>
 									</dict>
 									<key>Module</key>
 									<string>PBXProjectFindModule</string>
@@ -529,11 +529,11 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>CBC4530111E360EE00AB7489</string>
+				<string>CBBA2E7411E4C277006416C5</string>
 				<string>1CA23ED40692098700951B8B</string>
-				<string>CBC4530211E360EE00AB7489</string>
+				<string>CBBA2E7511E4C277006416C5</string>
 				<string>CB3742AB106A5CEF00AED801</string>
-				<string>CBC4530311E360EE00AB7489</string>
+				<string>CBBA2E7611E4C277006416C5</string>
 				<string>1CA23EDF0692099D00951B8B</string>
 				<string>1CA23EE00692099D00951B8B</string>
 				<string>1CA23EE10692099D00951B8B</string>
@@ -706,7 +706,7 @@
 	<key>StatusbarIsVisible</key>
 	<true/>
 	<key>TimeStamp</key>
-	<real>300114158.99380898</real>
+	<real>300204663.80663902</real>
 	<key>ToolbarConfigUserDefaultsMinorVersion</key>
 	<string>2</string>
 	<key>ToolbarDisplayMode</key>
