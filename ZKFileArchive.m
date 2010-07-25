@@ -465,6 +465,9 @@
 	}
 
 	// construct a relative path for storage in the archive directory by removing basePath from the beginning of path
+    if ([[basePath substringFromIndex:([basePath length] - 1)] isEqualToString:@"/"])
+        basePath = [basePath substringToIndex:([basePath length] - 1)];
+
 	NSString *relativePath = path;
 	if (basePath && [basePath length] > 0) {
 		if (![basePath hasSuffix:@"/"])
