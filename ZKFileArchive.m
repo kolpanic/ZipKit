@@ -354,21 +354,22 @@
 				}
 			}
 		} else if (cdHeader.compressionMethod == Z_NO_COMPRESSION) {
-			chunkSize = MIN(ZKZipBlockSize, cdHeader.compressedSize);
-			deflatedData = [archiveFile readDataOfLength:chunkSize];
-			bytesRead = [deflatedData length];
-			totalBytesRead += bytesRead;
-			if (bytesRead > 0 && totalBytesRead <= cdHeader.compressedSize) {
+			if (totalBytesRead <= cdHeader.compressedSize) {
 				NSFileHandle *inflatedFile = [[NSFileHandle zk_newFileHandleForWritingAtPath:path] autorelease];
 				NSAutoreleasePool *pool = [NSAutoreleasePool new];
 				do {
+					chunkSize = MIN(ZKZipBlockSize, cdHeader.compressedSize - totalBytesRead);
+					deflatedData = [archiveFile readDataOfLength:chunkSize];
+					bytesRead = [deflatedData length];
+					totalBytesRead += bytesRead;
+					
 					[inflatedFile writeData:deflatedData];
 					bytesWritten += bytesRead;
 					crc = [deflatedData zk_crc32:crc];
-					chunkSize = MIN(ZKZipBlockSize, cdHeader.compressedSize - totalBytesRead);
+
 					[pool drain];
 					pool = [NSAutoreleasePool new];
-					deflatedData = [archiveFile readDataOfLength:chunkSize];
+
 					if ([self delegateWantsSizes]) {
 						if (ZKNotificationIterations > 0 && ++block % ZKNotificationIterations == 0) {
 							if ([NSThread isMainThread])
