@@ -58,8 +58,8 @@
 - (void) didUpdateTotalCount:(NSNumber *) count;
 - (void) didUpdateBytesWritten:(NSNumber *) byteCount;
 
-@property (assign) id __weak invoker;
-@property (assign) id __weak delegate;
+@property (assign, nonatomic) id __weak invoker;
+@property (assign, nonatomic) id __weak delegate;
 @property (copy) NSString *archivePath;
 @property (retain) NSMutableArray *centralDirectory;
 @property (retain) NSFileManager *fileManager;
