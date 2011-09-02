@@ -3,6 +3,7 @@
 	0867D690FE84028FC02AAC07 /* Project object */ = {
 		activeArchitecturePreference = armv7;
 		activeBuildConfigurationName = Debug;
+		activeSDKPreference = iphoneos4.3;
 		activeTarget = 8DC2EF4F0486A6940098B216 /* ZipKit */;
 		addToTargets = (
 		);
@@ -64,12 +65,12 @@
 					PBXFileDataSource_Warnings_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 328204724;
-			PBXWorkspaceStateSaveDate = 328204724;
+			PBXPerProjectTemplateStateSaveDate = 330966802;
+			PBXWorkspaceStateSaveDate = 330966802;
 		};
 		perUserProjectItems = {
-			CB5B9114139001D5001D3BF7 /* PBXTextBookmark */ = CB5B9114139001D5001D3BF7 /* PBXTextBookmark */;
-			CB5B9115139001D5001D3BF7 /* PBXTextBookmark */ = CB5B9115139001D5001D3BF7 /* PBXTextBookmark */;
+			CBC3F2AE13BA294100DD57DF /* PBXTextBookmark */ = CBC3F2AE13BA294100DD57DF /* PBXTextBookmark */;
+			CBC3F2AF13BA294100DD57DF /* PBXTextBookmark */ = CBC3F2AF13BA294100DD57DF /* PBXTextBookmark */;
 		};
 		sourceControlManager = CB9B9A1C109F63A8003E3F8B /* Source Control */;
 		userBuildSettings = {
@@ -84,26 +85,6 @@
 	};
 	8DC2EF4F0486A6940098B216 /* ZipKit */ = {
 		activeExec = 0;
-	};
-	CB5B9114139001D5001D3BF7 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = CB9B9B42109F64A0003E3F8B /* ZKDefs.m */;
-		name = "ZKDefs.m: 12";
-		rLen = 0;
-		rLoc = 232;
-		rType = 0;
-		vrLen = 1169;
-		vrLoc = 0;
-	};
-	CB5B9115139001D5001D3BF7 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = CB9B9B42109F64A0003E3F8B /* ZKDefs.m */;
-		name = "ZKDefs.m: 12";
-		rLen = 0;
-		rLoc = 232;
-		rType = 0;
-		vrLen = 1169;
-		vrLoc = 0;
 	};
 	CB9B9A1C109F63A8003E3F8B /* Source Control */ = {
 		isa = PBXSourceControlManager;
@@ -261,7 +242,7 @@
 	};
 	CB9B9B42109F64A0003E3F8B /* ZKDefs.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1019, 776}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1085, 891}}";
 			sepNavSelRange = "{232, 0}";
 			sepNavVisRange = "{0, 1169}";
 		};
@@ -299,5 +280,25 @@
 	};
 	CB9B9CED109F6769003E3F8B /* touchzipkit */ = {
 		activeExec = 0;
+	};
+	CBC3F2AE13BA294100DD57DF /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = CB9B9B42109F64A0003E3F8B /* ZKDefs.m */;
+		name = "ZKDefs.m: 12";
+		rLen = 0;
+		rLoc = 232;
+		rType = 0;
+		vrLen = 1169;
+		vrLoc = 0;
+	};
+	CBC3F2AF13BA294100DD57DF /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = CB9B9B42109F64A0003E3F8B /* ZKDefs.m */;
+		name = "ZKDefs.m: 12";
+		rLen = 0;
+		rLoc = 232;
+		rType = 0;
+		vrLen = 1169;
+		vrLoc = 0;
 	};
 }

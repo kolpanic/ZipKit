@@ -283,15 +283,15 @@
 			<array>
 				<string>XCToolbarPerspectiveControl</string>
 				<string>NSToolbarSeparatorItem</string>
-				<string>action</string>
 				<string>active-combo-popup</string>
-				<string>NSToolbarSpaceItem</string>
-				<string>build</string>
-				<string>build-and-go</string>
-				<string>go</string>
-				<string>clean-target</string>
-				<string>clean</string>
+				<string>action</string>
 				<string>NSToolbarFlexibleSpaceItem</string>
+				<string>debugger-enable-breakpoints</string>
+				<string>build-and-go</string>
+				<string>com.apple.ide.PBXToolbarStopButton</string>
+				<string>get-info</string>
+				<string>NSToolbarFlexibleSpaceItem</string>
+				<string>com.apple.pbx.toolbar.searchfield</string>
 			</array>
 			<key>ControllerClassBaseName</key>
 			<string></string>
@@ -350,8 +350,6 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>3</integer>
-									<integer>1</integer>
 									<integer>0</integer>
 								</array>
 							</array>
@@ -407,10 +405,10 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>CBF0D2A911E4D09600B81C32</string>
+										<string>CB9DE07313BA3BC600BF19C4</string>
 										<key>history</key>
 										<array>
-											<string>CBF0D2A811E4D09600B81C32</string>
+											<string>CB9DE07213BA3BC400BF19C4</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -450,6 +448,8 @@
 									<dict>
 										<key>Frame</key>
 										<string>{{10, 27}, {1080, -27}}</string>
+										<key>RubberWindowFrame</key>
+										<string>178 339 1373 839 0 0 1920 1178 </string>
 									</dict>
 									<key>Module</key>
 									<string>XCDetailModule</string>
@@ -503,9 +503,7 @@
 									<key>GeometryConfiguration</key>
 									<dict>
 										<key>Frame</key>
-										<string>{{10, 27}, {1080, -27}}</string>
-										<key>RubberWindowFrame</key>
-										<string>178 339 1373 839 0 0 1920 1178 </string>
+										<string>{{0, 0}, {568, 405}}</string>
 									</dict>
 									<key>Module</key>
 									<string>PBXBuildResultsModule</string>
@@ -533,11 +531,11 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>CBF0D24311E4CCD900B81C32</string>
+				<string>CB9DE06113BA3BA200BF19C4</string>
 				<string>1CA23ED40692098700951B8B</string>
-				<string>CBF0D24411E4CCD900B81C32</string>
+				<string>CB9DE06213BA3BA200BF19C4</string>
 				<string>CB3742AB106A5CEF00AED801</string>
-				<string>CBF0D24511E4CCD900B81C32</string>
+				<string>CB9DE06313BA3BA200BF19C4</string>
 				<string>1CA23EDF0692099D00951B8B</string>
 				<string>1CA23EE00692099D00951B8B</string>
 				<string>1CA23EE10692099D00951B8B</string>
@@ -690,13 +688,13 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>CBF0D24611E4CCD900B81C32</string>
+				<string>CB9DE06813BA3BA700BF19C4</string>
 				<string>1CCC7628064C1048000F2A68</string>
 				<string>1CCC7629064C1048000F2A68</string>
-				<string>CBF0D24711E4CCD900B81C32</string>
-				<string>CBF0D24811E4CCD900B81C32</string>
-				<string>CBF0D24911E4CCD900B81C32</string>
-				<string>CBF0D24A11E4CCD900B81C32</string>
+				<string>CB9DE06913BA3BA700BF19C4</string>
+				<string>CB9DE06A13BA3BA700BF19C4</string>
+				<string>CB9DE06B13BA3BA700BF19C4</string>
+				<string>CB9DE06C13BA3BA700BF19C4</string>
 				<string>CB3742AB106A5CEF00AED801</string>
 			</array>
 			<key>ToolbarConfigUserDefaultsMinorVersion</key>
@@ -714,11 +712,11 @@
 	<key>StatusbarIsVisible</key>
 	<true/>
 	<key>TimeStamp</key>
-	<real>300208278.40004498</real>
+	<real>330972102.61239201</real>
 	<key>ToolbarConfigUserDefaultsMinorVersion</key>
 	<string>2</string>
 	<key>ToolbarDisplayMode</key>
-	<integer>2</integer>
+	<integer>1</integer>
 	<key>ToolbarIsVisible</key>
 	<true/>
 	<key>ToolbarSizeMode</key>
@@ -731,7 +729,7 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>/Users/karl/Projects/zipkit/Demo Projects/ZipKit Touch - iPhone App/ZipKit Touch.xcodeproj</string>
+		<string>/Users/karl/Projects/ZipKit/Demo Projects/ZipKit Touch - iPhone App/ZipKit Touch.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
 	<string>178 339 1373 839 0 0 1920 1178 </string>

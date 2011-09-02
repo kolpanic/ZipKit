@@ -6,3 +6,4 @@ syntax: glob
 *~.nib
 
 build
+\.DS_Store

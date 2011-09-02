@@ -29,9 +29,9 @@
 	};
 	28C286E00D94DF7D0034E888 /* RootViewController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1312, 1615}}";
-			sepNavSelRange = "{583, 0}";
-			sepNavVisRange = "{594, 330}";
+			sepNavIntBoundsRect = "{{0, 0}, {1019, 962}}";
+			sepNavSelRange = "{582, 0}";
+			sepNavVisRange = "{0, 2101}";
 		};
 	};
 	29B97313FDCFA39411CA2CEA /* Project object */ = {
@@ -118,12 +118,12 @@
 					PBXFileDataSource_Warnings_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 300207248;
-			PBXWorkspaceStateSaveDate = 300207248;
+			PBXPerProjectTemplateStateSaveDate = 330972019;
+			PBXWorkspaceStateSaveDate = 330972019;
 		};
 		perUserProjectItems = {
-			CBF0D2A811E4D09600B81C32 /* PBXTextBookmark */ = CBF0D2A811E4D09600B81C32 /* PBXTextBookmark */;
-			CBF0D2A911E4D09600B81C32 /* PBXTextBookmark */ = CBF0D2A911E4D09600B81C32 /* PBXTextBookmark */;
+			CB9DE07213BA3BC400BF19C4 /* PBXTextBookmark */ = CB9DE07213BA3BC400BF19C4 /* PBXTextBookmark */;
+			CB9DE07313BA3BC600BF19C4 /* PBXTextBookmark */ = CB9DE07313BA3BC600BF19C4 /* PBXTextBookmark */;
 		};
 		sourceControlManager = CB748021109F76B4006A143C /* Source Control */;
 		userBuildSettings = {
@@ -182,24 +182,24 @@
 		isa = PBXCodeSenseManager;
 		indexTemplatePath = "";
 	};
-	CBF0D2A811E4D09600B81C32 /* PBXTextBookmark */ = {
+	CB9DE07213BA3BC400BF19C4 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
 		fRef = 28C286E00D94DF7D0034E888 /* RootViewController.m */;
-		name = "RootViewController.m: 3";
+		name = "RootViewController.m: 44";
 		rLen = 0;
-		rLoc = 75;
+		rLoc = 1395;
 		rType = 0;
-		vrLen = 1237;
-		vrLoc = 0;
+		vrLen = 590;
+		vrLoc = 1270;
 	};
-	CBF0D2A911E4D09600B81C32 /* PBXTextBookmark */ = {
+	CB9DE07313BA3BC600BF19C4 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
 		fRef = 28C286E00D94DF7D0034E888 /* RootViewController.m */;
-		name = "RootViewController.m: 8";
+		name = "RootViewController.m: 20";
 		rLen = 0;
-		rLoc = 188;
+		rLoc = 582;
 		rType = 0;
-		vrLen = 1145;
+		vrLen = 2101;
 		vrLoc = 0;
 	};
 }

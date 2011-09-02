@@ -285,9 +285,13 @@
 				<string>NSToolbarSeparatorItem</string>
 				<string>active-combo-popup</string>
 				<string>action</string>
-				<string>build</string>
+				<string>NSToolbarFlexibleSpaceItem</string>
+				<string>debugger-enable-breakpoints</string>
 				<string>build-and-go</string>
-				<string>clean</string>
+				<string>com.apple.ide.PBXToolbarStopButton</string>
+				<string>get-info</string>
+				<string>NSToolbarFlexibleSpaceItem</string>
+				<string>com.apple.pbx.toolbar.searchfield</string>
 			</array>
 			<key>ControllerClassBaseName</key>
 			<string></string>
@@ -300,6 +304,8 @@
 			<key>Layout</key>
 			<array>
 				<dict>
+					<key>BecomeActive</key>
+					<true/>
 					<key>ContentConfiguration</key>
 					<dict>
 						<key>PBXBottomSmartGroupGIDs</key>
@@ -345,8 +351,6 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>3</integer>
-									<integer>1</integer>
 									<integer>0</integer>
 								</array>
 							</array>
@@ -383,8 +387,6 @@
 					<key>Dock</key>
 					<array>
 						<dict>
-							<key>BecomeActive</key>
-							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
@@ -402,10 +404,10 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>CBB6CDD111849C0F00906F10</string>
+										<string>CB9DE0A113BA3C4100BF19C4</string>
 										<key>history</key>
 										<array>
-											<string>CBE2DFC6109F8791009FF99F</string>
+											<string>CBB6CDD111849C0F00906F10</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -445,6 +447,8 @@
 									<dict>
 										<key>Frame</key>
 										<string>{{10, 27}, {1269, -27}}</string>
+										<key>RubberWindowFrame</key>
+										<string>307 58 1613 1035 0 0 1920 1178 </string>
 									</dict>
 									<key>Module</key>
 									<string>XCDetailModule</string>
@@ -460,9 +464,7 @@
 									<key>GeometryConfiguration</key>
 									<dict>
 										<key>Frame</key>
-										<string>{{10, 27}, {1269, -27}}</string>
-										<key>RubberWindowFrame</key>
-										<string>307 58 1613 1035 0 0 1920 1178 </string>
+										<string>{{0, 0}, {614, 336}}</string>
 									</dict>
 									<key>Module</key>
 									<string>PBXProjectFindModule</string>
@@ -528,11 +530,11 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>CBB6CDD211849C0F00906F10</string>
+				<string>CB9DE09C13BA3C1B00BF19C4</string>
 				<string>1CA23ED40692098700951B8B</string>
-				<string>CBB6CDD311849C0F00906F10</string>
+				<string>CB9DE09D13BA3C1B00BF19C4</string>
 				<string>CB3742AB106A5CEF00AED801</string>
-				<string>CBB6CDD411849C0F00906F10</string>
+				<string>CB9DE09E13BA3C1B00BF19C4</string>
 				<string>1CA23EDF0692099D00951B8B</string>
 				<string>1CA23EE00692099D00951B8B</string>
 				<string>1CA23EE10692099D00951B8B</string>
@@ -705,11 +707,11 @@
 	<key>StatusbarIsVisible</key>
 	<true/>
 	<key>TimeStamp</key>
-	<real>293903375.670241</real>
+	<real>330972225.49636501</real>
 	<key>ToolbarConfigUserDefaultsMinorVersion</key>
 	<string>2</string>
 	<key>ToolbarDisplayMode</key>
-	<integer>2</integer>
+	<integer>1</integer>
 	<key>ToolbarIsVisible</key>
 	<true/>
 	<key>ToolbarSizeMode</key>
@@ -722,7 +724,7 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>/Users/karl/Projects/kineticD/zipkit/Demo Projects/zku - Mac OS X Tool/zku.xcodeproj</string>
+		<string>/Users/karl/Projects/ZipKit/Demo Projects/zku - Mac OS X Tool/zku.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
 	<string>307 58 1613 1035 0 0 1920 1178 </string>
