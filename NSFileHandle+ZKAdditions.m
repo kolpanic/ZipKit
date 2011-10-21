@@ -10,12 +10,14 @@
 @implementation NSFileHandle (ZKAdditions)
 
 + (NSFileHandle *)zk_newFileHandleForWritingAtPath:(NSString *)path {
-	NSFileManager *fm = [[NSFileManager new] autorelease];
+	NSFileManager *fm = [NSFileManager new];
 	if (![fm fileExistsAtPath:path]) {
 		[fm createDirectoryAtPath:[path stringByDeletingLastPathComponent] withIntermediateDirectories:YES attributes:nil error:nil];
 		[fm createFileAtPath:path contents:nil attributes:nil];
 	}
-	return [[self fileHandleForWritingAtPath:path] retain];
+	NSFileHandle *fileHandle = [self fileHandleForWritingAtPath:path];
+    [fm release];
+    return fileHandle;
 }
 
 @end
