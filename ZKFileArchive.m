@@ -287,7 +287,7 @@
 			strm.total_out = 0;
 			ret = inflateInit2(&strm, -MAX_WBITS);
 			if (ret == Z_OK) {
-				NSFileHandle *inflatedFile = [[NSFileHandle zk_newFileHandleForWritingAtPath:path] autorelease];
+				NSFileHandle *inflatedFile = [NSFileHandle zk_newFileHandleForWritingAtPath:path];
 				unsigned char out[ZKZipBlockSize];
 				NSAutoreleasePool *pool = [NSAutoreleasePool new];
 				do {
@@ -355,7 +355,7 @@
 			}
 		} else if (cdHeader.compressionMethod == Z_NO_COMPRESSION) {
 			if (totalBytesRead <= cdHeader.compressedSize) {
-				NSFileHandle *inflatedFile = [[NSFileHandle zk_newFileHandleForWritingAtPath:path] autorelease];
+				NSFileHandle *inflatedFile = [NSFileHandle zk_newFileHandleForWritingAtPath:path];
 				NSAutoreleasePool *pool = [NSAutoreleasePool new];
 				do {
 					chunkSize = MIN(ZKZipBlockSize, cdHeader.compressedSize - totalBytesRead);
@@ -452,7 +452,7 @@
 	BOOL isDir = [self.fileManager zk_isDirAtPath:path];
 	BOOL isSymlink = [self.fileManager zk_isSymLinkAtPath:path];
 
-	NSFileHandle *archiveFile = [[NSFileHandle zk_newFileHandleForWritingAtPath:self.archivePath] autorelease];
+	NSFileHandle *archiveFile = [NSFileHandle zk_newFileHandleForWritingAtPath:self.archivePath];
 
 	// append a trailing slash to directory paths
 	if (isDir && !isSymlink && ![[path substringFromIndex:([path length] - 1)] isEqualToString:@"/"])
