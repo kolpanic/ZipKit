@@ -148,8 +148,8 @@
 #if ZK_TARGET_OS_MAC
 	if (rfFlag)
 		[self.fileManager zk_combineAppleDoubleInDirectory:expansionDirectory];
-	[self cleanUpExpansionDirectory:expansionDirectory];
 #endif
+	[self cleanUpExpansionDirectory:expansionDirectory];
 	
 	return zkSucceeded;
 }
