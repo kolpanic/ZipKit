@@ -11,21 +11,6 @@
 #import "ZKCDTrailer.h"
 #import "ZKDefs.h"
 
-@interface NSObject (ZipKitDelegate)
-- (void) onZKArchiveDidBeginZip:(ZKArchive *) archive;
-- (void) onZKArchiveDidBeginUnzip:(ZKArchive *) archive;
-- (void) onZKArchive:(ZKArchive *) archive willZipPath:(NSString *) path;
-- (void) onZKArchive:(ZKArchive *) archive willUnzipPath:(NSString *) path;
-- (void) onZKArchive:(ZKArchive *) archive didUpdateTotalSize:(unsigned long long) size;
-- (void) onZKArchive:(ZKArchive *) archive didUpdateTotalCount:(unsigned long long) count;
-- (void) onZKArchive:(ZKArchive *) archive didUpdateBytesWritten:(unsigned long long) byteCount;
-- (void) onZKArchiveDidEndZip:(ZKArchive *) archive;
-- (void) onZKArchiveDidEndUnzip:(ZKArchive *) archive;
-- (void) onZKArchiveDidCancel:(ZKArchive *) archive;
-- (void) onZKArchiveDidFail:(ZKArchive *) archive;
-- (BOOL) zkDelegateWantsSizes;
-@end
-
 #pragma mark -
 
 @implementation ZKArchive
