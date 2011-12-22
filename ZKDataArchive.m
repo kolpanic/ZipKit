@@ -150,7 +150,7 @@
 		[self.fileManager zk_combineAppleDoubleInDirectory:expansionDirectory];
 #endif
 	[self cleanUpExpansionDirectory:expansionDirectory];
-	
+
 	return zkSucceeded;
 }
 
