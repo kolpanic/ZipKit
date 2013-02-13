@@ -230,6 +230,10 @@
 
 - (BOOL) isDirectory {
 	uLong type = self.externalFileAttributes >> 29 & 0x1F;
+    if (0 == (self.versionMadeBy >> 8)) { // DOS-originated archive
+        type = self.externalFileAttributes >> 4;
+        return (type == 0x01) && ![self isSymLink];
+    }
 	return (0x02 == type)  && ![self isSymLink];
 }
 
