@@ -10,7 +10,7 @@
 @class ZKCDTrailer;
 @class ZKArchive;
 
-@protocol ZipKitDelegate
+@protocol ZipKitDelegate<NSObject>
 @optional 
 - (void) onZKArchiveDidBeginZip:(ZKArchive *) archive;
 - (void) onZKArchiveDidBeginUnzip:(ZKArchive *) archive;
