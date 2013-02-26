@@ -66,21 +66,21 @@ NSString* const ZKLogToFileKey = @"ZKLogToFile";
 	return label;
 }
 
-static ZKLog *sharedInstance = nil;
+static ZKLog *zkSharedInstance = nil;
 + (ZKLog *) sharedInstance {
 	@synchronized(self) {
-		if (sharedInstance == nil) {
-			sharedInstance = [self new];
+		if (zkSharedInstance == nil) {
+			zkSharedInstance = [self new];
 		}
 	}
-	return sharedInstance;
+	return [[zkSharedInstance retain] autorelease];
 }
 
 - (id) init {
 	@synchronized([self class]) {
-		if (sharedInstance == nil) {
+		if (zkSharedInstance == nil) {
 			if (self = [super init]) {
-				sharedInstance = self;
+				zkSharedInstance = self;
 				
 				self.pid = [[NSProcessInfo processInfo] processIdentifier];
 				self.minimumLevel = ZKLogLevelError;
@@ -100,16 +100,16 @@ static ZKLog *sharedInstance = nil;
 			}
 		}
 	}
-	return sharedInstance;
+	return zkSharedInstance;
 }
 
 + (id) allocWithZone:(NSZone *) zone {
 	@synchronized(self) {
-		if (sharedInstance == nil) {
+		if (zkSharedInstance == nil) {
 			return [super allocWithZone:zone];
 		}
 	}
-	return sharedInstance;
+	return zkSharedInstance;
 }
 
 + (void) initialize {
