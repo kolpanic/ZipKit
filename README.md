@@ -16,8 +16,8 @@ ZipKit requires Xcode 3.1. It works on Mac OS X Leopard 10.5 or greater (garbage
 
 The Project
 The Xcode project contains three targets:
-* a Mac OS X framework
-* a Mac OS X static library
+* an OS X framework
+* an OS X static library
 * an iOS static library
 
 ###Using ZipKit
@@ -28,3 +28,8 @@ The Xcode project contains three targets:
 4. In the Project Navigator, select your project at the top, then add the relevant ZipKit product to your target's Linked Frameworks and Libraries section, and add it to the your target's Target Dependencies.
 
 See the accompanying demo projects for guidance.
+
+###Demo Projects
+* [ZipKit Utility](https://github.com/kolpanic/ZipKit-Utility) - an OS X Cocoa application
+* [zku](https://github.com/kolpanic/zku) - an OS X command line tool
+* [ZipKit Touch](https://github.com/kolpanic/ZipKit-Touch) - an iOS application
