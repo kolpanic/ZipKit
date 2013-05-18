@@ -1,9 +1,0 @@
-syntax: glob
-
-.DS_Store
-
-*.swp
-*~.nib
-
-build
-\.DS_Store
