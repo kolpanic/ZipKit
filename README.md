@@ -34,3 +34,6 @@ See the accompanying demo projects for guidance.
 * [ZipKit Utility](https://github.com/kolpanic/ZipKit-Utility) - an OS X Cocoa application
 * [zku](https://github.com/kolpanic/zku) - an OS X command line tool
 * [ZipKit Touch](https://github.com/kolpanic/ZipKit-Touch) - an iOS application
+
+####Note
+This project was originally hosted at [Bitbucket](https://bitbucket.org/kolpanic/zipkit). It was transferred using [fast-export](https://github.com/frej/fast-export), and all open issues were manually copied here.
