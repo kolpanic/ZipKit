@@ -186,8 +186,6 @@
 		CB6F09C4174838FC00F91524 = {
 			isa = PBXGroup;
 			children = (
-				CB6F0AD717484C5300F91524 /* Foundation.framework */,
-				CB6F0AD517484C4D00F91524 /* libz.dylib */,
 				CB6F0A3A17483B7900F91524 /* COPYING.TXT */,
 				CB6F0A3917483B7900F91524 /* Credits.html */,
 				CB6F09D7174838FC00F91524 /* ZipKit */,
@@ -210,6 +208,7 @@
 		CB6F09D0174838FC00F91524 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CBF776171748888A00E6979E /* iOS */,
 				CB6F09EC174839FD00F91524 /* OS X */,
 			);
 			name = Frameworks;
@@ -317,6 +316,15 @@
 				CB6F0A3D17483CC900F91524 /* GMAppleDouble.m */,
 			);
 			name = MacFUSE;
+			sourceTree = "<group>";
+		};
+		CBF776171748888A00E6979E /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				CB6F0AD717484C5300F91524 /* Foundation.framework */,
+				CB6F0AD517484C4D00F91524 /* libz.dylib */,
+			);
+			name = iOS;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
