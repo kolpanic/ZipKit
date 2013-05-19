@@ -33,8 +33,11 @@
 		unsigned long long offset = archive.cdTrailer.offsetOfStartOfCentralDirectory;
 		for (NSUInteger i = 0; i < archive.cdTrailer.totalNumberOfCentralDirectoryEntries; i++) {
 			ZKCDHeader *cdHeader = [ZKCDHeader recordWithData:archive.data atOffset:(UInt64)offset];
-			[archive.centralDirectory addObject:cdHeader];
-			offset += [cdHeader length];
+            if (cdHeader != nil) {
+                [archive.centralDirectory addObject:cdHeader];
+                offset += [cdHeader length];
+            } else
+                archive = nil;
 		}
 	} else
 		archive = nil;
