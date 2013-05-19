@@ -35,5 +35,6 @@ See the accompanying demo projects for guidance.
 * [zku](https://github.com/kolpanic/zku) - an OS X command line tool
 * [ZipKit Touch](https://github.com/kolpanic/ZipKit-Touch) - an iOS application
 
-####Note
-This project was originally hosted at [Bitbucket](https://bitbucket.org/kolpanic/zipkit). It was transferred using [fast-export](https://github.com/frej/fast-export), and all open issues were manually copied here.
+####Notes
+1. If you're using Mac OS X < 10.7 or iOS < 5.0, make sure you "git checkout 1.0.0". That tag supports GC and manual memory management.
+2. This project was originally hosted at [Bitbucket](https://bitbucket.org/kolpanic/zipkit). It was transferred using [fast-export](https://github.com/frej/fast-export), and all open issues were manually copied here.
