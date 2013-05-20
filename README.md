@@ -12,7 +12,7 @@ If you find ZipKit to be useful, please [let me know](http://about.me/kolpanic).
 
 ###Requirements
 
-ZipKit requires Xcode 3.1. It works on Mac OS X Leopard 10.5 or greater (garbage collection is supported but not required), and iOS 3.0 or greater.
+ZipKit requires Xcode 4.6. It works on OS X 10.8 Mountain Lion, and iOS 6.0 or greater. (If you're using older versions, make sure you "git checkout 1.0.0". The project at that tag supports garbage collection and manual memory management.)
 
 The Project
 The Xcode project contains three targets:
@@ -35,6 +35,5 @@ See the accompanying demo projects for guidance.
 * [zku](https://github.com/kolpanic/zku) - an OS X command line tool
 * [ZipKit Touch](https://github.com/kolpanic/ZipKit-Touch) - an iOS application
 
-####Notes
-1. If you're using Mac OS X < 10.7 or iOS < 5.0, make sure you "git checkout 1.0.0". That tag supports GC and manual memory management.
-2. This project was originally hosted at [Bitbucket](https://bitbucket.org/kolpanic/zipkit). It was transferred using [fast-export](https://github.com/frej/fast-export), and all open issues were manually copied here.
+####Note
+This project was originally hosted at [Bitbucket](https://bitbucket.org/kolpanic/zipkit). It was transferred using [fast-export](https://github.com/frej/fast-export), and all open issues were manually copied here.
