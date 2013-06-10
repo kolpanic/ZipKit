@@ -32,6 +32,10 @@ The Xcode project contains three targets:
 
 See the accompanying demo projects for guidance.
 
+###License
+
+ZipKit is released under the BSD license. It's in COPYING.TXT in the project. Acknowledge ZipKit (and other FOSS projects you use) in your app's About or Settings view or window. (If your iOS app doesn't have either, you can add a Settings Bundle; see the ZipKit Touch demo.)
+
 ###Demo Projects
 * [ZipKit Utility](https://github.com/kolpanic/ZipKit-Utility) - an OS X Cocoa application
 * [zku](https://github.com/kolpanic/zku) - an OS X command line tool
