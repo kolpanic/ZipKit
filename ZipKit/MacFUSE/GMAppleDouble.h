@@ -145,7 +145,6 @@ GM_EXPORT @interface GMAppleDouble : NSObject {
  * @discussion This will attempt to parse the given data as an AppleDouble file
  * and add all entries found.
  * @param data Raw AppleDouble file data
- * @param data The raw data for the entry to add (retained)
  * @result YES if the provided data was parsed correctly.
  */
 - (BOOL) addEntriesFromAppleDoubleData:(NSData *)data;
