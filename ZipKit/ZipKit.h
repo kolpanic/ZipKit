@@ -11,6 +11,8 @@
 #import "ZKFileArchive.h"
 #import "ZKLog.h"
 
+#import "GMAppleDouble.h"
+
 #import "GMAppleDouble+ZKAdditions.h"
 #import "NSData+ZKAdditions.h"
 #import "NSDate+ZKAdditions.h"
