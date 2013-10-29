@@ -7,23 +7,44 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CB6F0A1017483A9A00F91524 /* GMAppleDouble+ZKAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = CB6F09ED17483A9A00F91524 /* GMAppleDouble+ZKAdditions.h */; };
-		CB6F0A1117483A9A00F91524 /* NSData+ZKAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = CB6F09EE17483A9A00F91524 /* NSData+ZKAdditions.h */; };
-		CB6F0A1217483A9A00F91524 /* NSDate+ZKAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = CB6F09EF17483A9A00F91524 /* NSDate+ZKAdditions.h */; };
-		CB6F0A1317483A9A00F91524 /* NSDictionary+ZKAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = CB6F09F017483A9A00F91524 /* NSDictionary+ZKAdditions.h */; };
-		CB6F0A1417483A9A00F91524 /* NSFileHandle+ZKAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = CB6F09F117483A9A00F91524 /* NSFileHandle+ZKAdditions.h */; };
-		CB6F0A1517483A9A00F91524 /* NSFileManager+ZKAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = CB6F09F217483A9A00F91524 /* NSFileManager+ZKAdditions.h */; };
-		CB6F0A1617483A9A00F91524 /* NSString+ZKAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = CB6F09F317483A9A00F91524 /* NSString+ZKAdditions.h */; };
-		CB6F0A1717483A9A00F91524 /* ZKArchive.h in Headers */ = {isa = PBXBuildFile; fileRef = CB6F09F417483A9A00F91524 /* ZKArchive.h */; };
+		22164E18181ABDA400ECDC0F /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 22164E17181ABDA400ECDC0F /* libz.dylib */; };
+		22164E19181ABE4900ECDC0F /* ZKDefs.h in Headers */ = {isa = PBXBuildFile; fileRef = CB6F09FA17483A9A00F91524 /* ZKDefs.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		22164E1A181ABE4900ECDC0F /* GMAppleDouble.h in Headers */ = {isa = PBXBuildFile; fileRef = CB6F0A3C17483CC900F91524 /* GMAppleDouble.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		22164E1B181ABE4900ECDC0F /* GMAppleDouble+ZKAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = CB6F09ED17483A9A00F91524 /* GMAppleDouble+ZKAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		22164E1C181ABE4900ECDC0F /* NSData+ZKAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = CB6F09EE17483A9A00F91524 /* NSData+ZKAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		22164E1D181ABE4900ECDC0F /* NSDate+ZKAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = CB6F09EF17483A9A00F91524 /* NSDate+ZKAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		22164E1E181ABE4900ECDC0F /* NSDictionary+ZKAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = CB6F09F017483A9A00F91524 /* NSDictionary+ZKAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		22164E1F181ABE4900ECDC0F /* NSFileHandle+ZKAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = CB6F09F117483A9A00F91524 /* NSFileHandle+ZKAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		22164E20181ABE4900ECDC0F /* NSFileManager+ZKAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = CB6F09F217483A9A00F91524 /* NSFileManager+ZKAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		22164E21181ABE4900ECDC0F /* NSString+ZKAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = CB6F09F317483A9A00F91524 /* NSString+ZKAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		22164E22181ABE4900ECDC0F /* ZKArchive.h in Headers */ = {isa = PBXBuildFile; fileRef = CB6F09F417483A9A00F91524 /* ZKArchive.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		22164E23181ABE4900ECDC0F /* ZKDataArchive.h in Headers */ = {isa = PBXBuildFile; fileRef = CB6F09F917483A9A00F91524 /* ZKDataArchive.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		22164E24181ABE4900ECDC0F /* ZKFileArchive.h in Headers */ = {isa = PBXBuildFile; fileRef = CB6F09FB17483A9A00F91524 /* ZKFileArchive.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		22164E25181ABE4900ECDC0F /* ZKCDHeader.h in Headers */ = {isa = PBXBuildFile; fileRef = CB6F09F517483A9A00F91524 /* ZKCDHeader.h */; };
+		22164E26181ABE4900ECDC0F /* ZKCDTrailer.h in Headers */ = {isa = PBXBuildFile; fileRef = CB6F09F617483A9A00F91524 /* ZKCDTrailer.h */; };
+		22164E27181ABE4900ECDC0F /* ZKCDTrailer64.h in Headers */ = {isa = PBXBuildFile; fileRef = CB6F09F717483A9A00F91524 /* ZKCDTrailer64.h */; };
+		22164E28181ABE4900ECDC0F /* ZKCDTrailer64Locator.h in Headers */ = {isa = PBXBuildFile; fileRef = CB6F09F817483A9A00F91524 /* ZKCDTrailer64Locator.h */; };
+		22164E29181ABE4900ECDC0F /* ZKLFHeader.h in Headers */ = {isa = PBXBuildFile; fileRef = CB6F09FC17483A9A00F91524 /* ZKLFHeader.h */; };
+		22164E2A181ABE4900ECDC0F /* ZKLog.h in Headers */ = {isa = PBXBuildFile; fileRef = CB6F09FD17483A9A00F91524 /* ZKLog.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		22164E2C181ABEAA00ECDC0F /* ZipKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 22164E2B181ABEAA00ECDC0F /* ZipKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		22164E2D181ABEAB00ECDC0F /* ZipKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 22164E2B181ABEAA00ECDC0F /* ZipKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CB6F0A1017483A9A00F91524 /* GMAppleDouble+ZKAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = CB6F09ED17483A9A00F91524 /* GMAppleDouble+ZKAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CB6F0A1117483A9A00F91524 /* NSData+ZKAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = CB6F09EE17483A9A00F91524 /* NSData+ZKAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CB6F0A1217483A9A00F91524 /* NSDate+ZKAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = CB6F09EF17483A9A00F91524 /* NSDate+ZKAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CB6F0A1317483A9A00F91524 /* NSDictionary+ZKAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = CB6F09F017483A9A00F91524 /* NSDictionary+ZKAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CB6F0A1417483A9A00F91524 /* NSFileHandle+ZKAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = CB6F09F117483A9A00F91524 /* NSFileHandle+ZKAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CB6F0A1517483A9A00F91524 /* NSFileManager+ZKAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = CB6F09F217483A9A00F91524 /* NSFileManager+ZKAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CB6F0A1617483A9A00F91524 /* NSString+ZKAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = CB6F09F317483A9A00F91524 /* NSString+ZKAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CB6F0A1717483A9A00F91524 /* ZKArchive.h in Headers */ = {isa = PBXBuildFile; fileRef = CB6F09F417483A9A00F91524 /* ZKArchive.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CB6F0A1817483A9A00F91524 /* ZKCDHeader.h in Headers */ = {isa = PBXBuildFile; fileRef = CB6F09F517483A9A00F91524 /* ZKCDHeader.h */; };
 		CB6F0A1917483A9A00F91524 /* ZKCDTrailer.h in Headers */ = {isa = PBXBuildFile; fileRef = CB6F09F617483A9A00F91524 /* ZKCDTrailer.h */; };
 		CB6F0A1A17483A9A00F91524 /* ZKCDTrailer64.h in Headers */ = {isa = PBXBuildFile; fileRef = CB6F09F717483A9A00F91524 /* ZKCDTrailer64.h */; };
 		CB6F0A1B17483A9A00F91524 /* ZKCDTrailer64Locator.h in Headers */ = {isa = PBXBuildFile; fileRef = CB6F09F817483A9A00F91524 /* ZKCDTrailer64Locator.h */; };
-		CB6F0A1C17483A9A00F91524 /* ZKDataArchive.h in Headers */ = {isa = PBXBuildFile; fileRef = CB6F09F917483A9A00F91524 /* ZKDataArchive.h */; };
-		CB6F0A1D17483A9A00F91524 /* ZKDefs.h in Headers */ = {isa = PBXBuildFile; fileRef = CB6F09FA17483A9A00F91524 /* ZKDefs.h */; };
-		CB6F0A1E17483A9A00F91524 /* ZKFileArchive.h in Headers */ = {isa = PBXBuildFile; fileRef = CB6F09FB17483A9A00F91524 /* ZKFileArchive.h */; };
+		CB6F0A1C17483A9A00F91524 /* ZKDataArchive.h in Headers */ = {isa = PBXBuildFile; fileRef = CB6F09F917483A9A00F91524 /* ZKDataArchive.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CB6F0A1D17483A9A00F91524 /* ZKDefs.h in Headers */ = {isa = PBXBuildFile; fileRef = CB6F09FA17483A9A00F91524 /* ZKDefs.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CB6F0A1E17483A9A00F91524 /* ZKFileArchive.h in Headers */ = {isa = PBXBuildFile; fileRef = CB6F09FB17483A9A00F91524 /* ZKFileArchive.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CB6F0A1F17483A9A00F91524 /* ZKLFHeader.h in Headers */ = {isa = PBXBuildFile; fileRef = CB6F09FC17483A9A00F91524 /* ZKLFHeader.h */; };
-		CB6F0A2017483A9A00F91524 /* ZKLog.h in Headers */ = {isa = PBXBuildFile; fileRef = CB6F09FD17483A9A00F91524 /* ZKLog.h */; };
+		CB6F0A2017483A9A00F91524 /* ZKLog.h in Headers */ = {isa = PBXBuildFile; fileRef = CB6F09FD17483A9A00F91524 /* ZKLog.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CB6F0A2217483A9A00F91524 /* GMAppleDouble+ZKAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = CB6F09FF17483A9A00F91524 /* GMAppleDouble+ZKAdditions.m */; };
 		CB6F0A2317483A9A00F91524 /* NSData+ZKAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = CB6F0A0017483A9A00F91524 /* NSData+ZKAdditions.m */; };
 		CB6F0A2417483A9A00F91524 /* NSDate+ZKAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = CB6F0A0117483A9A00F91524 /* NSDate+ZKAdditions.m */; };
@@ -42,7 +63,7 @@
 		CB6F0A3117483A9A00F91524 /* ZKLFHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = CB6F0A0E17483A9A00F91524 /* ZKLFHeader.m */; };
 		CB6F0A3217483A9A00F91524 /* ZKLog.m in Sources */ = {isa = PBXBuildFile; fileRef = CB6F0A0F17483A9A00F91524 /* ZKLog.m */; };
 		CB6F0A3E17483CC900F91524 /* COPYING.TXT in Resources */ = {isa = PBXBuildFile; fileRef = CB6F0A3B17483CC900F91524 /* COPYING.TXT */; };
-		CB6F0A3F17483CC900F91524 /* GMAppleDouble.h in Headers */ = {isa = PBXBuildFile; fileRef = CB6F0A3C17483CC900F91524 /* GMAppleDouble.h */; };
+		CB6F0A3F17483CC900F91524 /* GMAppleDouble.h in Headers */ = {isa = PBXBuildFile; fileRef = CB6F0A3C17483CC900F91524 /* GMAppleDouble.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CB6F0A4017483CC900F91524 /* GMAppleDouble.m in Sources */ = {isa = PBXBuildFile; fileRef = CB6F0A3D17483CC900F91524 /* GMAppleDouble.m */; };
 		CB6F0A5617483F2B00F91524 /* ZKDefs.m in Sources */ = {isa = PBXBuildFile; fileRef = CB6F0A0C17483A9A00F91524 /* ZKDefs.m */; };
 		CB6F0A5717483F2B00F91524 /* GMAppleDouble.m in Sources */ = {isa = PBXBuildFile; fileRef = CB6F0A3D17483CC900F91524 /* GMAppleDouble.m */; };
@@ -64,9 +85,7 @@
 		CB6F0A6717483F2B00F91524 /* ZKLog.m in Sources */ = {isa = PBXBuildFile; fileRef = CB6F0A0F17483A9A00F91524 /* ZKLog.m */; };
 		CB6F0A6817483F7200F91524 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB6F09D6174838FC00F91524 /* Foundation.framework */; };
 		CB6F0A8B174840F000F91524 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB6F09D6174838FC00F91524 /* Foundation.framework */; };
-		CB6F0A8D174840F600F91524 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CB6F0A8C174840F600F91524 /* libz.dylib */; };
 		CB6F0A921748463D00F91524 /* CoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB6F09E61748398400F91524 /* CoreServices.framework */; };
-		CB6F0A931748464400F91524 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CB6F0A8C174840F600F91524 /* libz.dylib */; };
 		CB6F0AC517484C4600F91524 /* ZKDefs.m in Sources */ = {isa = PBXBuildFile; fileRef = CB6F0A0C17483A9A00F91524 /* ZKDefs.m */; };
 		CB6F0AC617484C4600F91524 /* NSData+ZKAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = CB6F0A0017483A9A00F91524 /* NSData+ZKAdditions.m */; };
 		CB6F0AC717484C4600F91524 /* NSDate+ZKAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = CB6F0A0117483A9A00F91524 /* NSDate+ZKAdditions.m */; };
@@ -100,6 +119,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		22164E17181ABDA400ECDC0F /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		22164E2B181ABEAA00ECDC0F /* ZipKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZipKit.h; sourceTree = "<group>"; };
 		CB6F09CE174838FC00F91524 /* ZipKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ZipKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB6F09D6174838FC00F91524 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		CB6F09D9174838FC00F91524 /* ZipKit-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ZipKit-Info.plist"; sourceTree = "<group>"; };
@@ -145,7 +166,6 @@
 		CB6F0A3C17483CC900F91524 /* GMAppleDouble.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GMAppleDouble.h; path = MacFUSE/GMAppleDouble.h; sourceTree = "<group>"; };
 		CB6F0A3D17483CC900F91524 /* GMAppleDouble.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GMAppleDouble.m; path = MacFUSE/GMAppleDouble.m; sourceTree = "<group>"; };
 		CB6F0A4617483E5000F91524 /* libzipkit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libzipkit.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		CB6F0A8C174840F600F91524 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/lib/libz.dylib; sourceTree = "<absolute>"; };
 		CB6F0A9817484BDE00F91524 /* libtouchzipkit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libtouchzipkit.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB6F0AD517484C4D00F91524 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk/usr/lib/libz.dylib; sourceTree = DEVELOPER_DIR; };
 		CB6F0AD717484C5300F91524 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
@@ -156,9 +176,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22164E18181ABDA400ECDC0F /* libz.dylib in Frameworks */,
 				CB6F0A6817483F7200F91524 /* Foundation.framework in Frameworks */,
 				CB6F0A921748463D00F91524 /* CoreServices.framework in Frameworks */,
-				CB6F0A931748464400F91524 /* libz.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -167,7 +187,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				CB6F0A8B174840F000F91524 /* Foundation.framework in Frameworks */,
-				CB6F0A8D174840F600F91524 /* libz.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -217,6 +236,7 @@
 		CB6F09D7174838FC00F91524 /* ZipKit */ = {
 			isa = PBXGroup;
 			children = (
+				22164E2B181ABEAA00ECDC0F /* ZipKit.h */,
 				CB6F09FA17483A9A00F91524 /* ZKDefs.h */,
 				CB6F0A0C17483A9A00F91524 /* ZKDefs.m */,
 				CB6F0A4117483CCD00F91524 /* MacFUSE */,
@@ -241,9 +261,9 @@
 		CB6F09EC174839FD00F91524 /* OS X */ = {
 			isa = PBXGroup;
 			children = (
+				22164E17181ABDA400ECDC0F /* libz.dylib */,
 				CB6F09D6174838FC00F91524 /* Foundation.framework */,
 				CB6F09E61748398400F91524 /* CoreServices.framework */,
-				CB6F0A8C174840F600F91524 /* libz.dylib */,
 			);
 			name = "OS X";
 			sourceTree = "<group>";
@@ -341,6 +361,7 @@
 				CB6F0A1417483A9A00F91524 /* NSFileHandle+ZKAdditions.h in Headers */,
 				CB6F0A1517483A9A00F91524 /* NSFileManager+ZKAdditions.h in Headers */,
 				CB6F0A1617483A9A00F91524 /* NSString+ZKAdditions.h in Headers */,
+				22164E2C181ABEAA00ECDC0F /* ZipKit.h in Headers */,
 				CB6F0A1717483A9A00F91524 /* ZKArchive.h in Headers */,
 				CB6F0A1817483A9A00F91524 /* ZKCDHeader.h in Headers */,
 				CB6F0A1917483A9A00F91524 /* ZKCDTrailer.h in Headers */,
@@ -359,6 +380,25 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22164E2A181ABE4900ECDC0F /* ZKLog.h in Headers */,
+				22164E24181ABE4900ECDC0F /* ZKFileArchive.h in Headers */,
+				22164E23181ABE4900ECDC0F /* ZKDataArchive.h in Headers */,
+				22164E25181ABE4900ECDC0F /* ZKCDHeader.h in Headers */,
+				22164E1F181ABE4900ECDC0F /* NSFileHandle+ZKAdditions.h in Headers */,
+				22164E26181ABE4900ECDC0F /* ZKCDTrailer.h in Headers */,
+				22164E1E181ABE4900ECDC0F /* NSDictionary+ZKAdditions.h in Headers */,
+				22164E2D181ABEAB00ECDC0F /* ZipKit.h in Headers */,
+				22164E1D181ABE4900ECDC0F /* NSDate+ZKAdditions.h in Headers */,
+				22164E27181ABE4900ECDC0F /* ZKCDTrailer64.h in Headers */,
+				22164E1C181ABE4900ECDC0F /* NSData+ZKAdditions.h in Headers */,
+				22164E28181ABE4900ECDC0F /* ZKCDTrailer64Locator.h in Headers */,
+				22164E20181ABE4900ECDC0F /* NSFileManager+ZKAdditions.h in Headers */,
+				22164E1B181ABE4900ECDC0F /* GMAppleDouble+ZKAdditions.h in Headers */,
+				22164E29181ABE4900ECDC0F /* ZKLFHeader.h in Headers */,
+				22164E22181ABE4900ECDC0F /* ZKArchive.h in Headers */,
+				22164E21181ABE4900ECDC0F /* NSString+ZKAdditions.h in Headers */,
+				22164E1A181ABE4900ECDC0F /* GMAppleDouble.h in Headers */,
+				22164E19181ABE4900ECDC0F /* ZKDefs.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -629,6 +669,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ZipKit/ZipKit-Prefix.pch";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = include/ZipKit;
 			};
 			name = Debug;
 		};
@@ -639,6 +680,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ZipKit/ZipKit-Prefix.pch";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = include/ZipKit;
 			};
 			name = Release;
 		};
