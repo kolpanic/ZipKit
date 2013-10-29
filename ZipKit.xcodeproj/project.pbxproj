@@ -102,8 +102,8 @@
 		CB6F0AD217484C4600F91524 /* ZKCDTrailer64Locator.m in Sources */ = {isa = PBXBuildFile; fileRef = CB6F0A0A17483A9A00F91524 /* ZKCDTrailer64Locator.m */; };
 		CB6F0AD317484C4600F91524 /* ZKLFHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = CB6F0A0E17483A9A00F91524 /* ZKLFHeader.m */; };
 		CB6F0AD417484C4600F91524 /* ZKLog.m in Sources */ = {isa = PBXBuildFile; fileRef = CB6F0A0F17483A9A00F91524 /* ZKLog.m */; };
-		CB6F0AD617484C4D00F91524 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CB6F0AD517484C4D00F91524 /* libz.dylib */; };
-		CB6F0AD817484C5300F91524 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB6F0AD717484C5300F91524 /* Foundation.framework */; };
+		CBEAEBDE18204E310017011D /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CBEAEBDD18204E310017011D /* libz.dylib */; };
+		CBEAEBE018204E360017011D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBEAEBDF18204E360017011D /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -167,8 +167,8 @@
 		CB6F0A3D17483CC900F91524 /* GMAppleDouble.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GMAppleDouble.m; path = MacFUSE/GMAppleDouble.m; sourceTree = "<group>"; };
 		CB6F0A4617483E5000F91524 /* libzipkit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libzipkit.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB6F0A9817484BDE00F91524 /* libtouchzipkit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libtouchzipkit.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		CB6F0AD517484C4D00F91524 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk/usr/lib/libz.dylib; sourceTree = DEVELOPER_DIR; };
-		CB6F0AD717484C5300F91524 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		CBEAEBDD18204E310017011D /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = ../../../../iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		CBEAEBDF18204E360017011D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = ../../../../iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -194,8 +194,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CB6F0AD817484C5300F91524 /* Foundation.framework in Frameworks */,
-				CB6F0AD617484C4D00F91524 /* libz.dylib in Frameworks */,
+				CBEAEBE018204E360017011D /* Foundation.framework in Frameworks */,
+				CBEAEBDE18204E310017011D /* libz.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,8 +341,8 @@
 		CBF776171748888A00E6979E /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				CB6F0AD717484C5300F91524 /* Foundation.framework */,
-				CB6F0AD517484C4D00F91524 /* libz.dylib */,
+				CBEAEBDD18204E310017011D /* libz.dylib */,
+				CBEAEBDF18204E360017011D /* Foundation.framework */,
 			);
 			name = iOS;
 			sourceTree = "<group>";
