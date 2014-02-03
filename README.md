@@ -26,7 +26,8 @@ ZipKit requires Xcode 4.6. It works on OS X 10.8 Mountain Lion, and iOS 6.0 or g
 	* add the relevant ZipKit product to your target's Linked Frameworks and Libraries section, and add it to the your target's Target Dependencies under Build Phases;
 	* add libz.dylib to your target's Linked Frameworks;
 	* add ./ZipKit/ to your target's User Header Search Paths setting.
-
+5. If you're using one of ZipKit's static library targets in your project, add -ObjC to your target's Other Linker Flags. You may have to add -all_load as well. (Objective-C categories aren't properly linked by default when using static libraries.)
+ 
 See the accompanying demo projects for guidance.
 
 ###License
