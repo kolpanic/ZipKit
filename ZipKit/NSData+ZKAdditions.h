@@ -14,10 +14,13 @@
 - (UInt64) zk_hostInt64OffsetBy:(UInt64 *)offset;
 - (BOOL) zk_hostBoolOffsetBy:(UInt64 *)offset;
 - (NSString *) zk_stringOffsetBy:(UInt64 *)offset length:(NSUInteger)length;
-- (unsigned long)       zk_crc32;
+- (unsigned long) zk_crc32;
 - (unsigned long) zk_crc32:(unsigned long)crc;
-- (NSData *)            zk_inflate;
-- (NSData *)            zk_deflate;
+
+- (NSData *) zk_inflateWithWindowBits:(int)windowBits;
+- (NSData *) zk_deflateWithLevel:(int)level windowBits:(int)windowBits memoryLevel:(int)memoryLevel strategy:(int)strategy;
+- (NSData *) zk_inflate;
+- (NSData *) zk_deflate;
 
 @end
 

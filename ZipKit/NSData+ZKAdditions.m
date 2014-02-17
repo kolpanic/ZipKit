@@ -72,6 +72,10 @@
 }
 
 - (NSData *) zk_inflate {
+  return [self zk_inflateWithWindowBits:(-MAX_WBITS)];
+}
+
+- (NSData *) zk_inflateWithWindowBits:(int)windowBits {
 	NSUInteger full_length = [self length];
 	NSUInteger half_length = full_length / 2;
     
@@ -87,7 +91,7 @@
 	strm.zalloc = Z_NULL;
 	strm.zfree = Z_NULL;
     
-	if (inflateInit2(&strm, -MAX_WBITS) != Z_OK) return nil;
+	if (inflateInit2(&strm, windowBits) != Z_OK) return nil;
 	while (!done) {
 		if (strm.total_out >= [inflatedData length])
 			[inflatedData increaseLengthBy:half_length];
@@ -105,6 +109,10 @@
 }
 
 - (NSData *) zk_deflate {
+  return [self zk_deflateWithLevel:Z_BEST_COMPRESSION windowBits:(-MAX_WBITS) memoryLevel:8 strategy:Z_DEFAULT_STRATEGY];
+}
+
+- (NSData *) zk_deflateWithLevel:(int)level windowBits:(int)windowBits memoryLevel:(int)memoryLevel strategy:(int)strategy {
 	z_stream strm;
     
 	strm.zalloc = Z_NULL;
@@ -115,7 +123,7 @@
 	strm.avail_in = (unsigned int)[self length];
     
 	NSMutableData *deflatedData = [NSMutableData dataWithLength:16384];
-	if (deflateInit2(&strm, Z_BEST_COMPRESSION, Z_DEFLATED, -MAX_WBITS, 8, Z_DEFAULT_STRATEGY) != Z_OK) return nil;
+	if (deflateInit2(&strm, level, Z_DEFLATED, windowBits, memoryLevel, strategy) != Z_OK) return nil;
 	do {
 		if (strm.total_out >= [deflatedData length])
 			[deflatedData increaseLengthBy:16384];
