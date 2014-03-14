@@ -613,7 +613,7 @@
 					}
 					
 					// replace the local file header's default values with those calculated during deflation
-					lfHeaderData.crc = crc;
+					lfHeaderData.crc = (UInt32)crc;
 					lfHeaderData.compressedSize = compressedSize;
 				}
 			}

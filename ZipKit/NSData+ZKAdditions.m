@@ -63,12 +63,12 @@
 	return value;
 }
 
-- (unsigned long) zk_crc32 {
+- (UInt32) zk_crc32 {
 	return [self zk_crc32:0];
 }
 
-- (unsigned long) zk_crc32:(unsigned long)crc {
-	return crc32(crc, [self bytes], (unsigned int)[self length]);
+- (UInt32) zk_crc32:(unsigned long)crc {
+	return (UInt32)crc32(crc, [self bytes], (unsigned int)[self length]);
 }
 
 - (NSData *) zk_inflate {

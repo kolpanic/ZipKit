@@ -45,7 +45,7 @@
 }
 
 + (ZKCDTrailer *) recordWithData:(NSData *)data atOffset:(UInt64)offset {
-	NSUInteger mn = [data zk_hostInt32OffsetBy:&offset];
+	UInt32 mn = [data zk_hostInt32OffsetBy:&offset];
 	if (mn != ZKCDTrailerMagicNumber) return nil;
 	ZKCDTrailer *record = [ZKCDTrailer new];
 	record.magicNumber = mn;

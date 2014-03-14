@@ -133,20 +133,20 @@ const NSUInteger ZKMaxEntriesPerFetch = 40;
 	return [[self attributesOfItemAtPath:path error:nil] fileModificationDate];
 }
 
-- (NSUInteger) zk_posixPermissionsAtPath:(NSString *)path {
-	return [[self attributesOfItemAtPath:path error:nil] filePosixPermissions];
+- (UInt32) zk_posixPermissionsAtPath:(NSString *)path {
+	return (UInt32)[[self attributesOfItemAtPath:path error:nil] filePosixPermissions];
 }
 
-- (NSUInteger) zk_externalFileAttributesAtPath:(NSString *)path {
+- (UInt32) zk_externalFileAttributesAtPath:(NSString *)path {
 	return [self zk_externalFileAttributesFor:[self attributesOfItemAtPath:path error:nil]];
 }
 
-- (NSUInteger) zk_externalFileAttributesFor:(NSDictionary *)fileAttributes {
-	NSUInteger externalFileAttributes = 0;
+- (UInt32) zk_externalFileAttributesFor:(NSDictionary *)fileAttributes {
+	UInt32 externalFileAttributes = 0;
 	@try {
 		BOOL isSymLink = [[fileAttributes fileType] isEqualToString:NSFileTypeSymbolicLink];
 		BOOL isDir = [[fileAttributes fileType] isEqualToString:NSFileTypeDirectory];
-		NSUInteger posixPermissions = [fileAttributes filePosixPermissions];
+		UInt32 posixPermissions = (UInt32)[fileAttributes filePosixPermissions];
 		externalFileAttributes = posixPermissions << 16 | (isSymLink ? 0xA0004000 : (isDir ? 0x40004000 : 0x80004000));
 	} @catch (NSException *e) {
 		externalFileAttributes = 0;
@@ -154,16 +154,16 @@ const NSUInteger ZKMaxEntriesPerFetch = 40;
 	return externalFileAttributes;
 }
 
-- (NSUInteger) zk_crcForPath:(NSString *)path {
+- (UInt32) zk_crcForPath:(NSString *)path {
 	return [self zk_crcForPath:path invoker:nil throttleThreadSleepTime:0.0];
 }
 
-- (NSUInteger) zk_crcForPath:(NSString *)path invoker:(id)invoker {
+- (UInt32) zk_crcForPath:(NSString *)path invoker:(id)invoker {
 	return [self zk_crcForPath:path invoker:invoker throttleThreadSleepTime:0.0];
 }
 
-- (NSUInteger) zk_crcForPath:(NSString *)path invoker:(id)invoker throttleThreadSleepTime:(NSTimeInterval)throttleThreadSleepTime {
-	NSUInteger crc32 = 0;
+- (UInt32) zk_crcForPath:(NSString *)path invoker:(id)invoker throttleThreadSleepTime:(NSTimeInterval)throttleThreadSleepTime {
+	UInt32 crc32 = 0;
 	path = [path stringByExpandingTildeInPath];
 	BOOL isDirectory;
 	if ([self fileExistsAtPath:path isDirectory:&isDirectory] && !isDirectory) {
