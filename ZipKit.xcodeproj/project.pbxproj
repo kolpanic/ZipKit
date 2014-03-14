@@ -168,8 +168,8 @@
 		CB6F0A3D17483CC900F91524 /* GMAppleDouble.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GMAppleDouble.m; path = MacFUSE/GMAppleDouble.m; sourceTree = "<group>"; };
 		CB6F0A4617483E5000F91524 /* libzipkit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libzipkit.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB6F0A9817484BDE00F91524 /* libtouchzipkit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libtouchzipkit.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		CBEAEBDD18204E310017011D /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = ../../../../iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/usr/lib/libz.dylib; sourceTree = SDKROOT; };
-		CBEAEBDF18204E360017011D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = ../../../../iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		CBEAEBDD18204E310017011D /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		CBEAEBDF18204E360017011D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
