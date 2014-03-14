@@ -31,20 +31,20 @@ extern NSString *const ZKPathKey;
 
 // Zipping & Unzipping
 extern const unsigned long long ZKZipBlockSize;
-extern const NSUInteger ZKNotificationIterations;
+extern const UInt32 ZKNotificationIterations;
 
 // Magic numbers and lengths for zip records
-extern const NSUInteger ZKCDHeaderMagicNumber;
-extern const NSUInteger ZKCDHeaderFixedDataLength;
+extern const UInt32 ZKCDHeaderMagicNumber;
+extern const UInt32 ZKCDHeaderFixedDataLength;
 
-extern const NSUInteger ZKCDTrailerMagicNumber;
-extern const NSUInteger ZKCDTrailerFixedDataLength;
+extern const UInt32 ZKCDTrailerMagicNumber;
+extern const UInt32 ZKCDTrailerFixedDataLength;
 
-extern const NSUInteger ZKLFHeaderMagicNumber;
-extern const NSUInteger ZKLFHeaderFixedDataLength;
+extern const UInt32 ZKLFHeaderMagicNumber;
+extern const UInt32 ZKLFHeaderFixedDataLength;
 
-extern const NSUInteger ZKCDTrailer64MagicNumber;
-extern const NSUInteger ZKCDTrailer64FixedDataLength;
+extern const UInt32 ZKCDTrailer64MagicNumber;
+extern const UInt32 ZKCDTrailer64FixedDataLength;
 
-extern const NSUInteger ZKCDTrailer64LocatorMagicNumber;
-extern const NSUInteger ZKCDTrailer64LocatorFixedDataLength;
+extern const UInt32 ZKCDTrailer64LocatorMagicNumber;
+extern const UInt32 ZKCDTrailer64LocatorFixedDataLength;

@@ -20,12 +20,12 @@
 #endif
 
 - (NSDate *) zk_modificationDateForPath:(NSString *)path;
-- (NSUInteger) zk_posixPermissionsAtPath:(NSString *)path;
-- (NSUInteger) zk_externalFileAttributesAtPath:(NSString *)path;
-- (NSUInteger) zk_externalFileAttributesFor:(NSDictionary *)fileAttributes;
+- (UInt32) zk_posixPermissionsAtPath:(NSString *)path;
+- (UInt32) zk_externalFileAttributesAtPath:(NSString *)path;
+- (UInt32) zk_externalFileAttributesFor:(NSDictionary *)fileAttributes;
 
-- (NSUInteger) zk_crcForPath:(NSString *)path;
-- (NSUInteger) zk_crcForPath:(NSString *)path invoker:(id)invoker;
-- (NSUInteger) zk_crcForPath:(NSString *)path invoker:(id)invoker throttleThreadSleepTime:(NSTimeInterval)throttleThreadSleepTime;
+- (UInt32) zk_crcForPath:(NSString *)path;
+- (UInt32) zk_crcForPath:(NSString *)path invoker:(id)invoker;
+- (UInt32) zk_crcForPath:(NSString *)path invoker:(id)invoker throttleThreadSleepTime:(NSTimeInterval)throttleThreadSleepTime;
 
 @end

@@ -10,8 +10,8 @@
 
 @implementation NSString (ZKAdditions)
 
-- (NSUInteger) zk_precomposedUTF8Length {
-	return [[self precomposedStringWithCanonicalMapping] lengthOfBytesUsingEncoding:NSUTF8StringEncoding];
+- (UInt32) zk_precomposedUTF8Length {
+	return (UInt32)[[self precomposedStringWithCanonicalMapping] lengthOfBytesUsingEncoding:NSUTF8StringEncoding];
 }
 
 - (BOOL) zk_isResourceForkPath {

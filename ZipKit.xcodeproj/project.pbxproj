@@ -28,6 +28,7 @@
 		22164E2A181ABE4900ECDC0F /* ZKLog.h in Headers */ = {isa = PBXBuildFile; fileRef = CB6F09FD17483A9A00F91524 /* ZKLog.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		22164E2C181ABEAA00ECDC0F /* ZipKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 22164E2B181ABEAA00ECDC0F /* ZipKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		22164E2D181ABEAB00ECDC0F /* ZipKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 22164E2B181ABEAA00ECDC0F /* ZipKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4C187B4E18D2839E00D4AAC1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C187B4D18D2839E00D4AAC1 /* Foundation.framework */; };
 		CB6F0A1017483A9A00F91524 /* GMAppleDouble+ZKAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = CB6F09ED17483A9A00F91524 /* GMAppleDouble+ZKAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CB6F0A1117483A9A00F91524 /* NSData+ZKAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = CB6F09EE17483A9A00F91524 /* NSData+ZKAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CB6F0A1217483A9A00F91524 /* NSDate+ZKAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = CB6F09EF17483A9A00F91524 /* NSDate+ZKAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -102,8 +103,6 @@
 		CB6F0AD217484C4600F91524 /* ZKCDTrailer64Locator.m in Sources */ = {isa = PBXBuildFile; fileRef = CB6F0A0A17483A9A00F91524 /* ZKCDTrailer64Locator.m */; };
 		CB6F0AD317484C4600F91524 /* ZKLFHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = CB6F0A0E17483A9A00F91524 /* ZKLFHeader.m */; };
 		CB6F0AD417484C4600F91524 /* ZKLog.m in Sources */ = {isa = PBXBuildFile; fileRef = CB6F0A0F17483A9A00F91524 /* ZKLog.m */; };
-		CBEAEBDE18204E310017011D /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CBEAEBDD18204E310017011D /* libz.dylib */; };
-		CBEAEBE018204E360017011D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBEAEBDF18204E360017011D /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -121,6 +120,8 @@
 /* Begin PBXFileReference section */
 		22164E17181ABDA400ECDC0F /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		22164E2B181ABEAA00ECDC0F /* ZipKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZipKit.h; sourceTree = "<group>"; };
+		4C187B4B18D2839900D4AAC1 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/usr/lib/libz.dylib; sourceTree = DEVELOPER_DIR; };
+		4C187B4D18D2839E00D4AAC1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		CB6F09CE174838FC00F91524 /* ZipKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ZipKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB6F09D6174838FC00F91524 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		CB6F09D9174838FC00F91524 /* ZipKit-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ZipKit-Info.plist"; sourceTree = "<group>"; };
@@ -194,8 +195,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CBEAEBE018204E360017011D /* Foundation.framework in Frameworks */,
-				CBEAEBDE18204E310017011D /* libz.dylib in Frameworks */,
+				4C187B4E18D2839E00D4AAC1 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -227,6 +227,8 @@
 		CB6F09D0174838FC00F91524 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4C187B4D18D2839E00D4AAC1 /* Foundation.framework */,
+				4C187B4B18D2839900D4AAC1 /* libz.dylib */,
 				CBF776171748888A00E6979E /* iOS */,
 				CB6F09EC174839FD00F91524 /* OS X */,
 			);
@@ -463,7 +465,7 @@
 		CB6F09C5174838FC00F91524 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0460;
+				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "Karl Moskowski";
 			};
 			buildConfigurationList = CB6F09C8174838FC00F91524 /* Build configuration list for PBXProject "ZipKit" */;

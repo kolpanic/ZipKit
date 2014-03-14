@@ -57,14 +57,14 @@
 	if ([keyPath isEqualToString:@"compressedSize"] || [keyPath isEqualToString:@"uncompressedSize"])
 		self.versionNeededToExtract = ([self useZip64Extensions] ? 45 : 20);
 	else if ([keyPath isEqualToString:@"extraField"] && self.extraFieldLength < 1)
-		self.extraFieldLength = [self.extraField length];
+		self.extraFieldLength = (UInt32)[self.extraField length];
 	else if ([keyPath isEqualToString:@"filename"] && self.filenameLength < 1)
 		self.filenameLength = [self.filename zk_precomposedUTF8Length];
 }
 
 + (ZKLFHeader *) recordWithData:(NSData *)data atOffset:(UInt64)offset {
 	if (!data) return nil;
-	NSUInteger mn = [data zk_hostInt32OffsetBy:&offset];
+	UInt32 mn = [data zk_hostInt32OffsetBy:&offset];
 	if (mn != ZKLFHeaderMagicNumber) return nil;
 	ZKLFHeader *record = [ZKLFHeader new];
 	record.magicNumber = mn;
@@ -81,7 +81,7 @@
 		if (record.filenameLength > 0)
 			record.filename = [data zk_stringOffsetBy:&offset length:record.filenameLength];
 		if (record.extraFieldLength > 0) {
-			record.extraField = [data subdataWithRange:NSMakeRange(offset, record.extraFieldLength)];
+			record.extraField = [data subdataWithRange:NSMakeRange((NSUInteger)offset, record.extraFieldLength)];
 			[record parseZip64ExtraField];
 		}
 	}
