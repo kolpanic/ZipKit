@@ -13,7 +13,7 @@ If you find ZipKit to be useful, please [let me know](http://about.me/kolpanic).
 
 ###Requirements
 
-ZipKit requires Xcode 4.6. It works on OS X 10.8 Mountain Lion, and iOS 6.0 or greater. (If you're using older versions, make sure you "git checkout 1.0.0". The project at that tag supports garbage collection and manual memory management.) The Xcode project contains three targets:
+ZipKit requires Xcode 4.6. It works on OS X 10.8 Mountain Lion, and iOS 6.0 or greater. (If you're using older versions, make sure you `git checkout 1.0.0`. The project at that tag supports garbage collection and manual memory management.) The Xcode project contains three targets:
 * an OS X framework;
 * an OS X static library;
 * an iOS static library.
