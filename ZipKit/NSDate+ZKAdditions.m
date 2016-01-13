@@ -7,6 +7,17 @@
 
 #import "NSDate+ZKAdditions.h"
 
+typedef NS_OPTIONS(NSUInteger, ZKCalendarUnit)
+{
+    ZKCalendarUnitEra                = kCFCalendarUnitEra,
+    ZKCalendarUnitYear               = kCFCalendarUnitYear,
+    ZKCalendarUnitMonth              = kCFCalendarUnitMonth,
+    ZKCalendarUnitDay                = kCFCalendarUnitDay,
+    ZKCalendarUnitHour               = kCFCalendarUnitHour,
+    ZKCalendarUnitMinute             = kCFCalendarUnitMinute,
+    ZKCalendarUnitSecond             = kCFCalendarUnitSecond,
+};
+
 @implementation NSDate (ZKAdditions)
 
 + (NSDate *) zk_dateWithDosDate:(NSUInteger)dosDate {
@@ -22,8 +33,8 @@
 }
 
 - (UInt32) zk_dosDate {
-	NSUInteger options = NSYearCalendarUnit | NSMonthCalendarUnit | NSDayCalendarUnit |
-    NSHourCalendarUnit | NSMinuteCalendarUnit | NSSecondCalendarUnit;
+	NSUInteger options = ZKCalendarUnitYear | ZKCalendarUnitMonth | ZKCalendarUnitDay |
+    ZKCalendarUnitHour | ZKCalendarUnitMinute | ZKCalendarUnitSecond;
 	NSDateComponents *comps = [[NSCalendar currentCalendar] components:options fromDate:self];
 	return ((UInt32)(comps.day + 32 * comps.month + 512 * (comps.year - 1980)) << 16) | (UInt32)(comps.second / 2 + 32 * comps.minute + 2048 * comps.hour);
 }
