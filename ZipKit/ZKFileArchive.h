@@ -24,5 +24,6 @@
 - (NSInteger) deflateFile:(NSString *)path relativeToPath:(NSString *)basePath usingResourceFork:(BOOL)flag;
 
 @property (assign) BOOL useZip64Extensions;
+@property (atomic) int compressionLevel;
 
 @end
