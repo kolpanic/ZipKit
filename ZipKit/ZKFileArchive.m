@@ -525,7 +525,7 @@
 			strm.next_in = Z_NULL;
 			strm.avail_in = 0;
 			strm.total_out = 0;
-			NSInteger ret = deflateInit2(&strm, Z_BEST_COMPRESSION, Z_DEFLATED, -MAX_WBITS, 8, Z_DEFAULT_STRATEGY);
+			NSInteger ret = deflateInit2(&strm, self.compressionLevel, Z_DEFLATED, -MAX_WBITS, 8, Z_DEFAULT_STRATEGY);
 			if (ret == Z_OK) {
 				NSFileHandle *file = [NSFileHandle fileHandleForReadingAtPath:path];
 				NSData *fileData = nil;
@@ -716,6 +716,7 @@
 - (id) init {
 	if (self = [super init])
 		self.useZip64Extensions = NO;
+		self.compressionLevel = Z_BEST_COMPRESSION;
 	return self;
 }
 
