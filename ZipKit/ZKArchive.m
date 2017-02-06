@@ -24,7 +24,7 @@
 	NSData *fileHeader = [fileHandle readDataOfLength:4];
 	[fileHandle closeFile];
 	UInt32 headerValue;
-	[fileHeader getBytes:&headerValue];
+	[fileHeader getBytes:&headerValue length:sizeof(headerValue)];
 	return CFSwapInt32LittleToHost(headerValue) == ZKLFHeaderMagicNumber;
 }
 
