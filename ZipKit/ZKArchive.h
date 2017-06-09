@@ -74,4 +74,6 @@
 @property (assign) NSTimeInterval throttleThreadSleepTime;
 @property (copy) NSString *comment;
 
+@property (assign) BOOL overwriteExistingFiles;
+
 @end
