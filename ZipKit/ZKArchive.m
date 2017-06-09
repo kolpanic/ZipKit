@@ -78,14 +78,26 @@
 		if (![item isEqualToString:ZKMacOSXDirectory]) {
 			NSString *subPath = [expansionDirectory stringByAppendingPathComponent:item];
 			NSString *dest = [enclosingFolder stringByAppendingPathComponent:item];
-			NSUInteger i = 2;
-			while ([self.fileManager fileExistsAtPath:dest]) {
-				NSString *ext = [item pathExtension];
-				dest = [enclosingFolder stringByAppendingPathComponent:[NSString stringWithFormat:@"%@ %lu",
-				                                                        [item stringByDeletingPathExtension], (unsigned long)i++]];
-				if (ext && [ext length] > 0)
-					dest = [dest stringByAppendingPathExtension:ext];
-			}
+            
+            if (self.overwriteExistingFiles) {
+                
+                if ([self.fileManager fileExistsAtPath:dest]) {
+                    [self.fileManager removeItemAtPath:dest error:nil];
+                }
+                
+            } else {
+            
+                NSUInteger i = 2;
+                while ([self.fileManager fileExistsAtPath:dest]) {
+                    NSString *ext = [item pathExtension];
+                    dest = [enclosingFolder stringByAppendingPathComponent:[NSString stringWithFormat:@"%@ %lu",
+                                                                            [item stringByDeletingPathExtension], (unsigned long)i++]];
+                    if (ext && [ext length] > 0)
+                        dest = [dest stringByAppendingPathExtension:ext];
+                }
+                
+            }
+            
 			[self.fileManager moveItemAtPath:subPath toPath:dest error:nil];
 		}
 	}
