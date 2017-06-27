@@ -22,6 +22,7 @@
 - (NSInteger) deflateFiles:(NSArray * _Nonnull)paths relativeToPath:(NSString *_Null_unspecified)basePath usingResourceFork:(BOOL)flag;
 - (NSInteger) deflateDirectory:(NSString * _Nonnull)dirPath relativeToPath:(NSString *_Nonnull)basePath usingResourceFork:(BOOL)flag;
 - (NSInteger) deflateFile:(NSString * _Nonnull)path relativeToPath:(NSString * _Null_unspecified)basePath usingResourceFork:(BOOL)flag;
+- (NSInteger) deflateFile:(NSString * _Nonnull)path relativeToPath:(NSString * _Null_unspecified)basePath usingResourceFork:(BOOL)flag andProgressHandler:(void(^ _Nullable)(CGFloat percent))progressHandler;
 
 @property (assign) BOOL useZip64Extensions;
 @property (atomic) int compressionLevel;

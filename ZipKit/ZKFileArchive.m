@@ -451,6 +451,10 @@
 }
 
 - (NSInteger) deflateFile:(NSString *)path relativeToPath:(NSString *)basePath usingResourceFork:(BOOL)rfFlag {
+    return [self deflateFile:path relativeToPath:basePath usingResourceFork:rfFlag andProgressHandler:nil];
+}
+
+- (NSInteger) deflateFile:(NSString *)path relativeToPath:(NSString *)basePath usingResourceFork:(BOOL)rfFlag andProgressHandler:(void(^ _Nullable)(CGFloat percent))progressHandler {
 	@autoreleasepool {
 		BOOL isDir = [self.fileManager zk_isDirAtPath:path];
 		BOOL isSymlink = [self.fileManager zk_isSymLinkAtPath:path];
@@ -528,6 +532,7 @@
 			NSInteger ret = deflateInit2(&strm, self.compressionLevel, Z_DEFLATED, -MAX_WBITS, 8, Z_DEFAULT_STRATEGY);
 			if (ret == Z_OK) {
 				NSFileHandle *file = [NSFileHandle fileHandleForReadingAtPath:path];
+                UInt64 fileSize = [self.fileManager zk_dataSizeAtFilePath:path];
 				NSData *fileData = nil;
 				NSData *archiveData = nil;
 				unsigned char out[ZKZipBlockSize];
@@ -592,6 +597,15 @@
 									bytesWritten = 0;
 								}
 							}
+                            if ((progressHandler) && (fileSize > 0)) {
+                                CGFloat progress = (double)bytesWritten / (double)fileSize;
+                                if ([NSThread isMainThread])
+                                    progressHandler(progress);
+                                else
+                                    dispatch_async(dispatch_get_main_queue(), ^{
+                                        progressHandler(progress);
+                                    });
+                            }
 							[NSThread sleepForTimeInterval:self.throttleThreadSleepTime];
 						}
 					} while (flush != Z_FINISH);
@@ -604,6 +618,15 @@
 							[self performSelectorOnMainThread:@selector(didUpdateBytesWritten:)
 							                       withObject:@(bytesWritten) waitUntilDone:NO];
 					}
+                    if ((progressHandler) && (fileSize > 0)) {
+                        CGFloat progress = (double)bytesWritten / (double)fileSize;
+                        if ([NSThread isMainThread])
+                            progressHandler(progress);
+                        else
+                            dispatch_async(dispatch_get_main_queue(), ^{
+                                progressHandler(progress);
+                            });
+                    }
 					if (ret != Z_STREAM_END) {
 						@autoreleasepool {
 							ZKLogError(@"Stream incomplete");
