@@ -12,16 +12,16 @@
 
 @interface ZKFileArchive : ZKArchive 
 
-+ (ZKFileArchive *) process:(id)item usingResourceFork:(BOOL)flag withInvoker:(id)invoker andDelegate:(id)delegate;
-+ (ZKFileArchive *) archiveWithArchivePath:(NSString *)archivePath;
++ (ZKFileArchive * _Nullable) process:(id _Nullable)item usingResourceFork:(BOOL)flag withInvoker:(id _Nullable)invoker andDelegate:(id _Nullable)delegate;
++ (ZKFileArchive * _Nullable) archiveWithArchivePath:(NSString * _Nonnull)archivePath;
 
 - (NSInteger) inflateToDiskUsingResourceFork:(BOOL)flag;
-- (NSInteger) inflateToDirectory:(NSString *)expansionDirectory usingResourceFork:(BOOL)rfFlag;
-- (NSInteger) inflateFile:(ZKCDHeader *)cdHeader toDirectory:(NSString *)expansionDirectory;
+- (NSInteger) inflateToDirectory:(NSString * _Nonnull)expansionDirectory usingResourceFork:(BOOL)rfFlag;
+- (NSInteger) inflateFile:(ZKCDHeader *_Nonnull)cdHeader toDirectory:(NSString * _Null_unspecified)expansionDirectory;
 
-- (NSInteger) deflateFiles:(NSArray *)paths relativeToPath:(NSString *)basePath usingResourceFork:(BOOL)flag;
-- (NSInteger) deflateDirectory:(NSString *)dirPath relativeToPath:(NSString *)basePath usingResourceFork:(BOOL)flag;
-- (NSInteger) deflateFile:(NSString *)path relativeToPath:(NSString *)basePath usingResourceFork:(BOOL)flag;
+- (NSInteger) deflateFiles:(NSArray * _Nonnull)paths relativeToPath:(NSString *_Null_unspecified)basePath usingResourceFork:(BOOL)flag;
+- (NSInteger) deflateDirectory:(NSString * _Nonnull)dirPath relativeToPath:(NSString *_Nonnull)basePath usingResourceFork:(BOOL)flag;
+- (NSInteger) deflateFile:(NSString * _Nonnull)path relativeToPath:(NSString * _Null_unspecified)basePath usingResourceFork:(BOOL)flag;
 
 @property (assign) BOOL useZip64Extensions;
 @property (atomic) int compressionLevel;
