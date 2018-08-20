@@ -17,7 +17,9 @@
 - (UInt16) zk_hostInt16OffsetBy:(UInt64 *)offset {
 	UInt16 value;
 	NSUInteger length = sizeof(value);
-	[self getBytes:&value range:NSMakeRange((NSUInteger) * offset, length)];
+    if (sizeof(value) != 0) {
+        [self getBytes:&value range:NSMakeRange((NSUInteger) * offset, length)];
+    }
 	*offset += length;
 	return CFSwapInt16LittleToHost(value);
 }
@@ -25,7 +27,9 @@
 - (UInt32) zk_hostInt32OffsetBy:(UInt64 *)offset {
 	UInt32 value;
 	NSUInteger length = sizeof(value);
-	[self getBytes:&value range:NSMakeRange((NSUInteger) * offset, length)];
+    if (sizeof(value) != 0) {
+        [self getBytes:&value range:NSMakeRange((NSUInteger) * offset, length)];
+    }
 	*offset += length;
 	return CFSwapInt32LittleToHost(value);
 }
@@ -33,7 +37,9 @@
 - (UInt64) zk_hostInt64OffsetBy:(UInt64 *)offset {
 	UInt64 value;
 	NSUInteger length = sizeof(value);
-	[self getBytes:&value range:NSMakeRange((NSUInteger) * offset, length)];
+    if (sizeof(value) != 0) {
+        [self getBytes:&value range:NSMakeRange((NSUInteger) * offset, length)];
+    }
 	*offset += length;
 	return CFSwapInt64LittleToHost(value);
 }
