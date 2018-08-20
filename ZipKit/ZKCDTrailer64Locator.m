@@ -21,7 +21,7 @@
 }
 
 + (ZKCDTrailer64Locator *) recordWithData:(NSData *)data atOffset:(UInt64)offset {
-    if (!data) return nil;
+    if (!data || data.length < 1) return nil;
 	UInt32 mn = [data zk_hostInt32OffsetBy:&offset];
 	if (mn != ZKCDTrailer64LocatorMagicNumber) return nil;
 	ZKCDTrailer64Locator *record = [ZKCDTrailer64Locator new];
