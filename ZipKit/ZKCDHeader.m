@@ -73,7 +73,7 @@
 }
 
 + (ZKCDHeader *) recordWithData:(NSData *)data atOffset:(UInt64)offset {
-	if (!data) return nil;
+	if (!data || data.length < 1) return nil;
 	UInt32 mn = [data zk_hostInt32OffsetBy:&offset];
 	if (mn != ZKCDHeaderMagicNumber) return nil;
 	ZKCDHeader *record = [ZKCDHeader new];
