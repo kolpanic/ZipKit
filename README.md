@@ -9,7 +9,7 @@ ZipKit is an Objective-C framework for reading and writing Zip archives in OS X 
 
 It was developed by Karl Moskowski (aka [@kolpanic](https://twitter.com/kolpanic)) and released under the BSD license.
 
-If you find ZipKit to be useful, please [let me know](http://about.me/kolpanic).
+If you find ZipKit to be useful, please [let me know](https://kolpanic.github.io/).
 
 ### Requirements
 
