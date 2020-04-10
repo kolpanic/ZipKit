@@ -9,12 +9,12 @@
 
 @interface ZKCDTrailer : NSObject
 
-+ (ZKCDTrailer *) recordWithData:(NSData *)data atOffset:(UInt64)offset;
-+ (ZKCDTrailer *) recordWithData:(NSData *)data;
-+ (ZKCDTrailer *) recordWithArchivePath:(NSString *)path;
-- (NSData *)            data;
-- (NSUInteger)          length;
-- (BOOL)                useZip64Extensions;
++ (ZKCDTrailer *)recordWithData:(NSData *)data atOffset:(UInt64)offset;
++ (ZKCDTrailer *)recordWithData:(NSData *)data;
++ (ZKCDTrailer *)recordWithArchivePath:(NSString *)path;
+- (NSData *)data;
+- (NSUInteger)length;
+- (BOOL)useZip64Extensions;
 
 @property (assign) UInt32 magicNumber;
 @property (assign) UInt32 thisDiskNumber;

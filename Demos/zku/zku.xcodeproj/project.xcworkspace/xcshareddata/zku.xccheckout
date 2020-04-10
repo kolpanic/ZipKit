@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>4E91E8DC-A8EB-4B88-B70D-96BA9B0F28ED</string>
+	<key>IDESourceControlProjectName</key>
+	<string>zku</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>C34FB7BE-63F4-4719-8110-638F882D6936</key>
+		<string>https://github.com/kolpanic/ZipKit.git</string>
+		<key>EAE9B5D4-3932-4032-B639-0B274ECDAD3A</key>
+		<string>ssh://github.com/kolpanic/zku.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>zku.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>C34FB7BE-63F4-4719-8110-638F882D6936</key>
+		<string>../../ZipKit</string>
+		<key>EAE9B5D4-3932-4032-B639-0B274ECDAD3A</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>ssh://github.com/kolpanic/zku.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>EAE9B5D4-3932-4032-B639-0B274ECDAD3A</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>C34FB7BE-63F4-4719-8110-638F882D6936</string>
+			<key>IDESourceControlWCCName</key>
+			<string>ZipKit</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>EAE9B5D4-3932-4032-B639-0B274ECDAD3A</string>
+			<key>IDESourceControlWCCName</key>
+			<string>zku</string>
+		</dict>
+	</array>
+</dict>
+</plist>

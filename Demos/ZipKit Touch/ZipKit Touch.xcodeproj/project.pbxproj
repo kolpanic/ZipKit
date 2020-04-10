@@ -1,0 +1,366 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CB222F501766261B0032EEB0 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = CB222F4F1766261B0032EEB0 /* Settings.bundle */; };
+		CB3B5C891748858200A061B1 /* Read Me.txt in Resources */ = {isa = PBXBuildFile; fileRef = CB3B5C871748858200A061B1 /* Read Me.txt */; };
+		CB3B5C8A1748858200A061B1 /* ZipKit.png in Resources */ = {isa = PBXBuildFile; fileRef = CB3B5C881748858200A061B1 /* ZipKit.png */; };
+		CB4AC85F243FAB5100D2BC41 /* libtouchzipkit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CB4AC85E243FAB5100D2BC41 /* libtouchzipkit.a */; };
+		CB7951471748572400849531 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB7951461748572400849531 /* UIKit.framework */; };
+		CB7951491748572400849531 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB7951481748572400849531 /* Foundation.framework */; };
+		CB79514B1748572400849531 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB79514A1748572400849531 /* CoreGraphics.framework */; };
+		CB7951511748572400849531 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CB79514F1748572400849531 /* InfoPlist.strings */; };
+		CB7951531748572400849531 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CB7951521748572400849531 /* main.m */; };
+		CB7951571748572400849531 /* ZKAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CB7951561748572400849531 /* ZKAppDelegate.m */; };
+		CB7951591748572400849531 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = CB7951581748572400849531 /* Default.png */; };
+		CB79515B1748572400849531 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CB79515A1748572400849531 /* Default@2x.png */; };
+		CB79515D1748572500849531 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CB79515C1748572400849531 /* Default-568h@2x.png */; };
+		CB7951601748572500849531 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB79515E1748572500849531 /* MainStoryboard_iPhone.storyboard */; };
+		CB7951631748572500849531 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB7951611748572500849531 /* MainStoryboard_iPad.storyboard */; };
+		CB7951661748572500849531 /* ZKMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB7951651748572500849531 /* ZKMasterViewController.m */; };
+		CB7951691748572500849531 /* ZKDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB7951681748572500849531 /* ZKDetailViewController.m */; };
+		CB795170174857B700849531 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CB79516F174857B700849531 /* libz.dylib */; };
+		CB79518517485C0200849531 /* ZipKit_Touch.png in Resources */ = {isa = PBXBuildFile; fileRef = CB79518317485C0200849531 /* ZipKit_Touch.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		CB222F4F1766261B0032EEB0 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
+		CB3B5C871748858200A061B1 /* Read Me.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Read Me.txt"; sourceTree = "<group>"; };
+		CB3B5C881748858200A061B1 /* ZipKit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ZipKit.png; sourceTree = "<group>"; };
+		CB4AC85E243FAB5100D2BC41 /* libtouchzipkit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libtouchzipkit.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		CB7951431748572400849531 /* ZipKit Touch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ZipKit Touch.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CB7951461748572400849531 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		CB7951481748572400849531 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		CB79514A1748572400849531 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		CB79514E1748572400849531 /* ZipKit Touch-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ZipKit Touch-Info.plist"; sourceTree = "<group>"; };
+		CB7951501748572400849531 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		CB7951521748572400849531 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		CB7951551748572400849531 /* ZKAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZKAppDelegate.h; sourceTree = "<group>"; };
+		CB7951561748572400849531 /* ZKAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZKAppDelegate.m; sourceTree = "<group>"; };
+		CB7951581748572400849531 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		CB79515A1748572400849531 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		CB79515C1748572400849531 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		CB79515F1748572500849531 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
+		CB7951621748572500849531 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
+		CB7951641748572500849531 /* ZKMasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZKMasterViewController.h; sourceTree = "<group>"; };
+		CB7951651748572500849531 /* ZKMasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZKMasterViewController.m; sourceTree = "<group>"; };
+		CB7951671748572500849531 /* ZKDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZKDetailViewController.h; sourceTree = "<group>"; };
+		CB7951681748572500849531 /* ZKDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZKDetailViewController.m; sourceTree = "<group>"; };
+		CB79516F174857B700849531 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		CB79518317485C0200849531 /* ZipKit_Touch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ZipKit_Touch.png; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CB7951401748572400849531 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CB4AC85F243FAB5100D2BC41 /* libtouchzipkit.a in Frameworks */,
+				CB795170174857B700849531 /* libz.dylib in Frameworks */,
+				CB7951471748572400849531 /* UIKit.framework in Frameworks */,
+				CB7951491748572400849531 /* Foundation.framework in Frameworks */,
+				CB79514B1748572400849531 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CB222F4E176623080032EEB0 /* Settings - Acknowledgements */ = {
+			isa = PBXGroup;
+			children = (
+				CB222F4F1766261B0032EEB0 /* Settings.bundle */,
+			);
+			name = "Settings - Acknowledgements";
+			sourceTree = "<group>";
+		};
+		CB79513A1748572400849531 = {
+			isa = PBXGroup;
+			children = (
+				CB79514C1748572400849531 /* ZipKit Touch */,
+				CB7951451748572400849531 /* Frameworks */,
+				CB7951441748572400849531 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CB7951441748572400849531 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CB7951431748572400849531 /* ZipKit Touch.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CB7951451748572400849531 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CB4AC85E243FAB5100D2BC41 /* libtouchzipkit.a */,
+				CB7951461748572400849531 /* UIKit.framework */,
+				CB7951481748572400849531 /* Foundation.framework */,
+				CB79514A1748572400849531 /* CoreGraphics.framework */,
+				CB79516F174857B700849531 /* libz.dylib */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CB79514C1748572400849531 /* ZipKit Touch */ = {
+			isa = PBXGroup;
+			children = (
+				CB7951551748572400849531 /* ZKAppDelegate.h */,
+				CB7951561748572400849531 /* ZKAppDelegate.m */,
+				CB79515E1748572500849531 /* MainStoryboard_iPhone.storyboard */,
+				CB7951611748572500849531 /* MainStoryboard_iPad.storyboard */,
+				CB7951641748572500849531 /* ZKMasterViewController.h */,
+				CB7951651748572500849531 /* ZKMasterViewController.m */,
+				CB7951671748572500849531 /* ZKDetailViewController.h */,
+				CB7951681748572500849531 /* ZKDetailViewController.m */,
+				CB79514D1748572400849531 /* Supporting Files */,
+				CB222F4E176623080032EEB0 /* Settings - Acknowledgements */,
+			);
+			path = "ZipKit Touch";
+			sourceTree = "<group>";
+		};
+		CB79514D1748572400849531 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CB3B5C871748858200A061B1 /* Read Me.txt */,
+				CB3B5C881748858200A061B1 /* ZipKit.png */,
+				CB79518317485C0200849531 /* ZipKit_Touch.png */,
+				CB79514E1748572400849531 /* ZipKit Touch-Info.plist */,
+				CB79514F1748572400849531 /* InfoPlist.strings */,
+				CB7951521748572400849531 /* main.m */,
+				CB7951581748572400849531 /* Default.png */,
+				CB79515A1748572400849531 /* Default@2x.png */,
+				CB79515C1748572400849531 /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CB7951421748572400849531 /* ZipKit Touch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CB79516C1748572500849531 /* Build configuration list for PBXNativeTarget "ZipKit Touch" */;
+			buildPhases = (
+				CB79513F1748572400849531 /* Sources */,
+				CB7951401748572400849531 /* Frameworks */,
+				CB7951411748572400849531 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "ZipKit Touch";
+			productName = "ZipKit Touch";
+			productReference = CB7951431748572400849531 /* ZipKit Touch.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CB79513B1748572400849531 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = ZK;
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = "Karl Moskowski";
+			};
+			buildConfigurationList = CB79513E1748572400849531 /* Build configuration list for PBXProject "ZipKit Touch" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				English,
+				en,
+			);
+			mainGroup = CB79513A1748572400849531;
+			productRefGroup = CB7951441748572400849531 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CB7951421748572400849531 /* ZipKit Touch */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CB7951411748572400849531 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CB7951511748572400849531 /* InfoPlist.strings in Resources */,
+				CB7951591748572400849531 /* Default.png in Resources */,
+				CB79515B1748572400849531 /* Default@2x.png in Resources */,
+				CB79515D1748572500849531 /* Default-568h@2x.png in Resources */,
+				CB7951601748572500849531 /* MainStoryboard_iPhone.storyboard in Resources */,
+				CB7951631748572500849531 /* MainStoryboard_iPad.storyboard in Resources */,
+				CB79518517485C0200849531 /* ZipKit_Touch.png in Resources */,
+				CB3B5C891748858200A061B1 /* Read Me.txt in Resources */,
+				CB3B5C8A1748858200A061B1 /* ZipKit.png in Resources */,
+				CB222F501766261B0032EEB0 /* Settings.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CB79513F1748572400849531 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CB7951531748572400849531 /* main.m in Sources */,
+				CB7951571748572400849531 /* ZKAppDelegate.m in Sources */,
+				CB7951661748572500849531 /* ZKMasterViewController.m in Sources */,
+				CB7951691748572500849531 /* ZKDetailViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		CB79514F1748572400849531 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CB7951501748572400849531 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		CB79515E1748572500849531 /* MainStoryboard_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CB79515F1748572500849531 /* en */,
+			);
+			name = MainStoryboard_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		CB7951611748572500849531 /* MainStoryboard_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CB7951621748572500849531 /* en */,
+			);
+			name = MainStoryboard_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CB79516A1748572500849531 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CB79516B1748572500849531 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CB79516D1748572500849531 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				INFOPLIST_FILE = "ZipKit Touch/ZipKit Touch-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = "me.karlmoskowski.ZipKit-Touch";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "\"$(SRCROOT)/../../ZipKit\"/**";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		CB79516E1748572500849531 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				INFOPLIST_FILE = "ZipKit Touch/ZipKit Touch-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = "me.karlmoskowski.ZipKit-Touch";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "\"$(SRCROOT)/../../ZipKit\"/**";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CB79513E1748572400849531 /* Build configuration list for PBXProject "ZipKit Touch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CB79516A1748572500849531 /* Debug */,
+				CB79516B1748572500849531 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CB79516C1748572500849531 /* Build configuration list for PBXNativeTarget "ZipKit Touch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CB79516D1748572500849531 /* Debug */,
+				CB79516E1748572500849531 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CB79513B1748572400849531 /* Project object */;
+}

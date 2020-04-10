@@ -9,17 +9,17 @@
 
 @interface ZKCDHeader : NSObject
 
-+ (ZKCDHeader *) recordWithData:(NSData *)data atOffset:(UInt64)offset;
-+ (ZKCDHeader *) recordWithArchivePath:(NSString *)path atOffset:(UInt64)offset;
-- (void)                parseZip64ExtraField;
-- (NSData *)            zip64ExtraField;
-- (NSData *)            data;
-- (NSUInteger)          length;
-- (BOOL)                useZip64Extensions;
-- (NSNumber *)          posixPermissions;
-- (BOOL)                isDirectory;
-- (BOOL)                isSymLink;
-- (BOOL)                isResourceFork;
++ (ZKCDHeader *)recordWithData:(NSData *)data atOffset:(UInt64)offset;
++ (ZKCDHeader *)recordWithArchivePath:(NSString *)path atOffset:(UInt64)offset;
+- (void)parseZip64ExtraField;
+- (NSData *)zip64ExtraField;
+- (NSData *)data;
+- (NSUInteger)length;
+- (BOOL)useZip64Extensions;
+- (NSNumber *)posixPermissions;
+- (BOOL)isDirectory;
+- (BOOL)isSymLink;
+- (BOOL)isResourceFork;
 
 @property (assign) UInt32 magicNumber;
 @property (assign) UInt32 versionMadeBy;

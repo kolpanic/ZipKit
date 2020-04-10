@@ -32,7 +32,7 @@ ZipKit is covered under the following BSD-style license:
 
 Acknowledgement using this text is appreciated:
 	ZipKit developed by Karl Moskowski.
-	https://github.com/kolpanic/ZipKit
+	https://kolpanic.github.io/
 
 ------------------------------------------------------------------------------------------------
 

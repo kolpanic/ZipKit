@@ -9,14 +9,14 @@
 
 @interface ZKLFHeader : NSObject
 
-+ (ZKLFHeader *) recordWithData:(NSData *)data atOffset:(UInt64)offset;
-+ (ZKLFHeader *) recordWithArchivePath:(NSString *)path atOffset:(UInt64)offset;
-- (void)                parseZip64ExtraField;
-- (NSData *)            zip64ExtraField;
-- (NSData *)            data;
-- (NSUInteger)          length;
-- (BOOL)                useZip64Extensions;
-- (BOOL)                isResourceFork;
++ (ZKLFHeader *)recordWithData:(NSData *)data atOffset:(UInt64)offset;
++ (ZKLFHeader *)recordWithArchivePath:(NSString *)path atOffset:(UInt64)offset;
+- (void)parseZip64ExtraField;
+- (NSData *)zip64ExtraField;
+- (NSData *)data;
+- (NSUInteger)length;
+- (BOOL)useZip64Extensions;
+- (BOOL)isResourceFork;
 
 @property (assign) UInt32 magicNumber;
 @property (assign) UInt32 versionNeededToExtract;

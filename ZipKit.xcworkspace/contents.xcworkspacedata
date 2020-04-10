@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:README.md">
+   </FileRef>
+   <FileRef
+      location = "group:COPYING.TXT">
+   </FileRef>
+   <FileRef
+      location = "group:/Users/karl/Projects/Personal/ZipKit/ZipKit Framework.xcodeproj">
+   </FileRef>
+   <Group
+      location = "container:"
+      name = "Demo Projects">
+      <FileRef
+         location = "group:Demos/README.md">
+      </FileRef>
+      <FileRef
+         location = "group:Demos/ZipKit Utility/ZipKit Utility.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Demos/zku/zku.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Demos/ZipKit Touch/ZipKit Touch.xcodeproj">
+      </FileRef>
+   </Group>
+</Workspace>

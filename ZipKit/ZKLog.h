@@ -8,13 +8,13 @@
 #import <Foundation/Foundation.h>
 
 enum ZKLogLevel {
-	ZKLogLevelNotice = 3,
-	ZKLogLevelError = 2,
-	ZKLogLevelDebug = 1,
-	ZKLogLevelAll = 0,
+    ZKLogLevelNotice = 3,
+    ZKLogLevelError  = 2,
+    ZKLogLevelDebug  = 1,
+    ZKLogLevelAll    = 0,
 };
 
-#define ZKLog(s, l, ...) [[ZKLog sharedInstance] logFile : __FILE__ lineNumber : __LINE__ level : l format : (s), ## __VA_ARGS__]
+#define ZKLog(s, l, ...) [[ZKLog sharedInstance] logFile:__FILE__ lineNumber: __LINE__ level: l format: (s), ## __VA_ARGS__]
 
 #define ZKLogError(s, ...) ZKLog((s), ZKLogLevelError, ## __VA_ARGS__)
 #define ZKLogNotice(s, ...) ZKLog((s), ZKLogLevelNotice, ## __VA_ARGS__)
@@ -29,15 +29,15 @@ extern NSString *const ZKLogLevelKey;
 extern NSString *const ZKLogToFileKey;
 
 @interface ZKLog : NSObject {
-@private
-	NSUInteger _minimumLevel;
+    @private
+    NSUInteger _minimumLevel;
 }
 
-- (void) logFile:(char *)sourceFile lineNumber:(NSUInteger)lineNumber level:(NSUInteger)level format:(NSString *)format, ...;
+- (void)logFile:(char *)sourceFile lineNumber:(NSUInteger)lineNumber level:(NSUInteger)level format:(NSString *)format, ...;
 
-- (NSString *) levelToLabel:(NSUInteger)level;
+- (NSString *)levelToLabel:(NSUInteger)level;
 
-+ (ZKLog *) sharedInstance;
++ (ZKLog *)sharedInstance;
 
 @property (assign) NSUInteger minimumLevel;
 @property (strong) NSDateFormatter *dateFormatter;

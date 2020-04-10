@@ -9,11 +9,11 @@
 
 @interface ZKCDTrailer64Locator : NSObject
 
-+ (ZKCDTrailer64Locator *) recordWithData:(NSData *)data atOffset:(UInt64)offset;
-+ (ZKCDTrailer64Locator *) recordWithArchivePath:(NSString *)path andCDTrailerLength:(NSUInteger)cdTrailerLength;
++ (ZKCDTrailer64Locator *)recordWithData:(NSData *)data atOffset:(UInt64)offset;
++ (ZKCDTrailer64Locator *)recordWithArchivePath:(NSString *)path andCDTrailerLength:(NSUInteger)cdTrailerLength;
 
-- (NSData *)	data;
-- (NSUInteger)	length;
+- (NSData *)data;
+- (NSUInteger)length;
 
 @property (assign) UInt32 magicNumber;
 @property (assign) UInt32 diskNumberWithStartOfCentralDirectory;
