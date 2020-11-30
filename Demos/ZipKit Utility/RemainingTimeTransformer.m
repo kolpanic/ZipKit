@@ -34,21 +34,21 @@
 
     NSString *transformedValue = NSLocalizedString(@"About a second left", @"remaining time message");
     if (weeks > 8) {
-        transformedValue = [NSString stringWithFormat:NSLocalizedString(@"About %u months left", @"remaining time message"), months];
+		transformedValue = [NSString stringWithFormat:NSLocalizedString(@"About %lu months left", @"remaining time message"), (unsigned long)months];
     } else if (days > 10) {
-        transformedValue = [NSString stringWithFormat:NSLocalizedString(@"About %u weeks left", @"remaining time message"), weeks];
+		transformedValue = [NSString stringWithFormat:NSLocalizedString(@"About %lu weeks left", @"remaining time message"), (unsigned long)weeks];
     } else if (hours > 48) {
-        transformedValue = [NSString stringWithFormat:NSLocalizedString(@"About %u days left", @"remaining time message"), days];
+        transformedValue = [NSString stringWithFormat:NSLocalizedString(@"About %lu days left", @"remaining time message"), days];
     } else if (minutes > 100) {
-        transformedValue = [NSString stringWithFormat:NSLocalizedString(@"About %u hours left", @"remaining time message"), hours];
+        transformedValue = [NSString stringWithFormat:NSLocalizedString(@"About %lu hours left", @"remaining time message"), hours];
     } else if (seconds > 100) {
-        transformedValue = [NSString stringWithFormat:NSLocalizedString(@"About %u minutes left", @"remaining time message"), minutes];
+        transformedValue = [NSString stringWithFormat:NSLocalizedString(@"About %lu minutes left", @"remaining time message"), minutes];
     } else if (seconds > 50) {
         transformedValue = NSLocalizedString(@"About a minute left", @"remaining time message");
     } else if (seconds > 30) {
         transformedValue = NSLocalizedString(@"Less than a minute left", @"remaining time message");
     } else if (seconds > 1) {
-        transformedValue = [NSString stringWithFormat:NSLocalizedString(@"About %u seconds left", @"remaining time message"), seconds];
+        transformedValue = [NSString stringWithFormat:NSLocalizedString(@"About %lu seconds left", @"remaining time message"), seconds];
     }
 
     return transformedValue;
