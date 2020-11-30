@@ -45,14 +45,14 @@
 		CB7951581748572400849531 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		CB79515A1748572400849531 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		CB79515C1748572400849531 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		CB79515F1748572500849531 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
-		CB7951621748572500849531 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
 		CB7951641748572500849531 /* ZKMasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZKMasterViewController.h; sourceTree = "<group>"; };
 		CB7951651748572500849531 /* ZKMasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZKMasterViewController.m; sourceTree = "<group>"; };
 		CB7951671748572500849531 /* ZKDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZKDetailViewController.h; sourceTree = "<group>"; };
 		CB7951681748572500849531 /* ZKDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZKDetailViewController.m; sourceTree = "<group>"; };
 		CB79516F174857B700849531 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		CB79518317485C0200849531 /* ZipKit_Touch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ZipKit_Touch.png; sourceTree = "<group>"; };
+		D71F5C20257512B200B36AA8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
+		D71F5C21257512B200B36AA8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,11 +173,11 @@
 			};
 			buildConfigurationList = CB79513E1748572400849531 /* Build configuration list for PBXProject "ZipKit Touch" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				English,
 				en,
+				Base,
 			);
 			mainGroup = CB79513A1748572400849531;
 			productRefGroup = CB7951441748572400849531 /* Products */;
@@ -235,7 +235,7 @@
 		CB79515E1748572500849531 /* MainStoryboard_iPhone.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				CB79515F1748572500849531 /* en */,
+				D71F5C20257512B200B36AA8 /* Base */,
 			);
 			name = MainStoryboard_iPhone.storyboard;
 			sourceTree = "<group>";
@@ -243,7 +243,7 @@
 		CB7951611748572500849531 /* MainStoryboard_iPad.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				CB7951621748572500849531 /* en */,
+				D71F5C21257512B200B36AA8 /* Base */,
 			);
 			name = MainStoryboard_iPad.storyboard;
 			sourceTree = "<group>";

@@ -34,7 +34,6 @@
 
 /* Begin PBXFileReference section */
 		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
-		1DDD58150DA1D0A300B32029 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* ZipKit_Utility-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "ZipKit_Utility-Info.plist"; sourceTree = "<group>"; };
 		8D1107320486CEB800E47090 /* ZipKit Utility.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ZipKit Utility.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -46,6 +45,7 @@
 		CB9B9DD7109F6A03003E3F8B /* RemainingTimeTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RemainingTimeTransformer.m; sourceTree = "<group>"; };
 		CB9B9DD8109F6A03003E3F8B /* ZipFileOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZipFileOperation.h; sourceTree = "<group>"; };
 		CB9B9DD9109F6A03003E3F8B /* ZipFileOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZipFileOperation.m; sourceTree = "<group>"; };
+		D71F5C22257512B500B36AA8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,13 +161,14 @@
 			};
 			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "ZipKit Utility" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 1;
 			knownRegions = (
-				English,
-				Japanese,
-				French,
-				German,
+				Base,
+				en,
+				fr,
+				de,
+				ja,
 			);
 			mainGroup = 29B97314FDCFA39411CA2CEA /* ZipKit Utility */;
 			projectDirPath = "";
@@ -208,7 +209,7 @@
 		1DDD58140DA1D0A300B32029 /* MainMenu.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				1DDD58150DA1D0A300B32029 /* English */,
+				D71F5C22257512B500B36AA8 /* Base */,
 			);
 			name = MainMenu.xib;
 			sourceTree = "<group>";
