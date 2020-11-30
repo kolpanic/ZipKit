@@ -8,7 +8,7 @@
       location = "group:COPYING.TXT">
    </FileRef>
    <FileRef
-      location = "group:/Users/karl/Projects/Personal/ZipKit/ZipKit Framework.xcodeproj">
+      location = "group:ZipKit Framework.xcodeproj">
    </FileRef>
    <Group
       location = "container:"
