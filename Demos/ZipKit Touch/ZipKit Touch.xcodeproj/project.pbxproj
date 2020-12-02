@@ -353,12 +353,13 @@
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				HEADER_SEARCH_PATHS = ../..;
 				INFOPLIST_FILE = "ZipKit Touch/ZipKit Touch-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = "me.karlmoskowski.ZipKit-Touch";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				USER_HEADER_SEARCH_PATHS = "\"$(SRCROOT)/../../ZipKit\"/**";
+				USER_HEADER_SEARCH_PATHS = ./ZipKit/;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -368,12 +369,13 @@
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				HEADER_SEARCH_PATHS = ../..;
 				INFOPLIST_FILE = "ZipKit Touch/ZipKit Touch-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = "me.karlmoskowski.ZipKit-Touch";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				USER_HEADER_SEARCH_PATHS = "\"$(SRCROOT)/../../ZipKit\"/**";
+				USER_HEADER_SEARCH_PATHS = ./ZipKit/;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

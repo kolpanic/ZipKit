@@ -8,8 +8,8 @@
 
 #import "ZKMasterViewController.h"
 #import "ZKDetailViewController.h"
-#import "ZKDefs.h"
-#import "ZKDataArchive.h"
+#import "ZipKit/ZKDefs.h"
+#import "ZipKit/ZKDataArchive.h"
 
 @implementation ZKMasterViewController
 
