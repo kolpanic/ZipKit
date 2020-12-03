@@ -6,7 +6,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "ZKDefs.h"
+#import <ZipKit/ZKDefs.h>
 
 @interface NSFileManager (ZKAdditions)
 
