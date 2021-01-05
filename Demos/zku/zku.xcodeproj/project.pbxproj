@@ -159,7 +159,6 @@
 					"-all_load",
 				);
 				PRODUCT_NAME = zku;
-				USER_HEADER_SEARCH_PATHS = ./ZipKit/;
 			};
 			name = Debug;
 		};
@@ -177,7 +176,6 @@
 					"-all_load",
 				);
 				PRODUCT_NAME = zku;
-				USER_HEADER_SEARCH_PATHS = ./ZipKit/;
 			};
 			name = Release;
 		};
