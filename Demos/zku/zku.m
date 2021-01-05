@@ -1,6 +1,5 @@
 #import <Foundation/Foundation.h>
-#import "ZipKit/ZKFileArchive.h"
-#import "ZipKit/ZKLog.h"
+#import "ZipKit/ZipKit.h"
 #include <objc/objc-auto.h>
 
 @interface ZKUController : NSObject
