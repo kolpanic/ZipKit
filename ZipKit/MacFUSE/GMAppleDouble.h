@@ -86,7 +86,7 @@ typedef enum {
 
 /*!
  * @class
- * @discussion This class represents a single entry in an AppleDouble file.
+ * @note This class represents a single entry in an AppleDouble file.
  */
 GM_EXPORT @interface GMAppleDoubleEntry : NSObject {
 @private
@@ -109,7 +109,7 @@ GM_EXPORT @interface GMAppleDoubleEntry : NSObject {
 
 /*!
  * @class
- * @discussion This class can be used to construct raw AppleDouble data.
+ * @note This class can be used to construct raw AppleDouble data.
  */
 GM_EXPORT @interface GMAppleDouble : NSObject {
 @private
@@ -121,7 +121,7 @@ GM_EXPORT @interface GMAppleDouble : NSObject {
 
 /*!
  * @abstract An autoreleased GMAppleDouble file.
- * @discussion The GMAppleDouble is pre-filled with entries from the raw
+ * @note The GMAppleDouble is pre-filled with entries from the raw
  * AppleDouble file data.
  * @param data Raw AppleDouble file data.
  */
@@ -142,7 +142,7 @@ GM_EXPORT @interface GMAppleDouble : NSObject {
 
 /*!
  * @abstract Adds entries based on the provided raw AppleDouble file data.
- * @discussion This will attempt to parse the given data as an AppleDouble file
+ * @note This will attempt to parse the given data as an AppleDouble file
  * and add all entries found.
  * @param data Raw AppleDouble file data
  * @result YES if the provided data was parsed correctly.
