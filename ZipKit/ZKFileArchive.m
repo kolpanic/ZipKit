@@ -220,9 +220,13 @@
             unsigned long long offset = archive.cdTrailer.offsetOfStartOfCentralDirectory;
             for (NSUInteger i = 0; i < archive.cdTrailer.totalNumberOfCentralDirectoryEntries; i++) {
                 ZKCDHeader *cdHeader = [ZKCDHeader recordWithArchivePath:path atOffset:offset];
-                [archive.centralDirectory addObject:cdHeader];
-                archive.useZip64Extensions = (archive.useZip64Extensions || [cdHeader useZip64Extensions]);
-                offset += [cdHeader length];
+                if (cdHeader != nil) {
+                    [archive.centralDirectory addObject:cdHeader];
+                    archive.useZip64Extensions = (archive.useZip64Extensions || [cdHeader useZip64Extensions]);
+                    offset += [cdHeader length];
+                } else {
+                    archive = nil;
+                }
             }
         } else {
             archive = nil;
